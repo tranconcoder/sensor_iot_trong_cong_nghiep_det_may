@@ -1,0 +1,24 @@
+0000000000000000000000000000000000000000 415a9956b66697f71dc14cf549b8f7d322e0e9e4 tvconss <tranconcoder@gmail.com> 1723474106 +0700	commit (initial): upload project
+415a9956b66697f71dc14cf549b8f7d322e0e9e4 281c570294c11e3b7f683028e13bccbae9a4be5d tvconss <tranconcoder@gmail.com> 1723475153 +0700	commit: remove reactjs project
+281c570294c11e3b7f683028e13bccbae9a4be5d afdcd62b4fd4b122dc054dc1a6f2c138e3ad5ac2 tvconss <tranconcoder@gmail.com> 1723477979 +0700	commit: add custom lib 'common_struct'
+afdcd62b4fd4b122dc054dc1a6f2c138e3ad5ac2 acca4d72f142a2948421bfbb7608c7846c24a2dc tvconss <tranconcoder@gmail.com> 1723479308 +0700	commit: add custom lib 'esp_mesh_lite_custom_method'
+acca4d72f142a2948421bfbb7608c7846c24a2dc 415a9956b66697f71dc14cf549b8f7d322e0e9e4 tvconss <tranconcoder@gmail.com> 1723484965 +0700	reset: moving to 415a9956b66697f71dc14cf549b8f7d322e0e9e4
+415a9956b66697f71dc14cf549b8f7d322e0e9e4 c49aaee3ad2cf1ffc644a96aa2920b6b24606bdc tvconss <tranconcoder@gmail.com> 1723488271 +0700	commit: add setup_esp32_cam component
+c49aaee3ad2cf1ffc644a96aa2920b6b24606bdc b94986a259ef87fd053d9e478d798a072c078a73 tvconss <tranconcoder@gmail.com> 1723489189 +0700	commit: init setup_fc522 component
+b94986a259ef87fd053d9e478d798a072c078a73 24a4b0691d677683ecdf956e800330d39b131677 tvconss <tranconcoder@gmail.com> 1723557621 +0700	commit: add 'config_http_client' component
+24a4b0691d677683ecdf956e800330d39b131677 d7beab00f14b8b50b03cf65316b48460b109d750 tvconss <tranconcoder@gmail.com> 1723557666 +0700	commit: remove reactjs
+d7beab00f14b8b50b03cf65316b48460b109d750 b8c65e893dacc8a48cd4f74b29dd9ff056311ac6 tvconss <tranconcoder@gmail.com> 1723568090 +0700	commit: add 'esp_mesh_lite_methods' component
+b8c65e893dacc8a48cd4f74b29dd9ff056311ac6 7fd57ba176185f7eaece411c938d45c48fbd1abb tvconss <tranconcoder@gmail.com> 1723568237 +0700	commit: remove 'esp_mesh_lite_methods' component
+7fd57ba176185f7eaece411c938d45c48fbd1abb 6e01ae854d1677ed1ca2f1528ff3564bc2e54b4b tvconss <tranconcoder@gmail.com> 1723570731 +0700	commit: init 'setup_esp_websocket_client' component
+6e01ae854d1677ed1ca2f1528ff3564bc2e54b4b 61a7688696b69584e60392486ee228f95ddcf05f tvconss <tranconcoder@gmail.com> 1723574321 +0700	commit: install 'esp-websocket_client' component and build 'setup_esp_websocket_client' component
+61a7688696b69584e60392486ee228f95ddcf05f 268911ed1c4826617c181460edc7e12d538a4cfd tvconss <tranconcoder@gmail.com> 1723832199 +0700	commit: build success component 'setup_esp_websocket_client'
+268911ed1c4826617c181460edc7e12d538a4cfd d09847cc8b71f0059b98329b1f4d5eaa8d40fa87 tvconss <tranconcoder@gmail.com> 1723865964 +0700	commit: split nodejs websocket server and optimize code
+d09847cc8b71f0059b98329b1f4d5eaa8d40fa87 40d7171342181bbc62ab0cbf0550b9c36786f709 tvconss <tranconcoder@gmail.com> 1723871057 +0700	commit: upload
+40d7171342181bbc62ab0cbf0550b9c36786f709 9d6a0ee0bb7643fe5fc026f9dd680b59b61c6d60 tvconss <tranconcoder@gmail.com> 1723875730 +0700	commit: move esp-idf-rc522 to common component folder
+9d6a0ee0bb7643fe5fc026f9dd680b59b61c6d60 86c6e83f10fef4f292cf3b872f9b1deb898d8014 tvconss <tranconcoder@gmail.com> 1723881426 +0700	commit: build successfully stream image to nodejs with websocket
+86c6e83f10fef4f292cf3b872f9b1deb898d8014 8f9f8e7988823e22990aa0632f4b81b7ace5c135 tvconss <tranconcoder@gmail.com> 1723916455 +0700	commit: build successfully websocket send img and init receive_image_from_server
+8f9f8e7988823e22990aa0632f4b81b7ace5c135 93e19e901daab4388347eb94ffe27f229b76b8ed tvconss <tranconcoder@gmail.com> 1723920896 +0700	commit: setup handlebars to project
+93e19e901daab4388347eb94ffe27f229b76b8ed 53d42e8de89167e80ac5dbf7b37128dbff2cba3d tvconss <tranconcoder@gmail.com> 1723955544 +0700	commit: optimize send image to websocket perfomance
+53d42e8de89167e80ac5dbf7b37128dbff2cba3d 84e82bcb42536b8debf7250d37524c51bb153283 tvconss <tranconcoder@gmail.com> 1723956017 +0700	commit: add static file to express
+84e82bcb42536b8debf7250d37524c51bb153283 5e0a053d8f763a95ce16bc428769d21b0b6bcddc tvconss <tranconcoder@gmail.com> 1723994784 +0700	commit: build stream-page
+5e0a053d8f763a95ce16bc428769d21b0b6bcddc c6c62dfc26ceda4d448d244c9fb5e09012d6f07b tvconss <tranconcoder@gmail.com> 1724045190 +0700	commit: build ffmpeg to project

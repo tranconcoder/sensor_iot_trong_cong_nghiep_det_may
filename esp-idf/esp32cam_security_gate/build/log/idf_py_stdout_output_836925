@@ -1,0 +1,1782 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (29) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 18 2024 03:13:10[0m
+[0;33mW (29) boot: Unicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (82) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (97) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (105) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (112) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (120) boot: End of partition table[0m
+[0;32mI (124) boot: No factory image, trying OTA 0[0m
+[0;32mI (129) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2d83ch (186428) map[0m
+[0;32mI (202) esp_image: segment 1: paddr=0003d864 vaddr=3ffbdb60 size=027b4h ( 10164) load[0m
+[0;32mI (206) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=c220ch (795148) map[0m
+[0;32mI (480) esp_image: segment 3: paddr=00102234 vaddr=3ffc0314 size=037b4h ( 14260) load[0m
+[0;32mI (485) esp_image: segment 4: paddr=001059f0 vaddr=40080000 size=1c858h (116824) load[0m
+[0;32mI (546) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (551) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (551) boot: Disabling RNG early entropy source...[0m
+[0;32mI (563) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (564) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (564) esp_psram: Speed: 40MHz[0m
+[0;32mI (567) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (575) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (584) cpu_start: Unicore app[0m
+[0;32mI (588) cpu_start: Single core mode[0m
+[0;32mI (1517) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1525) cpu_start: Pro cpu start user code[0m
+[0;32mI (1525) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1525) app_init: Application information:[0m
+[0;32mI (1528) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1534) app_init: App version:      5e0a053-dirty[0m
+[0;32mI (1540) app_init: Compile time:     Aug 18 2024 22:30:32[0m
+[0;32mI (1546) app_init: ELF file SHA256:  5bd885564...[0m
+[0;32mI (1551) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1556) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1561) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1566) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1572) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1579) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1585) heap_init: At 3FFC88B8 len 00017748 (93 KiB): DRAM[0m
+[0;32mI (1591) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1597) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1604) heap_init: At 4009C858 len 000037A8 (13 KiB): IRAM[0m
+[0;32mI (1610) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1617) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1625) spi_flash: detected chip: generic[0m
+[0;32mI (1629) spi_flash: flash io: dio[0m
+[0;33mW (1633) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1644) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1649) main_task: Started on CPU0[0m
+[0;32mI (1652) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1661) main_task: Calling app_main()[0m
+[0;32mI (1680) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1684) wifi:wifi driver task: 3ffbd5e0, prio:23, stack:6656, core=0
+I (1687) wifi:wifi firmware version: 0caa81945
+I (1688) wifi:wifi certification version: v7.0
+I (1690) wifi:config NVS flash: enabled
+I (1694) wifi:config nano formating: disabled
+I (1698) wifi:Init data frame dynamic rx buffer num: 32
+I (1703) wifi:Init static rx mgmt buffer num: 5
+I (1707) wifi:Init management short buffer num: 32
+I (1712) wifi:Init static tx buffer num: 16
+I (1716) wifi:Init tx cache buffer num: 32
+I (1719) wifi:Init static rx buffer size: 1600
+I (1724) wifi:Init static rx buffer num: 10
+I (1727) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1732) wifi_init: accept mbox: 6[0m
+[0;32mI (1735) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1739) wifi_init: udp mbox: 6[0m
+[0;32mI (1743) wifi_init: tcp mbox: 6[0m
+[0;32mI (1747) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1751) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1756) wifi_init: tcp mss: 1440[0m
+[0;32mI (1760) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1764) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1770) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1776) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (1838) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+I (1849) wifi:mode : null
+I (1852) wifi:mode : softAP (08:a6:f7:11:51:a9)
+I (1853) wifi:Total power save buffer number: 8
+I (1854) wifi:Init max length of beacon: 752/752
+I (1856) wifi:Init max length of beacon: 752/752
+[0;32mI (1863) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+Add netif ap with 5e0a053(commit id)
+[0;32mI (1873) bridge_common: netif list add success[0m
+[0;31mE (1878) NVS: Failed to open NVS namespace[0m
+[0;32mI (1882) bridge_common: IP Address:192.168.5.1[0m
+[0;32mI (1888) bridge_common: GW Address:192.168.5.1[0m
+[0;32mI (1893) bridge_common: NM Address:255.255.255.0[0m
+[0;32mI (1898) bridge_common: [WIFI_AP_DEF ][0m
+[0;32mI (1903) bridge_common: Set ip info:192.168.5.1[0m
+[0;32mI (1908) bridge_wifi: SoftAP IP network segment has changed, deauth all station[0m
+I (1920) wifi:Disabled PMF config for SoftAP
+I (1921) wifi:Total power save buffer number: 8
+[0;32mI (1927) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (1933) bridge_common: [WIFI_AP_DEF ]Name Server1: 114.114.114.114[0m
+[0;32mI (1940) bridge_common: DHCPS Restart, deauth all station[0m
+Add netif sta with 5e0a053(commit id)
+[0;32mI (1949) bridge_common: netif list add success[0m
+I (1955) wifi:mode : sta (08:a6:f7:11:51:a8) + softAP (08:a6:f7:11:51:a9)
+I (1961) wifi:enable tsf
+[0;31mE (1965) NVS: Failed to read IP info from NVS[0m
+I (1969) wifi:Disabled PMF config for STA
+[0;32mI (1972) bridge_wifi: [esp_bridge_wifi_set_config] sta ssid: TP-Link M7350 password: password[0m
+[0;32mI (1982) bridge_wifi: [esp_bridge_wifi_set_config] softap ssid: ESP_Bridge_1151a9 password: 12345678[0m
+I (2165) wifi:Total power save buffer number: 8
+[0;32mI (2169) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (2170) bridge_wifi: SoftAP config changed, deauth all station[0m
+[0;32mI (2174) Mesh-Lite: esp-mesh-lite component version: 1.0.0[0m
+I (2180) ESPNOW: espnow [version: 1.0] init
+[0;32mI (2184) [vendor_ie]: Mesh-Lite commit id: bc9302d
+ [0m
+[0;31mE (2191) [vendor_ie]: Error Get! [0m
+[0;33mW (2194) [vendor_ie]: Mesh ID is not saved in flash [0m
+[0;32mI (2200) [vendor_ie]: Mesh ID: 77 [0m
+[0;33mW (2204) [vendor_ie]: Error Get[4354] [0m
+[0;33mW (2208) [vendor_ie]: Error Get[4354] [0m
+[0;32mI (2214) [ESP_Mesh_Lite_Comm]: msg action add success [0m
+[0;32mI (2220) [ESP_Mesh_Lite_Comm]: Bind Socket 54, port 6364 [0m
+[0;32mI (2224) [ESP_Mesh_Lite_Comm]: Bind Socket 55, port 6363 [0m
+[0;32mI (2231) [ESP_Mesh_Lite_Comm]: Bind Socket 56, port 6366 [0m
+[0;32mI (2237) [ESP_Mesh_Lite_Comm]: Bind Socket 57, port 6365 [0m
+[0;32mI (2243) [mesh-lite-espnow]: Start espnow task [0m
+[0;32mI (2250) Mesh-Lite: Mesh-Lite connecting[0m
+[0;32mI (2255) [vendor_ie]: esp_mesh_lite_wifi_scan_start return ESP_OK [0m
+[0;32mI (2260) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (2270) cam_hal: cam init ok[0m
+[0;32mI (2273) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (2276) sccb: sccb_i2c_port=1[0m
+[0;32mI (2281) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2319) camera: Detected camera at address=0x30[0m
+[0;32mI (2322) camera: Detected OV2640 camera[0m
+[0;32mI (2322) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (2409) cam_hal: buffer_size: 32768, half_buffer_size: 4096, node_buffer_size: 2048, node_cnt: 16, total_cnt: 15[0m
+[0;32mI (2410) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (2417) cam_hal: cam config ok[0m
+[0;32mI (2420) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8[0m
+[0;33mW (2507) websocket_client: `network_timeout_ms` is not set, or it is less than or equal to zero, using default time out 10000 (milliseconds)[0m
+[0;32mI (2515) main_task: Returned from app_main()[0m
+[0;32mI (3645) [vendor_ie]: Mesh-Lite Scan done [0m
+[0;32mI (3647) [vendor_ie]: RTC store: temp_mesh_id:255; ssid:TP-Link M7350; bssid:00:00:00:00:00:00; crc:3318033560 [0m
+[0;32mI (3651) [vendor_ie]: wifi_cfg TP-Link M7350 router_config TP-Link M7350 [0m
+[0;32mI (3660) [vendor_ie]: esp_mesh_lite_wifi_connect return ESP_OK [0m
+I (5203) wifi:ap channel adjust o:1,1 n:10,2
+I (5203) wifi:new:<10,2>, old:<1,1>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+I (5205) wifi:state: init -> auth (0xb0)
+I (5213) wifi:state: auth -> assoc (0x0)
+I (5223) wifi:state: assoc -> run (0x10)
+I (5233) wifi:connected with TP-Link M7350, aid = 2, channel 10, 40D, bssid = 34:60:f9:e5:3d:01
+I (5234) wifi:security: WPA2-PSK, phy: bgn, rssi: -70
+I (5236) wifi:pm start, type: 1
+
+I (5239) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (5249) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (5279) bridge_common: [WIFI_AP_DEF ]Name Server1: 8.8.8.8[0m
+[0;32mI (6257) esp_netif_handlers: sta ip: 192.168.0.103, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (6258) bridge_wifi: Connected with IP Address:192.168.0.103[0m
+[0;32mI (6263) [vendor_ie]: RTC store: temp_mesh_id:103; ssid:TP-Link M7350; bssid:00:00:00:00:00:00; crc:4057279346 [0m
+[0;31mE (6275) [ESP_Mesh_Lite_Comm]: Error Get! [0m
+[0;33mW (6277) [ESP_Mesh_Lite_Comm]: argot is not saved in flash [0m
+[0;32mI (6289) esp32cam_security_gate: TCP client write task is running[0m
+I (6376) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+I (10370) wifi:new:<10,2>, old:<10,0>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+[0;31mE (12516) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (12517) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (12517) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (12525) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (12542) websocket_client: WebSocket client error[0m
+[0;32mI (12547) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (12553) websocket_client: WebSocket client connected[0m
+[0;31mE (12559) websocket_client: Websocket client is not connected[0m
+[0;33mW (12565) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+I (13339) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+I (14363) wifi:new:<10,2>, old:<10,0>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+I (15388) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+[0;31mE (15919) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (15920) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (15923) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (15931) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (15948) websocket_client: WebSocket client error[0m
+[0;32mI (15954) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (15959) websocket_client: WebSocket client connected[0m
+[0;31mE (15965) websocket_client: Websocket client is not connected[0m
+[0;33mW (15971) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (18989) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (18990) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (18993) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (19001) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (19018) websocket_client: WebSocket client error[0m
+[0;32mI (19024) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (19029) websocket_client: WebSocket client connected[0m
+[0;31mE (19035) websocket_client: Websocket client is not connected[0m
+[0;33mW (19041) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (22252) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (22254) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (22256) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (22264) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (22282) websocket_client: WebSocket client error[0m
+[0;32mI (22287) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (22293) websocket_client: WebSocket client connected[0m
+[0;31mE (22298) websocket_client: Websocket client is not connected[0m
+[0;33mW (22305) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (22316) cam_hal: NO-SOI[0m
+[0;31mE (25633) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (25634) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (25637) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (25645) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (25662) websocket_client: WebSocket client error[0m
+[0;32mI (25668) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (25674) websocket_client: WebSocket client connected[0m
+[0;31mE (25679) websocket_client: Websocket client is not connected[0m
+[0;33mW (25686) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (28708) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (28709) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (28712) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (28719) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (28737) websocket_client: WebSocket client error[0m
+[0;32mI (28742) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (28748) websocket_client: WebSocket client connected[0m
+[0;31mE (28754) websocket_client: Websocket client is not connected[0m
+[0;33mW (28760) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (31981) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (31982) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (31985) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (31993) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (32010) websocket_client: WebSocket client error[0m
+[0;32mI (32016) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (32022) websocket_client: WebSocket client connected[0m
+[0;31mE (32027) websocket_client: Websocket client is not connected[0m
+[0;33mW (32033) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (32046) cam_hal: NO-SOI[0m
+[0;31mE (35061) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (35062) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (35065) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (35072) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (35090) websocket_client: WebSocket client error[0m
+[0;32mI (35095) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (35101) websocket_client: WebSocket client connected[0m
+[0;31mE (35107) websocket_client: Websocket client is not connected[0m
+[0;33mW (35113) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (35126) cam_hal: NO-SOI[0m
+[0;31mE (38133) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (38134) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (38137) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (38144) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (38162) websocket_client: WebSocket client error[0m
+[0;32mI (38167) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (38173) websocket_client: WebSocket client connected[0m
+[0;31mE (38178) websocket_client: Websocket client is not connected[0m
+[0;33mW (38185) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (38197) cam_hal: NO-SOI[0m
+[0;31mE (41403) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (41404) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (41407) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (41414) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (41432) websocket_client: WebSocket client error[0m
+[0;32mI (41437) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (41443) websocket_client: WebSocket client connected[0m
+[0;31mE (41449) websocket_client: Websocket client is not connected[0m
+[0;33mW (41455) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (41466) cam_hal: NO-SOI[0m
+[0;31mE (44481) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (44482) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (44485) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (44493) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (44510) websocket_client: WebSocket client error[0m
+[0;32mI (44516) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (44522) websocket_client: WebSocket client connected[0m
+[0;31mE (44527) websocket_client: Websocket client is not connected[0m
+[0;33mW (44534) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (47560) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (47561) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (47564) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (47571) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (47589) websocket_client: WebSocket client error[0m
+[0;32mI (47594) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (47600) websocket_client: WebSocket client connected[0m
+[0;31mE (47606) websocket_client: Websocket client is not connected[0m
+[0;33mW (47612) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (50631) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (50633) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (50635) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (50643) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (50661) websocket_client: WebSocket client error[0m
+[0;32mI (50666) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (50672) websocket_client: WebSocket client connected[0m
+[0;31mE (50677) websocket_client: Websocket client is not connected[0m
+[0;33mW (50684) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (53702) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (53703) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (53706) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (53714) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (53731) websocket_client: WebSocket client error[0m
+[0;32mI (53737) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (53742) websocket_client: WebSocket client connected[0m
+[0;31mE (53748) websocket_client: Websocket client is not connected[0m
+[0;33mW (53754) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (56776) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (56777) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (56779) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (56787) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (56805) websocket_client: WebSocket client error[0m
+[0;32mI (56810) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (56816) websocket_client: WebSocket client connected[0m
+[0;31mE (56821) websocket_client: Websocket client is not connected[0m
+[0;33mW (56828) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (59875) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (59876) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (59879) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (59886) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (59904) websocket_client: WebSocket client error[0m
+[0;32mI (59909) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (59915) websocket_client: WebSocket client connected[0m
+[0;31mE (59921) websocket_client: Websocket client is not connected[0m
+[0;33mW (59927) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (59940) cam_hal: NO-SOI[0m
+[0;31mE (62976) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (62977) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (62980) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (62987) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (63005) websocket_client: WebSocket client error[0m
+[0;32mI (63010) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (63016) websocket_client: WebSocket client connected[0m
+[0;31mE (63022) websocket_client: Websocket client is not connected[0m
+[0;33mW (63028) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (66083) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (66084) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (66087) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (66095) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (66112) websocket_client: WebSocket client error[0m
+[0;32mI (66118) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (66124) websocket_client: WebSocket client connected[0m
+[0;31mE (66129) websocket_client: Websocket client is not connected[0m
+[0;33mW (66135) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (66147) cam_hal: NO-SOI[0m
+[0;31mE (69156) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (69157) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (69160) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (69167) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (69185) websocket_client: WebSocket client error[0m
+[0;32mI (69190) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (69196) websocket_client: WebSocket client connected[0m
+[0;31mE (69202) websocket_client: Websocket client is not connected[0m
+[0;33mW (69208) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (69220) cam_hal: NO-SOI[0m
+[0;31mE (72431) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (72432) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (72434) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (72442) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (72460) websocket_client: WebSocket client error[0m
+[0;32mI (72465) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (72471) websocket_client: WebSocket client connected[0m
+[0;31mE (72476) websocket_client: Websocket client is not connected[0m
+[0;33mW (72483) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (72495) cam_hal: NO-SOI[0m
+[0;31mE (75505) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (75506) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (75508) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (75516) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (75534) websocket_client: WebSocket client error[0m
+[0;32mI (75539) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (75545) websocket_client: WebSocket client connected[0m
+[0;31mE (75550) websocket_client: Websocket client is not connected[0m
+[0;33mW (75557) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+I (78365) wifi:new:<10,2>, old:<10,0>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+[0;31mE (78594) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (78596) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (78598) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (78606) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (78624) websocket_client: WebSocket client error[0m
+[0;32mI (78629) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (78635) websocket_client: WebSocket client connected[0m
+[0;31mE (78640) websocket_client: Websocket client is not connected[0m
+[0;33mW (78647) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (78659) cam_hal: NO-SOI[0m
+I (79389) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+[0;31mE (81665) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (81666) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (81669) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (81676) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (81694) websocket_client: WebSocket client error[0m
+[0;32mI (81699) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (81705) websocket_client: WebSocket client connected[0m
+[0;31mE (81711) websocket_client: Websocket client is not connected[0m
+[0;33mW (81717) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (84735) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (84736) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (84739) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (84746) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (84764) websocket_client: WebSocket client error[0m
+[0;32mI (84769) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (84775) websocket_client: WebSocket client connected[0m
+[0;31mE (84781) websocket_client: Websocket client is not connected[0m
+[0;33mW (84787) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (87805) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (87806) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (87809) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (87816) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (87834) websocket_client: WebSocket client error[0m
+[0;32mI (87839) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (87845) websocket_client: WebSocket client connected[0m
+[0;31mE (87851) websocket_client: Websocket client is not connected[0m
+[0;33mW (87857) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (91169) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (91171) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (91173) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (91181) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (91199) websocket_client: WebSocket client error[0m
+[0;32mI (91204) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (91210) websocket_client: WebSocket client connected[0m
+[0;31mE (91215) websocket_client: Websocket client is not connected[0m
+[0;33mW (91222) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (94267) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (94268) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (94271) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (94278) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (94296) websocket_client: WebSocket client error[0m
+[0;32mI (94301) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (94307) websocket_client: WebSocket client connected[0m
+[0;31mE (94312) websocket_client: Websocket client is not connected[0m
+[0;33mW (94319) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (94331) cam_hal: NO-SOI[0m
+[0;31mE (97415) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (97416) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (97419) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (97427) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (97444) websocket_client: WebSocket client error[0m
+[0;32mI (97450) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (97455) websocket_client: WebSocket client connected[0m
+[0;31mE (97461) websocket_client: Websocket client is not connected[0m
+[0;33mW (97467) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (100488) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (100489) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (100492) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (100500) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (100518) websocket_client: WebSocket client error[0m
+[0;32mI (100523) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (100529) websocket_client: WebSocket client connected[0m
+[0;31mE (100535) websocket_client: Websocket client is not connected[0m
+[0;33mW (100541) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;32mI (102259) esp32cam_security_gate: System information, channel: 10, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 34:60:f9:e5:3d:01, parent rssi: -70, free heap: 4155672[0m
+[0;31mE (103562) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (103563) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (103566) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (103574) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (103591) websocket_client: WebSocket client error[0m
+[0;32mI (103597) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (103603) websocket_client: WebSocket client connected[0m
+[0;31mE (103608) websocket_client: Websocket client is not connected[0m
+[0;33mW (103615) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (106839) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (106840) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (106843) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (106850) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (106868) websocket_client: WebSocket client error[0m
+[0;32mI (106874) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (106879) websocket_client: WebSocket client connected[0m
+[0;31mE (106885) websocket_client: Websocket client is not connected[0m
+[0;33mW (106892) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (109913) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (109914) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (109917) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (109925) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (109942) websocket_client: WebSocket client error[0m
+[0;32mI (109948) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (109954) websocket_client: WebSocket client connected[0m
+[0;31mE (109959) websocket_client: Websocket client is not connected[0m
+[0;33mW (109966) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (112987) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (112988) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (112991) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (112998) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (113016) websocket_client: WebSocket client error[0m
+[0;32mI (113022) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (113027) websocket_client: WebSocket client connected[0m
+[0;31mE (113033) websocket_client: Websocket client is not connected[0m
+[0;33mW (113040) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (113052) cam_hal: NO-SOI[0m
+[0;31mE (116262) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (116263) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (116266) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (116274) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (116292) websocket_client: WebSocket client error[0m
+[0;32mI (116297) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (116303) websocket_client: WebSocket client connected[0m
+[0;31mE (116309) websocket_client: Websocket client is not connected[0m
+[0;33mW (116315) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (116327) cam_hal: NO-SOI[0m
+[0;31mE (119337) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (119338) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (119341) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (119348) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (119366) websocket_client: WebSocket client error[0m
+[0;32mI (119372) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (119377) websocket_client: WebSocket client connected[0m
+[0;31mE (119383) websocket_client: Websocket client is not connected[0m
+[0;33mW (119390) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (119401) cam_hal: NO-SOI[0m
+[0;31mE (122410) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (122412) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (122414) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (122422) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (122440) websocket_client: WebSocket client error[0m
+[0;32mI (122445) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (122451) websocket_client: WebSocket client connected[0m
+[0;31mE (122457) websocket_client: Websocket client is not connected[0m
+[0;33mW (122463) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (122475) cam_hal: NO-SOI[0m
+[0;31mE (125679) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (125680) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (125683) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (125691) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (125709) websocket_client: WebSocket client error[0m
+[0;32mI (125714) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (125720) websocket_client: WebSocket client connected[0m
+[0;31mE (125726) websocket_client: Websocket client is not connected[0m
+[0;33mW (125732) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+I (126392) wifi:new:<10,2>, old:<10,0>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+I (127416) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+[0;31mE (128768) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (128769) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (128772) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (128779) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (128797) websocket_client: WebSocket client error[0m
+[0;32mI (128803) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (128808) websocket_client: WebSocket client connected[0m
+[0;31mE (128814) websocket_client: Websocket client is not connected[0m
+[0;33mW (128821) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (128833) cam_hal: NO-SOI[0m
+[0;31mE (131841) esp-tls: [sock=58] delayed connect error: Connection reset by peer[0m
+[0;31mE (131842) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (131845) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (131853) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (131871) websocket_client: WebSocket client error[0m
+[0;32mI (131876) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (131882) websocket_client: WebSocket client connected[0m
+[0;31mE (131888) websocket_client: Websocket client is not connected[0m
+[0;33mW (131894) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (144909) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (144910) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (144910) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (144918) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (144935) websocket_client: WebSocket client error[0m
+[0;32mI (144941) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (144946) websocket_client: WebSocket client connected[0m
+[0;31mE (144952) websocket_client: Websocket client is not connected[0m
+[0;33mW (144959) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+I (153324) wifi:new:<10,2>, old:<10,0>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+I (154350) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+[0;31mE (157971) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (157972) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (157972) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (157980) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (157997) websocket_client: WebSocket client error[0m
+[0;32mI (158003) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (158009) websocket_client: WebSocket client connected[0m
+[0;31mE (158014) websocket_client: Websocket client is not connected[0m
+[0;33mW (158021) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (158033) cam_hal: NO-SOI[0m
+[0;31mE (171035) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (171036) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (171036) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (171044) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (171061) websocket_client: WebSocket client error[0m
+[0;32mI (171067) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (171073) websocket_client: WebSocket client connected[0m
+[0;31mE (171078) websocket_client: Websocket client is not connected[0m
+[0;33mW (171085) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (171096) cam_hal: NO-SOI[0m
+[0;31mE (184101) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (184102) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (184102) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (184110) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (184127) websocket_client: WebSocket client error[0m
+[0;32mI (184133) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (184139) websocket_client: WebSocket client connected[0m
+[0;31mE (184144) websocket_client: Websocket client is not connected[0m
+[0;33mW (184151) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+I (184352) wifi:new:<10,2>, old:<10,0>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+I (185376) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+I (189370) wifi:new:<10,2>, old:<10,0>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+I (190394) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+[0;31mE (197166) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (197167) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (197167) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (197175) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (197192) websocket_client: WebSocket client error[0m
+[0;32mI (197198) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (197204) websocket_client: WebSocket client connected[0m
+[0;31mE (197209) websocket_client: Websocket client is not connected[0m
+[0;33mW (197216) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+I (201351) wifi:new:<10,2>, old:<10,0>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+[0;32mI (202259) esp32cam_security_gate: System information, channel: 10, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 34:60:f9:e5:3d:01, parent rssi: -70, free heap: 4155032[0m
+I (205344) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+I (207393) wifi:new:<10,2>, old:<10,0>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+[0;31mE (210229) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (210230) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (210230) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (210238) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (210255) websocket_client: WebSocket client error[0m
+[0;32mI (210261) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (210267) websocket_client: WebSocket client connected[0m
+[0;31mE (210272) websocket_client: Websocket client is not connected[0m
+[0;33mW (210279) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (210291) cam_hal: NO-SOI[0m
+I (212410) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+I (215380) wifi:new:<10,2>, old:<10,0>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+I (216404) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+I (217326) wifi:new:<10,2>, old:<10,0>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+I (218350) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+I (221422) wifi:new:<10,2>, old:<10,0>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+[0;31mE (223291) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (223292) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (223292) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (223300) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (223317) websocket_client: WebSocket client error[0m
+[0;32mI (223323) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (223329) websocket_client: WebSocket client connected[0m
+[0;31mE (223334) websocket_client: Websocket client is not connected[0m
+[0;33mW (223341) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (236355) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (236356) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (236357) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (236364) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (236382) websocket_client: WebSocket client error[0m
+[0;32mI (236387) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (236393) websocket_client: WebSocket client connected[0m
+[0;31mE (236398) websocket_client: Websocket client is not connected[0m
+[0;33mW (236405) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (249419) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (249420) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (249420) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (249428) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (249445) websocket_client: WebSocket client error[0m
+[0;32mI (249451) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (249457) websocket_client: WebSocket client connected[0m
+[0;31mE (249462) websocket_client: Websocket client is not connected[0m
+[0;33mW (249469) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (249482) cam_hal: NO-SOI[0m
+[0;31mE (262483) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (262484) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (262484) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (262492) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (262509) websocket_client: WebSocket client error[0m
+[0;32mI (262515) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (262521) websocket_client: WebSocket client connected[0m
+[0;31mE (262526) websocket_client: Websocket client is not connected[0m
+[0;33mW (262533) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (262544) cam_hal: NO-SOI[0m
+[0;31mE (275547) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (275548) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (275548) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (275556) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (275573) websocket_client: WebSocket client error[0m
+[0;32mI (275579) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (275585) websocket_client: WebSocket client connected[0m
+[0;31mE (275590) websocket_client: Websocket client is not connected[0m
+[0;33mW (275597) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (288612) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (288613) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (288614) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (288621) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (288638) websocket_client: WebSocket client error[0m
+[0;32mI (288644) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (288650) websocket_client: WebSocket client connected[0m
+[0;31mE (288655) websocket_client: Websocket client is not connected[0m
+[0;33mW (288662) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+I (301399) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+[0;31mE (301677) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (301678) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (301678) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (301686) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (301703) websocket_client: WebSocket client error[0m
+[0;32mI (301709) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (301715) websocket_client: WebSocket client connected[0m
+[0;31mE (301720) websocket_client: Websocket client is not connected[0m
+[0;33mW (301727) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (301739) cam_hal: NO-SOI[0m
+[0;32mI (302259) esp32cam_security_gate: System information, channel: 10, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 34:60:f9:e5:3d:01, parent rssi: -70, free heap: 4155704[0m
+I (305392) wifi:new:<10,2>, old:<10,0>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+I (306416) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+I (308362) wifi:new:<10,2>, old:<10,0>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+[0;31mE (314740) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (314741) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (314741) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (314749) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (314766) websocket_client: WebSocket client error[0m
+[0;32mI (314772) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (314778) websocket_client: WebSocket client connected[0m
+[0;31mE (314783) websocket_client: Websocket client is not connected[0m
+[0;33mW (314790) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (314802) cam_hal: NO-SOI[0m
+I (320343) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+I (321367) wifi:new:<10,2>, old:<10,0>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+I (322391) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+I (323415) wifi:new:<10,2>, old:<10,0>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+[0;31mE (327804) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (327805) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (327806) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (327813) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (327830) websocket_client: WebSocket client error[0m
+[0;32mI (327836) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (327841) websocket_client: WebSocket client connected[0m
+[0;31mE (327847) websocket_client: Websocket client is not connected[0m
+[0;33mW (327854) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+I (331402) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+I (332324) wifi:new:<10,2>, old:<10,0>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+I (333351) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+I (334372) wifi:new:<10,2>, old:<10,0>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+I (336420) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+[0;31mE (340867) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (340868) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (340868) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (340876) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (340893) websocket_client: WebSocket client error[0m
+[0;32mI (340899) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (340904) websocket_client: WebSocket client connected[0m
+[0;31mE (340910) websocket_client: Websocket client is not connected[0m
+[0;33mW (340917) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (353932) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (353933) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (353933) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (353941) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (353958) websocket_client: WebSocket client error[0m
+[0;32mI (353964) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (353969) websocket_client: WebSocket client connected[0m
+[0;31mE (353975) websocket_client: Websocket client is not connected[0m
+[0;33mW (353982) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (353994) cam_hal: NO-SOI[0m
+I (363352) wifi:new:<10,2>, old:<10,0>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+I (364376) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+[0;31mE (366996) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (366997) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (366997) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (367005) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (367022) websocket_client: WebSocket client error[0m
+[0;32mI (367028) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (367034) websocket_client: WebSocket client connected[0m
+[0;31mE (367039) websocket_client: Websocket client is not connected[0m
+[0;33mW (367046) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (367058) cam_hal: NO-SOI[0m
+[0;31mE (380061) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (380062) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (380062) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (380070) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (380087) websocket_client: WebSocket client error[0m
+[0;32mI (380093) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (380099) websocket_client: WebSocket client connected[0m
+[0;31mE (380104) websocket_client: Websocket client is not connected[0m
+[0;33mW (380111) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (393125) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (393126) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (393126) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (393134) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (393152) websocket_client: WebSocket client error[0m
+[0;32mI (393157) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (393163) websocket_client: WebSocket client connected[0m
+[0;31mE (393168) websocket_client: Websocket client is not connected[0m
+[0;33mW (393175) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;32mI (402259) esp32cam_security_gate: System information, channel: 10, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 34:60:f9:e5:3d:01, parent rssi: -68, free heap: 4155032[0m
+[0;31mE (406188) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (406189) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (406189) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (406197) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (406214) websocket_client: WebSocket client error[0m
+[0;32mI (406220) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (406226) websocket_client: WebSocket client connected[0m
+[0;31mE (406231) websocket_client: Websocket client is not connected[0m
+[0;33mW (406238) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (406249) cam_hal: NO-SOI[0m
+[0;31mE (419252) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (419253) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (419253) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (419261) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (419278) websocket_client: WebSocket client error[0m
+[0;32mI (419284) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (419290) websocket_client: WebSocket client connected[0m
+[0;31mE (419295) websocket_client: Websocket client is not connected[0m
+[0;33mW (419302) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (432316) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (432317) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (432317) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (432326) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (432342) websocket_client: WebSocket client error[0m
+[0;32mI (432348) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (432354) websocket_client: WebSocket client connected[0m
+[0;31mE (432359) websocket_client: Websocket client is not connected[0m
+[0;33mW (432366) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (445380) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (445381) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (445381) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (445389) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (445406) websocket_client: WebSocket client error[0m
+[0;32mI (445412) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (445418) websocket_client: WebSocket client connected[0m
+[0;31mE (445423) websocket_client: Websocket client is not connected[0m
+[0;33mW (445430) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (445443) cam_hal: NO-SOI[0m
+[0;31mE (458444) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (458445) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (458445) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (458453) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (458470) websocket_client: WebSocket client error[0m
+[0;32mI (458476) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (458482) websocket_client: WebSocket client connected[0m
+[0;31mE (458487) websocket_client: Websocket client is not connected[0m
+[0;33mW (458494) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (458505) cam_hal: NO-SOI[0m
+[0;31mE (471509) esp-tls: [sock=59] select() timeout[0m
+[0;31mE (471510) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (471510) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (471518) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (471535) websocket_client: WebSocket client error[0m
+[0;32mI (471541) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (471547) websocket_client: WebSocket client connected[0m
+[0;31mE (471552) websocket_client: Websocket client is not connected[0m
+[0;33mW (471559) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (484572) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (484574) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (484574) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (484581) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (484598) websocket_client: WebSocket client error[0m
+[0;32mI (484604) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (484610) websocket_client: WebSocket client connected[0m
+[0;31mE (484615) websocket_client: Websocket client is not connected[0m
+[0;33mW (484622) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (497633) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (497634) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (497634) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (497642) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (497659) websocket_client: WebSocket client error[0m
+[0;32mI (497665) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (497671) websocket_client: WebSocket client connected[0m
+[0;31mE (497676) websocket_client: Websocket client is not connected[0m
+[0;33mW (497683) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (497695) cam_hal: NO-SOI[0m
+[0;32mI (502259) esp32cam_security_gate: System information, channel: 10, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 34:60:f9:e5:3d:01, parent rssi: -70, free heap: 4155020[0m
+[0;31mE (510698) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (510699) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (510699) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (510707) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (510724) websocket_client: WebSocket client error[0m
+[0;32mI (510730) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (510736) websocket_client: WebSocket client connected[0m
+[0;31mE (510741) websocket_client: Websocket client is not connected[0m
+[0;33mW (510748) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (510760) cam_hal: NO-SOI[0m
+[0;31mE (523761) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (523762) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (523762) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (523770) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (523787) websocket_client: WebSocket client error[0m
+[0;32mI (523793) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (523799) websocket_client: WebSocket client connected[0m
+[0;31mE (523804) websocket_client: Websocket client is not connected[0m
+[0;33mW (523811) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (536826) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (536827) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (536827) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (536835) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (536852) websocket_client: WebSocket client error[0m
+[0;32mI (536858) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (536864) websocket_client: WebSocket client connected[0m
+[0;31mE (536869) websocket_client: Websocket client is not connected[0m
+[0;33mW (536876) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (549888) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (549889) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (549889) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (549897) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (549914) websocket_client: WebSocket client error[0m
+[0;32mI (549920) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (549925) websocket_client: WebSocket client connected[0m
+[0;31mE (549931) websocket_client: Websocket client is not connected[0m
+[0;33mW (549938) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (549950) cam_hal: NO-SOI[0m
+[0;31mE (562953) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (562954) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (562954) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (562962) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (562979) websocket_client: WebSocket client error[0m
+[0;32mI (562985) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (562991) websocket_client: WebSocket client connected[0m
+[0;31mE (562996) websocket_client: Websocket client is not connected[0m
+[0;33mW (563003) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (576017) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (576018) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (576019) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (576026) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (576043) websocket_client: WebSocket client error[0m
+[0;32mI (576049) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (576055) websocket_client: WebSocket client connected[0m
+[0;31mE (576060) websocket_client: Websocket client is not connected[0m
+[0;33mW (576067) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (589081) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (589083) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (589083) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (589090) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (589108) websocket_client: WebSocket client error[0m
+[0;32mI (589113) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (589119) websocket_client: WebSocket client connected[0m
+[0;31mE (589125) websocket_client: Websocket client is not connected[0m
+[0;33mW (589131) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (589144) cam_hal: NO-SOI[0m
+[0;31mE (602145) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (602146) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (602146) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (602154) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (602171) websocket_client: WebSocket client error[0m
+[0;32mI (602177) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (602182) websocket_client: WebSocket client connected[0m
+[0;31mE (602188) websocket_client: Websocket client is not connected[0m
+[0;33mW (602195) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (602207) cam_hal: NO-SOI[0m
+[0;32mI (602259) esp32cam_security_gate: System information, channel: 10, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 34:60:f9:e5:3d:01, parent rssi: -72, free heap: 4155344[0m
+[0;31mE (615209) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (615210) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (615210) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (615218) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (615235) websocket_client: WebSocket client error[0m
+[0;32mI (615241) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (615246) websocket_client: WebSocket client connected[0m
+[0;31mE (615252) websocket_client: Websocket client is not connected[0m
+[0;33mW (615259) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (628273) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (628274) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (628274) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (628282) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (628299) websocket_client: WebSocket client error[0m
+[0;32mI (628305) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (628310) websocket_client: WebSocket client connected[0m
+[0;31mE (628316) websocket_client: Websocket client is not connected[0m
+[0;33mW (628323) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (641336) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (641337) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (641338) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (641345) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (641362) websocket_client: WebSocket client error[0m
+[0;32mI (641368) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (641374) websocket_client: WebSocket client connected[0m
+[0;31mE (641379) websocket_client: Websocket client is not connected[0m
+[0;33mW (641386) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (641399) cam_hal: NO-SOI[0m
+I (650387) wifi:new:<10,2>, old:<10,0>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+I (651411) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+[0;31mE (654400) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (654401) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (654401) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (654409) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (654426) websocket_client: WebSocket client error[0m
+[0;32mI (654432) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (654437) websocket_client: WebSocket client connected[0m
+[0;31mE (654443) websocket_client: Websocket client is not connected[0m
+[0;33mW (654450) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (654461) cam_hal: NO-SOI[0m
+[0;31mE (667464) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (667465) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (667465) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (667473) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (667490) websocket_client: WebSocket client error[0m
+[0;32mI (667496) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (667501) websocket_client: WebSocket client connected[0m
+[0;31mE (667507) websocket_client: Websocket client is not connected[0m
+[0;33mW (667514) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (680526) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (680527) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (680527) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (680535) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (680552) websocket_client: WebSocket client error[0m
+[0;32mI (680558) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (680563) websocket_client: WebSocket client connected[0m
+[0;31mE (680569) websocket_client: Websocket client is not connected[0m
+[0;33mW (680576) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (680589) cam_hal: NO-SOI[0m
+[0;31mE (693590) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (693591) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (693591) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (693599) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (693616) websocket_client: WebSocket client error[0m
+[0;32mI (693622) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (693627) websocket_client: WebSocket client connected[0m
+[0;31mE (693633) websocket_client: Websocket client is not connected[0m
+[0;33mW (693640) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (693651) cam_hal: NO-SOI[0m
+[0;32mI (702259) esp32cam_security_gate: System information, channel: 10, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 34:60:f9:e5:3d:01, parent rssi: -72, free heap: 4155020[0m
+[0;31mE (706653) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (706654) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (706655) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (706662) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (706681) websocket_client: WebSocket client error[0m
+[0;32mI (706685) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (706691) websocket_client: WebSocket client connected[0m
+[0;31mE (706697) websocket_client: Websocket client is not connected[0m
+[0;33mW (706703) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (719719) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (719720) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (719720) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (719728) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (719745) websocket_client: WebSocket client error[0m
+[0;32mI (719751) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (719756) websocket_client: WebSocket client connected[0m
+[0;31mE (719762) websocket_client: Websocket client is not connected[0m
+[0;33mW (719769) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (732784) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (732785) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (732785) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (732793) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (732810) websocket_client: WebSocket client error[0m
+[0;32mI (732816) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (732822) websocket_client: WebSocket client connected[0m
+[0;31mE (732827) websocket_client: Websocket client is not connected[0m
+[0;33mW (732834) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (732847) cam_hal: NO-SOI[0m
+[0;31mE (745847) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (745848) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (745849) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (745856) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (745873) websocket_client: WebSocket client error[0m
+[0;32mI (745879) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (745885) websocket_client: WebSocket client connected[0m
+[0;31mE (745890) websocket_client: Websocket client is not connected[0m
+[0;33mW (745897) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (745909) cam_hal: NO-SOI[0m
+[0;31mE (758911) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (758912) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (758912) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (758920) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (758937) websocket_client: WebSocket client error[0m
+[0;32mI (758943) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (758949) websocket_client: WebSocket client connected[0m
+[0;31mE (758954) websocket_client: Websocket client is not connected[0m
+[0;33mW (758961) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (771974) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (771975) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (771975) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (771983) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (772000) websocket_client: WebSocket client error[0m
+[0;32mI (772006) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (772012) websocket_client: WebSocket client connected[0m
+[0;31mE (772017) websocket_client: Websocket client is not connected[0m
+[0;33mW (772024) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (785037) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (785038) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (785038) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (785046) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (785063) websocket_client: WebSocket client error[0m
+[0;32mI (785069) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (785075) websocket_client: WebSocket client connected[0m
+[0;31mE (785080) websocket_client: Websocket client is not connected[0m
+[0;33mW (785087) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (785100) cam_hal: NO-SOI[0m
+[0;31mE (798101) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (798102) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (798102) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (798110) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (798127) websocket_client: WebSocket client error[0m
+[0;32mI (798133) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (798139) websocket_client: WebSocket client connected[0m
+[0;31mE (798144) websocket_client: Websocket client is not connected[0m
+[0;33mW (798151) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;32mI (802259) esp32cam_security_gate: System information, channel: 10, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 34:60:f9:e5:3d:01, parent rssi: -72, free heap: 4154904[0m
+[0;31mE (811165) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (811166) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (811166) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (811174) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (811191) websocket_client: WebSocket client error[0m
+[0;32mI (811197) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (811203) websocket_client: WebSocket client connected[0m
+[0;31mE (811208) websocket_client: Websocket client is not connected[0m
+[0;33mW (811215) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (824229) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (824230) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (824230) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (824238) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (824255) websocket_client: WebSocket client error[0m
+[0;32mI (824261) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (824267) websocket_client: WebSocket client connected[0m
+[0;31mE (824272) websocket_client: Websocket client is not connected[0m
+[0;33mW (824279) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (824292) cam_hal: NO-SOI[0m
+[0;31mE (837293) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (837294) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (837294) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (837302) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (837319) websocket_client: WebSocket client error[0m
+[0;32mI (837325) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (837331) websocket_client: WebSocket client connected[0m
+[0;31mE (837336) websocket_client: Websocket client is not connected[0m
+[0;33mW (837343) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (837356) cam_hal: NO-SOI[0m
+[0;31mE (850357) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (850358) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (850358) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (850366) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (850383) websocket_client: WebSocket client error[0m
+[0;32mI (850389) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (850395) websocket_client: WebSocket client connected[0m
+[0;31mE (850400) websocket_client: Websocket client is not connected[0m
+[0;33mW (850407) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (863419) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (863420) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (863420) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (863428) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (863445) websocket_client: WebSocket client error[0m
+[0;32mI (863451) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (863457) websocket_client: WebSocket client connected[0m
+[0;31mE (863462) websocket_client: Websocket client is not connected[0m
+[0;33mW (863469) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (876483) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (876484) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (876484) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (876493) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (876509) websocket_client: WebSocket client error[0m
+[0;32mI (876515) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (876521) websocket_client: WebSocket client connected[0m
+[0;31mE (876526) websocket_client: Websocket client is not connected[0m
+[0;33mW (876533) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (876546) cam_hal: NO-SOI[0m
+[0;31mE (889546) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (889547) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (889547) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (889555) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (889572) websocket_client: WebSocket client error[0m
+[0;32mI (889578) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (889584) websocket_client: WebSocket client connected[0m
+[0;31mE (889589) websocket_client: Websocket client is not connected[0m
+[0;33mW (889596) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (889608) cam_hal: NO-SOI[0m
+[0;32mI (902259) esp32cam_security_gate: System information, channel: 10, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 34:60:f9:e5:3d:01, parent rssi: -72, free heap: 4155028[0m
+[0;31mE (902611) esp-tls: [sock=59] select() timeout[0m
+[0;31mE (902612) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (902612) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (902620) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (902637) websocket_client: WebSocket client error[0m
+[0;32mI (902643) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (902649) websocket_client: WebSocket client connected[0m
+[0;31mE (902654) websocket_client: Websocket client is not connected[0m
+[0;33mW (902661) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (915673) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (915674) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (915674) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (915682) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (915699) websocket_client: WebSocket client error[0m
+[0;32mI (915705) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (915711) websocket_client: WebSocket client connected[0m
+[0;31mE (915716) websocket_client: Websocket client is not connected[0m
+[0;33mW (915723) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+I (922369) wifi:new:<10,2>, old:<10,0>, ap:<10,2>, sta:<10,2>, prof:1, snd_ch_cfg:0x0
+I (926362) wifi:new:<10,0>, old:<10,2>, ap:<10,2>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+[0;31mE (928738) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (928739) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (928739) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (928747) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (928764) websocket_client: WebSocket client error[0m
+[0;32mI (928770) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (928776) websocket_client: WebSocket client connected[0m
+[0;31mE (928781) websocket_client: Websocket client is not connected[0m
+[0;33mW (928788) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (928801) cam_hal: NO-SOI[0m
+[0;31mE (941802) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (941803) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (941804) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (941811) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (941828) websocket_client: WebSocket client error[0m
+[0;32mI (941834) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (941840) websocket_client: WebSocket client connected[0m
+[0;31mE (941845) websocket_client: Websocket client is not connected[0m
+[0;33mW (941852) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (954867) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (954868) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (954868) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (954876) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (954893) websocket_client: WebSocket client error[0m
+[0;32mI (954899) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (954905) websocket_client: WebSocket client connected[0m
+[0;31mE (954910) websocket_client: Websocket client is not connected[0m
+[0;33mW (954917) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (967930) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (967931) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (967931) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (967939) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (967956) websocket_client: WebSocket client error[0m
+[0;32mI (967962) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (967968) websocket_client: WebSocket client connected[0m
+[0;31mE (967973) websocket_client: Websocket client is not connected[0m
+[0;33mW (967980) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (967993) cam_hal: NO-SOI[0m
+[0;31mE (980994) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (980995) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (980995) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (981003) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (981020) websocket_client: WebSocket client error[0m
+[0;32mI (981026) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (981032) websocket_client: WebSocket client connected[0m
+[0;31mE (981037) websocket_client: Websocket client is not connected[0m
+[0;33mW (981044) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (981056) cam_hal: NO-SOI[0m
+[0;31mE (994058) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (994059) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (994059) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (994067) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (994084) websocket_client: WebSocket client error[0m
+[0;32mI (994090) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (994096) websocket_client: WebSocket client connected[0m
+[0;31mE (994101) websocket_client: Websocket client is not connected[0m
+[0;33mW (994108) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;32mI (1002259) esp32cam_security_gate: System information, channel: 10, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 34:60:f9:e5:3d:01, parent rssi: -71, free heap: 4155016[0m
+[0;31mE (1007122) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1007123) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1007124) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1007131) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1007149) websocket_client: WebSocket client error[0m
+[0;32mI (1007154) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1007160) websocket_client: WebSocket client connected[0m
+[0;31mE (1007166) websocket_client: Websocket client is not connected[0m
+[0;33mW (1007173) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1020185) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1020186) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1020187) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1020194) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1020212) websocket_client: WebSocket client error[0m
+[0;32mI (1020217) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1020223) websocket_client: WebSocket client connected[0m
+[0;31mE (1020229) websocket_client: Websocket client is not connected[0m
+[0;33mW (1020236) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1020249) cam_hal: NO-SOI[0m
+[0;31mE (1033250) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1033251) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1033251) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1033259) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1033277) websocket_client: WebSocket client error[0m
+[0;32mI (1033282) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1033288) websocket_client: WebSocket client connected[0m
+[0;31mE (1033294) websocket_client: Websocket client is not connected[0m
+[0;33mW (1033300) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1033313) cam_hal: NO-SOI[0m
+[0;31mE (1046313) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1046314) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1046314) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1046322) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1046340) websocket_client: WebSocket client error[0m
+[0;32mI (1046345) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1046351) websocket_client: WebSocket client connected[0m
+[0;31mE (1046357) websocket_client: Websocket client is not connected[0m
+[0;33mW (1046363) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1059378) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1059379) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1059379) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1059387) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1059405) websocket_client: WebSocket client error[0m
+[0;32mI (1059410) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1059416) websocket_client: WebSocket client connected[0m
+[0;31mE (1059422) websocket_client: Websocket client is not connected[0m
+[0;33mW (1059428) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1072440) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1072441) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1072441) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1072449) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1072467) websocket_client: WebSocket client error[0m
+[0;32mI (1072472) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1072478) websocket_client: WebSocket client connected[0m
+[0;31mE (1072484) websocket_client: Websocket client is not connected[0m
+[0;33mW (1072490) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1072503) cam_hal: NO-SOI[0m
+[0;31mE (1085505) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1085506) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1085506) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1085514) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1085532) websocket_client: WebSocket client error[0m
+[0;32mI (1085537) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1085543) websocket_client: WebSocket client connected[0m
+[0;31mE (1085549) websocket_client: Websocket client is not connected[0m
+[0;33mW (1085555) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1098569) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1098570) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1098570) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1098578) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1098596) websocket_client: WebSocket client error[0m
+[0;32mI (1098601) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1098607) websocket_client: WebSocket client connected[0m
+[0;31mE (1098613) websocket_client: Websocket client is not connected[0m
+[0;33mW (1098619) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;32mI (1102259) esp32cam_security_gate: System information, channel: 10, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 34:60:f9:e5:3d:01, parent rssi: -72, free heap: 4155024[0m
+[0;31mE (1111633) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1111634) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1111634) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1111642) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1111660) websocket_client: WebSocket client error[0m
+[0;32mI (1111665) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1111671) websocket_client: WebSocket client connected[0m
+[0;31mE (1111677) websocket_client: Websocket client is not connected[0m
+[0;33mW (1111683) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1111697) cam_hal: NO-SOI[0m
+[0;31mE (1124698) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1124699) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1124699) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1124707) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1124725) websocket_client: WebSocket client error[0m
+[0;32mI (1124730) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1124736) websocket_client: WebSocket client connected[0m
+[0;31mE (1124742) websocket_client: Websocket client is not connected[0m
+[0;33mW (1124748) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1124761) cam_hal: NO-SOI[0m
+[0;31mE (1137763) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1137764) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1137764) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1137772) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1137790) websocket_client: WebSocket client error[0m
+[0;32mI (1137795) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1137801) websocket_client: WebSocket client connected[0m
+[0;31mE (1137807) websocket_client: Websocket client is not connected[0m
+[0;33mW (1137813) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1150828) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1150829) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1150829) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1150837) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1150855) websocket_client: WebSocket client error[0m
+[0;32mI (1150860) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1150866) websocket_client: WebSocket client connected[0m
+[0;31mE (1150872) websocket_client: Websocket client is not connected[0m
+[0;33mW (1150878) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1163892) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1163893) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1163893) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1163901) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1163919) websocket_client: WebSocket client error[0m
+[0;32mI (1163924) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1163930) websocket_client: WebSocket client connected[0m
+[0;31mE (1163936) websocket_client: Websocket client is not connected[0m
+[0;33mW (1163942) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1163956) cam_hal: NO-SOI[0m
+[0;31mE (1176958) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1176959) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1176959) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1176967) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1176985) websocket_client: WebSocket client error[0m
+[0;32mI (1176990) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1176996) websocket_client: WebSocket client connected[0m
+[0;31mE (1177002) websocket_client: Websocket client is not connected[0m
+[0;33mW (1177008) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1177021) cam_hal: NO-SOI[0m
+[0;31mE (1190024) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1190025) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1190025) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1190033) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1190050) websocket_client: WebSocket client error[0m
+[0;32mI (1190056) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1190062) websocket_client: WebSocket client connected[0m
+[0;31mE (1190068) websocket_client: Websocket client is not connected[0m
+[0;33mW (1190074) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;32mI (1202259) esp32cam_security_gate: System information, channel: 10, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 34:60:f9:e5:3d:01, parent rssi: -71, free heap: 4154788[0m
+[0;31mE (1203088) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1203089) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1203089) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1203097) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1203115) websocket_client: WebSocket client error[0m
+[0;32mI (1203120) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1203126) websocket_client: WebSocket client connected[0m
+[0;31mE (1203132) websocket_client: Websocket client is not connected[0m
+[0;33mW (1203138) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1216152) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1216153) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1216153) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1216161) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1216179) websocket_client: WebSocket client error[0m
+[0;32mI (1216184) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1216190) websocket_client: WebSocket client connected[0m
+[0;31mE (1216196) websocket_client: Websocket client is not connected[0m
+[0;33mW (1216202) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1229216) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1229217) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1229217) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1229226) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1229243) websocket_client: WebSocket client error[0m
+[0;32mI (1229248) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1229254) websocket_client: WebSocket client connected[0m
+[0;31mE (1229260) websocket_client: Websocket client is not connected[0m
+[0;33mW (1229266) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1229279) cam_hal: NO-SOI[0m
+[0;31mE (1242281) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1242282) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1242282) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1242290) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1242308) websocket_client: WebSocket client error[0m
+[0;32mI (1242313) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1242319) websocket_client: WebSocket client connected[0m
+[0;31mE (1242325) websocket_client: Websocket client is not connected[0m
+[0;33mW (1242331) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1255345) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1255346) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1255346) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1255354) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1255372) websocket_client: WebSocket client error[0m
+[0;32mI (1255377) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1255384) websocket_client: WebSocket client connected[0m
+[0;31mE (1255389) websocket_client: Websocket client is not connected[0m
+[0;33mW (1255396) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1268409) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1268410) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1268410) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1268418) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1268436) websocket_client: WebSocket client error[0m
+[0;32mI (1268441) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1268447) websocket_client: WebSocket client connected[0m
+[0;31mE (1268453) websocket_client: Websocket client is not connected[0m
+[0;33mW (1268459) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1268473) cam_hal: NO-SOI[0m
+[0;31mE (1281473) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1281474) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1281474) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1281482) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1281500) websocket_client: WebSocket client error[0m
+[0;32mI (1281505) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1281511) websocket_client: WebSocket client connected[0m
+[0;31mE (1281517) websocket_client: Websocket client is not connected[0m
+[0;33mW (1281523) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1281536) cam_hal: NO-SOI[0m
+[0;31mE (1294537) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1294538) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1294538) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1294546) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1294564) websocket_client: WebSocket client error[0m
+[0;32mI (1294569) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1294575) websocket_client: WebSocket client connected[0m
+[0;31mE (1294581) websocket_client: Websocket client is not connected[0m
+[0;33mW (1294587) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;32mI (1302259) esp32cam_security_gate: System information, channel: 10, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 34:60:f9:e5:3d:01, parent rssi: -71, free heap: 4155008[0m
+[0;31mE (1307600) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1307601) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1307601) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1307609) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1307627) websocket_client: WebSocket client error[0m
+[0;32mI (1307632) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1307638) websocket_client: WebSocket client connected[0m
+[0;31mE (1307644) websocket_client: Websocket client is not connected[0m
+[0;33mW (1307650) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1320664) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1320665) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1320665) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1320673) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1320691) websocket_client: WebSocket client error[0m
+[0;32mI (1320696) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1320702) websocket_client: WebSocket client connected[0m
+[0;31mE (1320708) websocket_client: Websocket client is not connected[0m
+[0;33mW (1320714) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1320728) cam_hal: NO-SOI[0m
+[0;31mE (1333729) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1333730) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1333730) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1333738) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1333756) websocket_client: WebSocket client error[0m
+[0;32mI (1333761) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1333767) websocket_client: WebSocket client connected[0m
+[0;31mE (1333773) websocket_client: Websocket client is not connected[0m
+[0;33mW (1333779) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1333792) cam_hal: NO-SOI[0m
+[0;31mE (1346795) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1346796) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1346796) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1346804) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1346822) websocket_client: WebSocket client error[0m
+[0;32mI (1346827) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1346833) websocket_client: WebSocket client connected[0m
+[0;31mE (1346839) websocket_client: Websocket client is not connected[0m
+[0;33mW (1346845) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1359859) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1359860) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1359860) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1359868) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1359886) websocket_client: WebSocket client error[0m
+[0;32mI (1359891) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1359897) websocket_client: WebSocket client connected[0m
+[0;31mE (1359903) websocket_client: Websocket client is not connected[0m
+[0;33mW (1359909) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1372923) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1372924) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1372924) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1372932) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1372950) websocket_client: WebSocket client error[0m
+[0;32mI (1372955) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1372961) websocket_client: WebSocket client connected[0m
+[0;31mE (1372967) websocket_client: Websocket client is not connected[0m
+[0;33mW (1372973) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1372987) cam_hal: NO-SOI[0m
+[0;31mE (1385987) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1385988) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1385988) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1385996) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1386014) websocket_client: WebSocket client error[0m
+[0;32mI (1386019) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1386025) websocket_client: WebSocket client connected[0m
+[0;31mE (1386031) websocket_client: Websocket client is not connected[0m
+[0;33mW (1386037) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1386050) cam_hal: NO-SOI[0m
+[0;31mE (1399052) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1399053) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1399055) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1399061) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1399079) websocket_client: WebSocket client error[0m
+[0;32mI (1399084) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1399090) websocket_client: WebSocket client connected[0m
+[0;31mE (1399096) websocket_client: Websocket client is not connected[0m
+[0;33mW (1399102) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;32mI (1402259) esp32cam_security_gate: System information, channel: 10, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 34:60:f9:e5:3d:01, parent rssi: -73, free heap: 4154908[0m
+[0;31mE (1412116) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1412117) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1412117) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1412125) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1412143) websocket_client: WebSocket client error[0m
+[0;32mI (1412148) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1412154) websocket_client: WebSocket client connected[0m
+[0;31mE (1412160) websocket_client: Websocket client is not connected[0m
+[0;33mW (1412166) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1425181) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1425182) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1425182) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1425190) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1425208) websocket_client: WebSocket client error[0m
+[0;32mI (1425213) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1425220) websocket_client: WebSocket client connected[0m
+[0;31mE (1425225) websocket_client: Websocket client is not connected[0m
+[0;33mW (1425231) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1425245) cam_hal: NO-SOI[0m
+[0;31mE (1438245) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1438246) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1438246) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1438254) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1438272) websocket_client: WebSocket client error[0m
+[0;32mI (1438277) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1438283) websocket_client: WebSocket client connected[0m
+[0;31mE (1438289) websocket_client: Websocket client is not connected[0m
+[0;33mW (1438295) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1451309) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1451310) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1451310) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1451318) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1451336) websocket_client: WebSocket client error[0m
+[0;32mI (1451341) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1451347) websocket_client: WebSocket client connected[0m
+[0;31mE (1451353) websocket_client: Websocket client is not connected[0m
+[0;33mW (1451359) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1464372) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1464373) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1464373) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1464381) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1464399) websocket_client: WebSocket client error[0m
+[0;32mI (1464404) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1464410) websocket_client: WebSocket client connected[0m
+[0;31mE (1464416) websocket_client: Websocket client is not connected[0m
+[0;33mW (1464422) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1464436) cam_hal: NO-SOI[0m
+[0;31mE (1477436) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1477437) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1477437) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1477445) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1477463) websocket_client: WebSocket client error[0m
+[0;32mI (1477468) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1477474) websocket_client: WebSocket client connected[0m
+[0;31mE (1477480) websocket_client: Websocket client is not connected[0m
+[0;33mW (1477486) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1477499) cam_hal: NO-SOI[0m
+[0;31mE (1490500) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1490501) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1490501) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1490509) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1490527) websocket_client: WebSocket client error[0m
+[0;32mI (1490532) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1490538) websocket_client: WebSocket client connected[0m
+[0;31mE (1490544) websocket_client: Websocket client is not connected[0m
+[0;33mW (1490550) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;32mI (1502259) esp32cam_security_gate: System information, channel: 10, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 34:60:f9:e5:3d:01, parent rssi: -72, free heap: 4155020[0m
+[0;31mE (1503565) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1503566) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1503566) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1503574) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1503592) websocket_client: WebSocket client error[0m
+[0;32mI (1503597) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1503603) websocket_client: WebSocket client connected[0m
+[0;31mE (1503609) websocket_client: Websocket client is not connected[0m
+[0;33mW (1503615) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1516629) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1516630) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1516630) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1516638) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1516656) websocket_client: WebSocket client error[0m
+[0;32mI (1516661) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1516667) websocket_client: WebSocket client connected[0m
+[0;31mE (1516673) websocket_client: Websocket client is not connected[0m
+[0;33mW (1516679) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1516693) cam_hal: NO-SOI[0m
+[0;31mE (1529695) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1529696) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1529696) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1529704) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1529722) websocket_client: WebSocket client error[0m
+[0;32mI (1529727) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1529733) websocket_client: WebSocket client connected[0m
+[0;31mE (1529739) websocket_client: Websocket client is not connected[0m
+[0;33mW (1529745) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1529759) cam_hal: NO-SOI[0m
+[0;31mE (1542759) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1542760) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1542760) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1542768) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1542786) websocket_client: WebSocket client error[0m
+[0;32mI (1542791) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1542797) websocket_client: WebSocket client connected[0m
+[0;31mE (1542803) websocket_client: Websocket client is not connected[0m
+[0;33mW (1542809) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1555824) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1555825) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1555825) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1555833) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1555851) websocket_client: WebSocket client error[0m
+[0;32mI (1555856) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1555862) websocket_client: WebSocket client connected[0m
+[0;31mE (1555868) websocket_client: Websocket client is not connected[0m
+[0;33mW (1555874) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1568889) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1568890) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1568891) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1568898) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1568916) websocket_client: WebSocket client error[0m
+[0;32mI (1568921) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1568927) websocket_client: WebSocket client connected[0m
+[0;31mE (1568933) websocket_client: Websocket client is not connected[0m
+[0;33mW (1568939) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1568953) cam_hal: NO-SOI[0m
+[0;31mE (1581955) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1581956) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1581956) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1581964) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1581982) websocket_client: WebSocket client error[0m
+[0;32mI (1581987) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1581994) websocket_client: WebSocket client connected[0m
+[0;31mE (1581999) websocket_client: Websocket client is not connected[0m
+[0;33mW (1582005) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1582019) cam_hal: NO-SOI[0m
+[0;31mE (1595021) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1595022) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1595022) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1595030) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1595048) websocket_client: WebSocket client error[0m
+[0;32mI (1595053) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1595059) websocket_client: WebSocket client connected[0m
+[0;31mE (1595065) websocket_client: Websocket client is not connected[0m
+[0;33mW (1595071) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;32mI (1602259) esp32cam_security_gate: System information, channel: 10, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 34:60:f9:e5:3d:01, parent rssi: -74, free heap: 4155020[0m
+[0;31mE (1608084) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1608085) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1608085) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1608093) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1608111) websocket_client: WebSocket client error[0m
+[0;32mI (1608116) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1608122) websocket_client: WebSocket client connected[0m
+[0;31mE (1608128) websocket_client: Websocket client is not connected[0m
+[0;33mW (1608134) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1621148) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1621149) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1621149) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1621157) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1621175) websocket_client: WebSocket client error[0m
+[0;32mI (1621180) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1621186) websocket_client: WebSocket client connected[0m
+[0;31mE (1621192) websocket_client: Websocket client is not connected[0m
+[0;33mW (1621198) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1621212) cam_hal: NO-SOI[0m
+[0;31mE (1634212) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1634213) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1634213) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1634221) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1634239) websocket_client: WebSocket client error[0m
+[0;32mI (1634244) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1634250) websocket_client: WebSocket client connected[0m
+[0;31mE (1634256) websocket_client: Websocket client is not connected[0m
+[0;33mW (1634262) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1634275) cam_hal: NO-SOI[0m
+[0;31mE (1647277) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1647279) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1647279) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1647287) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1647304) websocket_client: WebSocket client error[0m
+[0;32mI (1647310) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1647316) websocket_client: WebSocket client connected[0m
+[0;31mE (1647322) websocket_client: Websocket client is not connected[0m
+[0;33mW (1647328) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1660342) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1660343) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1660343) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1660351) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1660369) websocket_client: WebSocket client error[0m
+[0;32mI (1660374) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1660380) websocket_client: WebSocket client connected[0m
+[0;31mE (1660386) websocket_client: Websocket client is not connected[0m
+[0;33mW (1660392) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1673407) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1673408) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1673408) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1673416) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1673434) websocket_client: WebSocket client error[0m
+[0;32mI (1673439) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1673445) websocket_client: WebSocket client connected[0m
+[0;31mE (1673451) websocket_client: Websocket client is not connected[0m
+[0;33mW (1673457) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1673471) cam_hal: NO-SOI[0m
+[0;31mE (1686470) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1686471) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1686472) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1686479) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1686497) websocket_client: WebSocket client error[0m
+[0;32mI (1686502) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1686508) websocket_client: WebSocket client connected[0m
+[0;31mE (1686514) websocket_client: Websocket client is not connected[0m
+[0;33mW (1686521) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1686533) cam_hal: NO-SOI[0m
+[0;31mE (1699534) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1699535) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1699535) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1699543) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1699561) websocket_client: WebSocket client error[0m
+[0;32mI (1699566) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1699572) websocket_client: WebSocket client connected[0m
+[0;31mE (1699578) websocket_client: Websocket client is not connected[0m
+[0;33mW (1699584) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;32mI (1702259) esp32cam_security_gate: System information, channel: 10, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 34:60:f9:e5:3d:01, parent rssi: -73, free heap: 4155572[0m
+[0;31mE (1712596) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1712597) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1712597) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1712605) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1712623) websocket_client: WebSocket client error[0m
+[0;32mI (1712628) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1712634) websocket_client: WebSocket client connected[0m
+[0;31mE (1712640) websocket_client: Websocket client is not connected[0m
+[0;33mW (1712646) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1725660) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1725661) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1725662) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1725669) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1725687) websocket_client: WebSocket client error[0m
+[0;32mI (1725692) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1725698) websocket_client: WebSocket client connected[0m
+[0;31mE (1725704) websocket_client: Websocket client is not connected[0m
+[0;33mW (1725711) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (1725724) cam_hal: NO-SOI[0m
+[0;31mE (1738725) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1738726) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1738726) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1738734) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1738752) websocket_client: WebSocket client error[0m
+[0;32mI (1738757) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1738763) websocket_client: WebSocket client connected[0m
+[0;31mE (1738769) websocket_client: Websocket client is not connected[0m
+[0;33mW (1738775) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (1751790) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (1751791) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1751792) transport_ws: Error connecting to host 192.168.0.185:3000[0m
+[0;31mE (1751799) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (1751817) websocket_client: WebSocket client error[0m
+[0;32mI (1751822) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (1751828) websocket_client: WebSocket client connected[0m
+[0;31mE (1751834) websocket_client: Websocket client is not connected[0m
+[0;33mW (1751841) websocket_client: Waiting for WebSocket connection to resume sending image...[0m

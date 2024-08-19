@@ -1,0 +1,357 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (29) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 18 2024 03:13:10[0m
+[0;33mW (29) boot: Unicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (82) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (97) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (105) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (112) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (120) boot: End of partition table[0m
+[0;32mI (124) boot: No factory image, trying OTA 0[0m
+[0;32mI (129) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=30dfch (200188) map[0m
+[0;32mI (206) esp_image: segment 1: paddr=00040e24 vaddr=3ffbdb60 size=0608ch ( 24716) load[0m
+[0;32mI (216) esp_image: segment 2: paddr=00046eb8 vaddr=40080000 size=09160h ( 37216) load[0m
+[0;32mI (231) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=cb244h (832068) map[0m
+[0;32mI (516) esp_image: segment 4: paddr=0011b26c vaddr=40089160 size=15050h ( 86096) load[0m
+[0;32mI (565) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (571) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (571) boot: Disabling RNG early entropy source...[0m
+[0;32mI (582) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (583) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (583) esp_psram: Speed: 40MHz[0m
+[0;32mI (586) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (594) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (603) cpu_start: Unicore app[0m
+[0;32mI (607) cpu_start: Single core mode[0m
+[0;32mI (1536) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1544) cpu_start: Pro cpu start user code[0m
+[0;32mI (1544) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1544) app_init: Application information:[0m
+[0;32mI (1548) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1554) app_init: App version:      93e19e9-dirty[0m
+[0;32mI (1559) app_init: Compile time:     Aug 18 2024 03:13:03[0m
+[0;32mI (1565) app_init: ELF file SHA256:  74948a4b2...[0m
+[0;32mI (1570) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1576) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1580) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1586) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1591) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1598) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1604) heap_init: At 3FFC8A10 len 000175F0 (93 KiB): DRAM[0m
+[0;32mI (1610) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1617) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1623) heap_init: At 4009E1B0 len 00001E50 (7 KiB): IRAM[0m
+[0;32mI (1629) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1636) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1644) spi_flash: detected chip: generic[0m
+[0;32mI (1648) spi_flash: flash io: dio[0m
+[0;33mW (1652) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1663) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1669) main_task: Started on CPU0[0m
+[0;32mI (1672) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1681) main_task: Calling app_main()[0m
+[0;32mI (1700) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1704) wifi:wifi driver task: 3ffbd5e0, prio:23, stack:6656, core=0
+I (1707) wifi:wifi firmware version: 0caa81945
+I (1708) wifi:wifi certification version: v7.0
+I (1710) wifi:config NVS flash: enabled
+I (1714) wifi:config nano formating: disabled
+I (1718) wifi:Init data frame dynamic rx buffer num: 32
+I (1723) wifi:Init static rx mgmt buffer num: 5
+I (1727) wifi:Init management short buffer num: 32
+I (1732) wifi:Init static tx buffer num: 16
+I (1736) wifi:Init tx cache buffer num: 32
+I (1739) wifi:Init static rx buffer size: 1600
+I (1744) wifi:Init static rx buffer num: 10
+I (1747) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1752) wifi_init: accept mbox: 6[0m
+[0;32mI (1755) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1759) wifi_init: udp mbox: 6[0m
+[0;32mI (1763) wifi_init: tcp mbox: 6[0m
+[0;32mI (1767) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1771) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1776) wifi_init: tcp mss: 1440[0m
+[0;32mI (1780) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1784) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1790) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1796) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (1858) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+I (1870) wifi:mode : null
+I (1872) wifi:mode : softAP (08:a6:f7:11:51:a9)
+I (1874) wifi:Total power save buffer number: 8
+I (1874) wifi:Init max length of beacon: 752/752
+I (1877) wifi:Init max length of beacon: 752/752
+[0;32mI (1884) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+Add netif ap with 93e19e9(commit id)
+[0;32mI (1893) bridge_common: netif list add success[0m
+[0;31mE (1898) NVS: Failed to open NVS namespace[0m
+[0;32mI (1903) bridge_common: IP Address:192.168.5.1[0m
+[0;32mI (1908) bridge_common: GW Address:192.168.5.1[0m
+[0;32mI (1913) bridge_common: NM Address:255.255.255.0[0m
+[0;32mI (1918) bridge_common: [WIFI_AP_DEF ][0m
+[0;32mI (1924) bridge_common: Set ip info:192.168.5.1[0m
+[0;32mI (1928) bridge_wifi: SoftAP IP network segment has changed, deauth all station[0m
+I (1940) wifi:Disabled PMF config for SoftAP
+I (1942) wifi:Total power save buffer number: 8
+[0;32mI (1947) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (1954) bridge_common: [WIFI_AP_DEF ]Name Server1: 114.114.114.114[0m
+[0;32mI (1960) bridge_common: DHCPS Restart, deauth all station[0m
+Add netif sta with 93e19e9(commit id)
+[0;32mI (1970) bridge_common: netif list add success[0m
+I (1976) wifi:mode : sta (08:a6:f7:11:51:a8) + softAP (08:a6:f7:11:51:a9)
+I (1982) wifi:enable tsf
+[0;31mE (1986) NVS: Failed to read IP info from NVS[0m
+I (1989) wifi:Disabled PMF config for STA
+[0;32mI (1993) bridge_wifi: [esp_bridge_wifi_set_config] sta ssid: Xiaomi13T password: password[0m
+[0;32mI (2002) bridge_wifi: [esp_bridge_wifi_set_config] softap ssid: ESP_Bridge_1151a9 password: 12345678[0m
+I (2185) wifi:Total power save buffer number: 8
+[0;32mI (2189) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (2190) bridge_wifi: SoftAP config changed, deauth all station[0m
+[0;32mI (2194) Mesh-Lite: esp-mesh-lite component version: 1.0.0[0m
+I (2201) ESPNOW: espnow [version: 1.0] init
+[0;32mI (2204) [vendor_ie]: Mesh-Lite commit id: bc9302d
+ [0m
+[0;31mE (2211) [vendor_ie]: Error Get! [0m
+[0;33mW (2214) [vendor_ie]: Mesh ID is not saved in flash [0m
+[0;32mI (2220) [vendor_ie]: Mesh ID: 77 [0m
+[0;33mW (2224) [vendor_ie]: Error Get[4354] [0m
+[0;33mW (2228) [vendor_ie]: Error Get[4354] [0m
+[0;32mI (2234) [ESP_Mesh_Lite_Comm]: msg action add success [0m
+[0;32mI (2240) [ESP_Mesh_Lite_Comm]: Bind Socket 54, port 6364 [0m
+[0;32mI (2245) [ESP_Mesh_Lite_Comm]: Bind Socket 55, port 6363 [0m
+[0;32mI (2251) [ESP_Mesh_Lite_Comm]: Bind Socket 56, port 6366 [0m
+[0;32mI (2257) [ESP_Mesh_Lite_Comm]: Bind Socket 57, port 6365 [0m
+[0;32mI (2263) [mesh-lite-espnow]: Start espnow task [0m
+[0;32mI (2270) Mesh-Lite: Mesh-Lite connecting[0m
+[0;32mI (2275) [vendor_ie]: esp_mesh_lite_wifi_scan_start return ESP_OK [0m
+[0;31mE (2281) rc522: Read/write test failed[0m
+[0;32mI (2284) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (2294) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (2303) cam_hal: cam init ok[0m
+[0;32mI (2307) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (2310) sccb: sccb_i2c_port=1[0m
+[0;32mI (2315) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2353) camera: Detected camera at address=0x30[0m
+[0;32mI (2356) camera: Detected OV2640 camera[0m
+[0;32mI (2356) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (2444) cam_hal: buffer_size: 32768, half_buffer_size: 4096, node_buffer_size: 2048, node_cnt: 16, total_cnt: 3[0m
+[0;32mI (2445) cam_hal: Allocating 15360 Byte frame buffer in PSRAM[0m
+[0;32mI (2452) cam_hal: cam config ok[0m
+[0;32mI (2455) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8[0m
+[0;33mW (2546) websocket_client: `network_timeout_ms` is not set, or it is less than or equal to zero, using default time out 10000 (milliseconds)[0m
+[0;31mE (2549) FreeRTOS: FreeRTOS Task "send_image_to_w" should not return, Aborting now![0m
+
+abort() was called at PC 0x4009002b on core 0
+
+
+Backtrace: 0x40081989:0x3fffad40 0x4008f0c9:0x3fffad60 0x40097809:0x3fffad80 0x4009002b:0x3fffadf0
+
+
+
+
+ELF file SHA256: 74948a4b2
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (29) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 18 2024 03:13:10[0m
+[0;33mW (29) boot: Unicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (37) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (67) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (82) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (97) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (105) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (112) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (120) boot: End of partition table[0m
+[0;32mI (124) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=30dfch (200188) map[0m
+[0;32mI (201) esp_image: segment 1: paddr=00040e24 vaddr=3ffbdb60 size=0608ch ( 24716) load[0m
+[0;32mI (211) esp_image: segment 2: paddr=00046eb8 vaddr=40080000 size=09160h ( 37216) load[0m
+[0;32mI (226) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=cb244h (832068) map[0m
+[0;32mI (511) esp_image: segment 4: paddr=0011b26c vaddr=40089160 size=15050h ( 86096) load[0m
+[0;32mI (560) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (560) boot: Disabling RNG early entropy source...[0m
+[0;32mI (572) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (573) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (573) esp_psram: Speed: 40MHz[0m
+[0;32mI (576) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (584) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (593) cpu_start: Unicore app[0m
+[0;32mI (596) cpu_start: Single core mode[0m
+[0;32mI (1526) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1534) cpu_start: Pro cpu start user code[0m
+[0;32mI (1534) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1534) app_init: Application information:[0m
+[0;32mI (1537) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1543) app_init: App version:      93e19e9-dirty[0m
+[0;32mI (1549) app_init: Compile time:     Aug 18 2024 03:13:03[0m
+[0;32mI (1555) app_init: ELF file SHA256:  74948a4b2...[0m
+[0;32mI (1560) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1565) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1570) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1575) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1580) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1588) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1594) heap_init: At 3FFC8A10 len 000175F0 (93 KiB): DRAM[0m
+[0;32mI (1600) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1606) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1613) heap_init: At 4009E1B0 len 00001E50 (7 KiB): IRAM[0m
+[0;32mI (1619) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1626) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1634) spi_flash: detected chip: generic[0m
+[0;32mI (1637) spi_flash: flash io: dio[0m
+[0;33mW (1642) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1653) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1658) main_task: Started on CPU0[0m
+[0;32mI (1661) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1670) main_task: Calling app_main()[0m
+[0;32mI (1691) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1694) wifi:wifi driver task: 3ffbd654, prio:23, stack:6656, core=0
+I (1697) wifi:wifi firmware version: 0caa81945
+I (1697) wifi:wifi certification version: v7.0
+I (1701) wifi:config NVS flash: enabled
+I (1705) wifi:config nano formating: disabled
+I (1709) wifi:Init data frame dynamic rx buffer num: 32
+I (1714) wifi:Init static rx mgmt buffer num: 5
+I (1718) wifi:Init management short buffer num: 32
+I (1723) wifi:Init static tx buffer num: 16
+I (1727) wifi:Init tx cache buffer num: 32
+I (1730) wifi:Init static rx buffer size: 1600
+I (1735) wifi:Init static rx buffer num: 10
+I (1738) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1743) wifi_init: accept mbox: 6[0m
+[0;32mI (1746) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1751) wifi_init: udp mbox: 6[0m
+[0;32mI (1754) wifi_init: tcp mbox: 6[0m
+[0;32mI (1758) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1762) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1767) wifi_init: tcp mss: 1440[0m
+[0;32mI (1771) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1775) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1781) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (1844) wifi:mode : null
+I (1847) wifi:mode : softAP (08:a6:f7:11:51:a9)
+I (1848) wifi:Total power save buffer number: 8
+I (1849) wifi:Init max length of beacon: 752/752
+I (1851) wifi:Init max length of beacon: 752/752
+[0;32mI (1858) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+Add netif ap with 93e19e9(commit id)
+[0;32mI (1867) bridge_common: netif list add success[0m
+[0;32mI (1874) bridge_common: [WIFI_AP_DEF ][0m
+[0;32mI (1878) bridge_common: Set ip info:192.168.5.1[0m
+[0;32mI (1882) bridge_wifi: SoftAP IP network segment has changed, deauth all station[0m
+I (1892) wifi:Disabled PMF config for SoftAP
+I (1895) wifi:Total power save buffer number: 8
+[0;32mI (1901) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (1908) bridge_common: [WIFI_AP_DEF ]Name Server1: 114.114.114.114[0m
+[0;32mI (1914) bridge_common: DHCPS Restart, deauth all station[0m
+Add netif sta with 93e19e9(commit id)
+[0;32mI (1924) bridge_common: netif list add success[0m
+I (1930) wifi:mode : sta (08:a6:f7:11:51:a8) + softAP (08:a6:f7:11:51:a9)
+I (1936) wifi:enable tsf
+[0;31mE (1940) NVS: Failed to read IP info from NVS[0m
+I (1943) wifi:Disabled PMF config for STA
+[0;32mI (1947) bridge_wifi: [esp_bridge_wifi_set_config] sta ssid: Xiaomi13T password: password[0m
+[0;32mI (1956) bridge_wifi: [esp_bridge_wifi_set_config] softap ssid: ESP_Bridge_1151a9 password: 12345678[0m
+I (2139) wifi:Total power save buffer number: 8
+[0;32mI (2143) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (2144) bridge_wifi: SoftAP config changed, deauth all station[0m
+[0;32mI (2148) Mesh-Lite: esp-mesh-lite component version: 1.0.0[0m
+I (2155) ESPNOW: espnow [version: 1.0] init
+[0;32mI (2158) [vendor_ie]: Mesh-Lite commit id: bc9302d
+ [0m
+[0;32mI (2165) [vendor_ie]: Mesh ID: 77 [0m
+[0;32mI (2170) [ESP_Mesh_Lite_Comm]: msg action add success [0m
+[0;32mI (2176) [ESP_Mesh_Lite_Comm]: Bind Socket 54, port 6364 [0m
+[0;32mI (2180) [ESP_Mesh_Lite_Comm]: Bind Socket 55, port 6363 [0m
+[0;32mI (2186) [ESP_Mesh_Lite_Comm]: Bind Socket 56, port 6366 [0m
+[0;32mI (2192) [ESP_Mesh_Lite_Comm]: Bind Socket 57, port 6365 [0m
+[0;32mI (2199) [mesh-lite-espnow]: Start espnow task [0m
+[0;32mI (2205) Mesh-Lite: Mesh-Lite connecting[0m
+[0;32mI (2211) [vendor_ie]: esp_mesh_lite_wifi_scan_start return ESP_OK [0m
+[0;31mE (2217) rc522: Read/write test failed[0m
+[0;32mI (2219) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (2229) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (2239) cam_hal: cam init ok[0m
+[0;32mI (2242) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (2246) sccb: sccb_i2c_port=1[0m
+[0;32mI (2250) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2291) camera: Camera probe failed with error 0x105(ESP_ERR_NOT_FOUND)[0m
+[0;31mE (2291) setup_esp32_cam: Camera Init Failed[0m
+[0;32mI (2292) main_task: Returned from app_main()[0m
+[0;32mI (4053) [vendor_ie]: Mesh-Lite Scan done [0m
+[0;32mI (4055) [vendor_ie]: RTC store: temp_mesh_id:255; ssid:Xiaomi13T; bssid:00:00:00:00:00:00; crc:1883151208 [0m
+[0;32mI (4059) [vendor_ie]: wifi_cfg Xiaomi13T router_config Xiaomi13T [0m
+[0;32mI (4067) [vendor_ie]: esp_mesh_lite_wifi_connect return ESP_OK [0m
+I (6344) wifi:ap channel adjust o:1,1 n:13,2
+I (6345) wifi:new:<13,0>, old:<1,1>, ap:<13,2>, sta:<13,0>, prof:1, snd_ch_cfg:0x0
+I (6346) wifi:state: init -> auth (0xb0)
+I (6424) wifi:state: auth -> assoc (0x0)
+I (7425) wifi:state: assoc -> init (0x2700)
+I (7427) wifi:new:<13,0>, old:<13,0>, ap:<13,2>, sta:<13,0>, prof:1, snd_ch_cfg:0x0
+[0;32mI (8171) [vendor_ie]: esp_mesh_lite_wifi_connect return ESP_OK [0m
+[0;32mI (8172) [ESP_Mesh_Lite_Comm]: Retry to connect to the AP [0m
+W (12229) wifi:Haven't to connect to a suitable AP now!
+[0;32mI (12229) esp32cam_security_gate: System information, channel: 13, layer: 0, self mac: 08:a6:f7:11:51:a8, parent bssid: 00:00:00:00:00:00, parent rssi: -120, free heap: 4295512[0m
+[0;32mI (13171) [vendor_ie]: esp_mesh_lite_wifi_connect return ESP_OK [0m
+[0;32mI (13172) [ESP_Mesh_Lite_Comm]: Retry to connect to the AP [0m
+I (13199) wifi:new:<13,2>, old:<13,0>, ap:<13,2>, sta:<13,0>, prof:1, snd_ch_cfg:0x0
+I (13201) wifi:state: init -> auth (0xb0)
+I (13208) wifi:state: auth -> assoc (0x0)
+I (13217) wifi:state: assoc -> run (0x10)
+I (13326) wifi:connected with Xiaomi13T, aid = 2, channel 13, BW20, bssid = 62:99:11:7e:0d:6b
+I (13326) wifi:security: WPA2-PSK, phy: bgn, rssi: -76
+I (13329) wifi:pm start, type: 1
+
+I (13331) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (13340) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (13347) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (13967) bridge_common: [WIFI_AP_DEF ]Name Server1: 192.168.26.27[0m
+[0;32mI (14859) esp_netif_handlers: sta ip: 192.168.26.175, mask: 255.255.255.0, gw: 192.168.26.27[0m
+[0;32mI (14860) bridge_wifi: Connected with IP Address:192.168.26.175[0m
+[0;32mI (14865) [vendor_ie]: RTC store: temp_mesh_id:175; ssid:Xiaomi13T; bssid:00:00:00:00:00:00; crc:317619198 [0m
+[0;31mE (14876) [ESP_Mesh_Lite_Comm]: Error Get! [0m
+[0;33mW (14879) [ESP_Mesh_Lite_Comm]: argot is not saved in flash [0m
+[0;32mI (14890) esp32cam_security_gate: TCP client write task is running[0m
+[0;32mI (22229) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 62:99:11:7e:0d:6b, parent rssi: -55, free heap: 4289428[0m
+[0;32mI (32229) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 62:99:11:7e:0d:6b, parent rssi: -58, free heap: 4289420[0m
+[0;32mI (42229) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 62:99:11:7e:0d:6b, parent rssi: -58, free heap: 4289424[0m
+[0;32mI (52229) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 62:99:11:7e:0d:6b, parent rssi: -48, free heap: 4289424[0m
+[0;32mI (62229) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 62:99:11:7e:0d:6b, parent rssi: -47, free heap: 4289412[0m

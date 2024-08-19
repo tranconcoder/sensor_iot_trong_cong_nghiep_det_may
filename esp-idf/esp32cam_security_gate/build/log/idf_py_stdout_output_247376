@@ -1,0 +1,160 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/bootloader/esp-idf/esptool_py && /home/tvconss/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/tvconss/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/bootloader/bootloader.bin
+Bootloader binary size 0x6720 bytes. 0x8e0 bytes (8%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/esp32cam_security_gate.c.obj
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c: In function 'task_stream_cam_to_platform':
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c:227:13: warning: unused variable 'image_id' [-Wunused-variable]
+  227 |     uint8_t image_id = 0;
+      |             ^~~~~~~~
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c: In function 'tag_scanned_cb':
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c:277:9: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  277 |         task_auth_rfid_serial_number,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         |
+      |         void (*)(uint64_t) {aka void (*)(long long unsigned int)}
+In file included from /home/tvconss/esp/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:20,
+                 from /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:1533,
+                 from /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c:2:
+/home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:371:44: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'void (*)(uint64_t)' {aka 'void (*)(long long unsigned int)'}
+  371 |     BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+      |                             ~~~~~~~~~~~~~~~^~~~~~~~~~
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c:280:9: warning: passing argument 4 of 'xTaskCreate' makes pointer from integer without a cast [-Wint-conversion]
+  280 |         serial_number,
+      |         ^~~~~~~~~~~~~
+      |         |
+      |         uint64_t {aka long long unsigned int}
+/home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:374:42: note: expected 'void * const' but argument is of type 'uint64_t' {aka 'long long unsigned int'}
+  374 |                             void * const pvParameters,
+      |                             ~~~~~~~~~~~~~^~~~~~~~~~~~
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c:282:9: warning: passing argument 6 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  282 |         pv_task_auth_rfid_serial_number);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         |
+      |         TaskHandle_t {aka struct tskTaskControlBlock *}
+/home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:376:50: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  376 |                             TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION
+      |                             ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c: In function 'app_main':
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c:305:95: warning: passing argument 4 of 'xTimerCreate' makes pointer from integer without a cast [-Wint-conversion]
+  305 |     TimerHandle_t timer = xTimerCreate("print_system_info", 10000 / portTICK_PERIOD_MS, true, 2, print_system_info_timercb);
+      |                                                                                               ^
+      |                                                                                               |
+      |                                                                                               int
+In file included from /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/event_groups.h:41,
+                 from /home/tvconss/esp/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:25:
+/home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/timers.h:237:46: note: expected 'void * const' but argument is of type 'int'
+  237 |                                 void * const pvTimerID,
+      |                                 ~~~~~~~~~~~~~^~~~~~~~~
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c: At top level:
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c:36:12: warning: array 'howsmyssl_com_root_cert_pem_start' assumed to have one element
+   36 | const char howsmyssl_com_root_cert_pem_start[] asm("_binary_howsmyssl_com_root_cert_pem_start");
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c:20:
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_rc522/include/setup_rc522.h:6:20: warning: 'SETUP_RC522_TAG' defined but not used [-Wunused-variable]
+    6 | static const char *SETUP_RC522_TAG;
+      |                    ^~~~~~~~~~~~~~~
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_rc522/include/setup_rc522.h:5:23: warning: 'scanner' defined but not used [-Wunused-variable]
+    5 | static rc522_handle_t scanner;
+      |                       ^~~~~~~
+In file included from /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/managed_components/espressif__mesh_lite/include/esp_mesh_lite.h:16,
+                 from /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c:8:
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/managed_components/espressif__mesh_lite/include/esp_mesh_lite_espnow.h:16:16: warning: 's_broadcast_mac' defined but not used [-Wunused-variable]
+   16 | static uint8_t s_broadcast_mac[ESP_NOW_ETH_ALEN] = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF };
+      |                ^~~~~~~~~~~~~~~
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+warning: the int symbol BRIDGE_SOFTAP_MAX_CONNECT_NUMBER (defined at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/managed_components/espressif__iot_bridge/Kconfig:108) has a non-int default BRIDGE_CUSTOM_MAX_CONNECT_NUMBER (undefined)
+[7/10] Linking CXX executable mesh_local_control.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.8.dev4
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/mesh_local_control.bin
+[9/10] cd /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/esp-idf/esptool_py && /home/tvconss/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/tvconss/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/partition_table/partition-table.bin /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/mesh_local_control.bin
+mesh_local_control.bin binary size 0x11ffb0 bytes. Smallest app partition is 0x1e0000 bytes. 0xc0050 bytes (40%) free.
+[9/10] cd /home/tvconss/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/tvconss/esp/esp-idf -D "SERIAL_TOOL=/home/tvconss/.espressif/python_env/idf5.3_py3.12_env/bin/python;;/home/tvconss/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build -P /home/tvconss/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x10000 mesh_local_control.bin 0x8000 partition_table/partition-table.bin 0xd000 ota_data_initial.bin
+esptool.py v4.8.dev4
+Serial port /dev/ttyUSB0
+Connecting..........
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 08:a6:f7:11:51:a8
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0012ffff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000d000 to 0x0000efff...
+SHA digest in image updated
+Compressed 26400 bytes to 16224...
+Writing at 0x00001000... (100 %)
+Wrote 26400 bytes (16224 compressed) at 0x00001000 in 0.5 seconds (effective 417.3 kbit/s)...
+Hash of data verified.
+Compressed 1179568 bytes to 721775...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001d89a... (4 %)
+Writing at 0x0002af97... (6 %)
+Writing at 0x0003236c... (8 %)
+Writing at 0x000371ba... (11 %)
+Writing at 0x0004036a... (13 %)
+Writing at 0x000499c2... (15 %)
+Writing at 0x0004f645... (17 %)
+Writing at 0x000555b4... (20 %)
+Writing at 0x0005b83b... (22 %)
+Writing at 0x00060d95... (24 %)
+Writing at 0x0006719a... (26 %)
+Writing at 0x0006e2c0... (28 %)
+Writing at 0x000742e3... (31 %)
+Writing at 0x0007a649... (33 %)
+Writing at 0x0008043f... (35 %)
+Writing at 0x00086585... (37 %)
+Writing at 0x0008c433... (40 %)
+Writing at 0x000924a9... (42 %)
+Writing at 0x00098514... (44 %)
+Writing at 0x0009f108... (46 %)
+Writing at 0x000a4e91... (48 %)
+Writing at 0x000aacdf... (51 %)
+Writing at 0x000b14ae... (53 %)
+Writing at 0x000b718a... (55 %)
+Writing at 0x000bd0e0... (57 %)
+Writing at 0x000c296b... (60 %)
+Writing at 0x000c7b64... (62 %)
+Writing at 0x000cd011... (64 %)
+Writing at 0x000d27b1... (66 %)
+Writing at 0x000d7ebf... (68 %)
+Writing at 0x000dd141... (71 %)
+Writing at 0x000e2973... (73 %)
+Writing at 0x000e8945... (75 %)
+Writing at 0x000ee3e4... (77 %)
+Writing at 0x000f4333... (80 %)
+Writing at 0x000f9e9f... (82 %)
+Writing at 0x000ff5c4... (84 %)
+Writing at 0x001068bd... (86 %)
+Writing at 0x0011220e... (88 %)
+Writing at 0x0011815c... (91 %)
+Writing at 0x0011e0b1... (93 %)
+Writing at 0x0012440c... (95 %)
+Writing at 0x0012a187... (97 %)
+Writing at 0x0012fa5f... (100 %)
+Wrote 1179568 bytes (721775 compressed) at 0x00010000 in 16.3 seconds (effective 579.4 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 162...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (162 compressed) at 0x00008000 in 0.0 seconds (effective 1335.3 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 31...
+Writing at 0x0000d000... (100 %)
+Wrote 8192 bytes (31 compressed) at 0x0000d000 in 0.0 seconds (effective 2265.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

@@ -1,0 +1,2550 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (29) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 18 2024 03:13:10[0m
+[0;33mW (29) boot: Unicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (82) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (97) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (105) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (112) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (120) boot: End of partition table[0m
+[0;32mI (124) boot: No factory image, trying OTA 0[0m
+[0;32mI (129) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=30dfch (200188) map[0m
+[0;32mI (206) esp_image: segment 1: paddr=00040e24 vaddr=3ffbdb60 size=0608ch ( 24716) load[0m
+[0;32mI (216) esp_image: segment 2: paddr=00046eb8 vaddr=40080000 size=09160h ( 37216) load[0m
+[0;32mI (231) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=cb234h (832052) map[0m
+[0;32mI (516) esp_image: segment 4: paddr=0011b25c vaddr=40089160 size=15050h ( 86096) load[0m
+[0;32mI (565) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (571) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (571) boot: Disabling RNG early entropy source...[0m
+[0;32mI (582) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (583) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (583) esp_psram: Speed: 40MHz[0m
+[0;32mI (586) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (594) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (603) cpu_start: Unicore app[0m
+[0;32mI (607) cpu_start: Single core mode[0m
+[0;32mI (1536) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1544) cpu_start: Pro cpu start user code[0m
+[0;32mI (1544) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1544) app_init: Application information:[0m
+[0;32mI (1548) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1553) app_init: App version:      93e19e9-dirty[0m
+[0;32mI (1559) app_init: Compile time:     Aug 18 2024 03:13:03[0m
+[0;32mI (1565) app_init: ELF file SHA256:  29b12489f...[0m
+[0;32mI (1570) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1576) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1580) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1586) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1591) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1598) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1604) heap_init: At 3FFC8A10 len 000175F0 (93 KiB): DRAM[0m
+[0;32mI (1610) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1617) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1623) heap_init: At 4009E1B0 len 00001E50 (7 KiB): IRAM[0m
+[0;32mI (1629) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1636) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1644) spi_flash: detected chip: generic[0m
+[0;32mI (1648) spi_flash: flash io: dio[0m
+[0;33mW (1652) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1663) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1669) main_task: Started on CPU0[0m
+[0;32mI (1672) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1681) main_task: Calling app_main()[0m
+[0;32mI (1700) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1704) wifi:wifi driver task: 3ffbd5e0, prio:23, stack:6656, core=0
+I (1707) wifi:wifi firmware version: 0caa81945
+I (1708) wifi:wifi certification version: v7.0
+I (1710) wifi:config NVS flash: enabled
+I (1714) wifi:config nano formating: disabled
+I (1718) wifi:Init data frame dynamic rx buffer num: 32
+I (1723) wifi:Init static rx mgmt buffer num: 5
+I (1727) wifi:Init management short buffer num: 32
+I (1732) wifi:Init static tx buffer num: 16
+I (1736) wifi:Init tx cache buffer num: 32
+I (1739) wifi:Init static rx buffer size: 1600
+I (1744) wifi:Init static rx buffer num: 10
+I (1747) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1752) wifi_init: accept mbox: 6[0m
+[0;32mI (1755) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1759) wifi_init: udp mbox: 6[0m
+[0;32mI (1763) wifi_init: tcp mbox: 6[0m
+[0;32mI (1767) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1771) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1776) wifi_init: tcp mss: 1440[0m
+[0;32mI (1780) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1784) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1790) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1796) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (1858) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+I (1870) wifi:mode : null
+I (1873) wifi:mode : softAP (08:a6:f7:11:51:a9)
+I (1874) wifi:Total power save buffer number: 8
+I (1875) wifi:Init max length of beacon: 752/752
+I (1877) wifi:Init max length of beacon: 752/752
+[0;32mI (1884) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+Add netif ap with 93e19e9(commit id)
+[0;32mI (1893) bridge_common: netif list add success[0m
+[0;31mE (1899) NVS: Failed to open NVS namespace[0m
+[0;32mI (1903) bridge_common: IP Address:192.168.5.1[0m
+[0;32mI (1908) bridge_common: GW Address:192.168.5.1[0m
+[0;32mI (1913) bridge_common: NM Address:255.255.255.0[0m
+[0;32mI (1919) bridge_common: [WIFI_AP_DEF ][0m
+[0;32mI (1924) bridge_common: Set ip info:192.168.5.1[0m
+[0;32mI (1929) bridge_wifi: SoftAP IP network segment has changed, deauth all station[0m
+I (1940) wifi:Disabled PMF config for SoftAP
+I (1942) wifi:Total power save buffer number: 8
+[0;32mI (1948) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (1954) bridge_common: [WIFI_AP_DEF ]Name Server1: 114.114.114.114[0m
+[0;32mI (1961) bridge_common: DHCPS Restart, deauth all station[0m
+Add netif sta with 93e19e9(commit id)
+[0;32mI (1970) bridge_common: netif list add success[0m
+I (1976) wifi:mode : sta (08:a6:f7:11:51:a8) + softAP (08:a6:f7:11:51:a9)
+I (1982) wifi:enable tsf
+[0;31mE (1986) NVS: Failed to read IP info from NVS[0m
+I (1989) wifi:Disabled PMF config for STA
+[0;32mI (1993) bridge_wifi: [esp_bridge_wifi_set_config] sta ssid: Xiaomi13T password: password[0m
+[0;32mI (2002) bridge_wifi: [esp_bridge_wifi_set_config] softap ssid: ESP_Bridge_1151a9 password: 12345678[0m
+I (2185) wifi:Total power save buffer number: 8
+[0;32mI (2189) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (2191) bridge_wifi: SoftAP config changed, deauth all station[0m
+[0;32mI (2195) Mesh-Lite: esp-mesh-lite component version: 1.0.0[0m
+I (2201) ESPNOW: espnow [version: 1.0] init
+[0;32mI (2204) [vendor_ie]: Mesh-Lite commit id: bc9302d
+ [0m
+[0;31mE (2211) [vendor_ie]: Error Get! [0m
+[0;33mW (2214) [vendor_ie]: Mesh ID is not saved in flash [0m
+[0;32mI (2220) [vendor_ie]: Mesh ID: 77 [0m
+[0;33mW (2224) [vendor_ie]: Error Get[4354] [0m
+[0;33mW (2228) [vendor_ie]: Error Get[4354] [0m
+[0;32mI (2234) [ESP_Mesh_Lite_Comm]: msg action add success [0m
+[0;32mI (2241) [ESP_Mesh_Lite_Comm]: Bind Socket 54, port 6364 [0m
+[0;32mI (2245) [ESP_Mesh_Lite_Comm]: Bind Socket 55, port 6363 [0m
+[0;32mI (2251) [ESP_Mesh_Lite_Comm]: Bind Socket 56, port 6366 [0m
+[0;32mI (2257) [ESP_Mesh_Lite_Comm]: Bind Socket 57, port 6365 [0m
+[0;32mI (2264) [mesh-lite-espnow]: Start espnow task [0m
+[0;32mI (2271) Mesh-Lite: Mesh-Lite connecting[0m
+[0;32mI (2276) [vendor_ie]: esp_mesh_lite_wifi_scan_start return ESP_OK [0m
+[0;31mE (2283) rc522: Read/write test failed[0m
+[0;32mI (2284) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (2294) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (2303) cam_hal: cam init ok[0m
+[0;32mI (2307) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (2311) sccb: sccb_i2c_port=1[0m
+[0;32mI (2315) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2354) camera: Detected camera at address=0x30[0m
+[0;32mI (2357) camera: Detected OV2640 camera[0m
+[0;32mI (2358) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (2445) cam_hal: buffer_size: 32768, half_buffer_size: 4096, node_buffer_size: 2048, node_cnt: 16, total_cnt: 5[0m
+[0;32mI (2446) cam_hal: Allocating 23680 Byte frame buffer in PSRAM[0m
+[0;32mI (2452) cam_hal: cam config ok[0m
+[0;32mI (2456) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8[0m
+[0;33mW (2550) websocket_client: `network_timeout_ms` is not set, or it is less than or equal to zero, using default time out 10000 (milliseconds)[0m
+[0;32mI (2559) main_task: Returned from app_main()[0m
+[0;32mI (4121) [vendor_ie]: Mesh-Lite Scan done [0m
+[0;32mI (4123) [vendor_ie]: RTC store: temp_mesh_id:255; ssid:Xiaomi13T; bssid:00:00:00:00:00:00; crc:1883151208 [0m
+[0;32mI (4127) [vendor_ie]: wifi_cfg Xiaomi13T router_config Xiaomi13T [0m
+[0;32mI (4135) [vendor_ie]: esp_mesh_lite_wifi_connect return ESP_OK [0m
+I (6403) wifi:ap channel adjust o:1,1 n:13,2
+I (6404) wifi:new:<13,0>, old:<1,1>, ap:<13,2>, sta:<13,0>, prof:1, snd_ch_cfg:0x0
+I (6405) wifi:state: init -> auth (0xb0)
+I (6475) wifi:state: auth -> assoc (0x0)
+I (7476) wifi:state: assoc -> init (0x2700)
+I (7478) wifi:new:<13,0>, old:<13,0>, ap:<13,2>, sta:<13,0>, prof:1, snd_ch_cfg:0x0
+[0;32mI (8235) [vendor_ie]: esp_mesh_lite_wifi_connect return ESP_OK [0m
+[0;32mI (8236) [ESP_Mesh_Lite_Comm]: Retry to connect to the AP [0m
+W (12294) wifi:Haven't to connect to a suitable AP now!
+[0;32mI (12295) esp32cam_security_gate: System information, channel: 13, layer: 0, self mac: 08:a6:f7:11:51:a8, parent bssid: 00:00:00:00:00:00, parent rssi: -120, free heap: 4193528[0m
+[0;31mE (12560) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (12561) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (12561) transport_ws: Error connecting to host 192.168.26.35:3000[0m
+[0;31mE (12568) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (12586) websocket_client: WebSocket client error[0m
+[0;32mI (12591) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (12597) websocket_client: WebSocket client connected[0m
+[0;31mE (12602) websocket_client: Websocket client is not connected[0m
+[0;31mE (12630) websocket_client: Websocket client is not connected[0m
+[0;31mE (12650) websocket_client: Websocket client is not connected[0m
+[0;31mE (12670) websocket_client: Websocket client is not connected[0m
+[0;31mE (12690) websocket_client: Websocket client is not connected[0m
+[0;31mE (12710) websocket_client: Websocket client is not connected[0m
+[0;31mE (12730) websocket_client: Websocket client is not connected[0m
+[0;31mE (12750) websocket_client: Websocket client is not connected[0m
+[0;31mE (12770) websocket_client: Websocket client is not connected[0m
+[0;31mE (12790) websocket_client: Websocket client is not connected[0m
+[0;31mE (12810) websocket_client: Websocket client is not connected[0m
+[0;31mE (12830) websocket_client: Websocket client is not connected[0m
+[0;31mE (12850) websocket_client: Websocket client is not connected[0m
+[0;31mE (12870) websocket_client: Websocket client is not connected[0m
+[0;31mE (12890) websocket_client: Websocket client is not connected[0m
+[0;31mE (12910) websocket_client: Websocket client is not connected[0m
+[0;31mE (12930) websocket_client: Websocket client is not connected[0m
+[0;31mE (12950) websocket_client: Websocket client is not connected[0m
+[0;31mE (12969) websocket_client: Websocket client is not connected[0m
+[0;31mE (12989) websocket_client: Websocket client is not connected[0m
+[0;31mE (13009) websocket_client: Websocket client is not connected[0m
+[0;31mE (13029) websocket_client: Websocket client is not connected[0m
+[0;31mE (13049) websocket_client: Websocket client is not connected[0m
+[0;31mE (13069) websocket_client: Websocket client is not connected[0m
+[0;31mE (13089) websocket_client: Websocket client is not connected[0m
+[0;31mE (13109) websocket_client: Websocket client is not connected[0m
+[0;31mE (13129) websocket_client: Websocket client is not connected[0m
+[0;31mE (13149) websocket_client: Websocket client is not connected[0m
+[0;31mE (13169) websocket_client: Websocket client is not connected[0m
+[0;31mE (13189) websocket_client: Websocket client is not connected[0m
+[0;31mE (13209) websocket_client: Websocket client is not connected[0m
+[0;31mE (13229) websocket_client: Websocket client is not connected[0m
+[0;32mI (13236) [vendor_ie]: esp_mesh_lite_wifi_connect return ESP_OK [0m
+[0;32mI (13236) [ESP_Mesh_Lite_Comm]: Retry to connect to the AP [0m
+[0;31mE (13250) websocket_client: Websocket client is not connected[0m
+I (13253) wifi:new:<13,2>, old:<13,0>, ap:<13,2>, sta:<13,0>, prof:1, snd_ch_cfg:0x0
+I (13255) wifi:state: init -> auth (0xb0)
+[0;31mE (13269) websocket_client: Websocket client is not connected[0m
+[0;31mE (13289) websocket_client: Websocket client is not connected[0m
+[0;31mE (13309) websocket_client: Websocket client is not connected[0m
+[0;31mE (13329) websocket_client: Websocket client is not connected[0m
+[0;31mE (13350) websocket_client: Websocket client is not connected[0m
+I (13357) wifi:state: auth -> assoc (0x0)
+I (13367) wifi:state: assoc -> run (0x10)
+[0;31mE (13369) websocket_client: Websocket client is not connected[0m
+I (13386) wifi:connected with Xiaomi13T, aid = 3, channel 13, BW20, bssid = 62:99:11:7e:0d:6b
+I (13386) wifi:security: WPA2-PSK, phy: bgn, rssi: -50
+I (13389) wifi:pm start, type: 1
+[0;31mE (13390) websocket_client: Websocket client is not connected[0m
+
+I (13398) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+[0;33mW (13402) cam_hal: NO-SOI[0m
+[0;31mE (13429) websocket_client: Websocket client is not connected[0m
+[0;31mE (13449) websocket_client: Websocket client is not connected[0m
+[0;31mE (13469) websocket_client: Websocket client is not connected[0m
+I (13487) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (13487) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;31mE (13490) websocket_client: Websocket client is not connected[0m
+[0;33mW (13499) cam_hal: NO-SOI[0m
+[0;31mE (13529) websocket_client: Websocket client is not connected[0m
+[0;31mE (13549) websocket_client: Websocket client is not connected[0m
+[0;31mE (13569) websocket_client: Websocket client is not connected[0m
+[0;31mE (13589) websocket_client: Websocket client is not connected[0m
+[0;31mE (13609) websocket_client: Websocket client is not connected[0m
+[0;31mE (13629) websocket_client: Websocket client is not connected[0m
+[0;31mE (13649) websocket_client: Websocket client is not connected[0m
+[0;31mE (13669) websocket_client: Websocket client is not connected[0m
+[0;31mE (13689) websocket_client: Websocket client is not connected[0m
+[0;31mE (13709) websocket_client: Websocket client is not connected[0m
+[0;31mE (13729) websocket_client: Websocket client is not connected[0m
+[0;31mE (13749) websocket_client: Websocket client is not connected[0m
+[0;31mE (13769) websocket_client: Websocket client is not connected[0m
+[0;31mE (13789) websocket_client: Websocket client is not connected[0m
+[0;31mE (13809) websocket_client: Websocket client is not connected[0m
+[0;31mE (13829) websocket_client: Websocket client is not connected[0m
+[0;31mE (13849) websocket_client: Websocket client is not connected[0m
+[0;31mE (13869) websocket_client: Websocket client is not connected[0m
+[0;31mE (13889) websocket_client: Websocket client is not connected[0m
+[0;31mE (13909) websocket_client: Websocket client is not connected[0m
+[0;31mE (13929) websocket_client: Websocket client is not connected[0m
+[0;31mE (13949) websocket_client: Websocket client is not connected[0m
+[0;31mE (13969) websocket_client: Websocket client is not connected[0m
+[0;31mE (13989) websocket_client: Websocket client is not connected[0m
+[0;31mE (14009) websocket_client: Websocket client is not connected[0m
+[0;31mE (14029) websocket_client: Websocket client is not connected[0m
+[0;31mE (14049) websocket_client: Websocket client is not connected[0m
+[0;31mE (14069) websocket_client: Websocket client is not connected[0m
+[0;31mE (14089) websocket_client: Websocket client is not connected[0m
+[0;31mE (14109) websocket_client: Websocket client is not connected[0m
+[0;31mE (14129) websocket_client: Websocket client is not connected[0m
+[0;31mE (14149) websocket_client: Websocket client is not connected[0m
+[0;31mE (14169) websocket_client: Websocket client is not connected[0m
+[0;31mE (14189) websocket_client: Websocket client is not connected[0m
+[0;31mE (14209) websocket_client: Websocket client is not connected[0m
+[0;31mE (14229) websocket_client: Websocket client is not connected[0m
+[0;31mE (14249) websocket_client: Websocket client is not connected[0m
+[0;31mE (14269) websocket_client: Websocket client is not connected[0m
+[0;31mE (14289) websocket_client: Websocket client is not connected[0m
+[0;31mE (14309) websocket_client: Websocket client is not connected[0m
+[0;31mE (14329) websocket_client: Websocket client is not connected[0m
+[0;31mE (14349) websocket_client: Websocket client is not connected[0m
+[0;31mE (14369) websocket_client: Websocket client is not connected[0m
+[0;31mE (14389) websocket_client: Websocket client is not connected[0m
+[0;31mE (14409) websocket_client: Websocket client is not connected[0m
+[0;31mE (14429) websocket_client: Websocket client is not connected[0m
+[0;31mE (14449) websocket_client: Websocket client is not connected[0m
+[0;31mE (14469) websocket_client: Websocket client is not connected[0m
+[0;31mE (14489) websocket_client: Websocket client is not connected[0m
+[0;31mE (14509) websocket_client: Websocket client is not connected[0m
+[0;31mE (14529) websocket_client: Websocket client is not connected[0m
+[0;31mE (14549) websocket_client: Websocket client is not connected[0m
+[0;31mE (14569) websocket_client: Websocket client is not connected[0m
+[0;31mE (14589) websocket_client: Websocket client is not connected[0m
+[0;31mE (14609) websocket_client: Websocket client is not connected[0m
+[0;31mE (14629) websocket_client: Websocket client is not connected[0m
+[0;31mE (14649) websocket_client: Websocket client is not connected[0m
+[0;31mE (14669) websocket_client: Websocket client is not connected[0m
+[0;31mE (14689) websocket_client: Websocket client is not connected[0m
+[0;31mE (14709) websocket_client: Websocket client is not connected[0m
+[0;31mE (14729) websocket_client: Websocket client is not connected[0m
+[0;31mE (14749) websocket_client: Websocket client is not connected[0m
+[0;31mE (14769) websocket_client: Websocket client is not connected[0m
+[0;31mE (14789) websocket_client: Websocket client is not connected[0m
+[0;31mE (14809) websocket_client: Websocket client is not connected[0m
+[0;31mE (14829) websocket_client: Websocket client is not connected[0m
+[0;31mE (14849) websocket_client: Websocket client is not connected[0m
+[0;31mE (14869) websocket_client: Websocket client is not connected[0m
+[0;31mE (14889) websocket_client: Websocket client is not connected[0m
+[0;31mE (14909) websocket_client: Websocket client is not connected[0m
+[0;31mE (14929) websocket_client: Websocket client is not connected[0m
+[0;31mE (14949) websocket_client: Websocket client is not connected[0m
+[0;31mE (14969) websocket_client: Websocket client is not connected[0m
+[0;31mE (14989) websocket_client: Websocket client is not connected[0m
+[0;31mE (15009) websocket_client: Websocket client is not connected[0m
+[0;31mE (15029) websocket_client: Websocket client is not connected[0m
+[0;31mE (15049) websocket_client: Websocket client is not connected[0m
+[0;31mE (15069) websocket_client: Websocket client is not connected[0m
+[0;31mE (15089) websocket_client: Websocket client is not connected[0m
+[0;31mE (15109) websocket_client: Websocket client is not connected[0m
+[0;31mE (15129) websocket_client: Websocket client is not connected[0m
+[0;31mE (15149) websocket_client: Websocket client is not connected[0m
+[0;31mE (15168) websocket_client: Websocket client is not connected[0m
+[0;31mE (15189) websocket_client: Websocket client is not connected[0m
+[0;31mE (15209) websocket_client: Websocket client is not connected[0m
+[0;31mE (15228) websocket_client: Websocket client is not connected[0m
+[0;31mE (15249) websocket_client: Websocket client is not connected[0m
+[0;31mE (15269) websocket_client: Websocket client is not connected[0m
+[0;31mE (15288) websocket_client: Websocket client is not connected[0m
+[0;31mE (15309) websocket_client: Websocket client is not connected[0m
+[0;31mE (15328) websocket_client: Websocket client is not connected[0m
+[0;31mE (15349) websocket_client: Websocket client is not connected[0m
+[0;31mE (15369) websocket_client: Websocket client is not connected[0m
+[0;31mE (15389) websocket_client: Websocket client is not connected[0m
+[0;31mE (15409) websocket_client: Websocket client is not connected[0m
+[0;31mE (15428) websocket_client: Websocket client is not connected[0m
+[0;31mE (15449) websocket_client: Websocket client is not connected[0m
+[0;31mE (15468) websocket_client: Websocket client is not connected[0m
+[0;31mE (15489) websocket_client: Websocket client is not connected[0m
+[0;31mE (15509) websocket_client: Websocket client is not connected[0m
+[0;31mE (15528) websocket_client: Websocket client is not connected[0m
+[0;31mE (15548) websocket_client: Websocket client is not connected[0m
+[0;31mE (15568) websocket_client: Websocket client is not connected[0m
+[0;31mE (15588) websocket_client: Websocket client is not connected[0m
+[0;31mE (15609) websocket_client: Websocket client is not connected[0m
+[0;31mE (15628) websocket_client: Websocket client is not connected[0m
+[0;31mE (15648) websocket_client: Websocket client is not connected[0m
+[0;31mE (15668) websocket_client: Websocket client is not connected[0m
+[0;31mE (15688) websocket_client: Websocket client is not connected[0m
+[0;31mE (15708) websocket_client: Websocket client is not connected[0m
+[0;31mE (15728) websocket_client: Websocket client is not connected[0m
+[0;31mE (15748) websocket_client: Websocket client is not connected[0m
+[0;31mE (15768) websocket_client: Websocket client is not connected[0m
+[0;31mE (15788) websocket_client: Websocket client is not connected[0m
+[0;31mE (15809) websocket_client: Websocket client is not connected[0m
+[0;31mE (15828) websocket_client: Websocket client is not connected[0m
+[0;31mE (15848) websocket_client: Websocket client is not connected[0m
+[0;31mE (15868) websocket_client: Websocket client is not connected[0m
+[0;31mE (15888) websocket_client: Websocket client is not connected[0m
+[0;31mE (15908) websocket_client: Websocket client is not connected[0m
+[0;31mE (15928) websocket_client: Websocket client is not connected[0m
+[0;31mE (15948) websocket_client: Websocket client is not connected[0m
+[0;31mE (15968) websocket_client: Websocket client is not connected[0m
+[0;31mE (15988) websocket_client: Websocket client is not connected[0m
+[0;31mE (16008) websocket_client: Websocket client is not connected[0m
+[0;31mE (16028) websocket_client: Websocket client is not connected[0m
+[0;31mE (16048) websocket_client: Websocket client is not connected[0m
+[0;31mE (16068) websocket_client: Websocket client is not connected[0m
+[0;31mE (16088) websocket_client: Websocket client is not connected[0m
+[0;31mE (16108) websocket_client: Websocket client is not connected[0m
+[0;31mE (16128) websocket_client: Websocket client is not connected[0m
+[0;31mE (16148) websocket_client: Websocket client is not connected[0m
+[0;31mE (16168) websocket_client: Websocket client is not connected[0m
+[0;31mE (16188) websocket_client: Websocket client is not connected[0m
+[0;31mE (16208) websocket_client: Websocket client is not connected[0m
+[0;31mE (16228) websocket_client: Websocket client is not connected[0m
+[0;31mE (16248) websocket_client: Websocket client is not connected[0m
+[0;31mE (16268) websocket_client: Websocket client is not connected[0m
+[0;31mE (16288) websocket_client: Websocket client is not connected[0m
+[0;31mE (16308) websocket_client: Websocket client is not connected[0m
+[0;31mE (16328) websocket_client: Websocket client is not connected[0m
+[0;31mE (16348) websocket_client: Websocket client is not connected[0m
+[0;31mE (16369) websocket_client: Websocket client is not connected[0m
+[0;31mE (16388) websocket_client: Websocket client is not connected[0m
+[0;31mE (16408) websocket_client: Websocket client is not connected[0m
+[0;31mE (16428) websocket_client: Websocket client is not connected[0m
+[0;31mE (16448) websocket_client: Websocket client is not connected[0m
+[0;31mE (16468) websocket_client: Websocket client is not connected[0m
+[0;31mE (16488) websocket_client: Websocket client is not connected[0m
+[0;31mE (16508) websocket_client: Websocket client is not connected[0m
+[0;31mE (16528) websocket_client: Websocket client is not connected[0m
+[0;31mE (16548) websocket_client: Websocket client is not connected[0m
+[0;31mE (16568) websocket_client: Websocket client is not connected[0m
+[0;31mE (16588) websocket_client: Websocket client is not connected[0m
+[0;31mE (16608) websocket_client: Websocket client is not connected[0m
+[0;31mE (16628) websocket_client: Websocket client is not connected[0m
+[0;31mE (16648) websocket_client: Websocket client is not connected[0m
+[0;31mE (16668) websocket_client: Websocket client is not connected[0m
+[0;31mE (16688) websocket_client: Websocket client is not connected[0m
+[0;31mE (16708) websocket_client: Websocket client is not connected[0m
+[0;31mE (16728) websocket_client: Websocket client is not connected[0m
+[0;31mE (16748) websocket_client: Websocket client is not connected[0m
+[0;31mE (16768) websocket_client: Websocket client is not connected[0m
+[0;31mE (16788) websocket_client: Websocket client is not connected[0m
+[0;31mE (16808) websocket_client: Websocket client is not connected[0m
+[0;31mE (16828) websocket_client: Websocket client is not connected[0m
+[0;31mE (16848) websocket_client: Websocket client is not connected[0m
+[0;31mE (16868) websocket_client: Websocket client is not connected[0m
+[0;31mE (16888) websocket_client: Websocket client is not connected[0m
+[0;31mE (16908) websocket_client: Websocket client is not connected[0m
+[0;31mE (16928) websocket_client: Websocket client is not connected[0m
+[0;31mE (16948) websocket_client: Websocket client is not connected[0m
+[0;31mE (16968) websocket_client: Websocket client is not connected[0m
+[0;31mE (16988) websocket_client: Websocket client is not connected[0m
+[0;31mE (17008) websocket_client: Websocket client is not connected[0m
+[0;31mE (17028) websocket_client: Websocket client is not connected[0m
+[0;31mE (17048) websocket_client: Websocket client is not connected[0m
+[0;31mE (17068) websocket_client: Websocket client is not connected[0m
+[0;31mE (17088) websocket_client: Websocket client is not connected[0m
+[0;31mE (17108) websocket_client: Websocket client is not connected[0m
+[0;31mE (17128) websocket_client: Websocket client is not connected[0m
+[0;31mE (17148) websocket_client: Websocket client is not connected[0m
+[0;31mE (17168) websocket_client: Websocket client is not connected[0m
+[0;31mE (17188) websocket_client: Websocket client is not connected[0m
+[0;31mE (17208) websocket_client: Websocket client is not connected[0m
+[0;31mE (17228) websocket_client: Websocket client is not connected[0m
+[0;31mE (17248) websocket_client: Websocket client is not connected[0m
+[0;31mE (17268) websocket_client: Websocket client is not connected[0m
+[0;31mE (17288) websocket_client: Websocket client is not connected[0m
+[0;31mE (17308) websocket_client: Websocket client is not connected[0m
+[0;31mE (17328) websocket_client: Websocket client is not connected[0m
+[0;31mE (17348) websocket_client: Websocket client is not connected[0m
+[0;31mE (17368) websocket_client: Websocket client is not connected[0m
+[0;31mE (17388) websocket_client: Websocket client is not connected[0m
+[0;31mE (17408) websocket_client: Websocket client is not connected[0m
+[0;31mE (17428) websocket_client: Websocket client is not connected[0m
+[0;31mE (17448) websocket_client: Websocket client is not connected[0m
+[0;31mE (17468) websocket_client: Websocket client is not connected[0m
+[0;31mE (17488) websocket_client: Websocket client is not connected[0m
+[0;31mE (17508) websocket_client: Websocket client is not connected[0m
+[0;31mE (17528) websocket_client: Websocket client is not connected[0m
+[0;31mE (17548) websocket_client: Websocket client is not connected[0m
+[0;31mE (17568) websocket_client: Websocket client is not connected[0m
+[0;31mE (17587) websocket_client: Websocket client is not connected[0m
+[0;31mE (17608) websocket_client: Websocket client is not connected[0m
+[0;31mE (17611) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (17612) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (17617) transport_ws: Error connecting to host 192.168.26.35:3000[0m
+[0;31mE (17624) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (17642) websocket_client: WebSocket client error[0m
+[0;32mI (17647) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (17653) websocket_client: WebSocket client connected[0m
+[0;31mE (17659) websocket_client: Websocket client is not connected[0m
+[0;31mE (17687) websocket_client: Websocket client is not connected[0m
+[0;31mE (17708) websocket_client: Websocket client is not connected[0m
+[0;31mE (17727) websocket_client: Websocket client is not connected[0m
+[0;31mE (17748) websocket_client: Websocket client is not connected[0m
+[0;31mE (17768) websocket_client: Websocket client is not connected[0m
+[0;31mE (17788) websocket_client: Websocket client is not connected[0m
+[0;31mE (17807) websocket_client: Websocket client is not connected[0m
+[0;31mE (17827) websocket_client: Websocket client is not connected[0m
+[0;31mE (17847) websocket_client: Websocket client is not connected[0m
+[0;31mE (17868) websocket_client: Websocket client is not connected[0m
+[0;31mE (17888) websocket_client: Websocket client is not connected[0m
+[0;31mE (17907) websocket_client: Websocket client is not connected[0m
+[0;31mE (17927) websocket_client: Websocket client is not connected[0m
+[0;31mE (17947) websocket_client: Websocket client is not connected[0m
+[0;31mE (17968) websocket_client: Websocket client is not connected[0m
+[0;31mE (17987) websocket_client: Websocket client is not connected[0m
+[0;31mE (18007) websocket_client: Websocket client is not connected[0m
+[0;31mE (18027) websocket_client: Websocket client is not connected[0m
+[0;31mE (18048) websocket_client: Websocket client is not connected[0m
+[0;31mE (18068) websocket_client: Websocket client is not connected[0m
+[0;31mE (18087) websocket_client: Websocket client is not connected[0m
+[0;31mE (18107) websocket_client: Websocket client is not connected[0m
+[0;31mE (18127) websocket_client: Websocket client is not connected[0m
+[0;31mE (18147) websocket_client: Websocket client is not connected[0m
+[0;31mE (18167) websocket_client: Websocket client is not connected[0m
+[0;31mE (18187) websocket_client: Websocket client is not connected[0m
+[0;31mE (18207) websocket_client: Websocket client is not connected[0m
+[0;31mE (18227) websocket_client: Websocket client is not connected[0m
+[0;31mE (18247) websocket_client: Websocket client is not connected[0m
+[0;31mE (18267) websocket_client: Websocket client is not connected[0m
+[0;31mE (18287) websocket_client: Websocket client is not connected[0m
+[0;31mE (18307) websocket_client: Websocket client is not connected[0m
+[0;31mE (18327) websocket_client: Websocket client is not connected[0m
+[0;31mE (18347) websocket_client: Websocket client is not connected[0m
+[0;31mE (18368) websocket_client: Websocket client is not connected[0m
+[0;31mE (18387) websocket_client: Websocket client is not connected[0m
+[0;31mE (18407) websocket_client: Websocket client is not connected[0m
+[0;31mE (18427) websocket_client: Websocket client is not connected[0m
+[0;31mE (18447) websocket_client: Websocket client is not connected[0m
+[0;31mE (18467) websocket_client: Websocket client is not connected[0m
+[0;31mE (18487) websocket_client: Websocket client is not connected[0m
+[0;31mE (18507) websocket_client: Websocket client is not connected[0m
+[0;31mE (18527) websocket_client: Websocket client is not connected[0m
+[0;31mE (18547) websocket_client: Websocket client is not connected[0m
+[0;31mE (18567) websocket_client: Websocket client is not connected[0m
+[0;31mE (18587) websocket_client: Websocket client is not connected[0m
+[0;31mE (18607) websocket_client: Websocket client is not connected[0m
+[0;31mE (18627) websocket_client: Websocket client is not connected[0m
+[0;31mE (18647) websocket_client: Websocket client is not connected[0m
+[0;31mE (18667) websocket_client: Websocket client is not connected[0m
+[0;31mE (18687) websocket_client: Websocket client is not connected[0m
+[0;31mE (18707) websocket_client: Websocket client is not connected[0m
+[0;31mE (18727) websocket_client: Websocket client is not connected[0m
+[0;31mE (18747) websocket_client: Websocket client is not connected[0m
+[0;31mE (18767) websocket_client: Websocket client is not connected[0m
+[0;31mE (18787) websocket_client: Websocket client is not connected[0m
+[0;31mE (18807) websocket_client: Websocket client is not connected[0m
+[0;31mE (18827) websocket_client: Websocket client is not connected[0m
+[0;31mE (18847) websocket_client: Websocket client is not connected[0m
+[0;31mE (18867) websocket_client: Websocket client is not connected[0m
+[0;31mE (18887) websocket_client: Websocket client is not connected[0m
+[0;31mE (18907) websocket_client: Websocket client is not connected[0m
+[0;31mE (18927) websocket_client: Websocket client is not connected[0m
+[0;31mE (18947) websocket_client: Websocket client is not connected[0m
+[0;31mE (18967) websocket_client: Websocket client is not connected[0m
+[0;31mE (18987) websocket_client: Websocket client is not connected[0m
+[0;31mE (19007) websocket_client: Websocket client is not connected[0m
+[0;31mE (19027) websocket_client: Websocket client is not connected[0m
+[0;31mE (19047) websocket_client: Websocket client is not connected[0m
+[0;31mE (19067) websocket_client: Websocket client is not connected[0m
+[0;31mE (19087) websocket_client: Websocket client is not connected[0m
+[0;31mE (19107) websocket_client: Websocket client is not connected[0m
+[0;31mE (19127) websocket_client: Websocket client is not connected[0m
+[0;31mE (19147) websocket_client: Websocket client is not connected[0m
+[0;31mE (19167) websocket_client: Websocket client is not connected[0m
+[0;31mE (19187) websocket_client: Websocket client is not connected[0m
+[0;31mE (19207) websocket_client: Websocket client is not connected[0m
+[0;31mE (19227) websocket_client: Websocket client is not connected[0m
+[0;31mE (19247) websocket_client: Websocket client is not connected[0m
+[0;31mE (19267) websocket_client: Websocket client is not connected[0m
+[0;31mE (19287) websocket_client: Websocket client is not connected[0m
+[0;31mE (19307) websocket_client: Websocket client is not connected[0m
+[0;31mE (19327) websocket_client: Websocket client is not connected[0m
+[0;31mE (19347) websocket_client: Websocket client is not connected[0m
+[0;31mE (19367) websocket_client: Websocket client is not connected[0m
+[0;31mE (19387) websocket_client: Websocket client is not connected[0m
+[0;31mE (19407) websocket_client: Websocket client is not connected[0m
+[0;31mE (19427) websocket_client: Websocket client is not connected[0m
+[0;31mE (19447) websocket_client: Websocket client is not connected[0m
+[0;31mE (19467) websocket_client: Websocket client is not connected[0m
+[0;31mE (19487) websocket_client: Websocket client is not connected[0m
+[0;31mE (19507) websocket_client: Websocket client is not connected[0m
+[0;31mE (19527) websocket_client: Websocket client is not connected[0m
+[0;31mE (19547) websocket_client: Websocket client is not connected[0m
+[0;31mE (19567) websocket_client: Websocket client is not connected[0m
+[0;31mE (19587) websocket_client: Websocket client is not connected[0m
+[0;31mE (19607) websocket_client: Websocket client is not connected[0m
+[0;31mE (19627) websocket_client: Websocket client is not connected[0m
+[0;31mE (19647) websocket_client: Websocket client is not connected[0m
+[0;31mE (19667) websocket_client: Websocket client is not connected[0m
+[0;31mE (19687) websocket_client: Websocket client is not connected[0m
+[0;31mE (19707) websocket_client: Websocket client is not connected[0m
+[0;31mE (19727) websocket_client: Websocket client is not connected[0m
+[0;31mE (19747) websocket_client: Websocket client is not connected[0m
+[0;31mE (19767) websocket_client: Websocket client is not connected[0m
+[0;31mE (19787) websocket_client: Websocket client is not connected[0m
+[0;31mE (19807) websocket_client: Websocket client is not connected[0m
+[0;31mE (19827) websocket_client: Websocket client is not connected[0m
+[0;31mE (19847) websocket_client: Websocket client is not connected[0m
+[0;31mE (19867) websocket_client: Websocket client is not connected[0m
+[0;31mE (19887) websocket_client: Websocket client is not connected[0m
+[0;31mE (19907) websocket_client: Websocket client is not connected[0m
+[0;31mE (19927) websocket_client: Websocket client is not connected[0m
+[0;31mE (19947) websocket_client: Websocket client is not connected[0m
+[0;31mE (19967) websocket_client: Websocket client is not connected[0m
+[0;31mE (19987) websocket_client: Websocket client is not connected[0m
+[0;31mE (20007) websocket_client: Websocket client is not connected[0m
+[0;31mE (20027) websocket_client: Websocket client is not connected[0m
+[0;31mE (20047) websocket_client: Websocket client is not connected[0m
+[0;31mE (20066) websocket_client: Websocket client is not connected[0m
+[0;31mE (20086) websocket_client: Websocket client is not connected[0m
+[0;31mE (20106) websocket_client: Websocket client is not connected[0m
+[0;31mE (20127) websocket_client: Websocket client is not connected[0m
+[0;31mE (20146) websocket_client: Websocket client is not connected[0m
+[0;31mE (20166) websocket_client: Websocket client is not connected[0m
+[0;31mE (20186) websocket_client: Websocket client is not connected[0m
+[0;31mE (20207) websocket_client: Websocket client is not connected[0m
+[0;31mE (20227) websocket_client: Websocket client is not connected[0m
+[0;31mE (20246) websocket_client: Websocket client is not connected[0m
+[0;31mE (20266) websocket_client: Websocket client is not connected[0m
+[0;31mE (20286) websocket_client: Websocket client is not connected[0m
+[0;31mE (20307) websocket_client: Websocket client is not connected[0m
+[0;31mE (20327) websocket_client: Websocket client is not connected[0m
+[0;31mE (20346) websocket_client: Websocket client is not connected[0m
+[0;31mE (20366) websocket_client: Websocket client is not connected[0m
+[0;31mE (20386) websocket_client: Websocket client is not connected[0m
+[0;31mE (20406) websocket_client: Websocket client is not connected[0m
+[0;31mE (20427) websocket_client: Websocket client is not connected[0m
+[0;31mE (20447) websocket_client: Websocket client is not connected[0m
+[0;31mE (20466) websocket_client: Websocket client is not connected[0m
+[0;31mE (20486) websocket_client: Websocket client is not connected[0m
+[0;31mE (20506) websocket_client: Websocket client is not connected[0m
+[0;31mE (20527) websocket_client: Websocket client is not connected[0m
+[0;31mE (20546) websocket_client: Websocket client is not connected[0m
+[0;31mE (20566) websocket_client: Websocket client is not connected[0m
+[0;31mE (20586) websocket_client: Websocket client is not connected[0m
+[0;31mE (20606) websocket_client: Websocket client is not connected[0m
+[0;31mE (20627) websocket_client: Websocket client is not connected[0m
+[0;31mE (20646) websocket_client: Websocket client is not connected[0m
+[0;31mE (20666) websocket_client: Websocket client is not connected[0m
+[0;31mE (20686) websocket_client: Websocket client is not connected[0m
+[0;31mE (20706) websocket_client: Websocket client is not connected[0m
+[0;31mE (20726) websocket_client: Websocket client is not connected[0m
+[0;31mE (20746) websocket_client: Websocket client is not connected[0m
+[0;31mE (20766) websocket_client: Websocket client is not connected[0m
+[0;31mE (20786) websocket_client: Websocket client is not connected[0m
+[0;31mE (20806) websocket_client: Websocket client is not connected[0m
+[0;31mE (20826) websocket_client: Websocket client is not connected[0m
+[0;31mE (20846) websocket_client: Websocket client is not connected[0m
+[0;31mE (20866) websocket_client: Websocket client is not connected[0m
+[0;31mE (20886) websocket_client: Websocket client is not connected[0m
+[0;31mE (20906) websocket_client: Websocket client is not connected[0m
+[0;31mE (20926) websocket_client: Websocket client is not connected[0m
+[0;31mE (20946) websocket_client: Websocket client is not connected[0m
+[0;31mE (20966) websocket_client: Websocket client is not connected[0m
+[0;31mE (20986) websocket_client: Websocket client is not connected[0m
+[0;31mE (21006) websocket_client: Websocket client is not connected[0m
+[0;31mE (21026) websocket_client: Websocket client is not connected[0m
+[0;31mE (21046) websocket_client: Websocket client is not connected[0m
+[0;31mE (21066) websocket_client: Websocket client is not connected[0m
+[0;31mE (21086) websocket_client: Websocket client is not connected[0m
+[0;31mE (21106) websocket_client: Websocket client is not connected[0m
+[0;31mE (21126) websocket_client: Websocket client is not connected[0m
+[0;31mE (21146) websocket_client: Websocket client is not connected[0m
+[0;31mE (21166) websocket_client: Websocket client is not connected[0m
+[0;31mE (21186) websocket_client: Websocket client is not connected[0m
+[0;31mE (21206) websocket_client: Websocket client is not connected[0m
+[0;31mE (21226) websocket_client: Websocket client is not connected[0m
+[0;31mE (21246) websocket_client: Websocket client is not connected[0m
+[0;31mE (21266) websocket_client: Websocket client is not connected[0m
+[0;31mE (21286) websocket_client: Websocket client is not connected[0m
+[0;31mE (21306) websocket_client: Websocket client is not connected[0m
+[0;31mE (21326) websocket_client: Websocket client is not connected[0m
+[0;31mE (21346) websocket_client: Websocket client is not connected[0m
+[0;31mE (21366) websocket_client: Websocket client is not connected[0m
+[0;31mE (21386) websocket_client: Websocket client is not connected[0m
+[0;31mE (21406) websocket_client: Websocket client is not connected[0m
+[0;31mE (21426) websocket_client: Websocket client is not connected[0m
+[0;31mE (21446) websocket_client: Websocket client is not connected[0m
+[0;31mE (21466) websocket_client: Websocket client is not connected[0m
+[0;31mE (21486) websocket_client: Websocket client is not connected[0m
+[0;31mE (21506) websocket_client: Websocket client is not connected[0m
+[0;31mE (21526) websocket_client: Websocket client is not connected[0m
+[0;31mE (21546) websocket_client: Websocket client is not connected[0m
+[0;31mE (21566) websocket_client: Websocket client is not connected[0m
+[0;31mE (21586) websocket_client: Websocket client is not connected[0m
+[0;31mE (21606) websocket_client: Websocket client is not connected[0m
+[0;31mE (21626) websocket_client: Websocket client is not connected[0m
+[0;31mE (21646) websocket_client: Websocket client is not connected[0m
+[0;31mE (21666) websocket_client: Websocket client is not connected[0m
+[0;31mE (21686) websocket_client: Websocket client is not connected[0m
+[0;31mE (21706) websocket_client: Websocket client is not connected[0m
+[0;31mE (21726) websocket_client: Websocket client is not connected[0m
+[0;31mE (21746) websocket_client: Websocket client is not connected[0m
+[0;31mE (21766) websocket_client: Websocket client is not connected[0m
+[0;31mE (21786) websocket_client: Websocket client is not connected[0m
+[0;31mE (21806) websocket_client: Websocket client is not connected[0m
+[0;31mE (21826) websocket_client: Websocket client is not connected[0m
+[0;31mE (21846) websocket_client: Websocket client is not connected[0m
+[0;31mE (21866) websocket_client: Websocket client is not connected[0m
+[0;31mE (21886) websocket_client: Websocket client is not connected[0m
+[0;31mE (21906) websocket_client: Websocket client is not connected[0m
+[0;31mE (21926) websocket_client: Websocket client is not connected[0m
+[0;31mE (21946) websocket_client: Websocket client is not connected[0m
+[0;31mE (21966) websocket_client: Websocket client is not connected[0m
+[0;31mE (21986) websocket_client: Websocket client is not connected[0m
+[0;31mE (22006) websocket_client: Websocket client is not connected[0m
+[0;31mE (22026) websocket_client: Websocket client is not connected[0m
+[0;31mE (22046) websocket_client: Websocket client is not connected[0m
+[0;31mE (22066) websocket_client: Websocket client is not connected[0m
+[0;31mE (22086) websocket_client: Websocket client is not connected[0m
+[0;31mE (22106) websocket_client: Websocket client is not connected[0m
+[0;31mE (22126) websocket_client: Websocket client is not connected[0m
+[0;31mE (22146) websocket_client: Websocket client is not connected[0m
+[0;31mE (22166) websocket_client: Websocket client is not connected[0m
+[0;31mE (22186) websocket_client: Websocket client is not connected[0m
+[0;31mE (22206) websocket_client: Websocket client is not connected[0m
+[0;31mE (22226) websocket_client: Websocket client is not connected[0m
+[0;32mI (22235) [vendor_ie]: esp_mesh_lite_wifi_scan_start return ESP_OK [0m
+[0;31mE (22246) websocket_client: Websocket client is not connected[0m
+[0;31mE (22266) websocket_client: Websocket client is not connected[0m
+[0;31mE (22286) websocket_client: Websocket client is not connected[0m
+[0;32mI (22294) esp32cam_security_gate: System information, channel: 13, layer: 0, self mac: 08:a6:f7:11:51:a8, parent bssid: 62:99:11:7e:0d:6b, parent rssi: -49, free heap: 4193184[0m
+[0;31mE (22306) websocket_client: Websocket client is not connected[0m
+[0;31mE (22326) websocket_client: Websocket client is not connected[0m
+[0;31mE (22346) websocket_client: Websocket client is not connected[0m
+[0;31mE (22366) websocket_client: Websocket client is not connected[0m
+[0;31mE (22386) websocket_client: Websocket client is not connected[0m
+[0;31mE (22406) websocket_client: Websocket client is not connected[0m
+[0;31mE (22426) websocket_client: Websocket client is not connected[0m
+[0;31mE (22446) websocket_client: Websocket client is not connected[0m
+[0;31mE (22466) websocket_client: Websocket client is not connected[0m
+[0;31mE (22486) websocket_client: Websocket client is not connected[0m
+[0;31mE (22506) websocket_client: Websocket client is not connected[0m
+[0;31mE (22526) websocket_client: Websocket client is not connected[0m
+[0;31mE (22546) websocket_client: Websocket client is not connected[0m
+[0;31mE (22566) websocket_client: Websocket client is not connected[0m
+[0;31mE (22586) websocket_client: Websocket client is not connected[0m
+[0;32mI (22596) [ESP_Mesh_Lite_Comm]: Mesh-Lite Comm Scan done [0m
+[0;32mI (22597) [ESP_Mesh_Lite_Comm]: approved: 1 [0m
+[0;31mE (22606) websocket_client: Websocket client is not connected[0m
+[0;31mE (22626) websocket_client: Websocket client is not connected[0m
+[0;31mE (22646) websocket_client: Websocket client is not connected[0m
+[0;31mE (22666) websocket_client: Websocket client is not connected[0m
+[0;31mE (22669) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (22671) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (22675) transport_ws: Error connecting to host 192.168.26.35:3000[0m
+[0;31mE (22682) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (22700) websocket_client: WebSocket client error[0m
+[0;32mI (22705) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (22711) websocket_client: WebSocket client connected[0m
+[0;31mE (22717) websocket_client: Websocket client is not connected[0m
+[0;31mE (22746) websocket_client: Websocket client is not connected[0m
+[0;31mE (22766) websocket_client: Websocket client is not connected[0m
+[0;31mE (22786) websocket_client: Websocket client is not connected[0m
+[0;31mE (22806) websocket_client: Websocket client is not connected[0m
+[0;31mE (22826) websocket_client: Websocket client is not connected[0m
+[0;31mE (22846) websocket_client: Websocket client is not connected[0m
+[0;31mE (22865) websocket_client: Websocket client is not connected[0m
+[0;31mE (22886) websocket_client: Websocket client is not connected[0m
+[0;31mE (22905) websocket_client: Websocket client is not connected[0m
+[0;31mE (22926) websocket_client: Websocket client is not connected[0m
+[0;31mE (22945) websocket_client: Websocket client is not connected[0m
+[0;31mE (22965) websocket_client: Websocket client is not connected[0m
+[0;31mE (22985) websocket_client: Websocket client is not connected[0m
+[0;31mE (23005) websocket_client: Websocket client is not connected[0m
+[0;31mE (23025) websocket_client: Websocket client is not connected[0m
+[0;31mE (23045) websocket_client: Websocket client is not connected[0m
+[0;31mE (23065) websocket_client: Websocket client is not connected[0m
+[0;31mE (23085) websocket_client: Websocket client is not connected[0m
+[0;31mE (23105) websocket_client: Websocket client is not connected[0m
+[0;31mE (23125) websocket_client: Websocket client is not connected[0m
+[0;31mE (23145) websocket_client: Websocket client is not connected[0m
+[0;31mE (23165) websocket_client: Websocket client is not connected[0m
+[0;31mE (23185) websocket_client: Websocket client is not connected[0m
+[0;31mE (23205) websocket_client: Websocket client is not connected[0m
+[0;31mE (23225) websocket_client: Websocket client is not connected[0m
+[0;31mE (23245) websocket_client: Websocket client is not connected[0m
+[0;31mE (23265) websocket_client: Websocket client is not connected[0m
+[0;31mE (23285) websocket_client: Websocket client is not connected[0m
+[0;31mE (23305) websocket_client: Websocket client is not connected[0m
+[0;31mE (23325) websocket_client: Websocket client is not connected[0m
+[0;31mE (23345) websocket_client: Websocket client is not connected[0m
+[0;31mE (23365) websocket_client: Websocket client is not connected[0m
+[0;31mE (23386) websocket_client: Websocket client is not connected[0m
+[0;31mE (23405) websocket_client: Websocket client is not connected[0m
+[0;31mE (23425) websocket_client: Websocket client is not connected[0m
+[0;31mE (23445) websocket_client: Websocket client is not connected[0m
+[0;31mE (23465) websocket_client: Websocket client is not connected[0m
+[0;31mE (23485) websocket_client: Websocket client is not connected[0m
+[0;31mE (23505) websocket_client: Websocket client is not connected[0m
+[0;31mE (23525) websocket_client: Websocket client is not connected[0m
+[0;31mE (23545) websocket_client: Websocket client is not connected[0m
+[0;31mE (23565) websocket_client: Websocket client is not connected[0m
+[0;31mE (23585) websocket_client: Websocket client is not connected[0m
+[0;31mE (23605) websocket_client: Websocket client is not connected[0m
+[0;31mE (23625) websocket_client: Websocket client is not connected[0m
+[0;31mE (23645) websocket_client: Websocket client is not connected[0m
+[0;31mE (23665) websocket_client: Websocket client is not connected[0m
+[0;31mE (23685) websocket_client: Websocket client is not connected[0m
+[0;31mE (23705) websocket_client: Websocket client is not connected[0m
+[0;31mE (23725) websocket_client: Websocket client is not connected[0m
+[0;31mE (23745) websocket_client: Websocket client is not connected[0m
+[0;31mE (23765) websocket_client: Websocket client is not connected[0m
+[0;31mE (23785) websocket_client: Websocket client is not connected[0m
+[0;31mE (23805) websocket_client: Websocket client is not connected[0m
+[0;31mE (23825) websocket_client: Websocket client is not connected[0m
+[0;31mE (23845) websocket_client: Websocket client is not connected[0m
+[0;31mE (23865) websocket_client: Websocket client is not connected[0m
+[0;31mE (23885) websocket_client: Websocket client is not connected[0m
+[0;31mE (23905) websocket_client: Websocket client is not connected[0m
+[0;31mE (23925) websocket_client: Websocket client is not connected[0m
+[0;31mE (23945) websocket_client: Websocket client is not connected[0m
+[0;31mE (23965) websocket_client: Websocket client is not connected[0m
+[0;31mE (23986) websocket_client: Websocket client is not connected[0m
+[0;31mE (24005) websocket_client: Websocket client is not connected[0m
+[0;31mE (24025) websocket_client: Websocket client is not connected[0m
+[0;31mE (24045) websocket_client: Websocket client is not connected[0m
+[0;31mE (24065) websocket_client: Websocket client is not connected[0m
+[0;31mE (24085) websocket_client: Websocket client is not connected[0m
+[0;31mE (24105) websocket_client: Websocket client is not connected[0m
+[0;31mE (24125) websocket_client: Websocket client is not connected[0m
+[0;31mE (24145) websocket_client: Websocket client is not connected[0m
+[0;31mE (24165) websocket_client: Websocket client is not connected[0m
+[0;31mE (24185) websocket_client: Websocket client is not connected[0m
+[0;31mE (24205) websocket_client: Websocket client is not connected[0m
+[0;31mE (24225) websocket_client: Websocket client is not connected[0m
+[0;31mE (24245) websocket_client: Websocket client is not connected[0m
+[0;31mE (24265) websocket_client: Websocket client is not connected[0m
+[0;31mE (24285) websocket_client: Websocket client is not connected[0m
+[0;31mE (24305) websocket_client: Websocket client is not connected[0m
+[0;31mE (24325) websocket_client: Websocket client is not connected[0m
+[0;31mE (24345) websocket_client: Websocket client is not connected[0m
+[0;31mE (24365) websocket_client: Websocket client is not connected[0m
+[0;31mE (24385) websocket_client: Websocket client is not connected[0m
+[0;31mE (24405) websocket_client: Websocket client is not connected[0m
+[0;31mE (24425) websocket_client: Websocket client is not connected[0m
+[0;31mE (24445) websocket_client: Websocket client is not connected[0m
+[0;31mE (24465) websocket_client: Websocket client is not connected[0m
+[0;31mE (24485) websocket_client: Websocket client is not connected[0m
+[0;31mE (24505) websocket_client: Websocket client is not connected[0m
+[0;31mE (24525) websocket_client: Websocket client is not connected[0m
+[0;31mE (24545) websocket_client: Websocket client is not connected[0m
+[0;31mE (24565) websocket_client: Websocket client is not connected[0m
+[0;31mE (24585) websocket_client: Websocket client is not connected[0m
+[0;31mE (24605) websocket_client: Websocket client is not connected[0m
+[0;31mE (24625) websocket_client: Websocket client is not connected[0m
+[0;31mE (24645) websocket_client: Websocket client is not connected[0m
+[0;31mE (24665) websocket_client: Websocket client is not connected[0m
+[0;31mE (24685) websocket_client: Websocket client is not connected[0m
+[0;31mE (24705) websocket_client: Websocket client is not connected[0m
+[0;31mE (24725) websocket_client: Websocket client is not connected[0m
+[0;31mE (24745) websocket_client: Websocket client is not connected[0m
+[0;31mE (24765) websocket_client: Websocket client is not connected[0m
+[0;31mE (24785) websocket_client: Websocket client is not connected[0m
+[0;31mE (24805) websocket_client: Websocket client is not connected[0m
+[0;31mE (24825) websocket_client: Websocket client is not connected[0m
+[0;31mE (24845) websocket_client: Websocket client is not connected[0m
+[0;31mE (24865) websocket_client: Websocket client is not connected[0m
+[0;31mE (24885) websocket_client: Websocket client is not connected[0m
+[0;31mE (24905) websocket_client: Websocket client is not connected[0m
+[0;31mE (24925) websocket_client: Websocket client is not connected[0m
+[0;31mE (24945) websocket_client: Websocket client is not connected[0m
+[0;31mE (24965) websocket_client: Websocket client is not connected[0m
+[0;31mE (24985) websocket_client: Websocket client is not connected[0m
+[0;32mI (25002) bridge_common: [WIFI_AP_DEF ]Name Server1: 192.168.26.27[0m
+[0;31mE (25005) websocket_client: Websocket client is not connected[0m
+[0;31mE (25025) websocket_client: Websocket client is not connected[0m
+[0;31mE (25045) websocket_client: Websocket client is not connected[0m
+[0;31mE (25065) websocket_client: Websocket client is not connected[0m
+[0;31mE (25085) websocket_client: Websocket client is not connected[0m
+[0;31mE (25105) websocket_client: Websocket client is not connected[0m
+[0;31mE (25125) websocket_client: Websocket client is not connected[0m
+[0;31mE (25145) websocket_client: Websocket client is not connected[0m
+[0;31mE (25165) websocket_client: Websocket client is not connected[0m
+[0;31mE (25185) websocket_client: Websocket client is not connected[0m
+[0;31mE (25205) websocket_client: Websocket client is not connected[0m
+[0;31mE (25225) websocket_client: Websocket client is not connected[0m
+[0;31mE (25245) websocket_client: Websocket client is not connected[0m
+[0;31mE (25264) websocket_client: Websocket client is not connected[0m
+[0;31mE (25285) websocket_client: Websocket client is not connected[0m
+[0;31mE (25305) websocket_client: Websocket client is not connected[0m
+[0;31mE (25325) websocket_client: Websocket client is not connected[0m
+[0;31mE (25345) websocket_client: Websocket client is not connected[0m
+[0;31mE (25365) websocket_client: Websocket client is not connected[0m
+[0;31mE (25385) websocket_client: Websocket client is not connected[0m
+[0;31mE (25405) websocket_client: Websocket client is not connected[0m
+[0;31mE (25425) websocket_client: Websocket client is not connected[0m
+[0;31mE (25445) websocket_client: Websocket client is not connected[0m
+[0;31mE (25464) websocket_client: Websocket client is not connected[0m
+[0;31mE (25485) websocket_client: Websocket client is not connected[0m
+[0;31mE (25504) websocket_client: Websocket client is not connected[0m
+[0;31mE (25524) websocket_client: Websocket client is not connected[0m
+[0;31mE (25544) websocket_client: Websocket client is not connected[0m
+[0;31mE (25564) websocket_client: Websocket client is not connected[0m
+[0;31mE (25584) websocket_client: Websocket client is not connected[0m
+[0;31mE (25604) websocket_client: Websocket client is not connected[0m
+[0;31mE (25624) websocket_client: Websocket client is not connected[0m
+[0;31mE (25644) websocket_client: Websocket client is not connected[0m
+[0;31mE (25664) websocket_client: Websocket client is not connected[0m
+[0;31mE (25684) websocket_client: Websocket client is not connected[0m
+[0;31mE (25704) websocket_client: Websocket client is not connected[0m
+[0;31mE (25724) websocket_client: Websocket client is not connected[0m
+[0;31mE (25744) websocket_client: Websocket client is not connected[0m
+[0;31mE (25764) websocket_client: Websocket client is not connected[0m
+[0;31mE (25784) websocket_client: Websocket client is not connected[0m
+[0;31mE (25804) websocket_client: Websocket client is not connected[0m
+[0;31mE (25824) websocket_client: Websocket client is not connected[0m
+[0;31mE (25844) websocket_client: Websocket client is not connected[0m
+[0;31mE (25864) websocket_client: Websocket client is not connected[0m
+[0;31mE (25884) websocket_client: Websocket client is not connected[0m
+[0;31mE (25904) websocket_client: Websocket client is not connected[0m
+[0;32mI (25921) esp_netif_handlers: sta ip: 192.168.26.175, mask: 255.255.255.0, gw: 192.168.26.27[0m
+[0;32mI (25923) bridge_wifi: Connected with IP Address:192.168.26.175[0m
+[0;31mE (25924) websocket_client: Websocket client is not connected[0m
+[0;32mI (25935) [vendor_ie]: RTC store: temp_mesh_id:175; ssid:Xiaomi13T; bssid:00:00:00:00:00:00; crc:2907497901 [0m
+[0;33mW (25945) cam_hal: NO-SOI[0m
+[0;31mE (25948) [ESP_Mesh_Lite_Comm]: Error Get! [0m
+cam_hal: EV-EOF-OVF
+[0;33mW (25954) [ESP_Mesh_Lite_Comm]: argot is not saved in flash [0m
+[0;33mW (25964) cam_hal: NO-SOI[0m
+[0;32mI (25969) esp32cam_security_gate: TCP client write task is running[0m
+[0;31mE (25984) websocket_client: Websocket client is not connected[0m
+[0;31mE (26004) websocket_client: Websocket client is not connected[0m
+[0;31mE (26024) websocket_client: Websocket client is not connected[0m
+[0;31mE (26044) websocket_client: Websocket client is not connected[0m
+[0;31mE (26064) websocket_client: Websocket client is not connected[0m
+[0;31mE (26084) websocket_client: Websocket client is not connected[0m
+[0;31mE (26104) websocket_client: Websocket client is not connected[0m
+[0;31mE (26124) websocket_client: Websocket client is not connected[0m
+[0;31mE (26144) websocket_client: Websocket client is not connected[0m
+[0;31mE (26164) websocket_client: Websocket client is not connected[0m
+[0;31mE (26184) websocket_client: Websocket client is not connected[0m
+[0;31mE (26204) websocket_client: Websocket client is not connected[0m
+[0;31mE (26224) websocket_client: Websocket client is not connected[0m
+[0;31mE (26244) websocket_client: Websocket client is not connected[0m
+[0;31mE (26264) websocket_client: Websocket client is not connected[0m
+[0;31mE (26284) websocket_client: Websocket client is not connected[0m
+[0;31mE (26304) websocket_client: Websocket client is not connected[0m
+[0;31mE (26324) websocket_client: Websocket client is not connected[0m
+[0;31mE (26344) websocket_client: Websocket client is not connected[0m
+[0;31mE (26364) websocket_client: Websocket client is not connected[0m
+[0;31mE (26384) websocket_client: Websocket client is not connected[0m
+[0;31mE (26404) websocket_client: Websocket client is not connected[0m
+[0;31mE (26424) websocket_client: Websocket client is not connected[0m
+[0;31mE (26444) websocket_client: Websocket client is not connected[0m
+[0;31mE (26464) websocket_client: Websocket client is not connected[0m
+[0;31mE (26485) websocket_client: Websocket client is not connected[0m
+[0;31mE (26504) websocket_client: Websocket client is not connected[0m
+[0;31mE (26524) websocket_client: Websocket client is not connected[0m
+[0;31mE (26544) websocket_client: Websocket client is not connected[0m
+[0;31mE (26564) websocket_client: Websocket client is not connected[0m
+[0;31mE (26584) websocket_client: Websocket client is not connected[0m
+[0;31mE (26604) websocket_client: Websocket client is not connected[0m
+[0;31mE (26624) websocket_client: Websocket client is not connected[0m
+[0;31mE (26644) websocket_client: Websocket client is not connected[0m
+[0;31mE (26664) websocket_client: Websocket client is not connected[0m
+[0;31mE (26684) websocket_client: Websocket client is not connected[0m
+[0;31mE (26704) websocket_client: Websocket client is not connected[0m
+[0;31mE (26724) websocket_client: Websocket client is not connected[0m
+[0;31mE (26744) websocket_client: Websocket client is not connected[0m
+[0;31mE (26764) websocket_client: Websocket client is not connected[0m
+[0;31mE (26784) websocket_client: Websocket client is not connected[0m
+[0;31mE (26804) websocket_client: Websocket client is not connected[0m
+[0;31mE (26824) websocket_client: Websocket client is not connected[0m
+[0;31mE (26844) websocket_client: Websocket client is not connected[0m
+[0;31mE (26864) websocket_client: Websocket client is not connected[0m
+[0;31mE (26884) websocket_client: Websocket client is not connected[0m
+[0;31mE (26904) websocket_client: Websocket client is not connected[0m
+[0;31mE (26924) websocket_client: Websocket client is not connected[0m
+[0;31mE (26944) websocket_client: Websocket client is not connected[0m
+[0;31mE (26964) websocket_client: Websocket client is not connected[0m
+[0;31mE (26984) websocket_client: Websocket client is not connected[0m
+[0;31mE (27004) websocket_client: Websocket client is not connected[0m
+[0;31mE (27024) websocket_client: Websocket client is not connected[0m
+[0;31mE (27044) websocket_client: Websocket client is not connected[0m
+[0;31mE (27064) websocket_client: Websocket client is not connected[0m
+[0;31mE (27084) websocket_client: Websocket client is not connected[0m
+[0;31mE (27104) websocket_client: Websocket client is not connected[0m
+[0;31mE (27124) websocket_client: Websocket client is not connected[0m
+[0;31mE (27144) websocket_client: Websocket client is not connected[0m
+[0;31mE (27164) websocket_client: Websocket client is not connected[0m
+[0;31mE (27184) websocket_client: Websocket client is not connected[0m
+[0;31mE (27204) websocket_client: Websocket client is not connected[0m
+[0;31mE (27224) websocket_client: Websocket client is not connected[0m
+[0;31mE (27244) websocket_client: Websocket client is not connected[0m
+[0;31mE (27264) websocket_client: Websocket client is not connected[0m
+[0;31mE (27284) websocket_client: Websocket client is not connected[0m
+[0;31mE (27304) websocket_client: Websocket client is not connected[0m
+[0;31mE (27324) websocket_client: Websocket client is not connected[0m
+[0;31mE (27344) websocket_client: Websocket client is not connected[0m
+[0;31mE (27364) websocket_client: Websocket client is not connected[0m
+[0;31mE (27384) websocket_client: Websocket client is not connected[0m
+[0;31mE (27404) websocket_client: Websocket client is not connected[0m
+[0;31mE (27424) websocket_client: Websocket client is not connected[0m
+[0;31mE (27444) websocket_client: Websocket client is not connected[0m
+[0;31mE (27464) websocket_client: Websocket client is not connected[0m
+[0;31mE (27484) websocket_client: Websocket client is not connected[0m
+[0;31mE (27504) websocket_client: Websocket client is not connected[0m
+[0;31mE (27524) websocket_client: Websocket client is not connected[0m
+[0;31mE (27544) websocket_client: Websocket client is not connected[0m
+[0;31mE (27564) websocket_client: Websocket client is not connected[0m
+[0;31mE (27584) websocket_client: Websocket client is not connected[0m
+[0;31mE (27604) websocket_client: Websocket client is not connected[0m
+[0;31mE (27624) websocket_client: Websocket client is not connected[0m
+[0;31mE (27644) websocket_client: Websocket client is not connected[0m
+[0;31mE (27663) websocket_client: Websocket client is not connected[0m
+[0;31mE (27683) websocket_client: Websocket client is not connected[0m
+[0;31mE (27704) websocket_client: Websocket client is not connected[0m
+[0;31mE (27724) websocket_client: Websocket client is not connected[0m
+[0;32mI (31257) websocket_client: WebSocket client connected[0m
+[0;32mI (31274) websocket_client: Image sent to WebSocket: 8340 bytes[0m
+[0;32mI (31378) websocket_client: Image sent to WebSocket: 8130 bytes[0m
+[0;32mI (31503) websocket_client: Image sent to WebSocket: 8130 bytes[0m
+[0;32mI (31621) websocket_client: Image sent to WebSocket: 8130 bytes[0m
+[0;32mI (32294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 62:99:11:7e:0d:6b, parent rssi: -50, free heap: 4181004[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (29) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 18 2024 03:13:10[0m
+[0;33mW (29) boot: Unicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (82) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (97) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (105) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (112) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (120) boot: End of partition table[0m
+[0;32mI (124) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=30dfch (200188) map[0m
+[0;32mI (201) esp_image: segment 1: paddr=00040e24 vaddr=3ffbdb60 size=0608ch ( 24716) load[0m
+[0;32mI (211) esp_image: segment 2: paddr=00046eb8 vaddr=40080000 size=09160h ( 37216) load[0m
+[0;32mI (226) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=cb234h (832052) map[0m
+[0;32mI (511) esp_image: segment 4: paddr=0011b25c vaddr=40089160 size=15050h ( 86096) load[0m
+[0;32mI (560) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (560) boot: Disabling RNG early entropy source...[0m
+[0;32mI (572) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (573) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (573) esp_psram: Speed: 40MHz[0m
+[0;32mI (576) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (584) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (593) cpu_start: Unicore app[0m
+[0;32mI (596) cpu_start: Single core mode[0m
+[0;32mI (1526) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1534) cpu_start: Pro cpu start user code[0m
+[0;32mI (1534) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1534) app_init: Application information:[0m
+[0;32mI (1537) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1543) app_init: App version:      93e19e9-dirty[0m
+[0;32mI (1549) app_init: Compile time:     Aug 18 2024 03:13:03[0m
+[0;32mI (1555) app_init: ELF file SHA256:  29b12489f...[0m
+[0;32mI (1560) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1565) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1570) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1575) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1581) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1588) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1594) heap_init: At 3FFC8A10 len 000175F0 (93 KiB): DRAM[0m
+[0;32mI (1600) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1606) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1613) heap_init: At 4009E1B0 len 00001E50 (7 KiB): IRAM[0m
+[0;32mI (1619) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1626) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1634) spi_flash: detected chip: generic[0m
+[0;32mI (1638) spi_flash: flash io: dio[0m
+[0;33mW (1642) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1653) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1658) main_task: Started on CPU0[0m
+[0;32mI (1661) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1670) main_task: Calling app_main()[0m
+[0;32mI (1691) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1694) wifi:wifi driver task: 3ffbd654, prio:23, stack:6656, core=0
+I (1697) wifi:wifi firmware version: 0caa81945
+I (1697) wifi:wifi certification version: v7.0
+I (1701) wifi:config NVS flash: enabled
+I (1705) wifi:config nano formating: disabled
+I (1709) wifi:Init data frame dynamic rx buffer num: 32
+I (1714) wifi:Init static rx mgmt buffer num: 5
+I (1718) wifi:Init management short buffer num: 32
+I (1723) wifi:Init static tx buffer num: 16
+I (1727) wifi:Init tx cache buffer num: 32
+I (1731) wifi:Init static rx buffer size: 1600
+I (1735) wifi:Init static rx buffer num: 10
+I (1738) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1744) wifi_init: accept mbox: 6[0m
+[0;32mI (1747) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1751) wifi_init: udp mbox: 6[0m
+[0;32mI (1754) wifi_init: tcp mbox: 6[0m
+[0;32mI (1758) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1763) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1767) wifi_init: tcp mss: 1440[0m
+[0;32mI (1771) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1775) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1781) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (1844) wifi:mode : null
+I (1847) wifi:mode : softAP (08:a6:f7:11:51:a9)
+I (1849) wifi:Total power save buffer number: 8
+I (1849) wifi:Init max length of beacon: 752/752
+I (1852) wifi:Init max length of beacon: 752/752
+[0;32mI (1858) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+Add netif ap with 93e19e9(commit id)
+[0;32mI (1868) bridge_common: netif list add success[0m
+[0;32mI (1874) bridge_common: [WIFI_AP_DEF ][0m
+[0;32mI (1878) bridge_common: Set ip info:192.168.5.1[0m
+[0;32mI (1883) bridge_wifi: SoftAP IP network segment has changed, deauth all station[0m
+I (1893) wifi:Disabled PMF config for SoftAP
+I (1895) wifi:Total power save buffer number: 8
+[0;32mI (1902) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (1908) bridge_common: [WIFI_AP_DEF ]Name Server1: 114.114.114.114[0m
+[0;32mI (1915) bridge_common: DHCPS Restart, deauth all station[0m
+Add netif sta with 93e19e9(commit id)
+[0;32mI (1924) bridge_common: netif list add success[0m
+I (1930) wifi:mode : sta (08:a6:f7:11:51:a8) + softAP (08:a6:f7:11:51:a9)
+I (1936) wifi:enable tsf
+[0;31mE (1940) NVS: Failed to read IP info from NVS[0m
+I (1944) wifi:Disabled PMF config for STA
+[0;32mI (1947) bridge_wifi: [esp_bridge_wifi_set_config] sta ssid: Xiaomi13T password: password[0m
+[0;32mI (1956) bridge_wifi: [esp_bridge_wifi_set_config] softap ssid: ESP_Bridge_1151a9 password: 12345678[0m
+I (2139) wifi:Total power save buffer number: 8
+[0;32mI (2143) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (2145) bridge_wifi: SoftAP config changed, deauth all station[0m
+[0;32mI (2149) Mesh-Lite: esp-mesh-lite component version: 1.0.0[0m
+I (2155) ESPNOW: espnow [version: 1.0] init
+[0;32mI (2158) [vendor_ie]: Mesh-Lite commit id: bc9302d
+ [0m
+[0;32mI (2165) [vendor_ie]: Mesh ID: 77 [0m
+[0;32mI (2170) [ESP_Mesh_Lite_Comm]: msg action add success [0m
+[0;32mI (2176) [ESP_Mesh_Lite_Comm]: Bind Socket 54, port 6364 [0m
+[0;32mI (2181) [ESP_Mesh_Lite_Comm]: Bind Socket 55, port 6363 [0m
+[0;32mI (2187) [ESP_Mesh_Lite_Comm]: Bind Socket 56, port 6366 [0m
+[0;32mI (2193) [ESP_Mesh_Lite_Comm]: Bind Socket 57, port 6365 [0m
+[0;32mI (2199) [mesh-lite-espnow]: Start espnow task [0m
+[0;32mI (2205) Mesh-Lite: Mesh-Lite connecting[0m
+[0;32mI (2211) [vendor_ie]: esp_mesh_lite_wifi_scan_start return ESP_OK [0m
+[0;31mE (2217) rc522: Read/write test failed[0m
+[0;32mI (2220) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (2229) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (2239) cam_hal: cam init ok[0m
+[0;32mI (2243) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (2246) sccb: sccb_i2c_port=1[0m
+[0;32mI (2251) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2289) camera: Detected camera at address=0x30[0m
+[0;32mI (2292) camera: Detected OV2640 camera[0m
+[0;32mI (2293) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (2384) cam_hal: buffer_size: 32768, half_buffer_size: 4096, node_buffer_size: 2048, node_cnt: 16, total_cnt: 5[0m
+[0;32mI (2384) cam_hal: Allocating 23680 Byte frame buffer in PSRAM[0m
+[0;32mI (2391) cam_hal: cam config ok[0m
+[0;32mI (2394) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8[0m
+[0;33mW (2484) websocket_client: `network_timeout_ms` is not set, or it is less than or equal to zero, using default time out 10000 (milliseconds)[0m
+[0;32mI (2494) main_task: Returned from app_main()[0m
+[0;32mI (4057) [vendor_ie]: Mesh-Lite Scan done [0m
+[0;32mI (4058) [vendor_ie]: RTC store: temp_mesh_id:255; ssid:Xiaomi13T; bssid:00:00:00:00:00:00; crc:1883151208 [0m
+[0;32mI (4062) [vendor_ie]: wifi_cfg Xiaomi13T router_config Xiaomi13T [0m
+[0;32mI (4070) [vendor_ie]: esp_mesh_lite_wifi_connect return ESP_OK [0m
+I (6350) wifi:ap channel adjust o:1,1 n:13,2
+I (6350) wifi:new:<13,0>, old:<1,1>, ap:<13,2>, sta:<13,0>, prof:1, snd_ch_cfg:0x0
+I (6352) wifi:state: init -> auth (0xb0)
+I (6426) wifi:state: auth -> assoc (0x0)
+I (6436) wifi:state: assoc -> run (0x10)
+I (6454) wifi:connected with Xiaomi13T, aid = 3, channel 13, BW20, bssid = 62:99:11:7e:0d:6b
+I (6455) wifi:security: WPA2-PSK, phy: bgn, rssi: -52
+I (6457) wifi:pm start, type: 1
+
+I (6460) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (6552) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (6553) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (12229) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 62:99:11:7e:0d:6b, parent rssi: -50, free heap: 4192840[0m
+[0;31mE (12495) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (12496) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (12496) transport_ws: Error connecting to host 192.168.26.35:3000[0m
+[0;31mE (12504) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (12521) websocket_client: WebSocket client error[0m
+[0;32mI (12526) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (12532) websocket_client: WebSocket client connected[0m
+[0;31mE (12537) websocket_client: Websocket client is not connected[0m
+[0;31mE (12563) websocket_client: Websocket client is not connected[0m
+[0;31mE (12583) websocket_client: Websocket client is not connected[0m
+[0;31mE (12603) websocket_client: Websocket client is not connected[0m
+[0;31mE (12623) websocket_client: Websocket client is not connected[0m
+[0;31mE (12643) websocket_client: Websocket client is not connected[0m
+[0;31mE (12663) websocket_client: Websocket client is not connected[0m
+[0;31mE (12683) websocket_client: Websocket client is not connected[0m
+[0;31mE (12703) websocket_client: Websocket client is not connected[0m
+[0;31mE (12723) websocket_client: Websocket client is not connected[0m
+[0;31mE (12743) websocket_client: Websocket client is not connected[0m
+[0;31mE (12763) websocket_client: Websocket client is not connected[0m
+[0;31mE (12783) websocket_client: Websocket client is not connected[0m
+[0;31mE (12803) websocket_client: Websocket client is not connected[0m
+[0;31mE (12823) websocket_client: Websocket client is not connected[0m
+[0;31mE (12843) websocket_client: Websocket client is not connected[0m
+[0;31mE (12863) websocket_client: Websocket client is not connected[0m
+[0;31mE (12883) websocket_client: Websocket client is not connected[0m
+[0;31mE (12903) websocket_client: Websocket client is not connected[0m
+[0;31mE (12923) websocket_client: Websocket client is not connected[0m
+[0;31mE (12943) websocket_client: Websocket client is not connected[0m
+[0;31mE (12963) websocket_client: Websocket client is not connected[0m
+[0;31mE (12983) websocket_client: Websocket client is not connected[0m
+[0;31mE (13003) websocket_client: Websocket client is not connected[0m
+[0;31mE (13023) websocket_client: Websocket client is not connected[0m
+[0;31mE (13043) websocket_client: Websocket client is not connected[0m
+[0;31mE (13063) websocket_client: Websocket client is not connected[0m
+[0;31mE (13083) websocket_client: Websocket client is not connected[0m
+[0;31mE (13103) websocket_client: Websocket client is not connected[0m
+[0;31mE (13123) websocket_client: Websocket client is not connected[0m
+[0;31mE (13143) websocket_client: Websocket client is not connected[0m
+[0;31mE (13163) websocket_client: Websocket client is not connected[0m
+[0;31mE (13183) websocket_client: Websocket client is not connected[0m
+[0;31mE (13203) websocket_client: Websocket client is not connected[0m
+[0;31mE (13223) websocket_client: Websocket client is not connected[0m
+[0;31mE (13243) websocket_client: Websocket client is not connected[0m
+[0;31mE (13263) websocket_client: Websocket client is not connected[0m
+[0;31mE (13283) websocket_client: Websocket client is not connected[0m
+[0;31mE (13303) websocket_client: Websocket client is not connected[0m
+[0;31mE (13323) websocket_client: Websocket client is not connected[0m
+[0;31mE (13343) websocket_client: Websocket client is not connected[0m
+[0;31mE (13363) websocket_client: Websocket client is not connected[0m
+[0;31mE (13383) websocket_client: Websocket client is not connected[0m
+[0;31mE (13403) websocket_client: Websocket client is not connected[0m
+[0;31mE (13423) websocket_client: Websocket client is not connected[0m
+[0;31mE (13443) websocket_client: Websocket client is not connected[0m
+[0;31mE (13463) websocket_client: Websocket client is not connected[0m
+[0;31mE (13483) websocket_client: Websocket client is not connected[0m
+[0;31mE (13503) websocket_client: Websocket client is not connected[0m
+[0;31mE (13523) websocket_client: Websocket client is not connected[0m
+[0;31mE (13543) websocket_client: Websocket client is not connected[0m
+[0;31mE (13563) websocket_client: Websocket client is not connected[0m
+[0;31mE (13583) websocket_client: Websocket client is not connected[0m
+[0;31mE (13603) websocket_client: Websocket client is not connected[0m
+[0;31mE (13623) websocket_client: Websocket client is not connected[0m
+[0;31mE (13643) websocket_client: Websocket client is not connected[0m
+[0;31mE (13663) websocket_client: Websocket client is not connected[0m
+[0;31mE (13683) websocket_client: Websocket client is not connected[0m
+[0;31mE (13703) websocket_client: Websocket client is not connected[0m
+[0;31mE (13723) websocket_client: Websocket client is not connected[0m
+[0;31mE (13743) websocket_client: Websocket client is not connected[0m
+[0;31mE (13762) websocket_client: Websocket client is not connected[0m
+[0;31mE (13783) websocket_client: Websocket client is not connected[0m
+[0;31mE (13803) websocket_client: Websocket client is not connected[0m
+[0;31mE (13823) websocket_client: Websocket client is not connected[0m
+[0;31mE (13843) websocket_client: Websocket client is not connected[0m
+[0;31mE (13862) websocket_client: Websocket client is not connected[0m
+[0;31mE (13883) websocket_client: Websocket client is not connected[0m
+[0;31mE (13903) websocket_client: Websocket client is not connected[0m
+[0;31mE (13923) websocket_client: Websocket client is not connected[0m
+[0;31mE (13943) websocket_client: Websocket client is not connected[0m
+[0;31mE (13962) websocket_client: Websocket client is not connected[0m
+[0;31mE (13983) websocket_client: Websocket client is not connected[0m
+[0;31mE (14003) websocket_client: Websocket client is not connected[0m
+[0;31mE (14023) websocket_client: Websocket client is not connected[0m
+[0;31mE (14043) websocket_client: Websocket client is not connected[0m
+[0;31mE (14063) websocket_client: Websocket client is not connected[0m
+[0;31mE (14083) websocket_client: Websocket client is not connected[0m
+[0;31mE (14102) websocket_client: Websocket client is not connected[0m
+[0;31mE (14122) websocket_client: Websocket client is not connected[0m
+[0;31mE (14143) websocket_client: Websocket client is not connected[0m
+[0;31mE (14162) websocket_client: Websocket client is not connected[0m
+[0;31mE (14182) websocket_client: Websocket client is not connected[0m
+[0;31mE (14202) websocket_client: Websocket client is not connected[0m
+[0;31mE (14222) websocket_client: Websocket client is not connected[0m
+[0;31mE (14242) websocket_client: Websocket client is not connected[0m
+[0;31mE (14262) websocket_client: Websocket client is not connected[0m
+[0;31mE (14282) websocket_client: Websocket client is not connected[0m
+[0;31mE (14302) websocket_client: Websocket client is not connected[0m
+[0;31mE (14322) websocket_client: Websocket client is not connected[0m
+[0;31mE (14342) websocket_client: Websocket client is not connected[0m
+[0;31mE (14362) websocket_client: Websocket client is not connected[0m
+[0;31mE (14382) websocket_client: Websocket client is not connected[0m
+[0;31mE (14402) websocket_client: Websocket client is not connected[0m
+[0;31mE (14422) websocket_client: Websocket client is not connected[0m
+[0;31mE (14442) websocket_client: Websocket client is not connected[0m
+[0;31mE (14462) websocket_client: Websocket client is not connected[0m
+[0;31mE (14482) websocket_client: Websocket client is not connected[0m
+[0;31mE (14502) websocket_client: Websocket client is not connected[0m
+[0;31mE (14522) websocket_client: Websocket client is not connected[0m
+[0;31mE (14542) websocket_client: Websocket client is not connected[0m
+[0;31mE (14562) websocket_client: Websocket client is not connected[0m
+[0;31mE (14582) websocket_client: Websocket client is not connected[0m
+[0;31mE (14602) websocket_client: Websocket client is not connected[0m
+[0;31mE (14622) websocket_client: Websocket client is not connected[0m
+[0;31mE (14642) websocket_client: Websocket client is not connected[0m
+[0;31mE (14662) websocket_client: Websocket client is not connected[0m
+[0;31mE (14682) websocket_client: Websocket client is not connected[0m
+[0;31mE (14702) websocket_client: Websocket client is not connected[0m
+[0;31mE (14722) websocket_client: Websocket client is not connected[0m
+[0;31mE (14742) websocket_client: Websocket client is not connected[0m
+[0;31mE (14762) websocket_client: Websocket client is not connected[0m
+[0;31mE (14782) websocket_client: Websocket client is not connected[0m
+[0;31mE (14802) websocket_client: Websocket client is not connected[0m
+[0;31mE (14822) websocket_client: Websocket client is not connected[0m
+[0;31mE (14842) websocket_client: Websocket client is not connected[0m
+[0;31mE (14862) websocket_client: Websocket client is not connected[0m
+[0;31mE (14882) websocket_client: Websocket client is not connected[0m
+[0;31mE (14902) websocket_client: Websocket client is not connected[0m
+[0;31mE (14922) websocket_client: Websocket client is not connected[0m
+[0;31mE (14942) websocket_client: Websocket client is not connected[0m
+[0;31mE (14962) websocket_client: Websocket client is not connected[0m
+[0;31mE (14982) websocket_client: Websocket client is not connected[0m
+[0;31mE (15002) websocket_client: Websocket client is not connected[0m
+[0;31mE (15022) websocket_client: Websocket client is not connected[0m
+[0;31mE (15042) websocket_client: Websocket client is not connected[0m
+[0;31mE (15062) websocket_client: Websocket client is not connected[0m
+[0;31mE (15082) websocket_client: Websocket client is not connected[0m
+[0;31mE (15102) websocket_client: Websocket client is not connected[0m
+[0;31mE (15122) websocket_client: Websocket client is not connected[0m
+[0;31mE (15142) websocket_client: Websocket client is not connected[0m
+[0;31mE (15162) websocket_client: Websocket client is not connected[0m
+[0;31mE (15182) websocket_client: Websocket client is not connected[0m
+[0;31mE (15202) websocket_client: Websocket client is not connected[0m
+[0;31mE (15222) websocket_client: Websocket client is not connected[0m
+[0;31mE (15242) websocket_client: Websocket client is not connected[0m
+[0;31mE (15262) websocket_client: Websocket client is not connected[0m
+[0;31mE (15282) websocket_client: Websocket client is not connected[0m
+[0;31mE (15302) websocket_client: Websocket client is not connected[0m
+[0;31mE (15322) websocket_client: Websocket client is not connected[0m
+[0;31mE (15342) websocket_client: Websocket client is not connected[0m
+[0;31mE (15362) websocket_client: Websocket client is not connected[0m
+[0;31mE (15382) websocket_client: Websocket client is not connected[0m
+[0;31mE (15402) websocket_client: Websocket client is not connected[0m
+[0;31mE (15422) websocket_client: Websocket client is not connected[0m
+[0;31mE (15442) websocket_client: Websocket client is not connected[0m
+[0;31mE (15462) websocket_client: Websocket client is not connected[0m
+[0;31mE (15482) websocket_client: Websocket client is not connected[0m
+[0;31mE (15502) websocket_client: Websocket client is not connected[0m
+[0;31mE (15522) websocket_client: Websocket client is not connected[0m
+[0;31mE (15542) websocket_client: Websocket client is not connected[0m
+[0;31mE (15562) websocket_client: Websocket client is not connected[0m
+[0;31mE (15582) websocket_client: Websocket client is not connected[0m
+[0;31mE (15602) websocket_client: Websocket client is not connected[0m
+[0;31mE (15622) websocket_client: Websocket client is not connected[0m
+[0;31mE (15642) websocket_client: Websocket client is not connected[0m
+[0;31mE (15662) websocket_client: Websocket client is not connected[0m
+[0;31mE (15682) websocket_client: Websocket client is not connected[0m
+[0;31mE (15702) websocket_client: Websocket client is not connected[0m
+[0;31mE (15722) websocket_client: Websocket client is not connected[0m
+[0;31mE (15742) websocket_client: Websocket client is not connected[0m
+[0;31mE (15762) websocket_client: Websocket client is not connected[0m
+[0;31mE (15782) websocket_client: Websocket client is not connected[0m
+[0;31mE (15802) websocket_client: Websocket client is not connected[0m
+[0;31mE (15822) websocket_client: Websocket client is not connected[0m
+[0;31mE (15842) websocket_client: Websocket client is not connected[0m
+[0;31mE (15862) websocket_client: Websocket client is not connected[0m
+[0;31mE (15882) websocket_client: Websocket client is not connected[0m
+[0;31mE (15902) websocket_client: Websocket client is not connected[0m
+[0;31mE (15922) websocket_client: Websocket client is not connected[0m
+[0;31mE (15942) websocket_client: Websocket client is not connected[0m
+[0;31mE (15962) websocket_client: Websocket client is not connected[0m
+[0;31mE (15982) websocket_client: Websocket client is not connected[0m
+[0;31mE (16002) websocket_client: Websocket client is not connected[0m
+[0;31mE (16022) websocket_client: Websocket client is not connected[0m
+[0;31mE (16042) websocket_client: Websocket client is not connected[0m
+[0;31mE (16062) websocket_client: Websocket client is not connected[0m
+[0;31mE (16082) websocket_client: Websocket client is not connected[0m
+[0;31mE (16102) websocket_client: Websocket client is not connected[0m
+[0;31mE (16122) websocket_client: Websocket client is not connected[0m
+[0;31mE (16142) websocket_client: Websocket client is not connected[0m
+[0;31mE (16162) websocket_client: Websocket client is not connected[0m
+[0;31mE (16182) websocket_client: Websocket client is not connected[0m
+[0;31mE (16202) websocket_client: Websocket client is not connected[0m
+[0;31mE (16221) websocket_client: Websocket client is not connected[0m
+[0;31mE (16241) websocket_client: Websocket client is not connected[0m
+[0;31mE (16261) websocket_client: Websocket client is not connected[0m
+[0;31mE (16282) websocket_client: Websocket client is not connected[0m
+[0;31mE (16301) websocket_client: Websocket client is not connected[0m
+[0;31mE (16322) websocket_client: Websocket client is not connected[0m
+[0;31mE (16341) websocket_client: Websocket client is not connected[0m
+[0;31mE (16361) websocket_client: Websocket client is not connected[0m
+[0;31mE (16382) websocket_client: Websocket client is not connected[0m
+[0;31mE (16401) websocket_client: Websocket client is not connected[0m
+[0;31mE (16421) websocket_client: Websocket client is not connected[0m
+[0;31mE (16441) websocket_client: Websocket client is not connected[0m
+[0;31mE (16461) websocket_client: Websocket client is not connected[0m
+[0;31mE (16481) websocket_client: Websocket client is not connected[0m
+[0;31mE (16501) websocket_client: Websocket client is not connected[0m
+[0;31mE (16521) websocket_client: Websocket client is not connected[0m
+[0;31mE (16541) websocket_client: Websocket client is not connected[0m
+[0;31mE (16561) websocket_client: Websocket client is not connected[0m
+[0;31mE (16581) websocket_client: Websocket client is not connected[0m
+[0;31mE (16601) websocket_client: Websocket client is not connected[0m
+[0;31mE (16621) websocket_client: Websocket client is not connected[0m
+[0;31mE (16641) websocket_client: Websocket client is not connected[0m
+[0;31mE (16661) websocket_client: Websocket client is not connected[0m
+[0;31mE (16682) websocket_client: Websocket client is not connected[0m
+[0;31mE (16701) websocket_client: Websocket client is not connected[0m
+[0;31mE (16721) websocket_client: Websocket client is not connected[0m
+[0;31mE (16741) websocket_client: Websocket client is not connected[0m
+[0;31mE (16761) websocket_client: Websocket client is not connected[0m
+[0;31mE (16781) websocket_client: Websocket client is not connected[0m
+[0;31mE (16801) websocket_client: Websocket client is not connected[0m
+[0;31mE (16821) websocket_client: Websocket client is not connected[0m
+[0;31mE (16841) websocket_client: Websocket client is not connected[0m
+[0;31mE (16861) websocket_client: Websocket client is not connected[0m
+[0;31mE (16881) websocket_client: Websocket client is not connected[0m
+[0;31mE (16901) websocket_client: Websocket client is not connected[0m
+[0;31mE (16921) websocket_client: Websocket client is not connected[0m
+[0;31mE (16941) websocket_client: Websocket client is not connected[0m
+[0;31mE (16961) websocket_client: Websocket client is not connected[0m
+[0;31mE (16981) websocket_client: Websocket client is not connected[0m
+[0;31mE (17001) websocket_client: Websocket client is not connected[0m
+[0;31mE (17021) websocket_client: Websocket client is not connected[0m
+[0;31mE (17041) websocket_client: Websocket client is not connected[0m
+[0;31mE (17061) websocket_client: Websocket client is not connected[0m
+[0;31mE (17081) websocket_client: Websocket client is not connected[0m
+[0;31mE (17101) websocket_client: Websocket client is not connected[0m
+[0;31mE (17121) websocket_client: Websocket client is not connected[0m
+[0;31mE (17141) websocket_client: Websocket client is not connected[0m
+[0;31mE (17161) websocket_client: Websocket client is not connected[0m
+[0;31mE (17181) websocket_client: Websocket client is not connected[0m
+[0;31mE (17201) websocket_client: Websocket client is not connected[0m
+[0;31mE (17221) websocket_client: Websocket client is not connected[0m
+[0;31mE (17241) websocket_client: Websocket client is not connected[0m
+[0;31mE (17261) websocket_client: Websocket client is not connected[0m
+[0;31mE (17281) websocket_client: Websocket client is not connected[0m
+[0;31mE (17301) websocket_client: Websocket client is not connected[0m
+[0;31mE (17321) websocket_client: Websocket client is not connected[0m
+[0;31mE (17341) websocket_client: Websocket client is not connected[0m
+[0;31mE (17361) websocket_client: Websocket client is not connected[0m
+[0;31mE (17381) websocket_client: Websocket client is not connected[0m
+[0;31mE (17401) websocket_client: Websocket client is not connected[0m
+[0;31mE (17421) websocket_client: Websocket client is not connected[0m
+[0;31mE (17441) websocket_client: Websocket client is not connected[0m
+[0;31mE (17461) websocket_client: Websocket client is not connected[0m
+[0;31mE (17481) websocket_client: Websocket client is not connected[0m
+[0;31mE (17501) websocket_client: Websocket client is not connected[0m
+[0;31mE (17521) websocket_client: Websocket client is not connected[0m
+[0;31mE (17541) websocket_client: Websocket client is not connected[0m
+[0;31mE (17546) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (17547) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (17550) transport_ws: Error connecting to host 192.168.26.35:3000[0m
+[0;31mE (17558) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (17575) websocket_client: WebSocket client error[0m
+[0;32mI (17581) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (17586) websocket_client: WebSocket client connected[0m
+[0;31mE (17592) websocket_client: Websocket client is not connected[0m
+[0;31mE (17621) websocket_client: Websocket client is not connected[0m
+[0;31mE (17641) websocket_client: Websocket client is not connected[0m
+[0;31mE (17661) websocket_client: Websocket client is not connected[0m
+[0;31mE (17681) websocket_client: Websocket client is not connected[0m
+[0;31mE (17701) websocket_client: Websocket client is not connected[0m
+[0;31mE (17721) websocket_client: Websocket client is not connected[0m
+[0;31mE (17741) websocket_client: Websocket client is not connected[0m
+[0;31mE (17761) websocket_client: Websocket client is not connected[0m
+[0;31mE (17781) websocket_client: Websocket client is not connected[0m
+[0;31mE (17801) websocket_client: Websocket client is not connected[0m
+[0;31mE (17821) websocket_client: Websocket client is not connected[0m
+[0;31mE (17841) websocket_client: Websocket client is not connected[0m
+[0;31mE (17861) websocket_client: Websocket client is not connected[0m
+[0;31mE (17881) websocket_client: Websocket client is not connected[0m
+[0;31mE (17901) websocket_client: Websocket client is not connected[0m
+[0;31mE (17921) websocket_client: Websocket client is not connected[0m
+[0;31mE (17941) websocket_client: Websocket client is not connected[0m
+[0;31mE (17961) websocket_client: Websocket client is not connected[0m
+[0;31mE (17981) websocket_client: Websocket client is not connected[0m
+[0;31mE (18001) websocket_client: Websocket client is not connected[0m
+[0;31mE (18021) websocket_client: Websocket client is not connected[0m
+[0;31mE (18041) websocket_client: Websocket client is not connected[0m
+[0;31mE (18061) websocket_client: Websocket client is not connected[0m
+[0;31mE (18081) websocket_client: Websocket client is not connected[0m
+[0;31mE (18101) websocket_client: Websocket client is not connected[0m
+[0;31mE (18121) websocket_client: Websocket client is not connected[0m
+[0;31mE (18141) websocket_client: Websocket client is not connected[0m
+[0;31mE (18161) websocket_client: Websocket client is not connected[0m
+[0;31mE (18181) websocket_client: Websocket client is not connected[0m
+[0;31mE (18201) websocket_client: Websocket client is not connected[0m
+[0;31mE (18221) websocket_client: Websocket client is not connected[0m
+[0;31mE (18241) websocket_client: Websocket client is not connected[0m
+[0;31mE (18261) websocket_client: Websocket client is not connected[0m
+[0;31mE (18281) websocket_client: Websocket client is not connected[0m
+[0;31mE (18301) websocket_client: Websocket client is not connected[0m
+[0;31mE (18321) websocket_client: Websocket client is not connected[0m
+[0;31mE (18341) websocket_client: Websocket client is not connected[0m
+[0;31mE (18361) websocket_client: Websocket client is not connected[0m
+[0;31mE (18381) websocket_client: Websocket client is not connected[0m
+[0;31mE (18401) websocket_client: Websocket client is not connected[0m
+[0;31mE (18421) websocket_client: Websocket client is not connected[0m
+[0;31mE (18441) websocket_client: Websocket client is not connected[0m
+[0;31mE (18461) websocket_client: Websocket client is not connected[0m
+[0;31mE (18481) websocket_client: Websocket client is not connected[0m
+[0;31mE (18501) websocket_client: Websocket client is not connected[0m
+[0;31mE (18521) websocket_client: Websocket client is not connected[0m
+[0;31mE (18541) websocket_client: Websocket client is not connected[0m
+[0;31mE (18561) websocket_client: Websocket client is not connected[0m
+[0;31mE (18581) websocket_client: Websocket client is not connected[0m
+[0;31mE (18601) websocket_client: Websocket client is not connected[0m
+[0;31mE (18621) websocket_client: Websocket client is not connected[0m
+[0;31mE (18641) websocket_client: Websocket client is not connected[0m
+[0;31mE (18661) websocket_client: Websocket client is not connected[0m
+[0;31mE (18681) websocket_client: Websocket client is not connected[0m
+[0;31mE (18701) websocket_client: Websocket client is not connected[0m
+[0;31mE (18720) websocket_client: Websocket client is not connected[0m
+[0;31mE (18741) websocket_client: Websocket client is not connected[0m
+[0;31mE (18761) websocket_client: Websocket client is not connected[0m
+[0;31mE (18780) websocket_client: Websocket client is not connected[0m
+[0;31mE (18800) websocket_client: Websocket client is not connected[0m
+[0;31mE (18820) websocket_client: Websocket client is not connected[0m
+[0;31mE (18841) websocket_client: Websocket client is not connected[0m
+[0;31mE (18860) websocket_client: Websocket client is not connected[0m
+[0;31mE (18881) websocket_client: Websocket client is not connected[0m
+[0;31mE (18901) websocket_client: Websocket client is not connected[0m
+[0;31mE (18921) websocket_client: Websocket client is not connected[0m
+[0;31mE (18940) websocket_client: Websocket client is not connected[0m
+[0;31mE (18960) websocket_client: Websocket client is not connected[0m
+[0;31mE (18980) websocket_client: Websocket client is not connected[0m
+[0;31mE (19000) websocket_client: Websocket client is not connected[0m
+[0;31mE (19020) websocket_client: Websocket client is not connected[0m
+[0;31mE (19040) websocket_client: Websocket client is not connected[0m
+[0;31mE (19060) websocket_client: Websocket client is not connected[0m
+[0;31mE (19080) websocket_client: Websocket client is not connected[0m
+[0;31mE (19100) websocket_client: Websocket client is not connected[0m
+[0;31mE (19120) websocket_client: Websocket client is not connected[0m
+[0;31mE (19140) websocket_client: Websocket client is not connected[0m
+[0;31mE (19160) websocket_client: Websocket client is not connected[0m
+[0;31mE (19180) websocket_client: Websocket client is not connected[0m
+[0;31mE (19200) websocket_client: Websocket client is not connected[0m
+[0;31mE (19220) websocket_client: Websocket client is not connected[0m
+[0;31mE (19240) websocket_client: Websocket client is not connected[0m
+[0;31mE (19260) websocket_client: Websocket client is not connected[0m
+[0;31mE (19280) websocket_client: Websocket client is not connected[0m
+[0;31mE (19300) websocket_client: Websocket client is not connected[0m
+[0;31mE (19320) websocket_client: Websocket client is not connected[0m
+[0;31mE (19340) websocket_client: Websocket client is not connected[0m
+[0;31mE (19360) websocket_client: Websocket client is not connected[0m
+[0;31mE (19380) websocket_client: Websocket client is not connected[0m
+[0;31mE (19400) websocket_client: Websocket client is not connected[0m
+[0;31mE (19420) websocket_client: Websocket client is not connected[0m
+[0;31mE (19440) websocket_client: Websocket client is not connected[0m
+[0;31mE (19460) websocket_client: Websocket client is not connected[0m
+[0;31mE (19480) websocket_client: Websocket client is not connected[0m
+[0;31mE (19500) websocket_client: Websocket client is not connected[0m
+[0;31mE (19520) websocket_client: Websocket client is not connected[0m
+[0;31mE (19540) websocket_client: Websocket client is not connected[0m
+[0;31mE (19560) websocket_client: Websocket client is not connected[0m
+[0;31mE (19580) websocket_client: Websocket client is not connected[0m
+[0;31mE (19600) websocket_client: Websocket client is not connected[0m
+[0;31mE (19620) websocket_client: Websocket client is not connected[0m
+[0;31mE (19640) websocket_client: Websocket client is not connected[0m
+[0;31mE (19660) websocket_client: Websocket client is not connected[0m
+[0;31mE (19680) websocket_client: Websocket client is not connected[0m
+[0;31mE (19700) websocket_client: Websocket client is not connected[0m
+[0;31mE (19720) websocket_client: Websocket client is not connected[0m
+[0;31mE (19740) websocket_client: Websocket client is not connected[0m
+[0;31mE (19760) websocket_client: Websocket client is not connected[0m
+[0;31mE (19780) websocket_client: Websocket client is not connected[0m
+[0;31mE (19800) websocket_client: Websocket client is not connected[0m
+[0;31mE (19820) websocket_client: Websocket client is not connected[0m
+[0;31mE (19840) websocket_client: Websocket client is not connected[0m
+[0;31mE (19860) websocket_client: Websocket client is not connected[0m
+[0;31mE (19880) websocket_client: Websocket client is not connected[0m
+[0;31mE (19900) websocket_client: Websocket client is not connected[0m
+[0;31mE (19920) websocket_client: Websocket client is not connected[0m
+[0;31mE (19940) websocket_client: Websocket client is not connected[0m
+[0;31mE (19960) websocket_client: Websocket client is not connected[0m
+[0;31mE (19980) websocket_client: Websocket client is not connected[0m
+[0;31mE (20000) websocket_client: Websocket client is not connected[0m
+[0;31mE (20020) websocket_client: Websocket client is not connected[0m
+[0;31mE (20040) websocket_client: Websocket client is not connected[0m
+[0;31mE (20060) websocket_client: Websocket client is not connected[0m
+[0;31mE (20080) websocket_client: Websocket client is not connected[0m
+[0;31mE (20100) websocket_client: Websocket client is not connected[0m
+[0;31mE (20120) websocket_client: Websocket client is not connected[0m
+[0;31mE (20140) websocket_client: Websocket client is not connected[0m
+[0;31mE (20160) websocket_client: Websocket client is not connected[0m
+[0;31mE (20180) websocket_client: Websocket client is not connected[0m
+[0;31mE (20200) websocket_client: Websocket client is not connected[0m
+[0;31mE (20220) websocket_client: Websocket client is not connected[0m
+[0;31mE (20240) websocket_client: Websocket client is not connected[0m
+[0;31mE (20260) websocket_client: Websocket client is not connected[0m
+[0;31mE (20280) websocket_client: Websocket client is not connected[0m
+[0;31mE (20300) websocket_client: Websocket client is not connected[0m
+[0;31mE (20320) websocket_client: Websocket client is not connected[0m
+[0;31mE (20340) websocket_client: Websocket client is not connected[0m
+[0;31mE (20360) websocket_client: Websocket client is not connected[0m
+[0;31mE (20380) websocket_client: Websocket client is not connected[0m
+[0;31mE (20400) websocket_client: Websocket client is not connected[0m
+[0;31mE (20420) websocket_client: Websocket client is not connected[0m
+[0;31mE (20440) websocket_client: Websocket client is not connected[0m
+[0;31mE (20460) websocket_client: Websocket client is not connected[0m
+[0;31mE (20480) websocket_client: Websocket client is not connected[0m
+[0;31mE (20500) websocket_client: Websocket client is not connected[0m
+[0;31mE (20520) websocket_client: Websocket client is not connected[0m
+[0;31mE (20540) websocket_client: Websocket client is not connected[0m
+[0;31mE (20560) websocket_client: Websocket client is not connected[0m
+[0;31mE (20580) websocket_client: Websocket client is not connected[0m
+[0;31mE (20600) websocket_client: Websocket client is not connected[0m
+[0;31mE (20620) websocket_client: Websocket client is not connected[0m
+[0;31mE (20640) websocket_client: Websocket client is not connected[0m
+[0;31mE (20660) websocket_client: Websocket client is not connected[0m
+[0;31mE (20680) websocket_client: Websocket client is not connected[0m
+[0;31mE (20700) websocket_client: Websocket client is not connected[0m
+[0;31mE (20720) websocket_client: Websocket client is not connected[0m
+[0;31mE (20740) websocket_client: Websocket client is not connected[0m
+[0;31mE (20760) websocket_client: Websocket client is not connected[0m
+[0;31mE (20780) websocket_client: Websocket client is not connected[0m
+[0;31mE (20800) websocket_client: Websocket client is not connected[0m
+[0;31mE (20820) websocket_client: Websocket client is not connected[0m
+[0;31mE (20840) websocket_client: Websocket client is not connected[0m
+[0;31mE (20860) websocket_client: Websocket client is not connected[0m
+[0;31mE (20880) websocket_client: Websocket client is not connected[0m
+[0;31mE (20900) websocket_client: Websocket client is not connected[0m
+[0;31mE (20920) websocket_client: Websocket client is not connected[0m
+[0;31mE (20940) websocket_client: Websocket client is not connected[0m
+[0;31mE (20960) websocket_client: Websocket client is not connected[0m
+[0;31mE (20980) websocket_client: Websocket client is not connected[0m
+[0;31mE (21000) websocket_client: Websocket client is not connected[0m
+[0;31mE (21020) websocket_client: Websocket client is not connected[0m
+[0;31mE (21040) websocket_client: Websocket client is not connected[0m
+[0;31mE (21060) websocket_client: Websocket client is not connected[0m
+[0;31mE (21080) websocket_client: Websocket client is not connected[0m
+[0;31mE (21100) websocket_client: Websocket client is not connected[0m
+[0;31mE (21120) websocket_client: Websocket client is not connected[0m
+[0;31mE (21140) websocket_client: Websocket client is not connected[0m
+[0;31mE (21160) websocket_client: Websocket client is not connected[0m
+[0;31mE (21180) websocket_client: Websocket client is not connected[0m
+[0;31mE (21200) websocket_client: Websocket client is not connected[0m
+[0;31mE (21219) websocket_client: Websocket client is not connected[0m
+[0;31mE (21239) websocket_client: Websocket client is not connected[0m
+[0;31mE (21259) websocket_client: Websocket client is not connected[0m
+[0;31mE (21279) websocket_client: Websocket client is not connected[0m
+[0;31mE (21300) websocket_client: Websocket client is not connected[0m
+[0;31mE (21320) websocket_client: Websocket client is not connected[0m
+[0;31mE (21340) websocket_client: Websocket client is not connected[0m
+[0;31mE (21359) websocket_client: Websocket client is not connected[0m
+[0;31mE (21379) websocket_client: Websocket client is not connected[0m
+[0;31mE (21400) websocket_client: Websocket client is not connected[0m
+[0;31mE (21419) websocket_client: Websocket client is not connected[0m
+[0;31mE (21439) websocket_client: Websocket client is not connected[0m
+[0;31mE (21459) websocket_client: Websocket client is not connected[0m
+[0;31mE (21479) websocket_client: Websocket client is not connected[0m
+[0;31mE (21499) websocket_client: Websocket client is not connected[0m
+[0;31mE (21519) websocket_client: Websocket client is not connected[0m
+[0;31mE (21539) websocket_client: Websocket client is not connected[0m
+[0;31mE (21559) websocket_client: Websocket client is not connected[0m
+[0;31mE (21579) websocket_client: Websocket client is not connected[0m
+[0;31mE (21599) websocket_client: Websocket client is not connected[0m
+[0;31mE (21619) websocket_client: Websocket client is not connected[0m
+[0;31mE (21639) websocket_client: Websocket client is not connected[0m
+[0;31mE (21659) websocket_client: Websocket client is not connected[0m
+[0;31mE (21679) websocket_client: Websocket client is not connected[0m
+[0;31mE (21700) websocket_client: Websocket client is not connected[0m
+[0;31mE (21719) websocket_client: Websocket client is not connected[0m
+[0;31mE (21739) websocket_client: Websocket client is not connected[0m
+[0;31mE (21759) websocket_client: Websocket client is not connected[0m
+[0;31mE (21779) websocket_client: Websocket client is not connected[0m
+[0;31mE (21799) websocket_client: Websocket client is not connected[0m
+[0;31mE (21819) websocket_client: Websocket client is not connected[0m
+[0;31mE (21839) websocket_client: Websocket client is not connected[0m
+[0;31mE (21859) websocket_client: Websocket client is not connected[0m
+[0;31mE (21879) websocket_client: Websocket client is not connected[0m
+[0;31mE (21899) websocket_client: Websocket client is not connected[0m
+[0;31mE (21919) websocket_client: Websocket client is not connected[0m
+[0;31mE (21939) websocket_client: Websocket client is not connected[0m
+[0;31mE (21959) websocket_client: Websocket client is not connected[0m
+[0;31mE (21979) websocket_client: Websocket client is not connected[0m
+[0;31mE (22000) websocket_client: Websocket client is not connected[0m
+[0;31mE (22019) websocket_client: Websocket client is not connected[0m
+[0;31mE (22039) websocket_client: Websocket client is not connected[0m
+[0;31mE (22059) websocket_client: Websocket client is not connected[0m
+[0;31mE (22080) websocket_client: Websocket client is not connected[0m
+[0;31mE (22099) websocket_client: Websocket client is not connected[0m
+[0;31mE (22119) websocket_client: Websocket client is not connected[0m
+[0;31mE (22139) websocket_client: Websocket client is not connected[0m
+[0;31mE (22159) websocket_client: Websocket client is not connected[0m
+[0;32mI (22171) [vendor_ie]: esp_mesh_lite_wifi_scan_start return ESP_OK [0m
+[0;31mE (22180) websocket_client: Websocket client is not connected[0m
+[0;31mE (22199) websocket_client: Websocket client is not connected[0m
+[0;31mE (22219) websocket_client: Websocket client is not connected[0m
+[0;32mI (22229) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 62:99:11:7e:0d:6b, parent rssi: -40, free heap: 4193188[0m
+[0;31mE (22239) websocket_client: Websocket client is not connected[0m
+[0;33mW (22244) cam_hal: NO-SOI[0m
+[0;31mE (22279) websocket_client: Websocket client is not connected[0m
+[0;31mE (22299) websocket_client: Websocket client is not connected[0m
+[0;31mE (22319) websocket_client: Websocket client is not connected[0m
+[0;31mE (22339) websocket_client: Websocket client is not connected[0m
+[0;31mE (22359) websocket_client: Websocket client is not connected[0m
+[0;31mE (22379) websocket_client: Websocket client is not connected[0m
+[0;31mE (22399) websocket_client: Websocket client is not connected[0m
+[0;31mE (22419) websocket_client: Websocket client is not connected[0m
+[0;31mE (22439) websocket_client: Websocket client is not connected[0m
+[0;31mE (22459) websocket_client: Websocket client is not connected[0m
+[0;31mE (22479) websocket_client: Websocket client is not connected[0m
+[0;31mE (22499) websocket_client: Websocket client is not connected[0m
+[0;31mE (22519) websocket_client: Websocket client is not connected[0m
+[0;32mI (22532) [ESP_Mesh_Lite_Comm]: Mesh-Lite Comm Scan done [0m
+[0;32mI (22535) [ESP_Mesh_Lite_Comm]: approved: 1 [0m
+[0;31mE (22539) websocket_client: Websocket client is not connected[0m
+[0;31mE (22559) websocket_client: Websocket client is not connected[0m
+[0;31mE (22579) websocket_client: Websocket client is not connected[0m
+[0;31mE (22599) websocket_client: Websocket client is not connected[0m
+[0;31mE (22602) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (22604) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (22608) transport_ws: Error connecting to host 192.168.26.35:3000[0m
+[0;31mE (22616) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (22633) websocket_client: WebSocket client error[0m
+[0;32mI (22639) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (22644) websocket_client: WebSocket client connected[0m
+[0;31mE (22650) websocket_client: Websocket client is not connected[0m
+[0;31mE (22679) websocket_client: Websocket client is not connected[0m
+[0;32mI (22694) bridge_common: [WIFI_AP_DEF ]Name Server1: 192.168.26.27[0m
+[0;31mE (22699) websocket_client: Websocket client is not connected[0m
+[0;31mE (22719) websocket_client: Websocket client is not connected[0m
+[0;31mE (22739) websocket_client: Websocket client is not connected[0m
+[0;31mE (22759) websocket_client: Websocket client is not connected[0m
+[0;31mE (22779) websocket_client: Websocket client is not connected[0m
+[0;31mE (22799) websocket_client: Websocket client is not connected[0m
+[0;31mE (22819) websocket_client: Websocket client is not connected[0m
+[0;31mE (22839) websocket_client: Websocket client is not connected[0m
+[0;31mE (22859) websocket_client: Websocket client is not connected[0m
+[0;31mE (22879) websocket_client: Websocket client is not connected[0m
+[0;31mE (22899) websocket_client: Websocket client is not connected[0m
+[0;31mE (22919) websocket_client: Websocket client is not connected[0m
+[0;31mE (22939) websocket_client: Websocket client is not connected[0m
+[0;31mE (22959) websocket_client: Websocket client is not connected[0m
+[0;31mE (22979) websocket_client: Websocket client is not connected[0m
+[0;31mE (22999) websocket_client: Websocket client is not connected[0m
+[0;31mE (23019) websocket_client: Websocket client is not connected[0m
+[0;31mE (23039) websocket_client: Websocket client is not connected[0m
+[0;31mE (23059) websocket_client: Websocket client is not connected[0m
+[0;31mE (23079) websocket_client: Websocket client is not connected[0m
+[0;31mE (23099) websocket_client: Websocket client is not connected[0m
+[0;31mE (23119) websocket_client: Websocket client is not connected[0m
+[0;31mE (23139) websocket_client: Websocket client is not connected[0m
+[0;31mE (23159) websocket_client: Websocket client is not connected[0m
+[0;31mE (23179) websocket_client: Websocket client is not connected[0m
+[0;31mE (23199) websocket_client: Websocket client is not connected[0m
+[0;31mE (23219) websocket_client: Websocket client is not connected[0m
+[0;31mE (23239) websocket_client: Websocket client is not connected[0m
+[0;31mE (23259) websocket_client: Websocket client is not connected[0m
+[0;31mE (23279) websocket_client: Websocket client is not connected[0m
+[0;31mE (23299) websocket_client: Websocket client is not connected[0m
+[0;31mE (23319) websocket_client: Websocket client is not connected[0m
+[0;31mE (23339) websocket_client: Websocket client is not connected[0m
+[0;31mE (23359) websocket_client: Websocket client is not connected[0m
+[0;31mE (23379) websocket_client: Websocket client is not connected[0m
+[0;31mE (23399) websocket_client: Websocket client is not connected[0m
+[0;31mE (23419) websocket_client: Websocket client is not connected[0m
+[0;31mE (23439) websocket_client: Websocket client is not connected[0m
+[0;31mE (23459) websocket_client: Websocket client is not connected[0m
+[0;31mE (23479) websocket_client: Websocket client is not connected[0m
+[0;32mI (23481) esp_netif_handlers: sta ip: 192.168.26.175, mask: 255.255.255.0, gw: 192.168.26.27[0m
+[0;32mI (23483) bridge_wifi: Connected with IP Address:192.168.26.175[0m
+[0;32mI (23491) [vendor_ie]: RTC store: temp_mesh_id:175; ssid:Xiaomi13T; bssid:00:00:00:00:00:00; crc:2758688755 [0m
+[0;31mE (23499) websocket_client: Websocket client is not connected[0m
+[0;33mW (23512) cam_hal: NO-SOI[0m
+[0;32mI (23515) esp32cam_security_gate: TCP client write task is running[0m
+[0;31mE (23539) websocket_client: Websocket client is not connected[0m
+[0;31mE (23559) websocket_client: Websocket client is not connected[0m
+[0;31mE (23579) websocket_client: Websocket client is not connected[0m
+[0;31mE (23599) websocket_client: Websocket client is not connected[0m
+[0;31mE (23619) websocket_client: Websocket client is not connected[0m
+[0;31mE (23639) websocket_client: Websocket client is not connected[0m
+[0;31mE (23659) websocket_client: Websocket client is not connected[0m
+[0;31mE (23679) websocket_client: Websocket client is not connected[0m
+[0;31mE (23699) websocket_client: Websocket client is not connected[0m
+[0;31mE (23719) websocket_client: Websocket client is not connected[0m
+[0;31mE (23738) websocket_client: Websocket client is not connected[0m
+[0;31mE (23759) websocket_client: Websocket client is not connected[0m
+[0;31mE (23779) websocket_client: Websocket client is not connected[0m
+[0;31mE (23799) websocket_client: Websocket client is not connected[0m
+[0;31mE (23819) websocket_client: Websocket client is not connected[0m
+[0;31mE (23839) websocket_client: Websocket client is not connected[0m
+[0;31mE (23859) websocket_client: Websocket client is not connected[0m
+[0;31mE (23878) websocket_client: Websocket client is not connected[0m
+[0;31mE (23898) websocket_client: Websocket client is not connected[0m
+[0;31mE (23918) websocket_client: Websocket client is not connected[0m
+[0;31mE (23938) websocket_client: Websocket client is not connected[0m
+[0;31mE (23958) websocket_client: Websocket client is not connected[0m
+[0;31mE (23978) websocket_client: Websocket client is not connected[0m
+[0;31mE (23998) websocket_client: Websocket client is not connected[0m
+[0;31mE (24019) websocket_client: Websocket client is not connected[0m
+[0;31mE (24039) websocket_client: Websocket client is not connected[0m
+[0;31mE (24059) websocket_client: Websocket client is not connected[0m
+[0;31mE (24078) websocket_client: Websocket client is not connected[0m
+[0;31mE (24098) websocket_client: Websocket client is not connected[0m
+[0;31mE (24119) websocket_client: Websocket client is not connected[0m
+[0;31mE (24138) websocket_client: Websocket client is not connected[0m
+[0;31mE (24158) websocket_client: Websocket client is not connected[0m
+[0;31mE (24178) websocket_client: Websocket client is not connected[0m
+[0;31mE (24198) websocket_client: Websocket client is not connected[0m
+[0;31mE (24218) websocket_client: Websocket client is not connected[0m
+[0;31mE (24238) websocket_client: Websocket client is not connected[0m
+[0;31mE (24258) websocket_client: Websocket client is not connected[0m
+[0;31mE (24278) websocket_client: Websocket client is not connected[0m
+[0;31mE (24298) websocket_client: Websocket client is not connected[0m
+[0;31mE (24318) websocket_client: Websocket client is not connected[0m
+[0;31mE (24338) websocket_client: Websocket client is not connected[0m
+[0;31mE (24358) websocket_client: Websocket client is not connected[0m
+[0;31mE (24378) websocket_client: Websocket client is not connected[0m
+[0;31mE (24398) websocket_client: Websocket client is not connected[0m
+[0;31mE (24418) websocket_client: Websocket client is not connected[0m
+[0;31mE (24438) websocket_client: Websocket client is not connected[0m
+[0;31mE (24458) websocket_client: Websocket client is not connected[0m
+[0;31mE (24478) websocket_client: Websocket client is not connected[0m
+[0;31mE (24498) websocket_client: Websocket client is not connected[0m
+[0;31mE (24518) websocket_client: Websocket client is not connected[0m
+[0;31mE (24538) websocket_client: Websocket client is not connected[0m
+[0;31mE (24558) websocket_client: Websocket client is not connected[0m
+[0;31mE (24578) websocket_client: Websocket client is not connected[0m
+[0;31mE (24598) websocket_client: Websocket client is not connected[0m
+[0;31mE (24618) websocket_client: Websocket client is not connected[0m
+[0;31mE (24638) websocket_client: Websocket client is not connected[0m
+[0;31mE (24658) websocket_client: Websocket client is not connected[0m
+[0;31mE (24678) websocket_client: Websocket client is not connected[0m
+[0;31mE (24698) websocket_client: Websocket client is not connected[0m
+[0;31mE (24718) websocket_client: Websocket client is not connected[0m
+[0;31mE (24738) websocket_client: Websocket client is not connected[0m
+[0;31mE (24758) websocket_client: Websocket client is not connected[0m
+[0;31mE (24778) websocket_client: Websocket client is not connected[0m
+[0;31mE (24798) websocket_client: Websocket client is not connected[0m
+[0;31mE (24818) websocket_client: Websocket client is not connected[0m
+[0;31mE (24838) websocket_client: Websocket client is not connected[0m
+[0;31mE (24858) websocket_client: Websocket client is not connected[0m
+[0;31mE (24878) websocket_client: Websocket client is not connected[0m
+[0;31mE (24898) websocket_client: Websocket client is not connected[0m
+[0;31mE (24918) websocket_client: Websocket client is not connected[0m
+[0;31mE (24938) websocket_client: Websocket client is not connected[0m
+[0;31mE (24958) websocket_client: Websocket client is not connected[0m
+[0;31mE (24978) websocket_client: Websocket client is not connected[0m
+[0;31mE (24998) websocket_client: Websocket client is not connected[0m
+[0;31mE (25018) websocket_client: Websocket client is not connected[0m
+[0;31mE (25038) websocket_client: Websocket client is not connected[0m
+[0;31mE (25058) websocket_client: Websocket client is not connected[0m
+[0;31mE (25078) websocket_client: Websocket client is not connected[0m
+[0;31mE (25098) websocket_client: Websocket client is not connected[0m
+[0;31mE (25118) websocket_client: Websocket client is not connected[0m
+[0;31mE (25138) websocket_client: Websocket client is not connected[0m
+[0;31mE (25158) websocket_client: Websocket client is not connected[0m
+[0;31mE (25178) websocket_client: Websocket client is not connected[0m
+[0;31mE (25198) websocket_client: Websocket client is not connected[0m
+[0;31mE (25218) websocket_client: Websocket client is not connected[0m
+[0;31mE (25238) websocket_client: Websocket client is not connected[0m
+[0;31mE (25258) websocket_client: Websocket client is not connected[0m
+[0;31mE (25278) websocket_client: Websocket client is not connected[0m
+[0;31mE (25298) websocket_client: Websocket client is not connected[0m
+[0;31mE (25318) websocket_client: Websocket client is not connected[0m
+[0;31mE (25338) websocket_client: Websocket client is not connected[0m
+[0;31mE (25358) websocket_client: Websocket client is not connected[0m
+[0;31mE (25378) websocket_client: Websocket client is not connected[0m
+[0;31mE (25398) websocket_client: Websocket client is not connected[0m
+[0;31mE (25418) websocket_client: Websocket client is not connected[0m
+[0;31mE (25438) websocket_client: Websocket client is not connected[0m
+[0;31mE (25458) websocket_client: Websocket client is not connected[0m
+[0;31mE (25478) websocket_client: Websocket client is not connected[0m
+[0;31mE (25498) websocket_client: Websocket client is not connected[0m
+[0;31mE (25518) websocket_client: Websocket client is not connected[0m
+[0;31mE (25538) websocket_client: Websocket client is not connected[0m
+[0;31mE (25558) websocket_client: Websocket client is not connected[0m
+[0;31mE (25578) websocket_client: Websocket client is not connected[0m
+[0;31mE (25598) websocket_client: Websocket client is not connected[0m
+[0;31mE (25618) websocket_client: Websocket client is not connected[0m
+[0;31mE (25638) websocket_client: Websocket client is not connected[0m
+[0;31mE (25658) websocket_client: Websocket client is not connected[0m
+[0;31mE (25678) websocket_client: Websocket client is not connected[0m
+[0;31mE (25698) websocket_client: Websocket client is not connected[0m
+[0;31mE (25718) websocket_client: Websocket client is not connected[0m
+[0;31mE (25738) websocket_client: Websocket client is not connected[0m
+[0;31mE (25758) websocket_client: Websocket client is not connected[0m
+[0;31mE (25778) websocket_client: Websocket client is not connected[0m
+[0;31mE (25798) websocket_client: Websocket client is not connected[0m
+[0;31mE (25818) websocket_client: Websocket client is not connected[0m
+[0;31mE (25838) websocket_client: Websocket client is not connected[0m
+[0;31mE (25858) websocket_client: Websocket client is not connected[0m
+[0;31mE (25878) websocket_client: Websocket client is not connected[0m
+[0;31mE (25898) websocket_client: Websocket client is not connected[0m
+[0;31mE (25918) websocket_client: Websocket client is not connected[0m
+[0;31mE (25938) websocket_client: Websocket client is not connected[0m
+[0;31mE (25958) websocket_client: Websocket client is not connected[0m
+[0;31mE (25978) websocket_client: Websocket client is not connected[0m
+[0;31mE (25998) websocket_client: Websocket client is not connected[0m
+[0;31mE (26018) websocket_client: Websocket client is not connected[0m
+[0;31mE (26038) websocket_client: Websocket client is not connected[0m
+[0;31mE (26058) websocket_client: Websocket client is not connected[0m
+[0;31mE (26078) websocket_client: Websocket client is not connected[0m
+[0;31mE (26098) websocket_client: Websocket client is not connected[0m
+[0;31mE (26118) websocket_client: Websocket client is not connected[0m
+[0;31mE (26138) websocket_client: Websocket client is not connected[0m
+[0;31mE (26158) websocket_client: Websocket client is not connected[0m
+[0;31mE (26178) websocket_client: Websocket client is not connected[0m
+[0;31mE (26198) websocket_client: Websocket client is not connected[0m
+[0;31mE (26218) websocket_client: Websocket client is not connected[0m
+[0;31mE (26238) websocket_client: Websocket client is not connected[0m
+[0;31mE (26258) websocket_client: Websocket client is not connected[0m
+[0;31mE (26278) websocket_client: Websocket client is not connected[0m
+[0;31mE (26298) websocket_client: Websocket client is not connected[0m
+[0;31mE (26318) websocket_client: Websocket client is not connected[0m
+[0;31mE (26337) websocket_client: Websocket client is not connected[0m
+[0;31mE (26357) websocket_client: Websocket client is not connected[0m
+[0;31mE (26377) websocket_client: Websocket client is not connected[0m
+[0;31mE (26397) websocket_client: Websocket client is not connected[0m
+[0;31mE (26418) websocket_client: Websocket client is not connected[0m
+[0;31mE (26438) websocket_client: Websocket client is not connected[0m
+[0;31mE (26457) websocket_client: Websocket client is not connected[0m
+[0;31mE (26477) websocket_client: Websocket client is not connected[0m
+[0;31mE (26497) websocket_client: Websocket client is not connected[0m
+[0;31mE (26517) websocket_client: Websocket client is not connected[0m
+[0;31mE (26537) websocket_client: Websocket client is not connected[0m
+[0;31mE (26557) websocket_client: Websocket client is not connected[0m
+[0;31mE (26577) websocket_client: Websocket client is not connected[0m
+[0;31mE (26597) websocket_client: Websocket client is not connected[0m
+[0;31mE (26617) websocket_client: Websocket client is not connected[0m
+[0;31mE (26637) websocket_client: Websocket client is not connected[0m
+[0;31mE (26657) websocket_client: Websocket client is not connected[0m
+[0;31mE (26677) websocket_client: Websocket client is not connected[0m
+[0;31mE (26697) websocket_client: Websocket client is not connected[0m
+[0;31mE (26717) websocket_client: Websocket client is not connected[0m
+[0;31mE (26737) websocket_client: Websocket client is not connected[0m
+[0;31mE (26757) websocket_client: Websocket client is not connected[0m
+[0;31mE (26777) websocket_client: Websocket client is not connected[0m
+[0;31mE (26797) websocket_client: Websocket client is not connected[0m
+[0;31mE (26817) websocket_client: Websocket client is not connected[0m
+[0;31mE (26837) websocket_client: Websocket client is not connected[0m
+[0;31mE (26858) websocket_client: Websocket client is not connected[0m
+[0;31mE (26877) websocket_client: Websocket client is not connected[0m
+[0;31mE (26897) websocket_client: Websocket client is not connected[0m
+[0;31mE (26917) websocket_client: Websocket client is not connected[0m
+[0;31mE (26937) websocket_client: Websocket client is not connected[0m
+[0;31mE (26957) websocket_client: Websocket client is not connected[0m
+[0;31mE (26977) websocket_client: Websocket client is not connected[0m
+[0;31mE (26997) websocket_client: Websocket client is not connected[0m
+[0;31mE (27017) websocket_client: Websocket client is not connected[0m
+[0;31mE (27037) websocket_client: Websocket client is not connected[0m
+[0;31mE (27057) websocket_client: Websocket client is not connected[0m
+[0;31mE (27077) websocket_client: Websocket client is not connected[0m
+[0;31mE (27097) websocket_client: Websocket client is not connected[0m
+[0;31mE (27117) websocket_client: Websocket client is not connected[0m
+[0;31mE (27137) websocket_client: Websocket client is not connected[0m
+[0;31mE (27157) websocket_client: Websocket client is not connected[0m
+[0;31mE (27177) websocket_client: Websocket client is not connected[0m
+[0;31mE (27197) websocket_client: Websocket client is not connected[0m
+[0;31mE (27217) websocket_client: Websocket client is not connected[0m
+[0;31mE (27237) websocket_client: Websocket client is not connected[0m
+[0;31mE (27257) websocket_client: Websocket client is not connected[0m
+[0;31mE (27277) websocket_client: Websocket client is not connected[0m
+[0;31mE (27297) websocket_client: Websocket client is not connected[0m
+[0;31mE (27317) websocket_client: Websocket client is not connected[0m
+[0;31mE (27337) websocket_client: Websocket client is not connected[0m
+[0;31mE (27357) websocket_client: Websocket client is not connected[0m
+[0;31mE (27377) websocket_client: Websocket client is not connected[0m
+[0;31mE (27397) websocket_client: Websocket client is not connected[0m
+[0;31mE (27417) websocket_client: Websocket client is not connected[0m
+[0;31mE (27437) websocket_client: Websocket client is not connected[0m
+[0;31mE (27457) websocket_client: Websocket client is not connected[0m
+[0;31mE (27477) websocket_client: Websocket client is not connected[0m
+[0;31mE (27497) websocket_client: Websocket client is not connected[0m
+[0;31mE (27517) websocket_client: Websocket client is not connected[0m
+[0;31mE (27537) websocket_client: Websocket client is not connected[0m
+[0;31mE (27557) websocket_client: Websocket client is not connected[0m
+[0;31mE (27577) websocket_client: Websocket client is not connected[0m
+[0;31mE (27597) websocket_client: Websocket client is not connected[0m
+[0;31mE (27617) websocket_client: Websocket client is not connected[0m
+[0;31mE (27637) websocket_client: Websocket client is not connected[0m
+[0;32mI (27825) websocket_client: WebSocket client connected[0m
+[0;32mI (27935) websocket_client: Image sent to WebSocket: 5934 bytes[0m
+[0;32mI (28060) websocket_client: Image sent to WebSocket: 6287 bytes[0m
+[0;32mI (30061) websocket_client: Image sent to WebSocket: 5727 bytes[0m
+[0;32mI (30184) websocket_client: Image sent to WebSocket: 5757 bytes[0m
+[0;32mI (32229) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 62:99:11:7e:0d:6b, parent rssi: -50, free heap: 4180868[0m
+[0;32mI (32432) websocket_client: Image sent to WebSocket: 5935 bytes[0m
+[0;32mI (32466) websocket_client: Image sent to WebSocket: 5982 bytes[0m
+[0;32mI (33960) websocket_client: Image sent to WebSocket: 5982 bytes[0m
+[0;32mI (34071) websocket_client: Image sent to WebSocket: 6610 bytes[0m
+[0;32mI (34123) websocket_client: Image sent to WebSocket: 5929 bytes[0m
+[0;32mI (34187) websocket_client: Image sent to WebSocket: 5929 bytes[0m
+[0;32mI (34685) websocket_client: Image sent to WebSocket: 5929 bytes[0m
+[0;32mI (36327) websocket_client: Image sent to WebSocket: 5929 bytes[0m
+[0;32mI (37815) websocket_client: Image sent to WebSocket: 5929 bytes[0m
+[0;32mI (37948) websocket_client: Image sent to WebSocket: 5929 bytes[0m
+[0;32mI (39583) websocket_client: Image sent to WebSocket: 5929 bytes[0m
+[0;32mI (39689) websocket_client: Image sent to WebSocket: 6657 bytes[0m
+[0;32mI (39720) websocket_client: Image sent to WebSocket: 5751 bytes[0m
+[0;32mI (39815) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (40711) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (40815) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (40938) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (41067) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (41812) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (41941) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (42229) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 62:99:11:7e:0d:6b, parent rssi: -42, free heap: 4179196[0m
+[0;32mI (43313) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (43577) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (43670) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (43813) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (44195) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (44705) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (44820) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (45281) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (45322) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (45937) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (46436) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (46568) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (48087) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (49823) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (50438) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (52061) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (52097) websocket_client: Image sent to WebSocket: 5998 bytes[0m
+[0;32mI (52192) websocket_client: Image sent to WebSocket: 6708 bytes[0m
+[0;32mI (52233) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 62:99:11:7e:0d:6b, parent rssi: -49, free heap: 4180752[0m
+[0;32mI (54057) websocket_client: Image sent to WebSocket: 5765 bytes[0m
+[0;32mI (57196) websocket_client: Image sent to WebSocket: 6029 bytes[0m
+[0;32mI (62184) websocket_client: Image sent to WebSocket: 6708 bytes[0m
+[0;32mI (62229) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 62:99:11:7e:0d:6b, parent rssi: -52, free heap: 4180752[0m
+[0;32mI (62831) websocket_client: Image sent to WebSocket: 5930 bytes[0m
+[0;32mI (62943) websocket_client: Image sent to WebSocket: 5938 bytes[0m
+[0;32mI (63323) websocket_client: Image sent to WebSocket: 5938 bytes[0m
+[0;32mI (63686) websocket_client: Image sent to WebSocket: 6016 bytes[0m
+[0;32mI (63820) websocket_client: Image sent to WebSocket: 5999 bytes[0m
+[0;32mI (64160) websocket_client: Image sent to WebSocket: 5999 bytes[0m
+[0;32mI (64194) websocket_client: Image sent to WebSocket: 5999 bytes[0m
+[0;32mI (64689) websocket_client: Image sent to WebSocket: 5999 bytes[0m
+[0;32mI (67325) websocket_client: Image sent to WebSocket: 6708 bytes[0m
+[0;32mI (67368) websocket_client: Image sent to WebSocket: 5721 bytes[0m
+[0;32mI (67834) websocket_client: Image sent to WebSocket: 5945 bytes[0m
+[0;32mI (67942) websocket_client: Image sent to WebSocket: 5945 bytes[0m
+[0;32mI (69587) websocket_client: Image sent to WebSocket: 5945 bytes[0m
+[0;32mI (71812) websocket_client: Image sent to WebSocket: 6708 bytes[0m
+[0;32mI (72229) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 62:99:11:7e:0d:6b, parent rssi: -42, free heap: 4180752[0m
+[0;32mI (74058) websocket_client: Image sent to WebSocket: 5728 bytes[0m
+[0;32mI (74204) websocket_client: Image sent to WebSocket: 5718 bytes[0m
+[0;32mI (74317) websocket_client: Image sent to WebSocket: 5783 bytes[0m
+[0;32mI (75343) websocket_client: Image sent to WebSocket: 5786 bytes[0m
+[0;32mI (75445) websocket_client: Image sent to WebSocket: 5786 bytes[0m
+[0;32mI (75564) websocket_client: Image sent to WebSocket: 5786 bytes[0m
+[0;32mI (78683) websocket_client: Image sent to WebSocket: 5786 bytes[0m
+[0;32mI (78817) websocket_client: Image sent to WebSocket: 5786 bytes[0m
+[0;32mI (78943) websocket_client: Image sent to WebSocket: 5803 bytes[0m
+[0;32mI (79565) websocket_client: Image sent to WebSocket: 5803 bytes[0m
+[0;32mI (82082) websocket_client: Image sent to WebSocket: 5803 bytes[0m
+[0;32mI (82229) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 62:99:11:7e:0d:6b, parent rssi: -51, free heap: 4179196[0m
+[0;32mI (83718) websocket_client: Image sent to WebSocket: 5803 bytes[0m
+[0;32mI (85439) websocket_client: Image sent to WebSocket: 6708 bytes[0m
+[0;32mI (85481) websocket_client: Image sent to WebSocket: 5693 bytes[0m
+[0;31mE (90516) transport_ws: Error transport_poll_write[0m
+[0;31mE (90517) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;31mE (90523) websocket_client: WebSocket client error[0m
+[0;32mI (90529) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (90534) websocket_client: WebSocket client connected[0m
+[0;32mI (90539) websocket_client: Image sent to WebSocket: 6708 bytes[0m
+[0;33mW (90550) cam_hal: NO-SOI[0m
+[0;31mE (90572) websocket_client: Websocket client is not connected[0m
+[0;31mE (90592) websocket_client: Websocket client is not connected[0m
+[0;31mE (90612) websocket_client: Websocket client is not connected[0m
+[0;31mE (90632) websocket_client: Websocket client is not connected[0m
+[0;31mE (90652) websocket_client: Websocket client is not connected[0m
+[0;31mE (90672) websocket_client: Websocket client is not connected[0m
+[0;31mE (90692) websocket_client: Websocket client is not connected[0m
+[0;31mE (90712) websocket_client: Websocket client is not connected[0m
+[0;31mE (90732) websocket_client: Websocket client is not connected[0m
+[0;31mE (90752) websocket_client: Websocket client is not connected[0m
+[0;31mE (90772) websocket_client: Websocket client is not connected[0m
+[0;31mE (90792) websocket_client: Websocket client is not connected[0m
+[0;31mE (90812) websocket_client: Websocket client is not connected[0m
+[0;31mE (90832) websocket_client: Websocket client is not connected[0m
+[0;31mE (90852) websocket_client: Websocket client is not connected[0m
+[0;31mE (90872) websocket_client: Websocket client is not connected[0m
+[0;31mE (90892) websocket_client: Websocket client is not connected[0m
+[0;31mE (90912) websocket_client: Websocket client is not connected[0m
+[0;31mE (90932) websocket_client: Websocket client is not connected[0m
+[0;31mE (90952) websocket_client: Websocket client is not connected[0m
+[0;31mE (90972) websocket_client: Websocket client is not connected[0m
+[0;31mE (90992) websocket_client: Websocket client is not connected[0m
+[0;31mE (91012) websocket_client: Websocket client is not connected[0m
+[0;31mE (91032) websocket_client: Websocket client is not connected[0m
+[0;31mE (91052) websocket_client: Websocket client is not connected[0m
+[0;31mE (91072) websocket_client: Websocket client is not connected[0m
+[0;31mE (91092) websocket_client: Websocket client is not connected[0m
+[0;31mE (91112) websocket_client: Websocket client is not connected[0m
+[0;31mE (91132) websocket_client: Websocket client is not connected[0m
+[0;31mE (91152) websocket_client: Websocket client is not connected[0m
+[0;31mE (91172) websocket_client: Websocket client is not connected[0m
+[0;31mE (91192) websocket_client: Websocket client is not connected[0m
+[0;31mE (91211) websocket_client: Websocket client is not connected[0m
+[0;31mE (91232) websocket_client: Websocket client is not connected[0m
+[0;31mE (91251) websocket_client: Websocket client is not connected[0m
+[0;31mE (91271) websocket_client: Websocket client is not connected[0m
+[0;31mE (91291) websocket_client: Websocket client is not connected[0m
+[0;31mE (91311) websocket_client: Websocket client is not connected[0m
+[0;31mE (91332) websocket_client: Websocket client is not connected[0m
+[0;31mE (91352) websocket_client: Websocket client is not connected[0m
+[0;31mE (91371) websocket_client: Websocket client is not connected[0m
+[0;31mE (91392) websocket_client: Websocket client is not connected[0m
+[0;31mE (91411) websocket_client: Websocket client is not connected[0m
+[0;31mE (91431) websocket_client: Websocket client is not connected[0m
+[0;31mE (91451) websocket_client: Websocket client is not connected[0m
+[0;31mE (91471) websocket_client: Websocket client is not connected[0m
+[0;31mE (91491) websocket_client: Websocket client is not connected[0m
+[0;31mE (91511) websocket_client: Websocket client is not connected[0m
+[0;31mE (91531) websocket_client: Websocket client is not connected[0m
+[0;31mE (91551) websocket_client: Websocket client is not connected[0m
+[0;31mE (91571) websocket_client: Websocket client is not connected[0m
+[0;31mE (91591) websocket_client: Websocket client is not connected[0m
+[0;31mE (91611) websocket_client: Websocket client is not connected[0m
+[0;31mE (91631) websocket_client: Websocket client is not connected[0m
+[0;31mE (91651) websocket_client: Websocket client is not connected[0m
+[0;31mE (91671) websocket_client: Websocket client is not connected[0m
+[0;31mE (91691) websocket_client: Websocket client is not connected[0m
+[0;31mE (91711) websocket_client: Websocket client is not connected[0m
+[0;31mE (91731) websocket_client: Websocket client is not connected[0m
+[0;31mE (91751) websocket_client: Websocket client is not connected[0m
+[0;31mE (91771) websocket_client: Websocket client is not connected[0m
+[0;31mE (91791) websocket_client: Websocket client is not connected[0m
+[0;31mE (91811) websocket_client: Websocket client is not connected[0m
+[0;31mE (91831) websocket_client: Websocket client is not connected[0m
+[0;31mE (91851) websocket_client: Websocket client is not connected[0m
+[0;31mE (91871) websocket_client: Websocket client is not connected[0m
+[0;31mE (91891) websocket_client: Websocket client is not connected[0m
+[0;31mE (91911) websocket_client: Websocket client is not connected[0m
+[0;31mE (91931) websocket_client: Websocket client is not connected[0m
+[0;31mE (91951) websocket_client: Websocket client is not connected[0m
+[0;31mE (91971) websocket_client: Websocket client is not connected[0m
+[0;31mE (91991) websocket_client: Websocket client is not connected[0m
+[0;31mE (92011) websocket_client: Websocket client is not connected[0m
+[0;31mE (92031) websocket_client: Websocket client is not connected[0m
+[0;31mE (92051) websocket_client: Websocket client is not connected[0m
+[0;31mE (92071) websocket_client: Websocket client is not connected[0m
+[0;31mE (92091) websocket_client: Websocket client is not connected[0m
+[0;31mE (92111) websocket_client: Websocket client is not connected[0m
+[0;31mE (92131) websocket_client: Websocket client is not connected[0m
+[0;31mE (92151) websocket_client: Websocket client is not connected[0m
+[0;31mE (92171) websocket_client: Websocket client is not connected[0m
+[0;31mE (92191) websocket_client: Websocket client is not connected[0m
+[0;31mE (92211) websocket_client: Websocket client is not connected[0m
+[0;32mI (92229) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 62:99:11:7e:0d:6b, parent rssi: -51, free heap: 4181072[0m
+[0;31mE (92231) websocket_client: Websocket client is not connected[0m
+[0;33mW (92245) cam_hal: NO-SOI[0m
+[0;31mE (92271) websocket_client: Websocket client is not connected[0m
+[0;31mE (92291) websocket_client: Websocket client is not connected[0m
+[0;31mE (92311) websocket_client: Websocket client is not connected[0m
+[0;31mE (92331) websocket_client: Websocket client is not connected[0m
+[0;31mE (92351) websocket_client: Websocket client is not connected[0m
+[0;31mE (92371) websocket_client: Websocket client is not connected[0m
+[0;31mE (92391) websocket_client: Websocket client is not connected[0m
+[0;31mE (92411) websocket_client: Websocket client is not connected[0m
+[0;31mE (92431) websocket_client: Websocket client is not connected[0m
+[0;31mE (92451) websocket_client: Websocket client is not connected[0m
+[0;31mE (92471) websocket_client: Websocket client is not connected[0m
+[0;31mE (92491) websocket_client: Websocket client is not connected[0m
+[0;31mE (92511) websocket_client: Websocket client is not connected[0m
+[0;31mE (92531) websocket_client: Websocket client is not connected[0m
+[0;31mE (92551) websocket_client: Websocket client is not connected[0m
+[0;31mE (92571) websocket_client: Websocket client is not connected[0m
+[0;31mE (92591) websocket_client: Websocket client is not connected[0m
+[0;31mE (92611) websocket_client: Websocket client is not connected[0m
+[0;31mE (92631) websocket_client: Websocket client is not connected[0m
+[0;31mE (92651) websocket_client: Websocket client is not connected[0m
+[0;31mE (92671) websocket_client: Websocket client is not connected[0m
+[0;31mE (92691) websocket_client: Websocket client is not connected[0m
+[0;31mE (92711) websocket_client: Websocket client is not connected[0m
+[0;31mE (92731) websocket_client: Websocket client is not connected[0m
+[0;31mE (92751) websocket_client: Websocket client is not connected[0m
+[0;31mE (92771) websocket_client: Websocket client is not connected[0m
+[0;31mE (92791) websocket_client: Websocket client is not connected[0m
+[0;31mE (92811) websocket_client: Websocket client is not connected[0m
+[0;31mE (92831) websocket_client: Websocket client is not connected[0m
+[0;31mE (92851) websocket_client: Websocket client is not connected[0m
+[0;31mE (92871) websocket_client: Websocket client is not connected[0m
+[0;31mE (92891) websocket_client: Websocket client is not connected[0m
+[0;31mE (92911) websocket_client: Websocket client is not connected[0m
+[0;31mE (92932) websocket_client: Websocket client is not connected[0m
+[0;31mE (92951) websocket_client: Websocket client is not connected[0m
+[0;31mE (92971) websocket_client: Websocket client is not connected[0m
+[0;31mE (92991) websocket_client: Websocket client is not connected[0m
+[0;31mE (93011) websocket_client: Websocket client is not connected[0m
+[0;31mE (93031) websocket_client: Websocket client is not connected[0m
+[0;31mE (93051) websocket_client: Websocket client is not connected[0m
+[0;31mE (93071) websocket_client: Websocket client is not connected[0m
+[0;31mE (93091) websocket_client: Websocket client is not connected[0m
+[0;31mE (93111) websocket_client: Websocket client is not connected[0m
+[0;31mE (93131) websocket_client: Websocket client is not connected[0m
+[0;31mE (93151) websocket_client: Websocket client is not connected[0m
+[0;31mE (93171) websocket_client: Websocket client is not connected[0m
+[0;31mE (93191) websocket_client: Websocket client is not connected[0m
+[0;31mE (93211) websocket_client: Websocket client is not connected[0m
+[0;31mE (93231) websocket_client: Websocket client is not connected[0m
+[0;31mE (93251) websocket_client: Websocket client is not connected[0m
+[0;31mE (93271) websocket_client: Websocket client is not connected[0m
+[0;31mE (93291) websocket_client: Websocket client is not connected[0m
+[0;31mE (93311) websocket_client: Websocket client is not connected[0m
+[0;31mE (93331) websocket_client: Websocket client is not connected[0m
+[0;31mE (93351) websocket_client: Websocket client is not connected[0m
+[0;31mE (93371) websocket_client: Websocket client is not connected[0m
+[0;31mE (93391) websocket_client: Websocket client is not connected[0m
+[0;31mE (93411) websocket_client: Websocket client is not connected[0m
+[0;31mE (93431) websocket_client: Websocket client is not connected[0m
+[0;31mE (93451) websocket_client: Websocket client is not connected[0m
+[0;31mE (93471) websocket_client: Websocket client is not connected[0m
+[0;31mE (93491) websocket_client: Websocket client is not connected[0m
+[0;31mE (93511) websocket_client: Websocket client is not connected[0m
+[0;31mE (93531) websocket_client: Websocket client is not connected[0m
+[0;31mE (93551) websocket_client: Websocket client is not connected[0m
+[0;31mE (93571) websocket_client: Websocket client is not connected[0m
+[0;31mE (93591) websocket_client: Websocket client is not connected[0m
+[0;31mE (93611) websocket_client: Websocket client is not connected[0m
+[0;31mE (93631) websocket_client: Websocket client is not connected[0m
+[0;31mE (93651) websocket_client: Websocket client is not connected[0m
+[0;31mE (93671) websocket_client: Websocket client is not connected[0m
+[0;31mE (93691) websocket_client: Websocket client is not connected[0m
+[0;31mE (93711) websocket_client: Websocket client is not connected[0m
+[0;31mE (93731) websocket_client: Websocket client is not connected[0m
+[0;31mE (93751) websocket_client: Websocket client is not connected[0m
+[0;31mE (93771) websocket_client: Websocket client is not connected[0m
+[0;31mE (93791) websocket_client: Websocket client is not connected[0m
+[0;31mE (93811) websocket_client: Websocket client is not connected[0m
+[0;31mE (93831) websocket_client: Websocket client is not connected[0m
+[0;31mE (93850) websocket_client: Websocket client is not connected[0m
+[0;31mE (93870) websocket_client: Websocket client is not connected[0m
+[0;31mE (93891) websocket_client: Websocket client is not connected[0m
+[0;31mE (93911) websocket_client: Websocket client is not connected[0m
+[0;31mE (93930) websocket_client: Websocket client is not connected[0m
+[0;31mE (93950) websocket_client: Websocket client is not connected[0m
+[0;31mE (93970) websocket_client: Websocket client is not connected[0m
+[0;31mE (93990) websocket_client: Websocket client is not connected[0m
+[0;31mE (94010) websocket_client: Websocket client is not connected[0m
+[0;31mE (94030) websocket_client: Websocket client is not connected[0m
+[0;31mE (94050) websocket_client: Websocket client is not connected[0m
+[0;31mE (94070) websocket_client: Websocket client is not connected[0m
+[0;31mE (94090) websocket_client: Websocket client is not connected[0m
+[0;31mE (94110) websocket_client: Websocket client is not connected[0m
+[0;31mE (94130) websocket_client: Websocket client is not connected[0m
+[0;31mE (94150) websocket_client: Websocket client is not connected[0m
+[0;31mE (94170) websocket_client: Websocket client is not connected[0m
+[0;31mE (94190) websocket_client: Websocket client is not connected[0m
+[0;31mE (94210) websocket_client: Websocket client is not connected[0m
+[0;31mE (94230) websocket_client: Websocket client is not connected[0m
+[0;31mE (94250) websocket_client: Websocket client is not connected[0m
+[0;31mE (94270) websocket_client: Websocket client is not connected[0m
+[0;31mE (94290) websocket_client: Websocket client is not connected[0m
+[0;31mE (94310) websocket_client: Websocket client is not connected[0m
+[0;31mE (94330) websocket_client: Websocket client is not connected[0m
+[0;31mE (94350) websocket_client: Websocket client is not connected[0m
+[0;31mE (94370) websocket_client: Websocket client is not connected[0m
+[0;31mE (94390) websocket_client: Websocket client is not connected[0m
+[0;31mE (94410) websocket_client: Websocket client is not connected[0m
+[0;31mE (94431) websocket_client: Websocket client is not connected[0m
+[0;31mE (94450) websocket_client: Websocket client is not connected[0m
+[0;31mE (94470) websocket_client: Websocket client is not connected[0m
+[0;31mE (94490) websocket_client: Websocket client is not connected[0m
+[0;31mE (94510) websocket_client: Websocket client is not connected[0m
+[0;31mE (94530) websocket_client: Websocket client is not connected[0m
+[0;31mE (94550) websocket_client: Websocket client is not connected[0m
+[0;31mE (94570) websocket_client: Websocket client is not connected[0m
+[0;31mE (94590) websocket_client: Websocket client is not connected[0m
+[0;31mE (94610) websocket_client: Websocket client is not connected[0m
+[0;31mE (94630) websocket_client: Websocket client is not connected[0m
+[0;31mE (94650) websocket_client: Websocket client is not connected[0m
+[0;31mE (94670) websocket_client: Websocket client is not connected[0m
+[0;31mE (94690) websocket_client: Websocket client is not connected[0m
+[0;31mE (94710) websocket_client: Websocket client is not connected[0m
+[0;31mE (94730) websocket_client: Websocket client is not connected[0m
+[0;31mE (94750) websocket_client: Websocket client is not connected[0m
+[0;31mE (94770) websocket_client: Websocket client is not connected[0m
+[0;31mE (94790) websocket_client: Websocket client is not connected[0m
+[0;31mE (94810) websocket_client: Websocket client is not connected[0m
+[0;31mE (94830) websocket_client: Websocket client is not connected[0m
+[0;31mE (94850) websocket_client: Websocket client is not connected[0m
+[0;31mE (94870) websocket_client: Websocket client is not connected[0m
+[0;31mE (94890) websocket_client: Websocket client is not connected[0m
+[0;31mE (94910) websocket_client: Websocket client is not connected[0m
+[0;31mE (94931) websocket_client: Websocket client is not connected[0m
+[0;31mE (94950) websocket_client: Websocket client is not connected[0m
+[0;31mE (94970) websocket_client: Websocket client is not connected[0m
+[0;31mE (94990) websocket_client: Websocket client is not connected[0m
+[0;31mE (95010) websocket_client: Websocket client is not connected[0m
+[0;31mE (95030) websocket_client: Websocket client is not connected[0m
+[0;31mE (95050) websocket_client: Websocket client is not connected[0m
+[0;31mE (95070) websocket_client: Websocket client is not connected[0m
+[0;31mE (95090) websocket_client: Websocket client is not connected[0m
+[0;31mE (95110) websocket_client: Websocket client is not connected[0m
+[0;31mE (95130) websocket_client: Websocket client is not connected[0m
+[0;31mE (95150) websocket_client: Websocket client is not connected[0m
+[0;31mE (95170) websocket_client: Websocket client is not connected[0m
+[0;31mE (95190) websocket_client: Websocket client is not connected[0m
+[0;31mE (95210) websocket_client: Websocket client is not connected[0m
+[0;31mE (95230) websocket_client: Websocket client is not connected[0m
+[0;31mE (95250) websocket_client: Websocket client is not connected[0m
+[0;31mE (95270) websocket_client: Websocket client is not connected[0m
+[0;31mE (95290) websocket_client: Websocket client is not connected[0m
+[0;31mE (95310) websocket_client: Websocket client is not connected[0m
+[0;31mE (95330) websocket_client: Websocket client is not connected[0m
+[0;31mE (95350) websocket_client: Websocket client is not connected[0m
+[0;31mE (95370) websocket_client: Websocket client is not connected[0m
+[0;31mE (95390) websocket_client: Websocket client is not connected[0m
+[0;31mE (95410) websocket_client: Websocket client is not connected[0m
+[0;31mE (95430) websocket_client: Websocket client is not connected[0m
+[0;31mE (95450) websocket_client: Websocket client is not connected[0m
+[0;31mE (95470) websocket_client: Websocket client is not connected[0m
+[0;31mE (95490) websocket_client: Websocket client is not connected[0m
+[0;31mE (95510) websocket_client: Websocket client is not connected[0m
+[0;31mE (95530) websocket_client: Websocket client is not connected[0m
+[0;32mI (95569) websocket_client: WebSocket client connected[0m
+[0;32mI (95581) websocket_client: Image sent to WebSocket: 6105 bytes[0m
+[0;32mI (95692) websocket_client: Image sent to WebSocket: 6105 bytes[0m
+[0;32mI (95941) websocket_client: Image sent to WebSocket: 6105 bytes[0m
+[0;32mI (96033) websocket_client: Image sent to WebSocket: 6105 bytes[0m
+[0;32mI (96081) websocket_client: Image sent to WebSocket: 6105 bytes[0m
+[0;32mI (96190) websocket_client: Image sent to WebSocket: 6105 bytes[0m
+[0;32mI (96305) websocket_client: Image sent to WebSocket: 6105 bytes[0m
+[0;32mI (96438) websocket_client: Image sent to WebSocket: 6105 bytes[0m
+[0;32mI (96576) websocket_client: Image sent to WebSocket: 6111 bytes[0m
+[0;32mI (96691) websocket_client: Image sent to WebSocket: 6111 bytes[0m
+[0;32mI (98820) websocket_client: Image sent to WebSocket: 6111 bytes[0m
+[0;32mI (101688) websocket_client: Image sent to WebSocket: 6111 bytes[0m
+[0;32mI (101954) websocket_client: Image sent to WebSocket: 6111 bytes[0m
+[0;32mI (102071) websocket_client: Image sent to WebSocket: 6967 bytes[0m
+[0;32mI (102229) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 62:99:11:7e:0d:6b, parent rssi: -42, free heap: 4178868[0m
+[0;32mI (103585) websocket_client: Image sent to WebSocket: 5678 bytes[0m
+[0;32mI (103700) websocket_client: Image sent to WebSocket: 5665 bytes[0m
+[0;32mI (103734) websocket_client: Image sent to WebSocket: 5746 bytes[0m
+[0;32mI (103824) websocket_client: Image sent to WebSocket: 6967 bytes[0m
+[0;32mI (103854) websocket_client: Image sent to WebSocket: 5723 bytes[0m
+[0;31mE (108888) transport_ws: Error transport_poll_write[0m
+[0;31mE (108889) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;31mE (108895) websocket_client: WebSocket client error[0m
+[0;32mI (108901) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (108906) websocket_client: WebSocket client connected[0m
+[0;32mI (108912) websocket_client: Image sent to WebSocket: 6042 bytes[0m
+[0;33mW (108923) cam_hal: NO-SOI[0m
+[0;31mE (108945) websocket_client: Websocket client is not connected[0m
+[0;31mE (108964) websocket_client: Websocket client is not connected[0m
+[0;31mE (108984) websocket_client: Websocket client is not connected[0m
+[0;31mE (109004) websocket_client: Websocket client is not connected[0m
+[0;31mE (109024) websocket_client: Websocket client is not connected[0m
+[0;31mE (109044) websocket_client: Websocket client is not connected[0m
+[0;31mE (109064) websocket_client: Websocket client is not connected[0m
+[0;31mE (109084) websocket_client: Websocket client is not connected[0m
+[0;31mE (109104) websocket_client: Websocket client is not connected[0m
+[0;31mE (109124) websocket_client: Websocket client is not connected[0m
+[0;31mE (109144) websocket_client: Websocket client is not connected[0m
+[0;31mE (109164) websocket_client: Websocket client is not connected[0m
+[0;31mE (109184) websocket_client: Websocket client is not connected[0m
+[0;31mE (109204) websocket_client: Websocket client is not connected[0m
+[0;31mE (109224) websocket_client: Websocket client is not connected[0m
+[0;31mE (109244) websocket_client: Websocket client is not connected[0m
+[0;31mE (109264) websocket_client: Websocket client is not connected[0m
+[0;31mE (109284) websocket_client: Websocket client is not connected[0m
+[0;31mE (109304) websocket_client: Websocket client is not connected[0m
+[0;31mE (109324) websocket_client: Websocket client is not connected[0m
+[0;31mE (109344) websocket_client: Websocket client is not connected[0m
+[0;31mE (109364) websocket_client: Websocket client is not connected[0m
+[0;31mE (109384) websocket_client: Websocket client is not connected[0m
+[0;31mE (109404) websocket_client: Websocket client is not connected[0m
+[0;31mE (109424) websocket_client: Websocket client is not connected[0m
+[0;31mE (109444) websocket_client: Websocket client is not connected[0m
+[0;31mE (109464) websocket_client: Websocket client is not connected[0m
+[0;31mE (109484) websocket_client: Websocket client is not connected[0m
+[0;31mE (109504) websocket_client: Websocket client is not connected[0m
+[0;31mE (109524) websocket_client: Websocket client is not connected[0m
+[0;31mE (109544) websocket_client: Websocket client is not connected[0m
+[0;31mE (109564) websocket_client: Websocket client is not connected[0m
+[0;31mE (109584) websocket_client: Websocket client is not connected[0m
+[0;31mE (109604) websocket_client: Websocket client is not connected[0m
+[0;31mE (109624) websocket_client: Websocket client is not connected[0m
+[0;31mE (109644) websocket_client: Websocket client is not connected[0m
+[0;31mE (109664) websocket_client: Websocket client is not connected[0m
+[0;31mE (109684) websocket_client: Websocket client is not connected[0m
+[0;31mE (109704) websocket_client: Websocket client is not connected[0m
+[0;31mE (109724) websocket_client: Websocket client is not connected[0m
+[0;31mE (109744) websocket_client: Websocket client is not connected[0m
+[0;31mE (109764) websocket_client: Websocket client is not connected[0m
+[0;31mE (109784) websocket_client: Websocket client is not connected[0m
+[0;31mE (109804) websocket_client: Websocket client is not connected[0m
+[0;31mE (109824) websocket_client: Websocket client is not connected[0m
+[0;31mE (109844) websocket_client: Websocket client is not connected[0m
+[0;31mE (109864) websocket_client: Websocket client is not connected[0m
+[0;31mE (109884) websocket_client: Websocket client is not connected[0m
+[0;31mE (109904) websocket_client: Websocket client is not connected[0m
+[0;31mE (109924) websocket_client: Websocket client is not connected[0m
+[0;31mE (109944) websocket_client: Websocket client is not connected[0m
+[0;31mE (109964) websocket_client: Websocket client is not connected[0m
+[0;31mE (109984) websocket_client: Websocket client is not connected[0m
+[0;31mE (110004) websocket_client: Websocket client is not connected[0m
+[0;31mE (110024) websocket_client: Websocket client is not connected[0m
+[0;31mE (110044) websocket_client: Websocket client is not connected[0m
+[0;31mE (110064) websocket_client: Websocket client is not connected[0m
+[0;31mE (110084) websocket_client: Websocket client is not connected[0m
+[0;31mE (110104) websocket_client: Websocket client is not connected[0m
+[0;31mE (110124) websocket_client: Websocket client is not connected[0m
+[0;31mE (110144) websocket_client: Websocket client is not connected[0m
+[0;31mE (110164) websocket_client: Websocket client is not connected[0m
+[0;31mE (110184) websocket_client: Websocket client is not connected[0m
+[0;31mE (110204) websocket_client: Websocket client is not connected[0m
+[0;31mE (110224) websocket_client: Websocket client is not connected[0m
+[0;31mE (110244) websocket_client: Websocket client is not connected[0m
+[0;31mE (110264) websocket_client: Websocket client is not connected[0m
+[0;31mE (110284) websocket_client: Websocket client is not connected[0m
+[0;31mE (110304) websocket_client: Websocket client is not connected[0m
+[0;31mE (110324) websocket_client: Websocket client is not connected[0m
+[0;31mE (110344) websocket_client: Websocket client is not connected[0m
+[0;31mE (110364) websocket_client: Websocket client is not connected[0m
+[0;31mE (110384) websocket_client: Websocket client is not connected[0m
+[0;31mE (110404) websocket_client: Websocket client is not connected[0m
+[0;31mE (110424) websocket_client: Websocket client is not connected[0m
+[0;31mE (110444) websocket_client: Websocket client is not connected[0m
+[0;31mE (110464) websocket_client: Websocket client is not connected[0m
+[0;31mE (110484) websocket_client: Websocket client is not connected[0m
+[0;31mE (110504) websocket_client: Websocket client is not connected[0m
+[0;31mE (110524) websocket_client: Websocket client is not connected[0m
+[0;31mE (110544) websocket_client: Websocket client is not connected[0m
+[0;31mE (110564) websocket_client: Websocket client is not connected[0m
+[0;31mE (110584) websocket_client: Websocket client is not connected[0m
+[0;31mE (110604) websocket_client: Websocket client is not connected[0m
+[0;31mE (110624) websocket_client: Websocket client is not connected[0m
+[0;31mE (110644) websocket_client: Websocket client is not connected[0m
+[0;31mE (110664) websocket_client: Websocket client is not connected[0m
+[0;31mE (110684) websocket_client: Websocket client is not connected[0m
+[0;31mE (110704) websocket_client: Websocket client is not connected[0m
+[0;31mE (110724) websocket_client: Websocket client is not connected[0m
+[0;31mE (110744) websocket_client: Websocket client is not connected[0m
+[0;31mE (110764) websocket_client: Websocket client is not connected[0m
+[0;31mE (110784) websocket_client: Websocket client is not connected[0m
+[0;31mE (110804) websocket_client: Websocket client is not connected[0m
+[0;31mE (110824) websocket_client: Websocket client is not connected[0m
+[0;31mE (110844) websocket_client: Websocket client is not connected[0m
+[0;31mE (110864) websocket_client: Websocket client is not connected[0m
+[0;31mE (110884) websocket_client: Websocket client is not connected[0m
+[0;31mE (110904) websocket_client: Websocket client is not connected[0m
+[0;31mE (110924) websocket_client: Websocket client is not connected[0m
+[0;31mE (110944) websocket_client: Websocket client is not connected[0m
+[0;31mE (110964) websocket_client: Websocket client is not connected[0m
+[0;31mE (110984) websocket_client: Websocket client is not connected[0m
+[0;31mE (111004) websocket_client: Websocket client is not connected[0m
+[0;31mE (111024) websocket_client: Websocket client is not connected[0m
+[0;31mE (111044) websocket_client: Websocket client is not connected[0m
+[0;31mE (111064) websocket_client: Websocket client is not connected[0m
+[0;31mE (111084) websocket_client: Websocket client is not connected[0m
+[0;31mE (111104) websocket_client: Websocket client is not connected[0m
+[0;31mE (111124) websocket_client: Websocket client is not connected[0m
+[0;31mE (111144) websocket_client: Websocket client is not connected[0m
+[0;31mE (111164) websocket_client: Websocket client is not connected[0m
+[0;31mE (111184) websocket_client: Websocket client is not connected[0m
+[0;31mE (111204) websocket_client: Websocket client is not connected[0m
+[0;31mE (111223) websocket_client: Websocket client is not connected[0m
+[0;31mE (111243) websocket_client: Websocket client is not connected[0m
+[0;31mE (111263) websocket_client: Websocket client is not connected[0m
+[0;31mE (111283) websocket_client: Websocket client is not connected[0m
+[0;31mE (111304) websocket_client: Websocket client is not connected[0m
+[0;31mE (111323) websocket_client: Websocket client is not connected[0m
+[0;31mE (111343) websocket_client: Websocket client is not connected[0m
+[0;31mE (111363) websocket_client: Websocket client is not connected[0m
+[0;31mE (111383) websocket_client: Websocket client is not connected[0m
+[0;31mE (111403) websocket_client: Websocket client is not connected[0m
+[0;31mE (111423) websocket_client: Websocket client is not connected[0m
+[0;31mE (111443) websocket_client: Websocket client is not connected[0m
+[0;31mE (111463) websocket_client: Websocket client is not connected[0m
+[0;31mE (111483) websocket_client: Websocket client is not connected[0m
+[0;31mE (111503) websocket_client: Websocket client is not connected[0m
+[0;31mE (111524) websocket_client: Websocket client is not connected[0m
+[0;31mE (111543) websocket_client: Websocket client is not connected[0m
+[0;31mE (111563) websocket_client: Websocket client is not connected[0m
+[0;31mE (111583) websocket_client: Websocket client is not connected[0m
+[0;31mE (111603) websocket_client: Websocket client is not connected[0m
+[0;31mE (111623) websocket_client: Websocket client is not connected[0m
+[0;31mE (111643) websocket_client: Websocket client is not connected[0m
+[0;31mE (111663) websocket_client: Websocket client is not connected[0m
+[0;31mE (111683) websocket_client: Websocket client is not connected[0m
+[0;31mE (111703) websocket_client: Websocket client is not connected[0m
+[0;31mE (111723) websocket_client: Websocket client is not connected[0m
+[0;31mE (111743) websocket_client: Websocket client is not connected[0m
+[0;31mE (111763) websocket_client: Websocket client is not connected[0m
+[0;31mE (111783) websocket_client: Websocket client is not connected[0m
+[0;31mE (111803) websocket_client: Websocket client is not connected[0m
+[0;31mE (111823) websocket_client: Websocket client is not connected[0m
+[0;31mE (111843) websocket_client: Websocket client is not connected[0m
+[0;31mE (111863) websocket_client: Websocket client is not connected[0m
+[0;31mE (111883) websocket_client: Websocket client is not connected[0m
+[0;31mE (111903) websocket_client: Websocket client is not connected[0m
+[0;31mE (111923) websocket_client: Websocket client is not connected[0m
+[0;31mE (111943) websocket_client: Websocket client is not connected[0m
+[0;31mE (111963) websocket_client: Websocket client is not connected[0m
+[0;31mE (111983) websocket_client: Websocket client is not connected[0m
+[0;31mE (112003) websocket_client: Websocket client is not connected[0m
+[0;31mE (112023) websocket_client: Websocket client is not connected[0m
+[0;31mE (112043) websocket_client: Websocket client is not connected[0m
+[0;31mE (112063) websocket_client: Websocket client is not connected[0m
+[0;31mE (112083) websocket_client: Websocket client is not connected[0m
+[0;31mE (112103) websocket_client: Websocket client is not connected[0m
+[0;31mE (112123) websocket_client: Websocket client is not connected[0m
+[0;31mE (112143) websocket_client: Websocket client is not connected[0m
+[0;31mE (112163) websocket_client: Websocket client is not connected[0m
+[0;31mE (112183) websocket_client: Websocket client is not connected[0m
+[0;31mE (112203) websocket_client: Websocket client is not connected[0m
+[0;31mE (112223) websocket_client: Websocket client is not connected[0m
+[0;32mI (112229) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 62:99:11:7e:0d:6b, parent rssi: -51, free heap: 4182420[0m
+[0;31mE (112243) websocket_client: Websocket client is not connected[0m
+[0;31mE (112263) websocket_client: Websocket client is not connected[0m
+[0;31mE (112283) websocket_client: Websocket client is not connected[0m
+[0;31mE (112303) websocket_client: Websocket client is not connected[0m
+[0;31mE (112323) websocket_client: Websocket client is not connected[0m
+[0;31mE (112343) websocket_client: Websocket client is not connected[0m
+[0;31mE (112363) websocket_client: Websocket client is not connected[0m
+[0;31mE (112383) websocket_client: Websocket client is not connected[0m
+[0;31mE (112403) websocket_client: Websocket client is not connected[0m
+[0;31mE (112423) websocket_client: Websocket client is not connected[0m
+[0;31mE (112443) websocket_client: Websocket client is not connected[0m
+[0;31mE (112463) websocket_client: Websocket client is not connected[0m
+[0;31mE (112483) websocket_client: Websocket client is not connected[0m
+[0;31mE (112503) websocket_client: Websocket client is not connected[0m
+[0;31mE (112523) websocket_client: Websocket client is not connected[0m
+[0;31mE (112543) websocket_client: Websocket client is not connected[0m
+[0;31mE (112563) websocket_client: Websocket client is not connected[0m
+[0;31mE (112583) websocket_client: Websocket client is not connected[0m
+[0;31mE (112603) websocket_client: Websocket client is not connected[0m
+[0;31mE (112623) websocket_client: Websocket client is not connected[0m
+[0;31mE (112643) websocket_client: Websocket client is not connected[0m
+[0;31mE (112663) websocket_client: Websocket client is not connected[0m
+[0;31mE (112683) websocket_client: Websocket client is not connected[0m
+[0;31mE (112703) websocket_client: Websocket client is not connected[0m
+[0;31mE (112723) websocket_client: Websocket client is not connected[0m
+[0;31mE (112743) websocket_client: Websocket client is not connected[0m
+[0;31mE (112763) websocket_client: Websocket client is not connected[0m
+[0;31mE (112783) websocket_client: Websocket client is not connected[0m
+[0;31mE (112803) websocket_client: Websocket client is not connected[0m
+[0;31mE (112823) websocket_client: Websocket client is not connected[0m
+[0;31mE (112843) websocket_client: Websocket client is not connected[0m
+[0;31mE (112863) websocket_client: Websocket client is not connected[0m
+[0;31mE (112883) websocket_client: Websocket client is not connected[0m
+[0;31mE (112903) websocket_client: Websocket client is not connected[0m
+[0;31mE (112923) websocket_client: Websocket client is not connected[0m
+[0;31mE (112943) websocket_client: Websocket client is not connected[0m
+[0;31mE (112963) websocket_client: Websocket client is not connected[0m
+[0;31mE (112983) websocket_client: Websocket client is not connected[0m
+[0;31mE (113003) websocket_client: Websocket client is not connected[0m
+[0;31mE (113023) websocket_client: Websocket client is not connected[0m
+[0;31mE (113043) websocket_client: Websocket client is not connected[0m
+[0;31mE (113063) websocket_client: Websocket client is not connected[0m
+[0;31mE (113083) websocket_client: Websocket client is not connected[0m
+[0;31mE (113103) websocket_client: Websocket client is not connected[0m
+[0;31mE (113123) websocket_client: Websocket client is not connected[0m
+[0;31mE (113143) websocket_client: Websocket client is not connected[0m
+[0;31mE (113163) websocket_client: Websocket client is not connected[0m
+[0;31mE (113183) websocket_client: Websocket client is not connected[0m
+[0;31mE (113203) websocket_client: Websocket client is not connected[0m
+[0;31mE (113223) websocket_client: Websocket client is not connected[0m
+[0;31mE (113243) websocket_client: Websocket client is not connected[0m
+[0;31mE (113263) websocket_client: Websocket client is not connected[0m
+[0;31mE (113283) websocket_client: Websocket client is not connected[0m
+[0;31mE (113303) websocket_client: Websocket client is not connected[0m
+[0;31mE (113323) websocket_client: Websocket client is not connected[0m
+[0;31mE (113343) websocket_client: Websocket client is not connected[0m
+[0;31mE (113363) websocket_client: Websocket client is not connected[0m
+[0;31mE (113383) websocket_client: Websocket client is not connected[0m
+[0;31mE (113403) websocket_client: Websocket client is not connected[0m
+[0;31mE (113423) websocket_client: Websocket client is not connected[0m
+[0;31mE (113443) websocket_client: Websocket client is not connected[0m
+[0;31mE (113463) websocket_client: Websocket client is not connected[0m
+[0;31mE (113483) websocket_client: Websocket client is not connected[0m
+[0;31mE (113503) websocket_client: Websocket client is not connected[0m
+[0;31mE (113523) websocket_client: Websocket client is not connected[0m
+[0;31mE (113543) websocket_client: Websocket client is not connected[0m
+[0;31mE (113563) websocket_client: Websocket client is not connected[0m
+[0;31mE (113583) websocket_client: Websocket client is not connected[0m
+[0;31mE (113603) websocket_client: Websocket client is not connected[0m
+[0;31mE (113623) websocket_client: Websocket client is not connected[0m
+[0;31mE (113643) websocket_client: Websocket client is not connected[0m
+[0;31mE (113663) websocket_client: Websocket client is not connected[0m
+[0;31mE (113683) websocket_client: Websocket client is not connected[0m
+[0;31mE (113703) websocket_client: Websocket client is not connected[0m
+[0;31mE (113723) websocket_client: Websocket client is not connected[0m
+[0;31mE (113743) websocket_client: Websocket client is not connected[0m
+[0;31mE (113763) websocket_client: Websocket client is not connected[0m
+[0;31mE (113783) websocket_client: Websocket client is not connected[0m
+[0;31mE (113803) websocket_client: Websocket client is not connected[0m
+[0;31mE (113823) websocket_client: Websocket client is not connected[0m
+[0;31mE (113843) websocket_client: Websocket client is not connected[0m
+[0;31mE (113863) websocket_client: Websocket client is not connected[0m
+[0;31mE (113883) websocket_client: Websocket client is not connected[0m
+[0;31mE (113902) websocket_client: Websocket client is not connected[0m
+[0;32mI (114818) websocket_client: WebSocket client connected[0m
+[0;32mI (114829) websocket_client: Image sent to WebSocket: 5754 bytes[0m
+[0;32mI (114936) websocket_client: Image sent to WebSocket: 5754 bytes[0m
+[0;32mI (115063) websocket_client: Image sent to WebSocket: 5754 bytes[0m
+[0;32mI (119449) websocket_client: Image sent to WebSocket: 5840 bytes[0m

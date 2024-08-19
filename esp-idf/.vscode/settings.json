@@ -1,0 +1,16 @@
+{
+	"cmake.configureOnOpen": false,
+	"files.associations": {
+		"*.js": "javascript",
+		"stdio.h": "c",
+		"stdlib.h": "c",
+		"esp_mesh_lite.h": "c",
+		"inttypes.h": "c",
+		"rc522.h": "c",
+		"array": "c",
+		"string": "c",
+		"string_view": "c",
+		"span": "c",
+		"stdint.h": "c"
+	}
+}

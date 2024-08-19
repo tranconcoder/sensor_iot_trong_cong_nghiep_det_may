@@ -1,0 +1,244 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (29) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 18 2024 03:13:10[0m
+[0;33mW (29) boot: Unicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (82) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (97) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (105) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (112) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (120) boot: End of partition table[0m
+[0;32mI (124) boot: No factory image, trying OTA 0[0m
+[0;32mI (129) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2d84ch (186444) map[0m
+[0;32mI (202) esp_image: segment 1: paddr=0003d874 vaddr=3ffbdb60 size=027a4h ( 10148) load[0m
+[0;32mI (206) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=c21f4h (795124) map[0m
+[0;32mI (480) esp_image: segment 3: paddr=0010221c vaddr=3ffc0304 size=037c4h ( 14276) load[0m
+[0;32mI (485) esp_image: segment 4: paddr=001059e8 vaddr=40080000 size=1c858h (116824) load[0m
+[0;32mI (546) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (551) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (551) boot: Disabling RNG early entropy source...[0m
+[0;32mI (563) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (564) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (564) esp_psram: Speed: 40MHz[0m
+[0;32mI (567) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (575) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (584) cpu_start: Unicore app[0m
+[0;32mI (587) cpu_start: Single core mode[0m
+[0;32mI (1517) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1525) cpu_start: Pro cpu start user code[0m
+[0;32mI (1525) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1525) app_init: Application information:[0m
+[0;32mI (1528) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1534) app_init: App version:      c6c62dfc-dirty[0m
+[0;32mI (1540) app_init: Compile time:     Aug 19 2024 14:33:11[0m
+[0;32mI (1546) app_init: ELF file SHA256:  5fdbed234...[0m
+[0;32mI (1551) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1556) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1561) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1566) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1572) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1579) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1585) heap_init: At 3FFC88B8 len 00017748 (93 KiB): DRAM[0m
+[0;32mI (1591) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1598) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1604) heap_init: At 4009C858 len 000037A8 (13 KiB): IRAM[0m
+[0;32mI (1610) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1617) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1625) spi_flash: detected chip: generic[0m
+[0;32mI (1629) spi_flash: flash io: dio[0m
+[0;33mW (1633) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1644) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1650) main_task: Started on CPU0[0m
+[0;32mI (1653) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1662) main_task: Calling app_main()[0m
+[0;32mI (1681) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1685) wifi:wifi driver task: 3ffbd5e0, prio:23, stack:6656, core=0
+I (1688) wifi:wifi firmware version: 0caa81945
+I (1689) wifi:wifi certification version: v7.0
+I (1691) wifi:config NVS flash: enabled
+I (1695) wifi:config nano formating: disabled
+I (1699) wifi:Init data frame dynamic rx buffer num: 32
+I (1704) wifi:Init static rx mgmt buffer num: 5
+I (1708) wifi:Init management short buffer num: 32
+I (1713) wifi:Init static tx buffer num: 16
+I (1717) wifi:Init tx cache buffer num: 32
+I (1720) wifi:Init static rx buffer size: 1600
+I (1725) wifi:Init static rx buffer num: 10
+I (1728) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1733) wifi_init: accept mbox: 6[0m
+[0;32mI (1736) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1740) wifi_init: udp mbox: 6[0m
+[0;32mI (1744) wifi_init: tcp mbox: 6[0m
+[0;32mI (1748) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1752) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1757) wifi_init: tcp mss: 1440[0m
+[0;32mI (1761) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1765) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1771) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1777) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (1839) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+I (1851) wifi:mode : null
+I (1853) wifi:mode : softAP (08:a6:f7:11:51:a9)
+I (1855) wifi:Total power save buffer number: 8
+I (1855) wifi:Init max length of beacon: 752/752
+I (1858) wifi:Init max length of beacon: 752/752
+[0;32mI (1864) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+Add netif ap with c6c62dfc(commit id)
+[0;32mI (1874) bridge_common: netif list add success[0m
+[0;31mE (1879) NVS: Failed to open NVS namespace[0m
+[0;32mI (1884) bridge_common: IP Address:192.168.5.1[0m
+[0;32mI (1889) bridge_common: GW Address:192.168.5.1[0m
+[0;32mI (1894) bridge_common: NM Address:255.255.255.0[0m
+[0;32mI (1899) bridge_common: [WIFI_AP_DEF ][0m
+[0;32mI (1905) bridge_common: Set ip info:192.168.5.1[0m
+[0;32mI (1909) bridge_wifi: SoftAP IP network segment has changed, deauth all station[0m
+I (1921) wifi:Disabled PMF config for SoftAP
+I (1922) wifi:Total power save buffer number: 8
+[0;32mI (1928) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (1935) bridge_common: [WIFI_AP_DEF ]Name Server1: 114.114.114.114[0m
+[0;32mI (1941) bridge_common: DHCPS Restart, deauth all station[0m
+Add netif sta with c6c62dfc(commit id)
+[0;32mI (1951) bridge_common: netif list add success[0m
+I (1957) wifi:mode : sta (08:a6:f7:11:51:a8) + softAP (08:a6:f7:11:51:a9)
+I (1963) wifi:enable tsf
+[0;31mE (1967) NVS: Failed to read IP info from NVS[0m
+I (1970) wifi:Disabled PMF config for STA
+[0;32mI (1974) bridge_wifi: [esp_bridge_wifi_set_config] sta ssid: Tran Con password: 88888888[0m
+[0;32mI (1983) bridge_wifi: [esp_bridge_wifi_set_config] softap ssid: ESP_Bridge_1151a9 password: 12345678[0m
+I (2166) wifi:Total power save buffer number: 8
+[0;32mI (2170) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (2171) bridge_wifi: SoftAP config changed, deauth all station[0m
+[0;32mI (2175) Mesh-Lite: esp-mesh-lite component version: 1.0.0[0m
+I (2181) ESPNOW: espnow [version: 1.0] init
+[0;32mI (2185) [vendor_ie]: Mesh-Lite commit id: bc9302d
+ [0m
+[0;31mE (2192) [vendor_ie]: Error Get! [0m
+[0;33mW (2195) [vendor_ie]: Mesh ID is not saved in flash [0m
+[0;32mI (2201) [vendor_ie]: Mesh ID: 77 [0m
+[0;33mW (2205) [vendor_ie]: Error Get[4354] [0m
+[0;33mW (2209) [vendor_ie]: Error Get[4354] [0m
+[0;32mI (2215) [ESP_Mesh_Lite_Comm]: msg action add success [0m
+[0;32mI (2221) [ESP_Mesh_Lite_Comm]: Bind Socket 54, port 6364 [0m
+[0;32mI (2225) [ESP_Mesh_Lite_Comm]: Bind Socket 55, port 6363 [0m
+[0;32mI (2232) [ESP_Mesh_Lite_Comm]: Bind Socket 56, port 6366 [0m
+[0;32mI (2238) [ESP_Mesh_Lite_Comm]: Bind Socket 57, port 6365 [0m
+[0;32mI (2244) [mesh-lite-espnow]: Start espnow task [0m
+[0;32mI (2251) Mesh-Lite: Mesh-Lite connecting[0m
+[0;32mI (2256) [vendor_ie]: esp_mesh_lite_wifi_scan_start return ESP_OK [0m
+[0;32mI (2261) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (2271) cam_hal: cam init ok[0m
+[0;32mI (2274) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (2277) sccb: sccb_i2c_port=1[0m
+[0;32mI (2282) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2320) camera: Detected camera at address=0x30[0m
+[0;32mI (2323) camera: Detected OV2640 camera[0m
+[0;32mI (2323) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (2409) cam_hal: buffer_size: 32768, half_buffer_size: 4096, node_buffer_size: 2048, node_cnt: 16, total_cnt: 45[0m
+[0;32mI (2410) cam_hal: Allocating 184320 Byte frame buffer in PSRAM[0m
+[0;32mI (2416) cam_hal: cam config ok[0m
+[0;32mI (2420) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 12[0m
+[0;33mW (2507) websocket_client: `network_timeout_ms` is not set, or it is less than or equal to zero, using default time out 10000 (milliseconds)[0m
+[0;32mI (2515) main_task: Returned from app_main()[0m
+[0;32mI (3646) [vendor_ie]: Mesh-Lite Scan done [0m
+[0;32mI (3647) [vendor_ie]: RTC store: temp_mesh_id:255; ssid:; bssid:c8:2e:18:25:e0:81; crc:774176778 [0m
+W (12260) wifi:Haven't to connect to a suitable AP now!
+[0;32mI (12261) esp32cam_security_gate: System information, channel: 1, layer: 0, self mac: 08:a6:f7:11:51:a8, parent bssid: 00:00:00:00:00:00, parent rssi: -120, free heap: 4038032[0m
+[0;31mE (12516) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (12517) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (12517) transport_ws: Error connecting to host 192.168.1.4:3000[0m
+[0;31mE (12524) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (12541) websocket_client: WebSocket client error[0m
+[0;32mI (12547) websocket_client: Reconnect after 3000 ms[0m
+[0;33mW (12552) cam_hal: Failed to get the frame on time![0m
+[0;31mE (12558) websocket_client: Camera Capture Failed[0m
+[0;32mI (12563) websocket_client: WebSocket client connected[0m
+[0;33mW (16563) cam_hal: Failed to get the frame on time![0m
+[0;31mE (16563) websocket_client: Camera Capture Failed[0m
+[0;32mI (17216) [vendor_ie]: esp_mesh_lite_wifi_scan_start return ESP_OK [0m
+[0;32mI (20056) [vendor_ie]: Mesh-Lite Scan done [0m
+[0;32mI (20057) [vendor_ie]: Find ESP_Bridge_25e081 [0m
+[0;32mI (20058) [vendor_ie]: bssid: c8:2e:18:25:e0:81, level: 2 [0m
+[0;32mI (20062) [vendor_ie]: RTC store: temp_mesh_id:255; ssid:ESP_Bridge_25e081; bssid:c8:2e:18:25:e0:81; crc:820343237 [0m
+[0;32mI (20073) [vendor_ie]: wifi_cfg ESP_Bridge_25e081 router_config Tran Con [0m
+[0;32mI (20082) [vendor_ie]: esp_mesh_lite_wifi_connect return ESP_OK [0m
+I (20410) wifi:ap channel adjust o:1,1 n:2,1
+I (20411) wifi:new:<2,1>, old:<1,1>, ap:<2,1>, sta:<2,1>, prof:1, snd_ch_cfg:0x0
+I (20412) wifi:state: init -> auth (0xb0)
+I (20419) wifi:state: auth -> assoc (0x0)
+I (20425) wifi:Association refused temporarily, comeback time 1500 (TUs)
+[0;33mW (20563) cam_hal: Failed to get the frame on time![0m
+[0;31mE (20563) websocket_client: Camera Capture Failed[0m
+I (21961) wifi:state: assoc -> assoc (0x0)
+I (21971) wifi:state: assoc -> run (0x10)
+I (21982) wifi:connected with ESP_Bridge_25e081, aid = 1, channel 2, 40U, bssid = c8:2e:18:25:e0:81
+I (21983) wifi:security: WPA2-PSK, phy: bgn, rssi: -77
+I (21985) wifi:pm start, type: 1
+
+I (21988) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (21997) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (22004) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;31mE (22015) [ESP_Mesh_Lite_Comm]: Error Get! [0m
+[0;32mI (22028) bridge_common: [WIFI_AP_DEF ]Name Server1: 203.113.131.2[0m
+[0;32mI (22096) Mesh-Lite: netif network segment conflict check[0m
+[0;32mI (22260) esp32cam_security_gate: System information, channel: 2, layer: 2, self mac: 08:a6:f7:11:51:a8, parent bssid: c8:2e:18:25:e0:81, parent rssi: -73, free heap: 4036852[0m
+[0;32mI (23017) esp_netif_handlers: sta ip: 192.168.5.2, mask: 255.255.255.0, gw: 192.168.5.1[0m
+[0;32mI (23017) bridge_wifi: Connected with IP Address:192.168.5.2[0m
+[0;32mI (23022) bridge_common: [WIFI_AP_DEF ][0m
+[0;32mI (23026) bridge_common: IP Address:192.168.4.1[0m
+[0;32mI (23031) bridge_common: GW Address:192.168.4.1[0m
+[0;32mI (23036) bridge_common: NM Address:255.255.255.0[0m
+[0;32mI (23044) bridge_common: ip reallocate new:192.168.4.1[0m
+[0;32mI (23048) bridge_wifi: SoftAP IP network segment has changed, deauth all station[0m
+[0;32mI (23056) [vendor_ie]: RTC store: temp_mesh_id:8; ssid:ESP_Bridge_25e081; bssid:c8:2e:18:25:e0:81; crc:3262912988 [0m
+[0;31mE (23068) esp-tls: [sock=58] delayed connect error: Software caused connection abort[0m
+[0;31mE (23075) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (23082) transport_ws: Error connecting to host 192.168.1.4:3000[0m
+[0;31mE (23089) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (23107) websocket_client: WebSocket client error[0m
+[0;32mI (23112) websocket_client: Reconnect after 3000 ms[0m
+[0;32mI (23117) websocket_client: WebSocket client connected[0m
+[0;32mI (23123) esp32cam_security_gate: TCP client write task is running[0m
+[0;33mW (24563) cam_hal: Failed to get the frame on time![0m
+[0;31mE (24563) websocket_client: Camera Capture Failed[0m
+[0;32mI (26200) websocket_client: WebSocket client connected[0m
+[0;33mW (28563) cam_hal: Failed to get the frame on time![0m
+[0;31mE (28563) websocket_client: Camera Capture Failed[0m
+[0;32mI (32260) esp32cam_security_gate: System information, channel: 2, layer: 2, self mac: 08:a6:f7:11:51:a8, parent bssid: c8:2e:18:25:e0:81, parent rssi: -73, free heap: 4031420[0m
+[0;33mW (32563) cam_hal: Failed to get the frame on time![0m
+[0;31mE (32563) websocket_client: Camera Capture Failed[0m
+[0;33mW (36563) cam_hal: Failed to get the frame on time![0m
+[0;31mE (36563) websocket_client: Camera Capture Failed[0m
+[0;32mI (37051) [vendor_ie]: esp_mesh_lite_wifi_scan_start return ESP_OK [0m
+[0;32mI (37552) [ESP_Mesh_Lite_Comm]: Mesh-Lite Comm Scan done [0m
+[0;32mI (37554) [ESP_Mesh_Lite_Comm]: approved: 1 [0m
+[0;33mW (40563) cam_hal: Failed to get the frame on time![0m
+[0;31mE (40563) websocket_client: Camera Capture Failed[0m
+[0;32mI (42260) esp32cam_security_gate: System information, channel: 2, layer: 2, self mac: 08:a6:f7:11:51:a8, parent bssid: c8:2e:18:25:e0:81, parent rssi: -74, free heap: 4031884[0m
+[0;33mW (44563) cam_hal: Failed to get the frame on time![0m
+[0;31mE (44563) websocket_client: Camera Capture Failed[0m
+[0;33mW (48563) cam_hal: Failed to get the frame on time![0m
+[0;31mE (48563) websocket_client: Camera Capture Failed[0m
+[0;32mI (52260) esp32cam_security_gate: System information, channel: 2, layer: 2, self mac: 08:a6:f7:11:51:a8, parent bssid: c8:2e:18:25:e0:81, parent rssi: -73, free heap: 4031332[0m
+[0;33mW (52563) cam_hal: Failed to get the frame on time![0m
+[0;31mE (52563) websocket_client: Camera Capture Failed[0m
+[0;33mW (56563) cam_hal: Failed to get the frame on time![0m
+[0;31mE (56563) websocket_client: Camera Capture Failed[0m

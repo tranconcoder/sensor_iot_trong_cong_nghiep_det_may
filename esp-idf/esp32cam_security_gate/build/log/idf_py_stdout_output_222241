@@ -1,0 +1,461 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (29) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 17 2024 00:42:55[0m
+[0;33mW (30) boot: Unicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (82) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (97) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (105) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (112) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (120) boot: End of partition table[0m
+[0;32mI (124) boot: No factory image, trying OTA 0[0m
+[0;32mI (129) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=30ddch (200156) map[0m
+[0;32mI (206) esp_image: segment 1: paddr=00040e04 vaddr=3ffbdb60 size=0608ch ( 24716) load[0m
+[0;32mI (216) esp_image: segment 2: paddr=00046e98 vaddr=40080000 size=09180h ( 37248) load[0m
+[0;32mI (231) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=cb254h (832084) map[0m
+[0;32mI (516) esp_image: segment 4: paddr=0011b27c vaddr=40089180 size=15030h ( 86064) load[0m
+[0;32mI (565) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (571) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (571) boot: Disabling RNG early entropy source...[0m
+[0;32mI (582) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (583) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (583) esp_psram: Speed: 40MHz[0m
+[0;32mI (586) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (594) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (603) cpu_start: Unicore app[0m
+[0;32mI (607) cpu_start: Single core mode[0m
+[0;32mI (1536) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1544) cpu_start: Pro cpu start user code[0m
+[0;32mI (1544) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1544) app_init: Application information:[0m
+[0;32mI (1548) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1554) app_init: App version:      9d6a0ee-dirty[0m
+[0;32mI (1559) app_init: Compile time:     Aug 17 2024 13:32:07[0m
+[0;32mI (1565) app_init: ELF file SHA256:  2d0f0cb3e...[0m
+[0;32mI (1570) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1576) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1581) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1586) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1591) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1598) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1604) heap_init: At 3FFC8A10 len 000175F0 (93 KiB): DRAM[0m
+[0;32mI (1610) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1617) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1623) heap_init: At 4009E1B0 len 00001E50 (7 KiB): IRAM[0m
+[0;32mI (1629) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1636) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1644) spi_flash: detected chip: generic[0m
+[0;32mI (1648) spi_flash: flash io: dio[0m
+[0;33mW (1652) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1663) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1669) main_task: Started on CPU0[0m
+[0;32mI (1672) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1681) main_task: Calling app_main()[0m
+[0;32mI (1700) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1704) wifi:wifi driver task: 3ffbd5e0, prio:23, stack:6656, core=0
+I (1707) wifi:wifi firmware version: 0caa81945
+I (1708) wifi:wifi certification version: v7.0
+I (1710) wifi:config NVS flash: enabled
+I (1714) wifi:config nano formating: disabled
+I (1718) wifi:Init data frame dynamic rx buffer num: 32
+I (1723) wifi:Init static rx mgmt buffer num: 5
+I (1727) wifi:Init management short buffer num: 32
+I (1732) wifi:Init static tx buffer num: 16
+I (1736) wifi:Init tx cache buffer num: 32
+I (1739) wifi:Init static rx buffer size: 1600
+I (1744) wifi:Init static rx buffer num: 10
+I (1747) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1752) wifi_init: accept mbox: 6[0m
+[0;32mI (1755) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1759) wifi_init: udp mbox: 6[0m
+[0;32mI (1763) wifi_init: tcp mbox: 6[0m
+[0;32mI (1767) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1771) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1776) wifi_init: tcp mss: 1440[0m
+[0;32mI (1780) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1784) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1790) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1796) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (1858) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+I (1870) wifi:mode : null
+I (1873) wifi:mode : softAP (08:a6:f7:11:51:a9)
+I (1874) wifi:Total power save buffer number: 8
+I (1875) wifi:Init max length of beacon: 752/752
+I (1877) wifi:Init max length of beacon: 752/752
+[0;32mI (1884) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+Add netif ap with 9d6a0ee(commit id)
+[0;32mI (1893) bridge_common: netif list add success[0m
+[0;31mE (1898) NVS: Failed to open NVS namespace[0m
+[0;32mI (1903) bridge_common: IP Address:192.168.5.1[0m
+[0;32mI (1908) bridge_common: GW Address:192.168.5.1[0m
+[0;32mI (1913) bridge_common: NM Address:255.255.255.0[0m
+[0;32mI (1919) bridge_common: [WIFI_AP_DEF ][0m
+[0;32mI (1924) bridge_common: Set ip info:192.168.5.1[0m
+[0;32mI (1928) bridge_wifi: SoftAP IP network segment has changed, deauth all station[0m
+I (1940) wifi:Disabled PMF config for SoftAP
+I (1942) wifi:Total power save buffer number: 8
+[0;32mI (1947) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (1954) bridge_common: [WIFI_AP_DEF ]Name Server1: 114.114.114.114[0m
+[0;32mI (1960) bridge_common: DHCPS Restart, deauth all station[0m
+Add netif sta with 9d6a0ee(commit id)
+[0;32mI (1970) bridge_common: netif list add success[0m
+I (1976) wifi:mode : sta (08:a6:f7:11:51:a8) + softAP (08:a6:f7:11:51:a9)
+I (1982) wifi:enable tsf
+[0;31mE (1986) NVS: Failed to read IP info from NVS[0m
+I (1989) wifi:Disabled PMF config for STA
+[0;32mI (1993) bridge_wifi: [esp_bridge_wifi_set_config] sta ssid: Xiaomi13T password: password[0m
+[0;32mI (2002) bridge_wifi: [esp_bridge_wifi_set_config] softap ssid: ESP_Bridge_1151a9 password: 12345678[0m
+I (2185) wifi:Total power save buffer number: 8
+[0;32mI (2189) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (2190) bridge_wifi: SoftAP config changed, deauth all station[0m
+[0;32mI (2194) Mesh-Lite: esp-mesh-lite component version: 1.0.0[0m
+I (2201) ESPNOW: espnow [version: 1.0] init
+[0;32mI (2204) [vendor_ie]: Mesh-Lite commit id: bc9302d
+ [0m
+[0;31mE (2211) [vendor_ie]: Error Get! [0m
+[0;33mW (2214) [vendor_ie]: Mesh ID is not saved in flash [0m
+[0;32mI (2220) [vendor_ie]: Mesh ID: 77 [0m
+[0;33mW (2224) [vendor_ie]: Error Get[4354] [0m
+[0;33mW (2228) [vendor_ie]: Error Get[4354] [0m
+[0;32mI (2234) [ESP_Mesh_Lite_Comm]: msg action add success [0m
+[0;32mI (2240) [ESP_Mesh_Lite_Comm]: Bind Socket 54, port 6364 [0m
+[0;32mI (2245) [ESP_Mesh_Lite_Comm]: Bind Socket 55, port 6363 [0m
+[0;32mI (2251) [ESP_Mesh_Lite_Comm]: Bind Socket 56, port 6366 [0m
+[0;32mI (2257) [ESP_Mesh_Lite_Comm]: Bind Socket 57, port 6365 [0m
+[0;32mI (2264) [mesh-lite-espnow]: Start espnow task [0m
+[0;32mI (2270) Mesh-Lite: Mesh-Lite connecting[0m
+[0;32mI (2275) [vendor_ie]: esp_mesh_lite_wifi_scan_start return ESP_OK [0m
+[0;31mE (2282) rc522: Read/write test failed[0m
+[0;32mI (2284) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (2294) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (2303) cam_hal: cam init ok[0m
+[0;32mI (2307) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (2310) sccb: sccb_i2c_port=1[0m
+[0;32mI (2315) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2354) camera: Detected camera at address=0x30[0m
+[0;32mI (2357) camera: Detected OV2640 camera[0m
+[0;32mI (2358) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (2448) cam_hal: buffer_size: 32768, half_buffer_size: 4096, node_buffer_size: 2048, node_cnt: 16, total_cnt: 5[0m
+[0;32mI (2449) cam_hal: Allocating 23680 Byte frame buffer in PSRAM[0m
+[0;32mI (2456) cam_hal: cam config ok[0m
+[0;32mI (2459) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8[0m
+[0;33mW (2552) websocket_client: `reconnect_timeout_ms` is not set, or it is less than or equal to zero, using default time out 10000 (milliseconds)[0m
+[0;33mW (2555) websocket_client: `network_timeout_ms` is not set, or it is less than or equal to zero, using default time out 10000 (milliseconds)[0m
+[0;32mI (2575) main_task: Returned from app_main()[0m
+[0;32mI (4122) [vendor_ie]: Mesh-Lite Scan done [0m
+[0;32mI (4123) [vendor_ie]: RTC store: temp_mesh_id:255; ssid:Xiaomi13T; bssid:00:00:00:00:00:00; crc:1883151208 [0m
+[0;32mI (4127) [vendor_ie]: wifi_cfg Xiaomi13T router_config Xiaomi13T [0m
+[0;32mI (4135) [vendor_ie]: esp_mesh_lite_wifi_connect return ESP_OK [0m
+I (6424) wifi:ap channel adjust o:1,1 n:13,2
+I (6425) wifi:new:<13,0>, old:<1,1>, ap:<13,2>, sta:<13,0>, prof:1, snd_ch_cfg:0x0
+I (6426) wifi:state: init -> auth (0xb0)
+I (6437) wifi:state: auth -> assoc (0x0)
+I (6448) wifi:state: assoc -> run (0x10)
+I (6521) wifi:connected with Xiaomi13T, aid = 3, channel 13, BW20, bssid = aa:c4:e1:f7:b3:31
+I (6522) wifi:security: WPA2-PSK, phy: bgn, rssi: -69
+I (6524) wifi:pm start, type: 1
+
+I (6527) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+[0;32mI (6563) bridge_common: [WIFI_AP_DEF ]Name Server1: 192.168.26.27[0m
+I (6619) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (6619) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (7539) esp_netif_handlers: sta ip: 192.168.26.175, mask: 255.255.255.0, gw: 192.168.26.27[0m
+[0;32mI (7539) bridge_wifi: Connected with IP Address:192.168.26.175[0m
+[0;32mI (7545) [vendor_ie]: RTC store: temp_mesh_id:175; ssid:Xiaomi13T; bssid:00:00:00:00:00:00; crc:195420288 [0m
+[0;31mE (7555) [ESP_Mesh_Lite_Comm]: Error Get! [0m
+[0;33mW (7559) [ESP_Mesh_Lite_Comm]: argot is not saved in flash [0m
+[0;32mI (7570) esp32cam_security_gate: TCP client write task is running[0m
+[0;32mI (12294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -64, free heap: 4154688[0m
+[0;31mE (12576) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (12577) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (12577) transport_ws: Error connecting to host 192.168.26.35:3000[0m
+[0;31mE (12585) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (12602) websocket_client: WebSocket client error[0m
+[0;32mI (12607) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (12613) websocket_client: WebSocket client connected[0m
+[0;31mE (12619) websocket_client: Websocket client is not connected[0m
+[0;31mE (13625) websocket_client: Websocket client is not connected[0m
+[0;31mE (14625) websocket_client: Websocket client is not connected[0m
+[0;31mE (15625) websocket_client: Websocket client is not connected[0m
+[0;31mE (16626) websocket_client: Websocket client is not connected[0m
+[0;31mE (17628) websocket_client: Websocket client is not connected[0m
+[0;31mE (18628) websocket_client: Websocket client is not connected[0m
+[0;31mE (19628) websocket_client: Websocket client is not connected[0m
+[0;31mE (20628) websocket_client: Websocket client is not connected[0m
+[0;31mE (21628) websocket_client: Websocket client is not connected[0m
+[0;32mI (22294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -75, free heap: 4155156[0m
+[0;32mI (22817) websocket_client: WebSocket client connected[0m
+[0;32mI (22850) websocket_client: WebSocket data received: 1061187312bytes[0m
+[0;32mI (22897) websocket_client: WebSocket data received: 1061187312bytes[0m
+[0;32mI (32294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -73, free heap: 4154468[0m
+[0;32mI (32968) websocket_client: WebSocket data received: 1061187312bytes[0m
+[0;32mI (42294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -74, free heap: 4154468[0m
+[0;32mI (42997) websocket_client: WebSocket data received: 1061187312bytes[0m
+[0;32mI (52294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -74, free heap: 4154468[0m
+[0;32mI (53066) websocket_client: WebSocket data received: 1061187312bytes[0m
+[0;32mI (62297) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -73, free heap: 4152900[0m
+[0;32mI (63121) websocket_client: WebSocket data received: 1061187312bytes[0m
+[0;32mI (72294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -64, free heap: 4154456[0m
+[0;32mI (73151) websocket_client: WebSocket data received: 1061187312bytes[0m
+[0;32mI (82295) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -73, free heap: 4154456[0m
+[0;32mI (84141) websocket_client: WebSocket data received: 1061187312bytes[0m
+[0;32mI (92294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -69, free heap: 4154456[0m
+[0;32mI (94483) websocket_client: WebSocket data received: 1061187312bytes[0m
+[0;32mI (102294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -63, free heap: 4154456[0m
+[0;32mI (104691) websocket_client: WebSocket data received: 1061187312bytes[0m
+[0;32mI (112294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -71, free heap: 4154456[0m
+[0;32mI (114722) websocket_client: WebSocket data received: 1061187312bytes[0m
+[0;32mI (122294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -73, free heap: 4154108[0m
+[0;32mI (124752) websocket_client: WebSocket data received: 1061187312bytes[0m
+[0;32mI (132294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -60, free heap: 4154484[0m
+[0;31mE (134092) transport_ws: Error read data[0m
+[0;31mE (134094) websocket_client: esp_transport_read() failed with -1, transport_error=ESP_ERR_ESP_TLS_TCP_CLOSED_FIN, tls_error_code=0, tls_flags=0, errno=128[0m
+[0;31mE (134101) websocket_client: WebSocket client error[0m
+[0;31mE (134106) websocket_client: Error receive data[0m
+[0;32mI (134114) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (134117) websocket_client: WebSocket client connected[0m
+[0;31mE (134923) websocket_client: Websocket client is not connected[0m
+[0;31mE (135924) websocket_client: Websocket client is not connected[0m
+[0;31mE (136924) websocket_client: Websocket client is not connected[0m
+[0;31mE (137924) websocket_client: Websocket client is not connected[0m
+[0;31mE (138924) websocket_client: Websocket client is not connected[0m
+[0;31mE (139924) websocket_client: Websocket client is not connected[0m
+[0;31mE (140924) websocket_client: Websocket client is not connected[0m
+[0;31mE (141924) websocket_client: Websocket client is not connected[0m
+[0;32mI (142294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -73, free heap: 4155000[0m
+[0;31mE (142924) websocket_client: Websocket client is not connected[0m
+[0;31mE (143924) websocket_client: Websocket client is not connected[0m
+[0;31mE (144131) esp-tls: [sock=59] delayed connect error: Connection reset by peer[0m
+[0;31mE (144132) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (144135) transport_ws: Error connecting to host 192.168.26.35:3000[0m
+[0;31mE (144143) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[0;31mE (144161) websocket_client: WebSocket client error[0m
+[0;32mI (144166) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (144173) websocket_client: WebSocket client connected[0m
+[0;31mE (144924) websocket_client: Websocket client is not connected[0m
+[0;31mE (145924) websocket_client: Websocket client is not connected[0m
+[0;31mE (146924) websocket_client: Websocket client is not connected[0m
+[0;31mE (147924) websocket_client: Websocket client is not connected[0m
+[0;31mE (148924) websocket_client: Websocket client is not connected[0m
+[0;31mE (149924) websocket_client: Websocket client is not connected[0m
+[0;31mE (150924) websocket_client: Websocket client is not connected[0m
+[0;31mE (151924) websocket_client: Websocket client is not connected[0m
+[0;32mI (152294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -71, free heap: 4155000[0m
+[0;31mE (152924) websocket_client: Websocket client is not connected[0m
+[0;31mE (153924) websocket_client: Websocket client is not connected[0m
+[0;31mE (154186) esp-tls: [sock=59] delayed connect error: Connection reset by peer[0m
+[0;31mE (154187) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (154190) transport_ws: Error connecting to host 192.168.26.35:3000[0m
+[0;31mE (154198) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[0;31mE (154215) websocket_client: WebSocket client error[0m
+[0;32mI (154221) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (154227) websocket_client: WebSocket client connected[0m
+[0;31mE (154924) websocket_client: Websocket client is not connected[0m
+[0;31mE (155924) websocket_client: Websocket client is not connected[0m
+[0;31mE (156924) websocket_client: Websocket client is not connected[0m
+[0;31mE (157924) websocket_client: Websocket client is not connected[0m
+[0;31mE (158924) websocket_client: Websocket client is not connected[0m
+[0;31mE (159924) websocket_client: Websocket client is not connected[0m
+[0;31mE (160924) websocket_client: Websocket client is not connected[0m
+[0;31mE (161924) websocket_client: Websocket client is not connected[0m
+[0;32mI (162294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -62, free heap: 4155000[0m
+[0;31mE (162924) websocket_client: Websocket client is not connected[0m
+[0;31mE (163924) websocket_client: Websocket client is not connected[0m
+[0;31mE (164240) esp-tls: [sock=59] delayed connect error: Connection reset by peer[0m
+[0;31mE (164241) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (164244) transport_ws: Error connecting to host 192.168.26.35:3000[0m
+[0;31mE (164252) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[0;31mE (164270) websocket_client: WebSocket client error[0m
+[0;32mI (164275) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (164281) websocket_client: WebSocket client connected[0m
+[0;31mE (164924) websocket_client: Websocket client is not connected[0m
+[0;31mE (165924) websocket_client: Websocket client is not connected[0m
+[0;31mE (166925) websocket_client: Websocket client is not connected[0m
+[0;31mE (167925) websocket_client: Websocket client is not connected[0m
+[0;31mE (168925) websocket_client: Websocket client is not connected[0m
+[0;31mE (169928) websocket_client: Websocket client is not connected[0m
+[0;31mE (170928) websocket_client: Websocket client is not connected[0m
+[0;31mE (171928) websocket_client: Websocket client is not connected[0m
+[0;32mI (172294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -72, free heap: 4155000[0m
+[0;31mE (172928) websocket_client: Websocket client is not connected[0m
+[0;31mE (173928) websocket_client: Websocket client is not connected[0m
+[0;31mE (174301) esp-tls: [sock=59] delayed connect error: Connection reset by peer[0m
+[0;31mE (174302) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (174305) transport_ws: Error connecting to host 192.168.26.35:3000[0m
+[0;31mE (174313) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[0;31mE (174331) websocket_client: WebSocket client error[0m
+[0;32mI (174337) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (174342) websocket_client: WebSocket client connected[0m
+[0;31mE (174928) websocket_client: Websocket client is not connected[0m
+[0;31mE (175928) websocket_client: Websocket client is not connected[0m
+[0;31mE (176928) websocket_client: Websocket client is not connected[0m
+[0;31mE (177928) websocket_client: Websocket client is not connected[0m
+[0;31mE (178928) websocket_client: Websocket client is not connected[0m
+[0;31mE (179928) websocket_client: Websocket client is not connected[0m
+[0;31mE (180928) websocket_client: Websocket client is not connected[0m
+[0;31mE (181928) websocket_client: Websocket client is not connected[0m
+[0;32mI (182294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -70, free heap: 4155000[0m
+[0;31mE (182928) websocket_client: Websocket client is not connected[0m
+[0;31mE (183928) websocket_client: Websocket client is not connected[0m
+[0;31mE (184357) esp-tls: [sock=59] delayed connect error: Connection reset by peer[0m
+[0;31mE (184358) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (184361) transport_ws: Error connecting to host 192.168.26.35:3000[0m
+[0;31mE (184369) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[0;31mE (184386) websocket_client: WebSocket client error[0m
+[0;32mI (184392) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (184398) websocket_client: WebSocket client connected[0m
+[0;31mE (184928) websocket_client: Websocket client is not connected[0m
+[0;31mE (185928) websocket_client: Websocket client is not connected[0m
+[0;31mE (186928) websocket_client: Websocket client is not connected[0m
+[0;31mE (187928) websocket_client: Websocket client is not connected[0m
+[0;31mE (188928) websocket_client: Websocket client is not connected[0m
+[0;31mE (189928) websocket_client: Websocket client is not connected[0m
+[0;31mE (190928) websocket_client: Websocket client is not connected[0m
+[0;31mE (191928) websocket_client: Websocket client is not connected[0m
+[0;32mI (192294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -71, free heap: 4155000[0m
+[0;31mE (192928) websocket_client: Websocket client is not connected[0m
+[0;31mE (193928) websocket_client: Websocket client is not connected[0m
+[0;31mE (194412) esp-tls: [sock=59] delayed connect error: Connection reset by peer[0m
+[0;31mE (194414) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (194416) transport_ws: Error connecting to host 192.168.26.35:3000[0m
+[0;31mE (194426) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[0;31mE (194442) websocket_client: WebSocket client error[0m
+[0;32mI (194448) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (194453) websocket_client: WebSocket client connected[0m
+[0;31mE (194928) websocket_client: Websocket client is not connected[0m
+[0;31mE (195928) websocket_client: Websocket client is not connected[0m
+[0;31mE (196928) websocket_client: Websocket client is not connected[0m
+[0;31mE (197928) websocket_client: Websocket client is not connected[0m
+[0;31mE (198928) websocket_client: Websocket client is not connected[0m
+[0;31mE (199929) websocket_client: Websocket client is not connected[0m
+[0;31mE (200929) websocket_client: Websocket client is not connected[0m
+[0;31mE (201929) websocket_client: Websocket client is not connected[0m
+[0;32mI (202294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -72, free heap: 4155012[0m
+[0;31mE (202929) websocket_client: Websocket client is not connected[0m
+[0;31mE (203929) websocket_client: Websocket client is not connected[0m
+[0;31mE (204566) esp-tls: [sock=59] delayed connect error: Connection reset by peer[0m
+[0;31mE (204567) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (204570) transport_ws: Error connecting to host 192.168.26.35:3000[0m
+[0;31mE (204578) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[0;31mE (204596) websocket_client: WebSocket client error[0m
+[0;32mI (204601) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (204607) websocket_client: WebSocket client connected[0m
+[0;31mE (204929) websocket_client: Websocket client is not connected[0m
+[0;31mE (205929) websocket_client: Websocket client is not connected[0m
+[0;31mE (206929) websocket_client: Websocket client is not connected[0m
+[0;31mE (207929) websocket_client: Websocket client is not connected[0m
+[0;31mE (208930) websocket_client: Websocket client is not connected[0m
+[0;31mE (209930) websocket_client: Websocket client is not connected[0m
+[0;31mE (210930) websocket_client: Websocket client is not connected[0m
+[0;31mE (211930) websocket_client: Websocket client is not connected[0m
+[0;32mI (212294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -81, free heap: 4155012[0m
+[0;31mE (212930) websocket_client: Websocket client is not connected[0m
+[0;31mE (213930) websocket_client: Websocket client is not connected[0m
+[0;31mE (214622) esp-tls: [sock=59] delayed connect error: Connection reset by peer[0m
+[0;31mE (214623) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (214626) transport_ws: Error connecting to host 192.168.26.35:3000[0m
+[0;31mE (214634) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[0;31mE (214652) websocket_client: WebSocket client error[0m
+[0;32mI (214657) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (214663) websocket_client: WebSocket client connected[0m
+[0;31mE (214930) websocket_client: Websocket client is not connected[0m
+[0;31mE (215930) websocket_client: Websocket client is not connected[0m
+[0;31mE (216930) websocket_client: Websocket client is not connected[0m
+[0;31mE (217930) websocket_client: Websocket client is not connected[0m
+[0;31mE (218930) websocket_client: Websocket client is not connected[0m
+[0;31mE (219930) websocket_client: Websocket client is not connected[0m
+[0;31mE (220930) websocket_client: Websocket client is not connected[0m
+[0;31mE (221930) websocket_client: Websocket client is not connected[0m
+[0;32mI (222294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -75, free heap: 4155012[0m
+[0;31mE (222930) websocket_client: Websocket client is not connected[0m
+[0;31mE (223930) websocket_client: Websocket client is not connected[0m
+[0;31mE (224680) esp-tls: [sock=59] delayed connect error: Connection reset by peer[0m
+[0;31mE (224681) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (224684) transport_ws: Error connecting to host 192.168.26.35:3000[0m
+[0;31mE (224692) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[0;31mE (224710) websocket_client: WebSocket client error[0m
+[0;32mI (224715) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (224721) websocket_client: WebSocket client connected[0m
+[0;31mE (224930) websocket_client: Websocket client is not connected[0m
+[0;31mE (225930) websocket_client: Websocket client is not connected[0m
+[0;31mE (226931) websocket_client: Websocket client is not connected[0m
+[0;31mE (227931) websocket_client: Websocket client is not connected[0m
+[0;31mE (228931) websocket_client: Websocket client is not connected[0m
+[0;31mE (229931) websocket_client: Websocket client is not connected[0m
+[0;31mE (230932) websocket_client: Websocket client is not connected[0m
+[0;31mE (231932) websocket_client: Websocket client is not connected[0m
+[0;32mI (232294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -68, free heap: 4155012[0m
+[0;31mE (232932) websocket_client: Websocket client is not connected[0m
+[0;31mE (233932) websocket_client: Websocket client is not connected[0m
+[0;31mE (234735) esp-tls: [sock=59] delayed connect error: Connection reset by peer[0m
+[0;31mE (234736) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (234739) transport_ws: Error connecting to host 192.168.26.35:3000[0m
+[0;31mE (234747) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[0;31mE (234765) websocket_client: WebSocket client error[0m
+[0;32mI (234770) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (234776) websocket_client: WebSocket client connected[0m
+[0;31mE (234932) websocket_client: Websocket client is not connected[0m
+[0;31mE (235932) websocket_client: Websocket client is not connected[0m
+[0;31mE (236932) websocket_client: Websocket client is not connected[0m
+[0;31mE (237932) websocket_client: Websocket client is not connected[0m
+[0;31mE (238932) websocket_client: Websocket client is not connected[0m
+[0;31mE (239932) websocket_client: Websocket client is not connected[0m
+[0;31mE (240932) websocket_client: Websocket client is not connected[0m
+[0;31mE (241932) websocket_client: Websocket client is not connected[0m
+[0;32mI (242294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -68, free heap: 4154664[0m
+[0;31mE (242932) websocket_client: Websocket client is not connected[0m
+[0;31mE (243932) websocket_client: Websocket client is not connected[0m
+[0;31mE (244789) esp-tls: [sock=59] delayed connect error: Connection reset by peer[0m
+[0;31mE (244790) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (244793) transport_ws: Error connecting to host 192.168.26.35:3000[0m
+[0;31mE (244802) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[0;31mE (244819) websocket_client: WebSocket client error[0m
+[0;32mI (244824) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (244830) websocket_client: WebSocket client connected[0m
+[0;31mE (244932) websocket_client: Websocket client is not connected[0m
+[0;31mE (245932) websocket_client: Websocket client is not connected[0m
+[0;31mE (246935) websocket_client: Websocket client is not connected[0m
+[0;31mE (247935) websocket_client: Websocket client is not connected[0m
+[0;31mE (248935) websocket_client: Websocket client is not connected[0m
+[0;31mE (249935) websocket_client: Websocket client is not connected[0m
+[0;31mE (250935) websocket_client: Websocket client is not connected[0m
+[0;31mE (251935) websocket_client: Websocket client is not connected[0m
+[0;32mI (252294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -75, free heap: 4155012[0m
+[0;31mE (252935) websocket_client: Websocket client is not connected[0m
+[0;31mE (253935) websocket_client: Websocket client is not connected[0m
+[0;32mI (254860) websocket_client: WebSocket client connected[0m
+[0;32mI (254867) websocket_client: WebSocket data received: 1061187312bytes[0m
+[0;32mI (254976) websocket_client: WebSocket data received: 1061187312bytes[0m
+[0;32mI (262294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -75, free heap: 4154488[0m
+[0;32mI (265004) websocket_client: WebSocket data received: 1061187312bytes[0m
+[0;32mI (272294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -70, free heap: 4154488[0m
+[0;32mI (275066) websocket_client: WebSocket data received: 1061187312bytes[0m
+[0;32mI (282294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -72, free heap: 4154488[0m
+[0;32mI (285103) websocket_client: WebSocket data received: 1061187312bytes[0m
+[0;32mI (292295) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -75, free heap: 4152920[0m
+[0;32mI (295233) websocket_client: WebSocket data received: 1061187312bytes[0m
+[0;32mI (302294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -68, free heap: 4154488[0m
+[0;32mI (305261) websocket_client: WebSocket data received: 1061187312bytes[0m
+[0;32mI (312298) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -74, free heap: 4152920[0m
+[0;32mI (315310) websocket_client: WebSocket data received: 1061187312bytes[0m
+[0;32mI (322294) esp32cam_security_gate: System information, channel: 13, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: aa:c4:e1:f7:b3:31, parent rssi: -75, free heap: 4154484[0m
+[0;32mI (325343) websocket_client: WebSocket data received: 1061187312bytes[0m

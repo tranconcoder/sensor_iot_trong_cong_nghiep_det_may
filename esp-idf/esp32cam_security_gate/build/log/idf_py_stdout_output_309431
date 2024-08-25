@@ -1,0 +1,449 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (29) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 17 2024 00:42:55[0m
+[0;33mW (29) boot: Unicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (82) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (97) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (105) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (112) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (120) boot: End of partition table[0m
+[0;32mI (124) boot: No factory image, trying OTA 0[0m
+[0;32mI (129) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=30d1ch (199964) map[0m
+[0;32mI (206) esp_image: segment 1: paddr=00040d44 vaddr=3ffbdb60 size=0608ch ( 24716) load[0m
+[0;32mI (216) esp_image: segment 2: paddr=00046dd8 vaddr=40080000 size=09240h ( 37440) load[0m
+[0;32mI (231) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=cb16ch (831852) map[0m
+[0;32mI (516) esp_image: segment 4: paddr=0011b194 vaddr=40089240 size=14f70h ( 85872) load[0m
+[0;32mI (565) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (570) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (571) boot: Disabling RNG early entropy source...[0m
+[0;32mI (582) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (583) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (583) esp_psram: Speed: 40MHz[0m
+[0;32mI (586) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (594) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (603) cpu_start: Unicore app[0m
+[0;32mI (607) cpu_start: Single core mode[0m
+[0;32mI (1536) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1544) cpu_start: Pro cpu start user code[0m
+[0;32mI (1544) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1544) app_init: Application information:[0m
+[0;32mI (1547) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1553) app_init: App version:      268911e-dirty[0m
+[0;32mI (1559) app_init: Compile time:     Aug 17 2024 01:28:44[0m
+[0;32mI (1565) app_init: ELF file SHA256:  d97d3aed5...[0m
+[0;32mI (1570) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1575) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1580) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1585) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1591) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1598) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1604) heap_init: At 3FFC8A18 len 000175E8 (93 KiB): DRAM[0m
+[0;32mI (1610) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1617) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1623) heap_init: At 4009E1B0 len 00001E50 (7 KiB): IRAM[0m
+[0;32mI (1629) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1636) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1644) spi_flash: detected chip: generic[0m
+[0;32mI (1648) spi_flash: flash io: dio[0m
+[0;33mW (1652) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1663) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1668) main_task: Started on CPU0[0m
+[0;32mI (1671) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1680) main_task: Calling app_main()[0m
+[0;32mI (1699) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1703) wifi:wifi driver task: 3ffbd5e0, prio:23, stack:6656, core=0
+I (1706) wifi:wifi firmware version: 0caa81945
+I (1707) wifi:wifi certification version: v7.0
+I (1709) wifi:config NVS flash: enabled
+I (1713) wifi:config nano formating: disabled
+I (1717) wifi:Init data frame dynamic rx buffer num: 32
+I (1722) wifi:Init static rx mgmt buffer num: 5
+I (1726) wifi:Init management short buffer num: 32
+I (1731) wifi:Init static tx buffer num: 16
+I (1735) wifi:Init tx cache buffer num: 32
+I (1738) wifi:Init static rx buffer size: 1600
+I (1742) wifi:Init static rx buffer num: 10
+I (1746) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1751) wifi_init: accept mbox: 6[0m
+[0;32mI (1754) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1758) wifi_init: udp mbox: 6[0m
+[0;32mI (1762) wifi_init: tcp mbox: 6[0m
+[0;32mI (1766) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1770) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1775) wifi_init: tcp mss: 1440[0m
+[0;32mI (1779) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1783) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1789) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1795) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (1857) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+I (1869) wifi:mode : null
+I (1871) wifi:mode : softAP (08:a6:f7:11:51:a9)
+I (1873) wifi:Total power save buffer number: 8
+I (1873) wifi:Init max length of beacon: 752/752
+I (1876) wifi:Init max length of beacon: 752/752
+[0;32mI (1882) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+Add netif ap with 268911e(commit id)
+[0;32mI (1892) bridge_common: netif list add success[0m
+[0;31mE (1897) NVS: Failed to open NVS namespace[0m
+[0;32mI (1902) bridge_common: IP Address:192.168.5.1[0m
+[0;32mI (1907) bridge_common: GW Address:192.168.5.1[0m
+[0;32mI (1912) bridge_common: NM Address:255.255.255.0[0m
+[0;32mI (1917) bridge_common: [WIFI_AP_DEF ][0m
+[0;32mI (1923) bridge_common: Set ip info:192.168.5.1[0m
+[0;32mI (1927) bridge_wifi: SoftAP IP network segment has changed, deauth all station[0m
+I (1939) wifi:Disabled PMF config for SoftAP
+I (1940) wifi:Total power save buffer number: 8
+[0;32mI (1946) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (1952) bridge_common: [WIFI_AP_DEF ]Name Server1: 114.114.114.114[0m
+[0;32mI (1959) bridge_common: DHCPS Restart, deauth all station[0m
+Add netif sta with 268911e(commit id)
+[0;32mI (1969) bridge_common: netif list add success[0m
+I (1974) wifi:mode : sta (08:a6:f7:11:51:a8) + softAP (08:a6:f7:11:51:a9)
+I (1981) wifi:enable tsf
+[0;31mE (1984) NVS: Failed to read IP info from NVS[0m
+I (1988) wifi:Disabled PMF config for STA
+[0;32mI (1991) bridge_wifi: [esp_bridge_wifi_set_config] sta ssid: Xiaomi13T password: password[0m
+[0;32mI (2001) bridge_wifi: [esp_bridge_wifi_set_config] softap ssid: ESP_Bridge_1151a9 password: 12345678[0m
+I (2184) wifi:Total power save buffer number: 8
+[0;32mI (2188) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (2189) bridge_wifi: SoftAP config changed, deauth all station[0m
+[0;32mI (2193) Mesh-Lite: esp-mesh-lite component version: 1.0.0[0m
+I (2199) ESPNOW: espnow [version: 1.0] init
+[0;32mI (2203) [vendor_ie]: Mesh-Lite commit id: bc9302d
+ [0m
+[0;31mE (2210) [vendor_ie]: Error Get! [0m
+[0;33mW (2213) [vendor_ie]: Mesh ID is not saved in flash [0m
+[0;32mI (2219) [vendor_ie]: Mesh ID: 77 [0m
+[0;33mW (2223) [vendor_ie]: Error Get[4354] [0m
+[0;33mW (2227) [vendor_ie]: Error Get[4354] [0m
+[0;32mI (2233) [ESP_Mesh_Lite_Comm]: msg action add success [0m
+[0;32mI (2239) [ESP_Mesh_Lite_Comm]: Bind Socket 54, port 6364 [0m
+[0;32mI (2244) [ESP_Mesh_Lite_Comm]: Bind Socket 55, port 6363 [0m
+[0;32mI (2250) [ESP_Mesh_Lite_Comm]: Bind Socket 56, port 6366 [0m
+[0;32mI (2256) [ESP_Mesh_Lite_Comm]: Bind Socket 57, port 6365 [0m
+[0;32mI (2262) [mesh-lite-espnow]: Start espnow task [0m
+[0;32mI (2269) Mesh-Lite: Mesh-Lite connecting[0m
+[0;32mI (2274) [vendor_ie]: esp_mesh_lite_wifi_scan_start return ESP_OK [0m
+[0;31mE (2282) rc522: Read/write test failed[0m
+[0;32mI (2283) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (2292) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (2302) cam_hal: cam init ok[0m
+[0;32mI (2306) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (2309) sccb: sccb_i2c_port=1[0m
+[0;32mI (2314) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2352) camera: Detected camera at address=0x30[0m
+[0;32mI (2355) camera: Detected OV2640 camera[0m
+[0;32mI (2356) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (2444) cam_hal: buffer_size: 32768, half_buffer_size: 4096, node_buffer_size: 2048, node_cnt: 16, total_cnt: 5[0m
+[0;32mI (2445) cam_hal: Allocating 23680 Byte frame buffer in PSRAM[0m
+[0;32mI (2451) cam_hal: cam config ok[0m
+[0;32mI (2455) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8[0m
+[0;33mW (2550) websocket_client: `network_timeout_ms` is not set, or it is less than or equal to zero, using default time out 10000 (milliseconds)[0m
+[0;32mI (2559) main_task: Returned from app_main()[0m
+[0;32mI (3968) [vendor_ie]: Mesh-Lite Scan done [0m
+[0;32mI (3969) [vendor_ie]: RTC store: temp_mesh_id:255; ssid:Xiaomi13T; bssid:00:00:00:00:00:00; crc:1883151208 [0m
+[0;32mI (3973) [vendor_ie]: wifi_cfg Xiaomi13T router_config Xiaomi13T [0m
+[0;32mI (3981) [vendor_ie]: esp_mesh_lite_wifi_connect return ESP_OK [0m
+I (4182) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0
+I (4183) wifi:state: init -> auth (0xb0)
+I (4248) wifi:state: auth -> assoc (0x0)
+I (4263) wifi:state: assoc -> run (0x10)
+I (5351) wifi:connected with Xiaomi13T, aid = 3, channel 1, BW20, bssid = 96:d2:c4:85:39:18
+I (5352) wifi:security: WPA2-PSK, phy: bgn, rssi: -72
+I (5354) wifi:pm start, type: 1
+
+I (5356) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+[0;32mI (5404) bridge_common: [WIFI_AP_DEF ]Name Server1: 192.168.26.27[0m
+I (5441) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (5442) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (6369) esp_netif_handlers: sta ip: 192.168.26.175, mask: 255.255.255.0, gw: 192.168.26.27[0m
+[0;32mI (6370) bridge_wifi: Connected with IP Address:192.168.26.175[0m
+[0;32mI (6375) [vendor_ie]: RTC store: temp_mesh_id:175; ssid:Xiaomi13T; bssid:00:00:00:00:00:00; crc:511359837 [0m
+[0;31mE (6386) [ESP_Mesh_Lite_Comm]: Error Get! [0m
+[0;33mW (6389) [ESP_Mesh_Lite_Comm]: argot is not saved in flash [0m
+[0;32mI (6401) esp32cam_security_gate: TCP client write task is running[0m
+[0;32mI (12292) esp32cam_security_gate: System information, channel: 1, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 96:d2:c4:85:39:18, parent rssi: -75, free heap: 4213780[0m
+[0;31mE (12560) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (12561) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (12561) transport_ws: Error connecting to host 192.168.26.35:3000[0m
+[0;31mE (12569) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (12586) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (12591) websocket_client: WebSocket client connected[0m
+[0;31mE (12598) transport_ws: Error transport_poll_write[0m
+[0;31mE (12603) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (12614) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (12620) websocket_client: WebSocket client connected[0m
+[0;31mE (13627) transport_ws: Error transport_poll_write[0m
+[0;31mE (13628) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (13634) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (13639) websocket_client: WebSocket client connected[0m
+[0;31mE (14646) transport_ws: Error transport_poll_write[0m
+[0;31mE (14647) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (14653) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (14658) websocket_client: WebSocket client connected[0m
+[0;31mE (15665) transport_ws: Error transport_poll_write[0m
+[0;31mE (15666) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (15672) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (15677) websocket_client: WebSocket client connected[0m
+[0;31mE (16684) transport_ws: Error transport_poll_write[0m
+[0;31mE (16685) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (16691) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (16696) websocket_client: WebSocket client connected[0m
+[0;31mE (17703) transport_ws: Error transport_poll_write[0m
+[0;31mE (17704) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (17709) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (17715) websocket_client: WebSocket client connected[0m
+[0;31mE (18722) transport_ws: Error transport_poll_write[0m
+[0;31mE (18723) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (18728) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (18734) websocket_client: WebSocket client connected[0m
+[0;31mE (19741) transport_ws: Error transport_poll_write[0m
+[0;31mE (19742) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (19747) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (19753) websocket_client: WebSocket client connected[0m
+[0;31mE (20760) transport_ws: Error transport_poll_write[0m
+[0;31mE (20761) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (20766) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (20772) websocket_client: WebSocket client connected[0m
+[0;31mE (21779) transport_ws: Error transport_poll_write[0m
+[0;31mE (21780) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (21785) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (21791) websocket_client: WebSocket client connected[0m
+[0;32mI (22292) esp32cam_security_gate: System information, channel: 1, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 96:d2:c4:85:39:18, parent rssi: -68, free heap: 4214260[0m
+[0;31mE (22798) transport_ws: Error transport_poll_write[0m
+[0;31mE (22798) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (22804) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (22810) websocket_client: WebSocket client connected[0m
+[0;31mE (23817) transport_ws: Error transport_poll_write[0m
+[0;31mE (23818) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (23823) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (23829) websocket_client: WebSocket client connected[0m
+[0;31mE (24836) transport_ws: Error transport_poll_write[0m
+[0;31mE (24837) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (24842) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (24848) websocket_client: WebSocket client connected[0m
+[0;31mE (25855) transport_ws: Error transport_poll_write[0m
+[0;31mE (25856) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (25862) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (25867) websocket_client: WebSocket client connected[0m
+[0;31mE (26874) transport_ws: Error transport_poll_write[0m
+[0;31mE (26875) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (26881) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (26886) websocket_client: WebSocket client connected[0m
+[0;31mE (27893) transport_ws: Error transport_poll_write[0m
+[0;31mE (27894) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (27899) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (27905) websocket_client: WebSocket client connected[0m
+[0;31mE (28912) transport_ws: Error transport_poll_write[0m
+[0;31mE (28913) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (28919) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (28924) websocket_client: WebSocket client connected[0m
+[0;31mE (29931) transport_ws: Error transport_poll_write[0m
+[0;31mE (29932) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (29938) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (29943) websocket_client: WebSocket client connected[0m
+[0;31mE (30950) transport_ws: Error transport_poll_write[0m
+[0;31mE (30951) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (30957) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (30962) websocket_client: WebSocket client connected[0m
+[0;31mE (31969) transport_ws: Error transport_poll_write[0m
+[0;31mE (31970) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (31975) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (31981) websocket_client: WebSocket client connected[0m
+[0;32mI (32292) esp32cam_security_gate: System information, channel: 1, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 96:d2:c4:85:39:18, parent rssi: -78, free heap: 4214260[0m
+[0;31mE (32988) transport_ws: Error transport_poll_write[0m
+[0;31mE (32988) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (32994) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (33000) websocket_client: WebSocket client connected[0m
+[0;31mE (34007) transport_ws: Error transport_poll_write[0m
+[0;31mE (34008) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (34013) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (34019) websocket_client: WebSocket client connected[0m
+[0;31mE (35026) transport_ws: Error transport_poll_write[0m
+[0;31mE (35027) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (35032) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (35038) websocket_client: WebSocket client connected[0m
+[0;31mE (36045) transport_ws: Error transport_poll_write[0m
+[0;31mE (36046) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (36051) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (36057) websocket_client: WebSocket client connected[0m
+[0;31mE (37064) transport_ws: Error transport_poll_write[0m
+[0;31mE (37065) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (37070) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (37076) websocket_client: WebSocket client connected[0m
+[0;31mE (38083) transport_ws: Error transport_poll_write[0m
+[0;31mE (38084) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (38089) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (38095) websocket_client: WebSocket client connected[0m
+[0;31mE (39102) transport_ws: Error transport_poll_write[0m
+[0;31mE (39103) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (39108) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (39114) websocket_client: WebSocket client connected[0m
+[0;31mE (40121) transport_ws: Error transport_poll_write[0m
+[0;31mE (40122) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (40127) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (40133) websocket_client: WebSocket client connected[0m
+[0;31mE (41140) transport_ws: Error transport_poll_write[0m
+[0;31mE (41141) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (41147) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (41152) websocket_client: WebSocket client connected[0m
+[0;31mE (42159) transport_ws: Error transport_poll_write[0m
+[0;31mE (42160) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (42166) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (42171) websocket_client: WebSocket client connected[0m
+[0;32mI (42293) esp32cam_security_gate: System information, channel: 1, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 96:d2:c4:85:39:18, parent rssi: -63, free heap: 4214260[0m
+[0;31mE (43178) transport_ws: Error transport_poll_write[0m
+[0;31mE (43179) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (43184) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (43190) websocket_client: WebSocket client connected[0m
+[0;31mE (44197) transport_ws: Error transport_poll_write[0m
+[0;31mE (44198) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (44203) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (44209) websocket_client: WebSocket client connected[0m
+[0;31mE (45216) transport_ws: Error transport_poll_write[0m
+[0;31mE (45217) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (45223) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (45228) websocket_client: WebSocket client connected[0m
+[0;31mE (46235) transport_ws: Error transport_poll_write[0m
+[0;31mE (46236) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (46241) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (46247) websocket_client: WebSocket client connected[0m
+[0;31mE (47254) transport_ws: Error transport_poll_write[0m
+[0;31mE (47255) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (47261) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (47266) websocket_client: WebSocket client connected[0m
+[0;31mE (48273) transport_ws: Error transport_poll_write[0m
+[0;31mE (48274) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (48279) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (48285) websocket_client: WebSocket client connected[0m
+[0;31mE (49292) transport_ws: Error transport_poll_write[0m
+[0;31mE (49293) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (49298) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (49304) websocket_client: WebSocket client connected[0m
+[0;31mE (50311) transport_ws: Error transport_poll_write[0m
+[0;31mE (50312) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (50317) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (50323) websocket_client: WebSocket client connected[0m
+[0;31mE (51330) transport_ws: Error transport_poll_write[0m
+[0;31mE (51331) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (51337) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (51342) websocket_client: WebSocket client connected[0m
+[0;32mI (52292) esp32cam_security_gate: System information, channel: 1, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 96:d2:c4:85:39:18, parent rssi: -70, free heap: 4214260[0m
+[0;31mE (52349) transport_ws: Error transport_poll_write[0m
+[0;31mE (52349) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (52355) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (52361) websocket_client: WebSocket client connected[0m
+[0;31mE (53367) transport_ws: Error transport_poll_write[0m
+[0;31mE (53368) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (53373) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (53379) websocket_client: WebSocket client connected[0m
+[0;31mE (54386) transport_ws: Error transport_poll_write[0m
+[0;31mE (54387) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (54392) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (54398) websocket_client: WebSocket client connected[0m
+[0;31mE (55405) transport_ws: Error transport_poll_write[0m
+[0;31mE (55406) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (55412) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (55417) websocket_client: WebSocket client connected[0m
+[0;31mE (56424) transport_ws: Error transport_poll_write[0m
+[0;31mE (56425) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (56430) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (56436) websocket_client: WebSocket client connected[0m
+[0;31mE (57443) transport_ws: Error transport_poll_write[0m
+[0;31mE (57444) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (57449) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (57455) websocket_client: WebSocket client connected[0m
+[0;31mE (58462) transport_ws: Error transport_poll_write[0m
+[0;31mE (58463) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (58468) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (58474) websocket_client: WebSocket client connected[0m
+[0;31mE (59483) transport_ws: Error transport_poll_write[0m
+[0;31mE (59484) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (59490) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (59495) websocket_client: WebSocket client connected[0m
+[0;31mE (60502) transport_ws: Error transport_poll_write[0m
+[0;31mE (60503) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (60508) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (60514) websocket_client: WebSocket client connected[0m
+[0;31mE (61521) transport_ws: Error transport_poll_write[0m
+[0;31mE (61522) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (61527) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (61533) websocket_client: WebSocket client connected[0m
+[0;32mI (62292) esp32cam_security_gate: System information, channel: 1, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 96:d2:c4:85:39:18, parent rssi: -71, free heap: 4214260[0m
+[0;31mE (62540) transport_ws: Error transport_poll_write[0m
+[0;31mE (62540) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (62546) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (62552) websocket_client: WebSocket client connected[0m
+[0;31mE (63560) transport_ws: Error transport_poll_write[0m
+[0;31mE (63561) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (63567) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (63572) websocket_client: WebSocket client connected[0m
+[0;31mE (64579) transport_ws: Error transport_poll_write[0m
+[0;31mE (64580) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (64586) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (64591) websocket_client: WebSocket client connected[0m
+[0;31mE (65598) transport_ws: Error transport_poll_write[0m
+[0;31mE (65599) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (65604) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (65610) websocket_client: WebSocket client connected[0m
+[0;31mE (66617) transport_ws: Error transport_poll_write[0m
+[0;31mE (66618) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (66623) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (66629) websocket_client: WebSocket client connected[0m
+[0;31mE (67636) transport_ws: Error transport_poll_write[0m
+[0;31mE (67637) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (67642) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (67648) websocket_client: WebSocket client connected[0m
+[0;31mE (68655) transport_ws: Error transport_poll_write[0m
+[0;31mE (68656) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (68661) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (68667) websocket_client: WebSocket client connected[0m
+[0;31mE (69674) transport_ws: Error transport_poll_write[0m
+[0;31mE (69675) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (69680) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (69686) websocket_client: WebSocket client connected[0m
+[0;31mE (70693) transport_ws: Error transport_poll_write[0m
+[0;31mE (70694) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (70699) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (70705) websocket_client: WebSocket client connected[0m
+[0;31mE (71712) transport_ws: Error transport_poll_write[0m
+[0;31mE (71713) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (71718) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (71724) websocket_client: WebSocket client connected[0m
+[0;32mI (72292) esp32cam_security_gate: System information, channel: 1, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: 96:d2:c4:85:39:18, parent rssi: -68, free heap: 4214260[0m
+[0;31mE (72731) transport_ws: Error transport_poll_write[0m
+[0;31mE (72731) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (72737) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (72743) websocket_client: WebSocket client connected[0m
+[0;31mE (73750) transport_ws: Error transport_poll_write[0m
+[0;31mE (73751) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (73756) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (73762) websocket_client: WebSocket client connected[0m
+[0;31mE (74769) transport_ws: Error transport_poll_write[0m
+[0;31mE (74770) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (74775) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (74781) websocket_client: WebSocket client connected[0m
+[0;31mE (75788) transport_ws: Error transport_poll_write[0m
+[0;31mE (75789) websocket_client: esp_transport_write() returned 0, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=0[0m
+[0;32mI (75794) websocket_client: Reconnect after 5000 ms[0m
+[0;32mI (75800) websocket_client: WebSocket client connected[0m

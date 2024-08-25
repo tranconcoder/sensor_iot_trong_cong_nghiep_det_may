@@ -1,0 +1,132 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40090c82: xTaskDelayUntil at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1486
+[0m
+[0;33m0x4008b062: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:150
+0x4008b06d: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:160
+[0m
+[0;33m0x40090c7f: xTaskDelayUntil at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1483
+0x400e2c79: task_send_image_to_websocket at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client/setup_esp_websocket_client.c:69
+0x4008f23d: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d63ca: uart_ll_get_txfifo_len at /home/tvconss/esp/esp-idf/components/hal/esp32/include/hal/uart_ll.h:408
+ (inlined by) uart_tx_char at /home/tvconss/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x400d739f: uart_write at /home/tvconss/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x400d83a9: esp_vfs_write at /home/tvconss/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000182a: write in ROM
+0x400d7ccd: console_write at /home/tvconss/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x400d83a9: esp_vfs_write at /home/tvconss/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4008b2e5: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4008a6b5: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4008a70a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4008ac19: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x40181cdb: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x401816a9: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x40175235: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4019081d: esp_log_writev at /home/tvconss/esp/esp-idf/components/log/log.c:210
+0x40094bc5: esp_log_write at /home/tvconss/esp/esp-idf/components/log/log.c:220
+0x400da658: app_main at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c:225 (discriminator 1)
+0x4018fdf7: main_task at /home/tvconss/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008f23d: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d63bd: uart_tx_char at /home/tvconss/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:168
+0x400d739f: uart_write at /home/tvconss/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x400d83a9: esp_vfs_write at /home/tvconss/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000182a: write in ROM
+0x400d7ccd: console_write at /home/tvconss/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x400d83a9: esp_vfs_write at /home/tvconss/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4008b2e5: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4008a6b5: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4008a70a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4008ac19: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x40181cdb: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x401816a9: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x40175235: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4019081d: esp_log_writev at /home/tvconss/esp/esp-idf/components/log/log.c:210
+0x40094bc5: esp_log_write at /home/tvconss/esp/esp-idf/components/log/log.c:220
+0x400da658: app_main at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c:225 (discriminator 1)
+0x4018fdf7: main_task at /home/tvconss/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008f23d: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d63bd: uart_tx_char at /home/tvconss/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:168
+0x400d739f: uart_write at /home/tvconss/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x400d83a9: esp_vfs_write at /home/tvconss/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000182a: write in ROM
+0x400d7ccd: console_write at /home/tvconss/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x400d83a9: esp_vfs_write at /home/tvconss/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4008b2e5: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4008a6b5: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4008a70a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4008ac19: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x40181cdb: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x401816a9: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x40175235: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4019081d: esp_log_writev at /home/tvconss/esp/esp-idf/components/log/log.c:210
+0x40094bc5: esp_log_write at /home/tvconss/esp/esp-idf/components/log/log.c:220
+0x400da658: app_main at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c:225 (discriminator 1)
+0x4018fdf7: main_task at /home/tvconss/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008f23d: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d63bd: uart_tx_char at /home/tvconss/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:168
+0x400d739f: uart_write at /home/tvconss/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x400d83a9: esp_vfs_write at /home/tvconss/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000182a: write in ROM
+0x400d7ccd: console_write at /home/tvconss/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x400d83a9: esp_vfs_write at /home/tvconss/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4008b2e5: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4008a6b5: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4008a70a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4008ac19: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x40181cdb: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x401816a9: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x40175235: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4019081d: esp_log_writev at /home/tvconss/esp/esp-idf/components/log/log.c:210
+0x40094bc5: esp_log_write at /home/tvconss/esp/esp-idf/components/log/log.c:220
+0x400da658: app_main at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c:225 (discriminator 1)
+0x4018fdf7: main_task at /home/tvconss/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008f23d: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d63bd: uart_tx_char at /home/tvconss/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:168
+0x400d739f: uart_write at /home/tvconss/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x400d83a9: esp_vfs_write at /home/tvconss/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000182a: write in ROM
+0x400d7ccd: console_write at /home/tvconss/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x400d83a9: esp_vfs_write at /home/tvconss/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4008b2e5: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4008a6b5: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4008a70a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4008ac19: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x40181cdb: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x401816a9: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x40175235: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4019081d: esp_log_writev at /home/tvconss/esp/esp-idf/components/log/log.c:210
+0x40094bc5: esp_log_write at /home/tvconss/esp/esp-idf/components/log/log.c:220
+0x400da658: app_main at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c:225 (discriminator 1)
+0x4018fdf7: main_task at /home/tvconss/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008f23d: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m

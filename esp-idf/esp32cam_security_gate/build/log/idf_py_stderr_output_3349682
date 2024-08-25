@@ -1,0 +1,9 @@
+CMake Error at /home/tvconss/esp/esp-idf/tools/cmake/build.cmake:552 (message):
+  ERROR: Manifest is not valid
+
+Call Stack (most recent call first):
+  /home/tvconss/esp/esp-idf/tools/cmake/project.cmake:710 (idf_build_process)
+  CMakeLists.txt:7 (project)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

@@ -1,0 +1,989 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (29) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 19 2024 22:42:34[0m
+[0;33mW (29) boot: Unicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (82) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (97) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (105) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (112) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (120) boot: End of partition table[0m
+[0;32mI (124) boot: No factory image, trying OTA 0[0m
+[0;32mI (129) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2d84ch (186444) map[0m
+[0;32mI (202) esp_image: segment 1: paddr=0003d874 vaddr=3ffbdb60 size=027a4h ( 10148) load[0m
+[0;32mI (206) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=c21f4h (795124) map[0m
+[0;32mI (480) esp_image: segment 3: paddr=0010221c vaddr=3ffc0304 size=037c4h ( 14276) load[0m
+[0;32mI (485) esp_image: segment 4: paddr=001059e8 vaddr=40080000 size=1c858h (116824) load[0m
+[0;32mI (546) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (551) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (551) boot: Disabling RNG early entropy source...[0m
+[0;32mI (563) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (564) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (564) esp_psram: Speed: 40MHz[0m
+[0;32mI (567) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (575) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (584) cpu_start: Unicore app[0m
+[0;32mI (587) cpu_start: Single core mode[0m
+[0;32mI (1517) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1525) cpu_start: Pro cpu start user code[0m
+[0;32mI (1525) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1525) app_init: Application information:[0m
+[0;32mI (1528) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1534) app_init: App version:      bad14ec3-dirty[0m
+[0;32mI (1540) app_init: Compile time:     Aug 20 2024 20:15:19[0m
+[0;32mI (1546) app_init: ELF file SHA256:  1d0784c17...[0m
+[0;32mI (1551) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1556) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1561) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1566) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1572) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1579) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1585) heap_init: At 3FFC88B8 len 00017748 (93 KiB): DRAM[0m
+[0;32mI (1591) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1598) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1604) heap_init: At 4009C858 len 000037A8 (13 KiB): IRAM[0m
+[0;32mI (1610) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1617) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1625) spi_flash: detected chip: generic[0m
+[0;32mI (1629) spi_flash: flash io: dio[0m
+[0;33mW (1633) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1644) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1650) main_task: Started on CPU0[0m
+[0;32mI (1653) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1662) main_task: Calling app_main()[0m
+[0;32mI (1681) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1685) wifi:wifi driver task: 3ffbd5e0, prio:23, stack:6656, core=0
+I (1688) wifi:wifi firmware version: 0caa81945
+I (1689) wifi:wifi certification version: v7.0
+I (1691) wifi:config NVS flash: enabled
+I (1695) wifi:config nano formating: disabled
+I (1699) wifi:Init data frame dynamic rx buffer num: 32
+I (1704) wifi:Init static rx mgmt buffer num: 5
+I (1708) wifi:Init management short buffer num: 32
+I (1713) wifi:Init static tx buffer num: 16
+I (1717) wifi:Init tx cache buffer num: 32
+I (1720) wifi:Init static rx buffer size: 1600
+I (1725) wifi:Init static rx buffer num: 10
+I (1728) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1733) wifi_init: accept mbox: 6[0m
+[0;32mI (1736) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1740) wifi_init: udp mbox: 6[0m
+[0;32mI (1744) wifi_init: tcp mbox: 6[0m
+[0;32mI (1748) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1752) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1757) wifi_init: tcp mss: 1440[0m
+[0;32mI (1761) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1765) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1771) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1777) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (1839) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+I (1850) wifi:mode : null
+I (1853) wifi:mode : softAP (08:a6:f7:11:51:a9)
+I (1854) wifi:Total power save buffer number: 8
+I (1855) wifi:Init max length of beacon: 752/752
+I (1857) wifi:Init max length of beacon: 752/752
+[0;32mI (1864) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+Add netif ap with bad14ec3(commit id)
+[0;32mI (1873) bridge_common: netif list add success[0m
+[0;31mE (1879) NVS: Failed to open NVS namespace[0m
+[0;32mI (1883) bridge_common: IP Address:192.168.5.1[0m
+[0;32mI (1888) bridge_common: GW Address:192.168.5.1[0m
+[0;32mI (1894) bridge_common: NM Address:255.255.255.0[0m
+[0;32mI (1899) bridge_common: [WIFI_AP_DEF ][0m
+[0;32mI (1904) bridge_common: Set ip info:192.168.5.1[0m
+[0;32mI (1909) bridge_wifi: SoftAP IP network segment has changed, deauth all station[0m
+I (1920) wifi:Disabled PMF config for SoftAP
+I (1922) wifi:Total power save buffer number: 8
+[0;32mI (1928) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (1934) bridge_common: [WIFI_AP_DEF ]Name Server1: 114.114.114.114[0m
+[0;32mI (1941) bridge_common: DHCPS Restart, deauth all station[0m
+Add netif sta with bad14ec3(commit id)
+[0;32mI (1950) bridge_common: netif list add success[0m
+I (1956) wifi:mode : sta (08:a6:f7:11:51:a8) + softAP (08:a6:f7:11:51:a9)
+I (1962) wifi:enable tsf
+[0;31mE (1966) NVS: Failed to read IP info from NVS[0m
+I (1970) wifi:Disabled PMF config for STA
+[0;32mI (1973) bridge_wifi: [esp_bridge_wifi_set_config] sta ssid: Tran Con password: 88888888[0m
+[0;32mI (1982) bridge_wifi: [esp_bridge_wifi_set_config] softap ssid: ESP_Bridge_1151a9 password: 12345678[0m
+I (2165) wifi:Total power save buffer number: 8
+[0;32mI (2169) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (2171) bridge_wifi: SoftAP config changed, deauth all station[0m
+[0;32mI (2175) Mesh-Lite: esp-mesh-lite component version: 1.0.0[0m
+I (2181) ESPNOW: espnow [version: 1.0] init
+[0;32mI (2184) [vendor_ie]: Mesh-Lite commit id: bc9302d
+ [0m
+[0;31mE (2191) [vendor_ie]: Error Get! [0m
+[0;33mW (2194) [vendor_ie]: Mesh ID is not saved in flash [0m
+[0;32mI (2200) [vendor_ie]: Mesh ID: 77 [0m
+[0;33mW (2204) [vendor_ie]: Error Get[4354] [0m
+[0;33mW (2208) [vendor_ie]: Error Get[4354] [0m
+[0;32mI (2214) [ESP_Mesh_Lite_Comm]: msg action add success [0m
+[0;32mI (2221) [ESP_Mesh_Lite_Comm]: Bind Socket 54, port 6364 [0m
+[0;32mI (2225) [ESP_Mesh_Lite_Comm]: Bind Socket 55, port 6363 [0m
+[0;32mI (2231) [ESP_Mesh_Lite_Comm]: Bind Socket 56, port 6366 [0m
+[0;32mI (2237) [ESP_Mesh_Lite_Comm]: Bind Socket 57, port 6365 [0m
+[0;32mI (2244) [mesh-lite-espnow]: Start espnow task [0m
+[0;32mI (2251) Mesh-Lite: Mesh-Lite connecting[0m
+[0;32mI (2256) [vendor_ie]: esp_mesh_lite_wifi_scan_start return ESP_OK [0m
+[0;32mI (2260) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (2271) cam_hal: cam init ok[0m
+[0;32mI (2273) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (2277) sccb: sccb_i2c_port=1[0m
+[0;32mI (2281) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2320) camera: Detected camera at address=0x30[0m
+[0;32mI (2323) camera: Detected OV2640 camera[0m
+[0;32mI (2323) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (2409) cam_hal: buffer_size: 32768, half_buffer_size: 4096, node_buffer_size: 2048, node_cnt: 16, total_cnt: 15[0m
+[0;32mI (2409) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (2416) cam_hal: cam config ok[0m
+[0;32mI (2419) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8[0m
+[0;33mW (2507) websocket_client: `network_timeout_ms` is not set, or it is less than or equal to zero, using default time out 10000 (milliseconds)[0m
+[0;32mI (2515) main_task: Returned from app_main()[0m
+[0;32mI (3646) [vendor_ie]: Mesh-Lite Scan done [0m
+[0;32mI (3647) [vendor_ie]: Find ESP_Bridge_25e081 [0m
+[0;32mI (3647) [vendor_ie]: bssid: c8:2e:18:25:e0:81, level: 2 [0m
+[0;32mI (3651) [vendor_ie]: RTC store: temp_mesh_id:255; ssid:ESP_Bridge_25e081; bssid:c8:2e:18:25:e0:81; crc:820343237 [0m
+[0;32mI (3663) [vendor_ie]: wifi_cfg ESP_Bridge_25e081 router_config Tran Con [0m
+[0;32mI (3671) [vendor_ie]: esp_mesh_lite_wifi_connect return ESP_OK [0m
+I (4455) wifi:ap channel adjust o:1,1 n:5,1
+I (4455) wifi:new:<5,1>, old:<1,1>, ap:<5,1>, sta:<5,1>, prof:1, snd_ch_cfg:0x0
+I (4456) wifi:state: init -> auth (0xb0)
+I (4463) wifi:state: auth -> assoc (0x0)
+I (4469) wifi:Association refused temporarily, comeback time 1500 (TUs)
+I (6006) wifi:state: assoc -> assoc (0x0)
+I (6015) wifi:state: assoc -> run (0x10)
+I (6028) wifi:connected with ESP_Bridge_25e081, aid = 1, channel 5, 40U, bssid = c8:2e:18:25:e0:81
+I (6028) wifi:security: WPA2-PSK, phy: bgn, rssi: -60
+I (6031) wifi:pm start, type: 1
+
+I (6034) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+[0;31mE (6046) [ESP_Mesh_Lite_Comm]: Error Get! [0m
+[0;32mI (6062) bridge_common: [WIFI_AP_DEF ]Name Server1: 192.168.2.253[0m
+I (6123) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (6124) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (6128) Mesh-Lite: netif network segment conflict check[0m
+[0;32mI (7047) esp_netif_handlers: sta ip: 192.168.5.2, mask: 255.255.255.0, gw: 192.168.5.1[0m
+[0;32mI (7048) bridge_wifi: Connected with IP Address:192.168.5.2[0m
+[0;32mI (7052) bridge_common: [WIFI_AP_DEF ][0m
+[0;32mI (7056) bridge_common: IP Address:192.168.4.1[0m
+[0;32mI (7061) bridge_common: GW Address:192.168.4.1[0m
+[0;32mI (7066) bridge_common: NM Address:255.255.255.0[0m
+[0;32mI (7074) bridge_common: ip reallocate new:192.168.4.1[0m
+[0;32mI (7077) bridge_wifi: SoftAP IP network segment has changed, deauth all station[0m
+[0;32mI (7086) [vendor_ie]: RTC store: temp_mesh_id:15; ssid:ESP_Bridge_25e081; bssid:c8:2e:18:25:e0:81; crc:2693372776 [0m
+[0;31mE (7098) esp-tls: [sock=58] delayed connect error: Software caused connection abort[0m
+[0;31mE (7105) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (7111) transport_ws: Error connecting to host 192.168.2.88:3000[0m
+[0;31mE (7118) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (7136) websocket_client: WebSocket client error[0m
+[0;32mI (7142) websocket_client: Reconnect after 1000 ms[0m
+[0;32mI (7147) websocket_client: WebSocket client connected[0m
+[0;31mE (7152) websocket_client: Websocket client is not connected[0m
+[0;33mW (7159) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;32mI (7169) esp32cam_security_gate: TCP client write task is running[0m
+[0;33mW (7171) cam_hal: NO-SOI[0m
+[0;32mI (8586) websocket_client: WebSocket client connected[0m
+[0;32mI (8728) websocket_client: Image sent to WebSocket: 15535 bytes (0.2fps)[0m
+[0;32mI (8851) websocket_client: Image sent to WebSocket: 15497 bytes (8.2fps)[0m
+[0;32mI (8961) websocket_client: Image sent to WebSocket: 15426 bytes (9.1fps)[0m
+[0;32mI (9122) websocket_client: Image sent to WebSocket: 15448 bytes (6.2fps)[0m
+[0;32mI (9243) websocket_client: Image sent to WebSocket: 15368 bytes (8.3fps)[0m
+[0;32mI (9358) websocket_client: Image sent to WebSocket: 15470 bytes (8.8fps)[0m
+[0;32mI (9727) websocket_client: Image sent to WebSocket: 15482 bytes (2.7fps)[0m
+[0;32mI (9867) websocket_client: Image sent to WebSocket: 15267 bytes (7.2fps)[0m
+[0;32mI (9969) websocket_client: Image sent to WebSocket: 15356 bytes (9.8fps)[0m
+[0;32mI (10107) websocket_client: Image sent to WebSocket: 15367 bytes (7.3fps)[0m
+[0;32mI (10209) websocket_client: Image sent to WebSocket: 15294 bytes (9.8fps)[0m
+[0;32mI (10314) websocket_client: Image sent to WebSocket: 15509 bytes (9.5fps)[0m
+[0;32mI (10398) websocket_client: Image sent to WebSocket: 15462 bytes (11.9fps)[0m
+[0;32mI (10526) websocket_client: Image sent to WebSocket: 15365 bytes (7.9fps)[0m
+[0;32mI (10709) websocket_client: Image sent to WebSocket: 15484 bytes (5.5fps)[0m
+[0;32mI (10803) websocket_client: Image sent to WebSocket: 15328 bytes (10.6fps)[0m
+[0;32mI (10918) websocket_client: Image sent to WebSocket: 15461 bytes (8.8fps)[0m
+[0;32mI (11045) websocket_client: Image sent to WebSocket: 15432 bytes (7.9fps)[0m
+[0;32mI (11186) websocket_client: Image sent to WebSocket: 15459 bytes (7.1fps)[0m
+[0;32mI (11288) websocket_client: Image sent to WebSocket: 15372 bytes (9.8fps)[0m
+[0;32mI (11422) websocket_client: Image sent to WebSocket: 15294 bytes (7.5fps)[0m
+[0;32mI (11523) websocket_client: Image sent to WebSocket: 15384 bytes (10.0fps)[0m
+[0;32mI (11689) websocket_client: Image sent to WebSocket: 15479 bytes (6.1fps)[0m
+[0;32mI (11837) websocket_client: Image sent to WebSocket: 15431 bytes (6.8fps)[0m
+[0;32mI (12010) websocket_client: Image sent to WebSocket: 15503 bytes (5.8fps)[0m
+[0;32mI (12166) websocket_client: Image sent to WebSocket: 15416 bytes (6.5fps)[0m
+[0;32mI (12260) esp32cam_security_gate: System information, channel: 5, layer: 2, self mac: 08:a6:f7:11:51:a8, parent bssid: c8:2e:18:25:e0:81, parent rssi: -58, free heap: 3916692[0m
+[0;32mI (12335) websocket_client: Image sent to WebSocket: 15811 bytes (5.9fps)[0m
+[0;32mI (12442) websocket_client: Image sent to WebSocket: 15371 bytes (9.3fps)[0m
+[0;32mI (12586) websocket_client: Image sent to WebSocket: 15310 bytes (7.0fps)[0m
+[0;32mI (12673) websocket_client: Image sent to WebSocket: 15590 bytes (11.5fps)[0m
+[0;32mI (12758) websocket_client: Image sent to WebSocket: 15428 bytes (11.9fps)[0m
+[0;32mI (12908) websocket_client: Image sent to WebSocket: 15480 bytes (6.7fps)[0m
+[0;32mI (13004) websocket_client: Image sent to WebSocket: 15548 bytes (10.5fps)[0m
+[0;32mI (13152) websocket_client: Image sent to WebSocket: 15381 bytes (6.8fps)[0m
+[0;32mI (13247) websocket_client: Image sent to WebSocket: 15367 bytes (10.6fps)[0m
+[0;32mI (13735) websocket_client: Image sent to WebSocket: 15355 bytes (2.0fps)[0m
+[0;32mI (14225) websocket_client: Image sent to WebSocket: 15332 bytes (2.0fps)[0m
+[0;32mI (14834) websocket_client: Image sent to WebSocket: 15616 bytes (1.6fps)[0m
+[0;32mI (15213) websocket_client: Image sent to WebSocket: 15376 bytes (2.6fps)[0m
+[0;32mI (15857) websocket_client: Image sent to WebSocket: 15330 bytes (1.6fps)[0m
+[0;32mI (16579) websocket_client: Image sent to WebSocket: 15440 bytes (1.4fps)[0m
+[0;32mI (16730) websocket_client: Image sent to WebSocket: 15437 bytes (6.6fps)[0m
+[0;32mI (16854) websocket_client: Image sent to WebSocket: 15391 bytes (8.1fps)[0m
+[0;32mI (17292) websocket_client: Image sent to WebSocket: 15312 bytes (2.3fps)[0m
+[0;32mI (18010) websocket_client: Image sent to WebSocket: 15379 bytes (1.4fps)[0m
+[0;32mI (18829) websocket_client: Image sent to WebSocket: 15469 bytes (1.2fps)[0m
+[0;32mI (19646) websocket_client: Image sent to WebSocket: 15867 bytes (1.2fps)[0m
+[0;32mI (19789) websocket_client: Image sent to WebSocket: 15446 bytes (7.0fps)[0m
+[0;32mI (19892) websocket_client: Image sent to WebSocket: 15365 bytes (9.8fps)[0m
+[0;32mI (19995) websocket_client: Image sent to WebSocket: 15407 bytes (9.7fps)[0m
+[0;32mI (20159) websocket_client: Image sent to WebSocket: 15309 bytes (6.1fps)[0m
+[0;32mI (20324) websocket_client: Image sent to WebSocket: 15323 bytes (6.1fps)[0m
+[0;32mI (20494) websocket_client: Image sent to WebSocket: 15313 bytes (5.9fps)[0m
+[0;32mI (20698) websocket_client: Image sent to WebSocket: 15381 bytes (4.9fps)[0m
+[0;32mI (20801) websocket_client: Image sent to WebSocket: 15356 bytes (9.8fps)[0m
+[0;32mI (20922) websocket_client: Image sent to WebSocket: 15333 bytes (8.3fps)[0m
+[0;32mI (21058) websocket_client: Image sent to WebSocket: 15399 bytes (7.4fps)[0m
+[0;32mI (21070) [vendor_ie]: esp_mesh_lite_wifi_scan_start return ESP_OK [0m
+[0;32mI (21570) [ESP_Mesh_Lite_Comm]: Mesh-Lite Comm Scan done [0m
+[0;32mI (21573) [ESP_Mesh_Lite_Comm]: approved: 1 [0m
+[0;32mI (21634) websocket_client: Image sent to WebSocket: 15394 bytes (1.7fps)[0m
+[0;32mI (21808) websocket_client: Image sent to WebSocket: 15305 bytes (5.7fps)[0m
+[0;32mI (22031) websocket_client: Image sent to WebSocket: 15313 bytes (4.5fps)[0m
+[0;32mI (22114) websocket_client: Image sent to WebSocket: 15662 bytes (12.0fps)[0m
+[0;32mI (22241) websocket_client: Image sent to WebSocket: 15394 bytes (7.9fps)[0m
+[0;32mI (22260) esp32cam_security_gate: System information, channel: 5, layer: 2, self mac: 08:a6:f7:11:51:a8, parent bssid: c8:2e:18:25:e0:81, parent rssi: -58, free heap: 3924384[0m
+[0;32mI (22379) websocket_client: Image sent to WebSocket: 15320 bytes (7.3fps)[0m
+[0;32mI (22464) websocket_client: Image sent to WebSocket: 15335 bytes (11.9fps)[0m
+[0;32mI (22557) websocket_client: Image sent to WebSocket: 15321 bytes (10.8fps)[0m
+[0;32mI (22711) websocket_client: Image sent to WebSocket: 15222 bytes (6.5fps)[0m
+[0;32mI (22872) websocket_client: Image sent to WebSocket: 15348 bytes (6.2fps)[0m
+[0;32mI (23038) websocket_client: Image sent to WebSocket: 15343 bytes (6.1fps)[0m
+[0;32mI (23197) websocket_client: Image sent to WebSocket: 15354 bytes (6.3fps)[0m
+[0;32mI (23312) websocket_client: Image sent to WebSocket: 15347 bytes (8.8fps)[0m
+[0;32mI (23447) websocket_client: Image sent to WebSocket: 15856 bytes (7.4fps)[0m
+[0;32mI (23565) websocket_client: Image sent to WebSocket: 15380 bytes (8.5fps)[0m
+[0;32mI (23695) websocket_client: Image sent to WebSocket: 15328 bytes (7.7fps)[0m
+[0;32mI (23791) websocket_client: Image sent to WebSocket: 15316 bytes (10.4fps)[0m
+[0;32mI (23916) websocket_client: Image sent to WebSocket: 15385 bytes (8.1fps)[0m
+[0;32mI (24255) websocket_client: Image sent to WebSocket: 15568 bytes (3.0fps)[0m
+[0;32mI (24352) websocket_client: Image sent to WebSocket: 15602 bytes (10.3fps)[0m
+[0;32mI (24515) websocket_client: Image sent to WebSocket: 15255 bytes (6.2fps)[0m
+[0;32mI (24682) websocket_client: Image sent to WebSocket: 15392 bytes (6.0fps)[0m
+[0;32mI (25176) websocket_client: Image sent to WebSocket: 15405 bytes (2.0fps)[0m
+[0;32mI (25651) websocket_client: Image sent to WebSocket: 15454 bytes (2.1fps)[0m
+[0;32mI (25754) websocket_client: Image sent to WebSocket: 15307 bytes (9.7fps)[0m
+[0;32mI (25915) websocket_client: Image sent to WebSocket: 15481 bytes (6.2fps)[0m
+[0;32mI (26075) websocket_client: Image sent to WebSocket: 15362 bytes (6.3fps)[0m
+[0;32mI (26512) websocket_client: Image sent to WebSocket: 15888 bytes (2.3fps)[0m
+[0;32mI (27126) websocket_client: Image sent to WebSocket: 15338 bytes (1.6fps)[0m
+[0;32mI (27839) websocket_client: Image sent to WebSocket: 15522 bytes (1.4fps)[0m
+[0;32mI (28558) websocket_client: Image sent to WebSocket: 15534 bytes (1.4fps)[0m
+[0;32mI (28672) websocket_client: Image sent to WebSocket: 15303 bytes (8.8fps)[0m
+[0;32mI (28789) websocket_client: Image sent to WebSocket: 15335 bytes (8.6fps)[0m
+[0;32mI (28951) websocket_client: Image sent to WebSocket: 15282 bytes (6.2fps)[0m
+[0;32mI (29374) websocket_client: Image sent to WebSocket: 15564 bytes (2.4fps)[0m
+[0;32mI (29768) websocket_client: Image sent to WebSocket: 15401 bytes (2.5fps)[0m
+[0;32mI (29865) websocket_client: Image sent to WebSocket: 15407 bytes (10.4fps)[0m
+[0;32mI (29945) websocket_client: Image sent to WebSocket: 15393 bytes (12.7fps)[0m
+[0;32mI (30029) websocket_client: Image sent to WebSocket: 15310 bytes (12.0fps)[0m
+[0;32mI (30185) websocket_client: Image sent to WebSocket: 15366 bytes (6.5fps)[0m
+[0;32mI (30260) websocket_client: Image sent to WebSocket: 15382 bytes (13.5fps)[0m
+[0;32mI (30348) websocket_client: Image sent to WebSocket: 15352 bytes (11.4fps)[0m
+[0;32mI (30529) websocket_client: Image sent to WebSocket: 15342 bytes (5.5fps)[0m
+[0;32mI (30635) websocket_client: Image sent to WebSocket: 15304 bytes (9.5fps)[0m
+[0;32mI (30767) websocket_client: Image sent to WebSocket: 15371 bytes (7.6fps)[0m
+[0;32mI (30862) websocket_client: Image sent to WebSocket: 15338 bytes (10.5fps)[0m
+[0;32mI (30950) websocket_client: Image sent to WebSocket: 15307 bytes (11.5fps)[0m
+[0;32mI (31090) websocket_client: Image sent to WebSocket: 15351 bytes (7.2fps)[0m
+[0;32mI (31188) websocket_client: Image sent to WebSocket: 15269 bytes (10.2fps)[0m
+[0;32mI (31313) websocket_client: Image sent to WebSocket: 15720 bytes (8.1fps)[0m
+[0;32mI (31428) websocket_client: Image sent to WebSocket: 15582 bytes (8.7fps)[0m
+[0;32mI (31585) websocket_client: Image sent to WebSocket: 15312 bytes (6.4fps)[0m
+[0;32mI (31670) websocket_client: Image sent to WebSocket: 15321 bytes (11.8fps)[0m
+[0;32mI (31836) websocket_client: Image sent to WebSocket: 15387 bytes (6.0fps)[0m
+[0;32mI (32242) websocket_client: Image sent to WebSocket: 15345 bytes (2.5fps)[0m
+[0;32mI (32260) esp32cam_security_gate: System information, channel: 5, layer: 2, self mac: 08:a6:f7:11:51:a8, parent bssid: c8:2e:18:25:e0:81, parent rssi: -58, free heap: 3919700[0m
+[0;32mI (32856) websocket_client: Image sent to WebSocket: 15507 bytes (1.6fps)[0m
+[0;32mI (33471) websocket_client: Image sent to WebSocket: 15487 bytes (1.6fps)[0m
+[0;32mI (34021) websocket_client: Image sent to WebSocket: 15327 bytes (1.8fps)[0m
+[0;32mI (34112) websocket_client: Image sent to WebSocket: 15353 bytes (11.1fps)[0m
+[0;32mI (34228) websocket_client: Image sent to WebSocket: 15364 bytes (8.6fps)[0m
+[0;32mI (34374) websocket_client: Image sent to WebSocket: 15374 bytes (6.9fps)[0m
+[0;32mI (34474) websocket_client: Image sent to WebSocket: 15409 bytes (10.1fps)[0m
+[0;32mI (34628) websocket_client: Image sent to WebSocket: 15415 bytes (6.5fps)[0m
+[0;32mI (34821) websocket_client: Image sent to WebSocket: 15370 bytes (5.2fps)[0m
+[0;32mI (34914) websocket_client: Image sent to WebSocket: 15562 bytes (10.9fps)[0m
+[0;32mI (35046) websocket_client: Image sent to WebSocket: 15344 bytes (7.6fps)[0m
+[0;32mI (35232) websocket_client: Image sent to WebSocket: 15344 bytes (5.4fps)[0m
+[0;32mI (35373) websocket_client: Image sent to WebSocket: 15346 bytes (7.1fps)[0m
+[0;32mI (35461) websocket_client: Image sent to WebSocket: 15375 bytes (11.4fps)[0m
+[0;32mI (35547) websocket_client: Image sent to WebSocket: 15292 bytes (11.6fps)[0m
+[0;32mI (35695) websocket_client: Image sent to WebSocket: 15405 bytes (6.8fps)[0m
+[0;32mI (35787) websocket_client: Image sent to WebSocket: 15360 bytes (10.9fps)[0m
+[0;32mI (35949) websocket_client: Image sent to WebSocket: 15423 bytes (6.2fps)[0m
+[0;32mI (36111) websocket_client: Image sent to WebSocket: 15368 bytes (6.2fps)[0m
+[0;32mI (36543) websocket_client: Image sent to WebSocket: 15496 bytes (2.3fps)[0m
+[0;32mI (37157) websocket_client: Image sent to WebSocket: 15426 bytes (1.6fps)[0m
+[0;32mI (37302) websocket_client: Image sent to WebSocket: 16023 bytes (6.9fps)[0m
+[0;32mI (37379) websocket_client: Image sent to WebSocket: 15319 bytes (13.2fps)[0m
+[0;32mI (37469) websocket_client: Image sent to WebSocket: 15881 bytes (11.1fps)[0m
+[0;32mI (37588) websocket_client: Image sent to WebSocket: 15321 bytes (8.4fps)[0m
+[0;32mI (37796) websocket_client: Image sent to WebSocket: 15190 bytes (4.8fps)[0m
+[0;32mI (37909) websocket_client: Image sent to WebSocket: 15390 bytes (8.9fps)[0m
+[0;32mI (38100) websocket_client: Image sent to WebSocket: 15309 bytes (5.3fps)[0m
+[0;32mI (38188) websocket_client: Image sent to WebSocket: 15810 bytes (11.4fps)[0m
+[0;32mI (38327) websocket_client: Image sent to WebSocket: 15264 bytes (7.2fps)[0m
+[0;32mI (38748) websocket_client: Image sent to WebSocket: 15281 bytes (2.4fps)[0m
+[0;32mI (38913) websocket_client: Image sent to WebSocket: 15317 bytes (6.1fps)[0m
+[0;32mI (39072) websocket_client: Image sent to WebSocket: 15346 bytes (6.3fps)[0m
+[0;32mI (39513) websocket_client: Image sent to WebSocket: 15409 bytes (2.3fps)[0m
+[0;32mI (40230) websocket_client: Image sent to WebSocket: 15290 bytes (1.4fps)[0m
+[0;32mI (40847) websocket_client: Image sent to WebSocket: 15294 bytes (1.6fps)[0m
+[0;32mI (41561) websocket_client: Image sent to WebSocket: 15450 bytes (1.4fps)[0m
+[0;32mI (42175) websocket_client: Image sent to WebSocket: 15494 bytes (1.6fps)[0m
+[0;32mI (42260) esp32cam_security_gate: System information, channel: 5, layer: 2, self mac: 08:a6:f7:11:51:a8, parent bssid: c8:2e:18:25:e0:81, parent rssi: -58, free heap: 3918016[0m
+[0;32mI (42790) websocket_client: Image sent to WebSocket: 15451 bytes (1.6fps)[0m
+[0;32mI (43609) websocket_client: Image sent to WebSocket: 15424 bytes (1.2fps)[0m
+[0;32mI (44633) websocket_client: Image sent to WebSocket: 15483 bytes (1.0fps)[0m
+[0;32mI (44797) websocket_client: Image sent to WebSocket: 15315 bytes (6.1fps)[0m
+[0;32mI (44897) websocket_client: Image sent to WebSocket: 15344 bytes (10.0fps)[0m
+[0;32mI (44980) websocket_client: Image sent to WebSocket: 15397 bytes (12.2fps)[0m
+[0;32mI (45067) websocket_client: Image sent to WebSocket: 15347 bytes (11.5fps)[0m
+[0;32mI (45186) websocket_client: Image sent to WebSocket: 15329 bytes (8.4fps)[0m
+[0;32mI (45798) websocket_client: Image sent to WebSocket: 15369 bytes (1.6fps)[0m
+[0;32mI (45902) websocket_client: Image sent to WebSocket: 15340 bytes (9.7fps)[0m
+[0;32mI (46061) websocket_client: Image sent to WebSocket: 15279 bytes (6.3fps)[0m
+[0;33mW (46066) cam_hal: NO-SOI[0m
+[0;32mI (46579) websocket_client: Image sent to WebSocket: 15324 bytes (1.9fps)[0m
+[0;32mI (46912) websocket_client: Image sent to WebSocket: 15527 bytes (3.0fps)[0m
+[0;32mI (47030) websocket_client: Image sent to WebSocket: 15397 bytes (8.5fps)[0m
+[0;32mI (47603) websocket_client: Image sent to WebSocket: 15330 bytes (1.7fps)[0m
+[0;32mI (48217) websocket_client: Image sent to WebSocket: 15384 bytes (1.6fps)[0m
+[0;32mI (48780) websocket_client: Image sent to WebSocket: 15443 bytes (1.8fps)[0m
+[0;32mI (48858) websocket_client: Image sent to WebSocket: 15347 bytes (12.8fps)[0m
+[0;32mI (48949) websocket_client: Image sent to WebSocket: 15492 bytes (11.1fps)[0m
+[0;32mI (49102) websocket_client: Image sent to WebSocket: 15330 bytes (6.5fps)[0m
+[0;32mI (49550) websocket_client: Image sent to WebSocket: 15580 bytes (2.2fps)[0m
+[0;32mI (49654) websocket_client: Image sent to WebSocket: 15330 bytes (9.6fps)[0m
+[0;32mI (49732) websocket_client: Image sent to WebSocket: 15385 bytes (13.0fps)[0m
+[0;32mI (49816) websocket_client: Image sent to WebSocket: 15311 bytes (11.9fps)[0m
+[0;32mI (49896) websocket_client: Image sent to WebSocket: 15290 bytes (12.7fps)[0m
+[0;32mI (49978) websocket_client: Image sent to WebSocket: 15287 bytes (12.3fps)[0m
+[0;32mI (50054) websocket_client: Image sent to WebSocket: 15757 bytes (13.2fps)[0m
+[0;32mI (50137) websocket_client: Image sent to WebSocket: 15305 bytes (12.0fps)[0m
+[0;32mI (50213) websocket_client: Image sent to WebSocket: 15289 bytes (13.3fps)[0m
+[0;32mI (50305) websocket_client: Image sent to WebSocket: 15409 bytes (11.0fps)[0m
+[0;32mI (50426) websocket_client: Image sent to WebSocket: 15395 bytes (8.3fps)[0m
+[0;32mI (50592) websocket_client: Image sent to WebSocket: 15250 bytes (6.1fps)[0m
+[0;32mI (50699) websocket_client: Image sent to WebSocket: 15293 bytes (9.3fps)[0m
+[0;32mI (50833) websocket_client: Image sent to WebSocket: 15348 bytes (7.5fps)[0m
+[0;32mI (51290) websocket_client: Image sent to WebSocket: 15280 bytes (2.2fps)[0m
+[0;32mI (51432) websocket_client: Image sent to WebSocket: 15629 bytes (7.0fps)[0m
+[0;32mI (51572) websocket_client: Image sent to WebSocket: 15282 bytes (7.2fps)[0m
+[0;32mI (51655) websocket_client: Image sent to WebSocket: 15406 bytes (12.2fps)[0m
+[0;32mI (51740) websocket_client: Image sent to WebSocket: 15389 bytes (11.8fps)[0m
+[0;32mI (51906) websocket_client: Image sent to WebSocket: 15365 bytes (6.0fps)[0m
+[0;32mI (52070) websocket_client: Image sent to WebSocket: 15286 bytes (6.1fps)[0m
+[0;32mI (52260) esp32cam_security_gate: System information, channel: 5, layer: 2, self mac: 08:a6:f7:11:51:a8, parent bssid: c8:2e:18:25:e0:81, parent rssi: -59, free heap: 3916576[0m
+[0;32mI (52518) websocket_client: Image sent to WebSocket: 15344 bytes (2.2fps)[0m
+[0;32mI (53235) websocket_client: Image sent to WebSocket: 15872 bytes (1.4fps)[0m
+[0;32mI (53850) websocket_client: Image sent to WebSocket: 15721 bytes (1.6fps)[0m
+[0;32mI (54464) websocket_client: Image sent to WebSocket: 15552 bytes (1.6fps)[0m
+[0;32mI (54787) websocket_client: Image sent to WebSocket: 15227 bytes (3.1fps)[0m
+[0;32mI (55181) websocket_client: Image sent to WebSocket: 15370 bytes (2.5fps)[0m
+[0;32mI (55795) websocket_client: Image sent to WebSocket: 15353 bytes (1.6fps)[0m
+[0;32mI (56121) websocket_client: Image sent to WebSocket: 15437 bytes (3.1fps)[0m
+[0;32mI (56225) websocket_client: Image sent to WebSocket: 15318 bytes (9.6fps)[0m
+[0;32mI (56338) websocket_client: Image sent to WebSocket: 15234 bytes (8.8fps)[0m
+[0;32mI (56533) websocket_client: Image sent to WebSocket: 15204 bytes (5.2fps)[0m
+[0;32mI (56615) websocket_client: Image sent to WebSocket: 16166 bytes (12.2fps)[0m
+[0;32mI (56689) websocket_client: Image sent to WebSocket: 15517 bytes (13.7fps)[0m
+[0;32mI (56776) websocket_client: Image sent to WebSocket: 15239 bytes (11.5fps)[0m
+[0;32mI (56871) websocket_client: Image sent to WebSocket: 15330 bytes (10.6fps)[0m
+[0;32mI (56982) websocket_client: Image sent to WebSocket: 15300 bytes (9.0fps)[0m
+[0;32mI (57114) websocket_client: Image sent to WebSocket: 15329 bytes (7.6fps)[0m
+[0;32mI (57250) websocket_client: Image sent to WebSocket: 15530 bytes (7.4fps)[0m
+[0;32mI (57335) websocket_client: Image sent to WebSocket: 15443 bytes (11.8fps)[0m
+[0;32mI (57411) websocket_client: Image sent to WebSocket: 15373 bytes (13.2fps)[0m
+[0;32mI (57490) websocket_client: Image sent to WebSocket: 15314 bytes (12.8fps)[0m
+[0;32mI (57579) websocket_client: Image sent to WebSocket: 15296 bytes (11.4fps)[0m
+[0;32mI (57763) websocket_client: Image sent to WebSocket: 15362 bytes (5.4fps)[0m
+[0;32mI (57860) websocket_client: Image sent to WebSocket: 15321 bytes (10.4fps)[0m
+[0;32mI (57992) websocket_client: Image sent to WebSocket: 15320 bytes (7.6fps)[0m
+[0;32mI (58458) websocket_client: Image sent to WebSocket: 15214 bytes (2.2fps)[0m
+[0;32mI (59174) websocket_client: Image sent to WebSocket: 15283 bytes (1.4fps)[0m
+[0;32mI (59322) websocket_client: Image sent to WebSocket: 15646 bytes (6.8fps)[0m
+[0;32mI (59429) websocket_client: Image sent to WebSocket: 15428 bytes (9.4fps)[0m
+[0;32mI (59556) websocket_client: Image sent to WebSocket: 15329 bytes (7.9fps)[0m
+[0;32mI (59893) websocket_client: Image sent to WebSocket: 15391 bytes (3.0fps)[0m
+[0;32mI (59968) websocket_client: Image sent to WebSocket: 15488 bytes (13.3fps)[0m
+[0;32mI (60054) websocket_client: Image sent to WebSocket: 15331 bytes (11.8fps)[0m
+[0;32mI (60139) websocket_client: Image sent to WebSocket: 15349 bytes (11.9fps)[0m
+[0;32mI (60292) websocket_client: Image sent to WebSocket: 15345 bytes (6.6fps)[0m
+[0;32mI (60369) websocket_client: Image sent to WebSocket: 15330 bytes (13.0fps)[0m
+[0;32mI (60452) websocket_client: Image sent to WebSocket: 15252 bytes (12.2fps)[0m
+[0;32mI (60533) websocket_client: Image sent to WebSocket: 15281 bytes (12.3fps)[0m
+[0;32mI (60612) websocket_client: Image sent to WebSocket: 15439 bytes (12.8fps)[0m
+[0;32mI (60690) websocket_client: Image sent to WebSocket: 15457 bytes (12.8fps)[0m
+[0;32mI (60770) websocket_client: Image sent to WebSocket: 15382 bytes (12.7fps)[0m
+[0;32mI (60855) websocket_client: Image sent to WebSocket: 15229 bytes (11.8fps)[0m
+[0;32mI (60938) websocket_client: Image sent to WebSocket: 15276 bytes (12.2fps)[0m
+[0;32mI (61057) websocket_client: Image sent to WebSocket: 15307 bytes (8.5fps)[0m
+[0;32mI (61201) websocket_client: Image sent to WebSocket: 15317 bytes (6.9fps)[0m
+[0;32mI (61289) websocket_client: Image sent to WebSocket: 15308 bytes (11.5fps)[0m
+[0;32mI (61375) websocket_client: Image sent to WebSocket: 15354 bytes (11.6fps)[0m
+[0;32mI (61463) websocket_client: Image sent to WebSocket: 15326 bytes (11.4fps)[0m
+[0;32mI (61612) websocket_client: Image sent to WebSocket: 15322 bytes (6.8fps)[0m
+[0;32mI (61697) websocket_client: Image sent to WebSocket: 15296 bytes (11.9fps)[0m
+[0;32mI (61865) websocket_client: Image sent to WebSocket: 15887 bytes (6.0fps)[0m
+[0;32mI (61990) websocket_client: Image sent to WebSocket: 15365 bytes (8.1fps)[0m
+[0;32mI (62112) websocket_client: Image sent to WebSocket: 15309 bytes (8.2fps)[0m
+[0;32mI (62218) websocket_client: Image sent to WebSocket: 15405 bytes (9.4fps)[0m
+[0;32mI (62260) esp32cam_security_gate: System information, channel: 5, layer: 2, self mac: 08:a6:f7:11:51:a8, parent bssid: c8:2e:18:25:e0:81, parent rssi: -58, free heap: 3924372[0m
+[0;32mI (62349) websocket_client: Image sent to WebSocket: 15446 bytes (7.7fps)[0m
+[0;32mI (62963) websocket_client: Image sent to WebSocket: 15777 bytes (1.6fps)[0m
+[0;32mI (63493) websocket_client: Image sent to WebSocket: 15550 bytes (1.9fps)[0m
+[0;32mI (63573) websocket_client: Image sent to WebSocket: 15411 bytes (12.7fps)[0m
+[0;32mI (63649) websocket_client: Image sent to WebSocket: 15450 bytes (13.2fps)[0m
+[0;32mI (63733) websocket_client: Image sent to WebSocket: 15374 bytes (11.9fps)[0m
+[0;32mI (63822) websocket_client: Image sent to WebSocket: 15278 bytes (11.4fps)[0m
+[0;32mI (64297) websocket_client: Image sent to WebSocket: 15316 bytes (2.1fps)[0m
+[0;32mI (64433) websocket_client: Image sent to WebSocket: 15249 bytes (7.4fps)[0m
+[0;32mI (64570) websocket_client: Image sent to WebSocket: 15303 bytes (7.4fps)[0m
+[0;32mI (64653) websocket_client: Image sent to WebSocket: 15297 bytes (12.0fps)[0m
+[0;32mI (64740) websocket_client: Image sent to WebSocket: 15304 bytes (11.5fps)[0m
+[0;32mI (64849) websocket_client: Image sent to WebSocket: 15301 bytes (9.3fps)[0m
+[0;32mI (64938) websocket_client: Image sent to WebSocket: 15243 bytes (11.2fps)[0m
+[0;32mI (65071) websocket_client: Image sent to WebSocket: 15328 bytes (7.6fps)[0m
+[0;32mI (65236) websocket_client: Image sent to WebSocket: 15255 bytes (6.1fps)[0m
+[0;32mI (65626) websocket_client: Image sent to WebSocket: 15408 bytes (2.6fps)[0m
+[0;32mI (66243) websocket_client: Image sent to WebSocket: 15446 bytes (1.6fps)[0m
+[0;32mI (66380) websocket_client: Image sent to WebSocket: 15391 bytes (7.4fps)[0m
+[0;32mI (66548) websocket_client: Image sent to WebSocket: 15283 bytes (6.0fps)[0m
+[0;32mI (66957) websocket_client: Image sent to WebSocket: 15405 bytes (2.4fps)[0m
+[0;32mI (67546) websocket_client: Image sent to WebSocket: 15328 bytes (1.7fps)[0m
+[0;32mI (67649) websocket_client: Image sent to WebSocket: 15495 bytes (9.8fps)[0m
+[0;32mI (67728) websocket_client: Image sent to WebSocket: 15376 bytes (12.7fps)[0m
+[0;32mI (67815) websocket_client: Image sent to WebSocket: 15296 bytes (11.5fps)[0m
+[0;32mI (67939) websocket_client: Image sent to WebSocket: 15273 bytes (8.1fps)[0m
+[0;32mI (68391) websocket_client: Image sent to WebSocket: 15309 bytes (2.2fps)[0m
+[0;32mI (68716) websocket_client: Image sent to WebSocket: 15510 bytes (3.1fps)[0m
+[0;32mI (68818) websocket_client: Image sent to WebSocket: 15364 bytes (9.8fps)[0m
+[0;32mI (68938) websocket_client: Image sent to WebSocket: 15363 bytes (8.3fps)[0m
+[0;32mI (69092) websocket_client: Image sent to WebSocket: 15299 bytes (6.5fps)[0m
+[0;32mI (69517) websocket_client: Image sent to WebSocket: 15553 bytes (2.4fps)[0m
+[0;32mI (70132) websocket_client: Image sent to WebSocket: 15548 bytes (1.6fps)[0m
+[0;32mI (70797) websocket_client: Image sent to WebSocket: 15329 bytes (1.5fps)[0m
+[0;32mI (70891) websocket_client: Image sent to WebSocket: 15349 bytes (10.8fps)[0m
+[0;32mI (70975) websocket_client: Image sent to WebSocket: 15383 bytes (11.9fps)[0m
+[0;32mI (71175) websocket_client: Image sent to WebSocket: 15278 bytes (5.0fps)[0m
+[0;32mI (71311) websocket_client: Image sent to WebSocket: 15290 bytes (7.4fps)[0m
+[0;32mI (71410) websocket_client: Image sent to WebSocket: 15322 bytes (10.1fps)[0m
+[0;32mI (71498) websocket_client: Image sent to WebSocket: 15367 bytes (11.5fps)[0m
+[0;32mI (71616) websocket_client: Image sent to WebSocket: 15352 bytes (8.5fps)[0m
+[0;32mI (71740) websocket_client: Image sent to WebSocket: 15310 bytes (8.1fps)[0m
+[0;32mI (71895) websocket_client: Image sent to WebSocket: 15396 bytes (6.5fps)[0m
+[0;32mI (72054) websocket_client: Image sent to WebSocket: 15298 bytes (6.3fps)[0m
+[0;32mI (72260) esp32cam_security_gate: System information, channel: 5, layer: 2, self mac: 08:a6:f7:11:51:a8, parent bssid: c8:2e:18:25:e0:81, parent rssi: -57, free heap: 3916676[0m
+[0;32mI (72487) websocket_client: Image sent to WebSocket: 15512 bytes (2.3fps)[0m
+[0;32mI (73101) websocket_client: Image sent to WebSocket: 15694 bytes (1.6fps)[0m
+[0;32mI (73799) websocket_client: Image sent to WebSocket: 15292 bytes (1.4fps)[0m
+[0;32mI (74136) websocket_client: Image sent to WebSocket: 15316 bytes (3.0fps)[0m
+[0;32mI (74674) websocket_client: Image sent to WebSocket: 15372 bytes (1.9fps)[0m
+[0;32mI (74778) websocket_client: Image sent to WebSocket: 15254 bytes (9.6fps)[0m
+[0;32mI (74929) websocket_client: Image sent to WebSocket: 15294 bytes (6.7fps)[0m
+[0;33mW (74934) cam_hal: NO-SOI[0m
+[0;32mI (75099) websocket_client: Image sent to WebSocket: 15506 bytes (5.9fps)[0m
+[0;32mI (75666) websocket_client: Image sent to WebSocket: 15261 bytes (1.8fps)[0m
+[0;32mI (76276) websocket_client: Image sent to WebSocket: 15509 bytes (1.6fps)[0m
+[0;32mI (77096) websocket_client: Image sent to WebSocket: 15642 bytes (1.2fps)[0m
+[0;32mI (77813) websocket_client: Image sent to WebSocket: 15299 bytes (1.4fps)[0m
+[0;32mI (78632) websocket_client: Image sent to WebSocket: 15323 bytes (1.2fps)[0m
+[0;32mI (79144) websocket_client: Image sent to WebSocket: 15441 bytes (2.0fps)[0m
+[0;32mI (79266) websocket_client: Image sent to WebSocket: 15399 bytes (8.3fps)[0m
+[0;32mI (79392) websocket_client: Image sent to WebSocket: 15352 bytes (7.9fps)[0m
+[0;32mI (79527) websocket_client: Image sent to WebSocket: 15343 bytes (7.5fps)[0m
+[0;32mI (79618) websocket_client: Image sent to WebSocket: 15316 bytes (11.0fps)[0m
+[0;32mI (79822) websocket_client: Image sent to WebSocket: 15345 bytes (4.9fps)[0m
+[0;32mI (79947) websocket_client: Image sent to WebSocket: 15302 bytes (8.0fps)[0m
+[0;32mI (80041) websocket_client: Image sent to WebSocket: 15298 bytes (10.8fps)[0m
+[0;32mI (80129) websocket_client: Image sent to WebSocket: 15382 bytes (11.4fps)[0m
+[0;32mI (80287) websocket_client: Image sent to WebSocket: 15372 bytes (6.4fps)[0m
+[0;32mI (80362) websocket_client: Image sent to WebSocket: 15565 bytes (13.5fps)[0m
+[0;32mI (80443) websocket_client: Image sent to WebSocket: 15455 bytes (12.3fps)[0m
+[0;32mI (80526) websocket_client: Image sent to WebSocket: 15360 bytes (12.2fps)[0m
+[0;32mI (80615) websocket_client: Image sent to WebSocket: 15317 bytes (11.2fps)[0m
+[0;32mI (80791) websocket_client: Image sent to WebSocket: 15295 bytes (5.7fps)[0m
+[0;32mI (80888) websocket_client: Image sent to WebSocket: 15599 bytes (10.4fps)[0m
+[0;32mI (81025) websocket_client: Image sent to WebSocket: 15269 bytes (7.4fps)[0m
+[0;32mI (81213) websocket_client: Image sent to WebSocket: 15385 bytes (5.3fps)[0m
+[0;32mI (81356) websocket_client: Image sent to WebSocket: 15338 bytes (7.0fps)[0m
+[0;32mI (81467) websocket_client: Image sent to WebSocket: 15346 bytes (9.1fps)[0m
+[0;32mI (81584) websocket_client: Image sent to WebSocket: 15314 bytes (8.6fps)[0m
+[0;32mI (81682) websocket_client: Image sent to WebSocket: 15643 bytes (10.2fps)[0m
+[0;32mI (81768) websocket_client: Image sent to WebSocket: 15343 bytes (11.8fps)[0m
+[0;32mI (81929) websocket_client: Image sent to WebSocket: 15406 bytes (6.2fps)[0m
+[0;32mI (82092) websocket_client: Image sent to WebSocket: 15336 bytes (6.1fps)[0m
+[0;32mI (82260) esp32cam_security_gate: System information, channel: 5, layer: 2, self mac: 08:a6:f7:11:51:a8, parent bssid: c8:2e:18:25:e0:81, parent rssi: -58, free heap: 3916560[0m
+[0;32mI (82523) websocket_client: Image sent to WebSocket: 15739 bytes (2.3fps)[0m
+[0;32mI (82837) websocket_client: Image sent to WebSocket: 15334 bytes (3.2fps)[0m
+[0;32mI (82926) websocket_client: Image sent to WebSocket: 15391 bytes (11.2fps)[0m
+[0;32mI (83081) websocket_client: Image sent to WebSocket: 15337 bytes (6.5fps)[0m
+[0;32mI (83179) websocket_client: Image sent to WebSocket: 15392 bytes (10.2fps)[0m
+[0;32mI (83321) websocket_client: Image sent to WebSocket: 15319 bytes (7.1fps)[0m
+[0;32mI (83410) websocket_client: Image sent to WebSocket: 15349 bytes (11.4fps)[0m
+[0;32mI (83575) websocket_client: Image sent to WebSocket: 15366 bytes (6.1fps)[0m
+[0;32mI (83689) websocket_client: Image sent to WebSocket: 15376 bytes (8.8fps)[0m
+[0;32mI (83816) websocket_client: Image sent to WebSocket: 15398 bytes (7.9fps)[0m
+[0;32mI (84268) websocket_client: Image sent to WebSocket: 15355 bytes (2.2fps)[0m
+[0;32mI (84370) websocket_client: Image sent to WebSocket: 15466 bytes (9.9fps)[0m
+[0;32mI (84709) websocket_client: Image sent to WebSocket: 15256 bytes (2.9fps)[0m
+[0;32mI (84815) websocket_client: Image sent to WebSocket: 15302 bytes (9.5fps)[0m
+[0;32mI (84923) websocket_client: Image sent to WebSocket: 15332 bytes (9.3fps)[0m
+[0;32mI (85007) websocket_client: Image sent to WebSocket: 15299 bytes (11.9fps)[0m
+[0;32mI (85140) websocket_client: Image sent to WebSocket: 15265 bytes (7.5fps)[0m
+[0;32mI (85309) websocket_client: Image sent to WebSocket: 15269 bytes (6.0fps)[0m
+[0;32mI (85407) websocket_client: Image sent to WebSocket: 15367 bytes (10.3fps)[0m
+[0;32mI (85541) websocket_client: Image sent to WebSocket: 15326 bytes (7.5fps)[0m
+[0;32mI (86005) websocket_client: Image sent to WebSocket: 15259 bytes (2.2fps)[0m
+[0;32mI (86721) websocket_client: Image sent to WebSocket: 15472 bytes (1.4fps)[0m
+[0;32mI (86880) websocket_client: Image sent to WebSocket: 15446 bytes (6.3fps)[0m
+[0;32mI (86963) websocket_client: Image sent to WebSocket: 15303 bytes (12.0fps)[0m
+[0;32mI (87049) websocket_client: Image sent to WebSocket: 15449 bytes (11.8fps)[0m
+[0;32mI (87193) websocket_client: Image sent to WebSocket: 15313 bytes (7.0fps)[0m
+[0;32mI (87286) websocket_client: Image sent to WebSocket: 15368 bytes (10.8fps)[0m
+[0;32mI (87441) websocket_client: Image sent to WebSocket: 15298 bytes (6.5fps)[0m
+[0;32mI (87521) websocket_client: Image sent to WebSocket: 15456 bytes (12.5fps)[0m
+[0;32mI (87605) websocket_client: Image sent to WebSocket: 15318 bytes (11.9fps)[0m
+[0;32mI (87765) websocket_client: Image sent to WebSocket: 15351 bytes (6.2fps)[0m
+[0;32mI (87927) websocket_client: Image sent to WebSocket: 15288 bytes (6.2fps)[0m
+[0;32mI (88328) websocket_client: Image sent to WebSocket: 15811 bytes (2.5fps)[0m
+[0;32mI (88975) websocket_client: Image sent to WebSocket: 15754 bytes (1.5fps)[0m
+[0;32mI (89589) websocket_client: Image sent to WebSocket: 15347 bytes (1.6fps)[0m
+[0;32mI (90203) websocket_client: Image sent to WebSocket: 15512 bytes (1.6fps)[0m
+[0;32mI (90921) websocket_client: Image sent to WebSocket: 15565 bytes (1.4fps)[0m
+[0;32mI (91535) websocket_client: Image sent to WebSocket: 15435 bytes (1.6fps)[0m
+[0;32mI (92149) websocket_client: Image sent to WebSocket: 15320 bytes (1.6fps)[0m
+[0;32mI (92240) websocket_client: Image sent to WebSocket: 15423 bytes (11.1fps)[0m
+[0;32mI (92260) esp32cam_security_gate: System information, channel: 5, layer: 2, self mac: 08:a6:f7:11:51:a8, parent bssid: c8:2e:18:25:e0:81, parent rssi: -58, free heap: 3922824[0m
+[0;32mI (92318) websocket_client: Image sent to WebSocket: 15656 bytes (12.8fps)[0m
+[0;32mI (92406) websocket_client: Image sent to WebSocket: 15407 bytes (11.5fps)[0m
+[0;32mI (92536) websocket_client: Image sent to WebSocket: 15320 bytes (7.8fps)[0m
+[0;32mI (92856) websocket_client: Image sent to WebSocket: 15380 bytes (3.1fps)[0m
+[0;32mI (92956) websocket_client: Image sent to WebSocket: 15540 bytes (10.0fps)[0m
+[0;32mI (93037) websocket_client: Image sent to WebSocket: 15412 bytes (12.5fps)[0m
+[0;32mI (93120) websocket_client: Image sent to WebSocket: 15359 bytes (12.2fps)[0m
+[0;32mI (93213) websocket_client: Image sent to WebSocket: 15366 bytes (10.8fps)[0m
+[0;32mI (93354) websocket_client: Image sent to WebSocket: 15293 bytes (7.1fps)[0m
+[0;32mI (93438) websocket_client: Image sent to WebSocket: 15309 bytes (12.0fps)[0m
+[0;32mI (93519) websocket_client: Image sent to WebSocket: 15305 bytes (12.3fps)[0m
+[0;32mI (93604) websocket_client: Image sent to WebSocket: 15310 bytes (11.9fps)[0m
+[0;32mI (93767) websocket_client: Image sent to WebSocket: 15214 bytes (6.1fps)[0m
+[0;32mI (94014) websocket_client: Image sent to WebSocket: 15765 bytes (4.0fps)[0m
+[0;32mI (94335) websocket_client: Image sent to WebSocket: 15354 bytes (3.1fps)[0m
+[0;32mI (94660) websocket_client: Image sent to WebSocket: 15357 bytes (3.1fps)[0m
+[0;32mI (94761) websocket_client: Image sent to WebSocket: 15314 bytes (10.0fps)[0m
+[0;32mI (94852) websocket_client: Image sent to WebSocket: 15383 bytes (11.1fps)[0m
+[0;32mI (95001) websocket_client: Image sent to WebSocket: 15340 bytes (6.7fps)[0m
+[0;32mI (95084) websocket_client: Image sent to WebSocket: 15378 bytes (12.0fps)[0m
+[0;32mI (95529) websocket_client: Image sent to WebSocket: 15648 bytes (2.3fps)[0m
+[0;32mI (95874) websocket_client: Image sent to WebSocket: 15405 bytes (2.9fps)[0m
+[0;32mI (95965) websocket_client: Image sent to WebSocket: 15292 bytes (11.1fps)[0m
+[0;32mI (96084) websocket_client: Image sent to WebSocket: 15295 bytes (8.5fps)[0m
+[0;32mI (96209) websocket_client: Image sent to WebSocket: 15265 bytes (8.0fps)[0m
+[0;32mI (96325) websocket_client: Image sent to WebSocket: 15397 bytes (8.7fps)[0m
+[0;32mI (96436) websocket_client: Image sent to WebSocket: 15452 bytes (9.0fps)[0m
+[0;32mI (96516) websocket_client: Image sent to WebSocket: 15236 bytes (12.7fps)[0m
+[0;32mI (96604) websocket_client: Image sent to WebSocket: 15398 bytes (11.5fps)[0m
+[0;32mI (96731) websocket_client: Image sent to WebSocket: 15330 bytes (7.9fps)[0m
+[0;32mI (97090) websocket_client: Image sent to WebSocket: 16106 bytes (2.8fps)[0m
+[0;32mI (97211) websocket_client: Image sent to WebSocket: 15453 bytes (8.3fps)[0m
+[0;32mI (97389) websocket_client: Image sent to WebSocket: 15292 bytes (5.6fps)[0m
+[0;32mI (97477) websocket_client: Image sent to WebSocket: 15356 bytes (11.4fps)[0m
+[0;32mI (97554) websocket_client: Image sent to WebSocket: 15424 bytes (13.2fps)[0m
+[0;32mI (97639) websocket_client: Image sent to WebSocket: 15424 bytes (11.9fps)[0m
+[0;32mI (97717) websocket_client: Image sent to WebSocket: 15338 bytes (12.8fps)[0m
+[0;32mI (97801) websocket_client: Image sent to WebSocket: 15356 bytes (11.9fps)[0m
+[0;32mI (97961) websocket_client: Image sent to WebSocket: 15310 bytes (6.3fps)[0m
+[0;32mI (98395) websocket_client: Image sent to WebSocket: 15377 bytes (2.3fps)[0m
+[0;32mI (98897) websocket_client: Image sent to WebSocket: 15397 bytes (2.0fps)[0m
+[0;32mI (98993) websocket_client: Image sent to WebSocket: 15485 bytes (10.5fps)[0m
+[0;32mI (99077) websocket_client: Image sent to WebSocket: 15372 bytes (12.0fps)[0m
+[0;32mI (99161) websocket_client: Image sent to WebSocket: 15280 bytes (11.9fps)[0m
+[0;32mI (99280) websocket_client: Image sent to WebSocket: 15306 bytes (8.5fps)[0m
+[0;32mI (99359) websocket_client: Image sent to WebSocket: 15400 bytes (12.7fps)[0m
+[0;32mI (99442) websocket_client: Image sent to WebSocket: 15352 bytes (12.2fps)[0m
+[0;32mI (99646) websocket_client: Image sent to WebSocket: 15316 bytes (4.9fps)[0m
+[0;32mI (99774) websocket_client: Image sent to WebSocket: 15409 bytes (7.9fps)[0m
+[0;32mI (100138) websocket_client: Image sent to WebSocket: 15373 bytes (2.7fps)[0m
+[0;32mI (100233) websocket_client: Image sent to WebSocket: 15648 bytes (10.5fps)[0m
+[0;32mI (100313) websocket_client: Image sent to WebSocket: 15492 bytes (12.7fps)[0m
+[0;32mI (100398) websocket_client: Image sent to WebSocket: 15298 bytes (11.9fps)[0m
+[0;32mI (100484) websocket_client: Image sent to WebSocket: 15355 bytes (11.8fps)[0m
+[0;32mI (100597) websocket_client: Image sent to WebSocket: 15251 bytes (8.9fps)[0m
+[0;32mI (100685) websocket_client: Image sent to WebSocket: 15321 bytes (11.4fps)[0m
+[0;32mI (100840) websocket_client: Image sent to WebSocket: 15359 bytes (6.5fps)[0m
+[0;32mI (100966) websocket_client: Image sent to WebSocket: 15822 bytes (8.0fps)[0m
+[0;32mI (101095) websocket_client: Image sent to WebSocket: 15265 bytes (7.8fps)[0m
+[0;32mI (101570) websocket_client: Image sent to WebSocket: 15286 bytes (2.1fps)[0m
+[0;32mI (101907) websocket_client: Image sent to WebSocket: 15323 bytes (3.0fps)[0m
+[0;32mI (101998) websocket_client: Image sent to WebSocket: 15377 bytes (11.1fps)[0m
+[0;32mI (102087) websocket_client: Image sent to WebSocket: 15496 bytes (11.2fps)[0m
+[0;32mI (102250) websocket_client: Image sent to WebSocket: 15284 bytes (6.2fps)[0m
+[0;32mI (102260) esp32cam_security_gate: System information, channel: 5, layer: 2, self mac: 08:a6:f7:11:51:a8, parent bssid: c8:2e:18:25:e0:81, parent rssi: -58, free heap: 3924384[0m
+[0;32mI (102424) websocket_client: Image sent to WebSocket: 15394 bytes (5.7fps)[0m
+[0;32mI (102520) websocket_client: Image sent to WebSocket: 15315 bytes (10.4fps)[0m
+[0;32mI (102650) websocket_client: Image sent to WebSocket: 15381 bytes (7.8fps)[0m
+[0;32mI (102895) websocket_client: Image sent to WebSocket: 15315 bytes (4.1fps)[0m
+[0;32mI (102997) websocket_client: Image sent to WebSocket: 15543 bytes (9.8fps)[0m
+[0;32mI (103072) websocket_client: Image sent to WebSocket: 15468 bytes (13.5fps)[0m
+[0;32mI (103157) websocket_client: Image sent to WebSocket: 15367 bytes (11.8fps)[0m
+[0;32mI (103619) websocket_client: Image sent to WebSocket: 15313 bytes (2.2fps)[0m
+[0;32mI (103730) websocket_client: Image sent to WebSocket: 15530 bytes (9.0fps)[0m
+[0;32mI (103842) websocket_client: Image sent to WebSocket: 15308 bytes (9.0fps)[0m
+[0;32mI (103967) websocket_client: Image sent to WebSocket: 15312 bytes (8.1fps)[0m
+[0;32mI (104151) websocket_client: Image sent to WebSocket: 15329 bytes (5.4fps)[0m
+[0;32mI (104233) websocket_client: Image sent to WebSocket: 15335 bytes (12.3fps)[0m
+[0;32mI (104849) websocket_client: Image sent to WebSocket: 15613 bytes (1.6fps)[0m
+[0;32mI (105564) websocket_client: Image sent to WebSocket: 15311 bytes (1.4fps)[0m
+[0;32mI (105882) websocket_client: Image sent to WebSocket: 15306 bytes (3.1fps)[0m
+[0;32mI (105995) websocket_client: Image sent to WebSocket: 15345 bytes (8.9fps)[0m
+[0;32mI (106077) websocket_client: Image sent to WebSocket: 15510 bytes (12.2fps)[0m
+[0;32mI (106198) websocket_client: Image sent to WebSocket: 15375 bytes (8.3fps)[0m
+[0;32mI (106793) websocket_client: Image sent to WebSocket: 15289 bytes (1.7fps)[0m
+[0;32mI (107612) websocket_client: Image sent to WebSocket: 15381 bytes (1.2fps)[0m
+[0;32mI (108228) websocket_client: Image sent to WebSocket: 15563 bytes (1.6fps)[0m
+[0;32mI (109046) websocket_client: Image sent to WebSocket: 15568 bytes (1.2fps)[0m
+[0;32mI (109660) websocket_client: Image sent to WebSocket: 15333 bytes (1.6fps)[0m
+[0;32mI (110274) websocket_client: Image sent to WebSocket: 15436 bytes (1.6fps)[0m
+[0;32mI (110424) websocket_client: Image sent to WebSocket: 15764 bytes (6.7fps)[0m
+[0;32mI (110514) websocket_client: Image sent to WebSocket: 15341 bytes (11.1fps)[0m
+[0;32mI (110619) websocket_client: Image sent to WebSocket: 15362 bytes (9.6fps)[0m
+[0;32mI (110726) websocket_client: Image sent to WebSocket: 15366 bytes (9.4fps)[0m
+[0;32mI (110872) websocket_client: Image sent to WebSocket: 15305 bytes (6.9fps)[0m
+[0;32mI (110954) websocket_client: Image sent to WebSocket: 15254 bytes (12.2fps)[0m
+[0;32mI (111034) websocket_client: Image sent to WebSocket: 15314 bytes (12.5fps)[0m
+[0;32mI (111119) websocket_client: Image sent to WebSocket: 15342 bytes (11.9fps)[0m
+[0;32mI (111244) websocket_client: Image sent to WebSocket: 15402 bytes (8.1fps)[0m
+[0;32mI (111349) websocket_client: Image sent to WebSocket: 15356 bytes (9.5fps)[0m
+[0;32mI (111438) websocket_client: Image sent to WebSocket: 15242 bytes (11.2fps)[0m
+[0;32mI (111880) websocket_client: Image sent to WebSocket: 15234 bytes (2.3fps)[0m
+[0;32mI (112033) websocket_client: Image sent to WebSocket: 15458 bytes (6.5fps)[0m
+[0;32mI (112108) websocket_client: Image sent to WebSocket: 15563 bytes (13.5fps)[0m
+[0;32mI (112191) websocket_client: Image sent to WebSocket: 15410 bytes (12.2fps)[0m
+[0;32mI (112260) esp32cam_security_gate: System information, channel: 5, layer: 2, self mac: 08:a6:f7:11:51:a8, parent bssid: c8:2e:18:25:e0:81, parent rssi: -58, free heap: 3916576[0m
+[0;32mI (112270) websocket_client: Image sent to WebSocket: 15293 bytes (12.7fps)[0m
+[0;33mW (112287) cam_hal: NO-SOI[0m
+[0;32mI (112737) websocket_client: Image sent to WebSocket: 15715 bytes (2.1fps)[0m
+[0;32mI (113382) websocket_client: Image sent to WebSocket: 15433 bytes (1.6fps)[0m
+[0;32mI (113481) websocket_client: Image sent to WebSocket: 15286 bytes (10.1fps)[0m
+[0;32mI (113595) websocket_client: Image sent to WebSocket: 15317 bytes (8.8fps)[0m
+[0;32mI (113757) websocket_client: Image sent to WebSocket: 15386 bytes (6.2fps)[0m
+[0;32mI (114166) websocket_client: Image sent to WebSocket: 15344 bytes (2.4fps)[0m
+[0;32mI (114883) websocket_client: Image sent to WebSocket: 15309 bytes (1.4fps)[0m
+[0;32mI (115497) websocket_client: Image sent to WebSocket: 15422 bytes (1.6fps)[0m
+[0;32mI (116112) websocket_client: Image sent to WebSocket: 15757 bytes (1.6fps)[0m
+[0;32mI (116727) websocket_client: Image sent to WebSocket: 15398 bytes (1.6fps)[0m
+[0;32mI (117341) websocket_client: Image sent to WebSocket: 15280 bytes (1.6fps)[0m
+[0;32mI (117895) websocket_client: Image sent to WebSocket: 15409 bytes (1.8fps)[0m
+[0;32mI (117995) websocket_client: Image sent to WebSocket: 15311 bytes (10.0fps)[0m
+[0;32mI (118110) websocket_client: Image sent to WebSocket: 15303 bytes (8.8fps)[0m
+[0;32mI (118195) websocket_client: Image sent to WebSocket: 15400 bytes (11.8fps)[0m
+[0;32mI (118312) websocket_client: Image sent to WebSocket: 15341 bytes (8.6fps)[0m
+[0;32mI (118441) websocket_client: Image sent to WebSocket: 15313 bytes (7.8fps)[0m
+[0;32mI (118979) websocket_client: Image sent to WebSocket: 15481 bytes (1.9fps)[0m
+[0;32mI (119593) websocket_client: Image sent to WebSocket: 15858 bytes (1.6fps)[0m
+[0;32mI (120209) websocket_client: Image sent to WebSocket: 15295 bytes (1.6fps)[0m
+[0;32mI (120822) websocket_client: Image sent to WebSocket: 15485 bytes (1.6fps)[0m
+[0;32mI (120960) websocket_client: Image sent to WebSocket: 15410 bytes (7.2fps)[0m
+[0;32mI (121067) websocket_client: Image sent to WebSocket: 15293 bytes (9.4fps)[0m
+[0;32mI (121151) websocket_client: Image sent to WebSocket: 15286 bytes (12.0fps)[0m
+[0;32mI (121226) websocket_client: Image sent to WebSocket: 15772 bytes (13.3fps)[0m
+[0;32mI (121315) websocket_client: Image sent to WebSocket: 15607 bytes (11.2fps)[0m
+[0;32mI (121850) websocket_client: Image sent to WebSocket: 15349 bytes (1.9fps)[0m
+[0;32mI (121985) websocket_client: Image sent to WebSocket: 15366 bytes (7.5fps)[0m
+[0;32mI (122072) websocket_client: Image sent to WebSocket: 15198 bytes (11.5fps)[0m
+[0;32mI (122228) websocket_client: Image sent to WebSocket: 15375 bytes (6.4fps)[0m
+[0;32mI (122260) esp32cam_security_gate: System information, channel: 5, layer: 2, self mac: 08:a6:f7:11:51:a8, parent bssid: c8:2e:18:25:e0:81, parent rssi: -58, free heap: 3924368[0m
+[0;32mI (122312) websocket_client: Image sent to WebSocket: 15282 bytes (12.0fps)[0m
+[0;32mI (122477) websocket_client: Image sent to WebSocket: 15324 bytes (6.1fps)[0m
+[0;32mI (122871) websocket_client: Image sent to WebSocket: 15334 bytes (2.5fps)[0m
+[0;32mI (123416) websocket_client: Image sent to WebSocket: 15322 bytes (1.8fps)[0m
+[0;32mI (123522) websocket_client: Image sent to WebSocket: 15285 bytes (9.5fps)[0m
+[0;32mI (123628) websocket_client: Image sent to WebSocket: 15298 bytes (9.4fps)[0m
+[0;32mI (123711) websocket_client: Image sent to WebSocket: 15351 bytes (12.0fps)[0m
+[0;32mI (123872) websocket_client: Image sent to WebSocket: 15299 bytes (6.2fps)[0m
+[0;32mI (123993) websocket_client: Image sent to WebSocket: 16181 bytes (8.3fps)[0m
+[0;32mI (124110) websocket_client: Image sent to WebSocket: 15377 bytes (8.5fps)[0m
+[0;32mI (124235) websocket_client: Image sent to WebSocket: 15214 bytes (8.0fps)[0m
+[0;32mI (124364) websocket_client: Image sent to WebSocket: 15280 bytes (7.8fps)[0m
+[0;32mI (124462) websocket_client: Image sent to WebSocket: 15271 bytes (10.2fps)[0m
+[0;32mI (124550) websocket_client: Image sent to WebSocket: 15279 bytes (11.5fps)[0m
+[0;32mI (124693) websocket_client: Image sent to WebSocket: 15212 bytes (7.0fps)[0m
+[0;32mI (124787) websocket_client: Image sent to WebSocket: 15305 bytes (10.6fps)[0m
+[0;32mI (124868) websocket_client: Image sent to WebSocket: 15209 bytes (12.3fps)[0m
+[0;32mI (124958) websocket_client: Image sent to WebSocket: 15266 bytes (11.2fps)[0m
+[0;32mI (125102) websocket_client: Image sent to WebSocket: 15230 bytes (6.9fps)[0m
+[0;32mI (125191) websocket_client: Image sent to WebSocket: 15342 bytes (11.2fps)[0m
+[0;32mI (125351) websocket_client: Image sent to WebSocket: 15408 bytes (6.2fps)[0m
+[0;32mI (125512) websocket_client: Image sent to WebSocket: 15273 bytes (6.2fps)[0m
+[0;32mI (125943) websocket_client: Image sent to WebSocket: 15383 bytes (2.3fps)[0m
+[0;32mI (126557) websocket_client: Image sent to WebSocket: 15506 bytes (1.6fps)[0m
+[0;32mI (126677) websocket_client: Image sent to WebSocket: 15345 bytes (8.3fps)[0m
+[0;32mI (126832) websocket_client: Image sent to WebSocket: 15336 bytes (6.5fps)[0m
+[0;32mI (127274) websocket_client: Image sent to WebSocket: 15416 bytes (2.3fps)[0m
+[0;32mI (127888) websocket_client: Image sent to WebSocket: 15254 bytes (1.6fps)[0m
+[0;32mI (128503) websocket_client: Image sent to WebSocket: 15550 bytes (1.6fps)[0m
+[0;32mI (129117) websocket_client: Image sent to WebSocket: 15470 bytes (1.6fps)[0m
+[0;32mI (129462) websocket_client: Image sent to WebSocket: 15312 bytes (2.9fps)[0m
+[0;32mI (129551) websocket_client: Image sent to WebSocket: 15269 bytes (11.2fps)[0m
+[0;32mI (129709) websocket_client: Image sent to WebSocket: 15308 bytes (6.4fps)[0m
+[0;32mI (129959) websocket_client: Image sent to WebSocket: 15394 bytes (4.0fps)[0m
+[0;32mI (130123) websocket_client: Image sent to WebSocket: 15230 bytes (6.1fps)[0m
+[0;32mI (130222) websocket_client: Image sent to WebSocket: 15430 bytes (10.2fps)[0m
+[0;32mI (130304) websocket_client: Image sent to WebSocket: 15278 bytes (12.2fps)[0m
+[0;32mI (130392) websocket_client: Image sent to WebSocket: 15344 bytes (11.5fps)[0m
+[0;32mI (130535) websocket_client: Image sent to WebSocket: 15265 bytes (7.0fps)[0m
+[0;32mI (130623) websocket_client: Image sent to WebSocket: 15372 bytes (11.5fps)[0m
+[0;32mI (130716) websocket_client: Image sent to WebSocket: 15227 bytes (10.8fps)[0m
+[0;32mI (130874) websocket_client: Image sent to WebSocket: 15444 bytes (6.4fps)[0m
+[0;32mI (131000) websocket_client: Image sent to WebSocket: 15348 bytes (8.0fps)[0m
+[0;32mI (131112) websocket_client: Image sent to WebSocket: 15283 bytes (8.9fps)[0m
+[0;32mI (131288) websocket_client: Image sent to WebSocket: 15204 bytes (5.7fps)[0m
+[0;32mI (131439) websocket_client: Image sent to WebSocket: 15232 bytes (6.7fps)[0m
+[0;32mI (131885) websocket_client: Image sent to WebSocket: 15536 bytes (2.2fps)[0m
+[0;32mI (132209) websocket_client: Image sent to WebSocket: 15395 bytes (3.1fps)[0m
+[0;32mI (132260) esp32cam_security_gate: System information, channel: 5, layer: 2, self mac: 08:a6:f7:11:51:a8, parent bssid: c8:2e:18:25:e0:81, parent rssi: -58, free heap: 3921276[0m
+[0;32mI (132312) websocket_client: Image sent to WebSocket: 15366 bytes (9.7fps)[0m
+[0;32mI (132443) websocket_client: Image sent to WebSocket: 15217 bytes (7.7fps)[0m
+[0;32mI (132592) websocket_client: Image sent to WebSocket: 15221 bytes (6.7fps)[0m
+[0;32mI (132754) websocket_client: Image sent to WebSocket: 15354 bytes (6.2fps)[0m
+[0;32mI (132925) websocket_client: Image sent to WebSocket: 15350 bytes (5.8fps)[0m
+[0;32mI (133032) websocket_client: Image sent to WebSocket: 15270 bytes (9.4fps)[0m
+[0;32mI (133167) websocket_client: Image sent to WebSocket: 15224 bytes (7.4fps)[0m
+[0;32mI (133828) websocket_client: Image sent to WebSocket: 15284 bytes (1.5fps)[0m
+[0;32mI (134002) websocket_client: Image sent to WebSocket: 15384 bytes (5.7fps)[0m
+[0;32mI (134544) websocket_client: Image sent to WebSocket: 15418 bytes (1.8fps)[0m
+[0;32mI (135160) websocket_client: Image sent to WebSocket: 15331 bytes (1.6fps)[0m
+[0;32mI (135700) websocket_client: Image sent to WebSocket: 15260 bytes (1.9fps)[0m
+[0;32mI (135785) websocket_client: Image sent to WebSocket: 15287 bytes (11.8fps)[0m
+[0;32mI (135909) websocket_client: Image sent to WebSocket: 15318 bytes (8.1fps)[0m
+[0;32mI (136023) websocket_client: Image sent to WebSocket: 15349 bytes (8.8fps)[0m
+[0;32mI (136106) websocket_client: Image sent to WebSocket: 15390 bytes (12.0fps)[0m
+[0;32mI (136224) websocket_client: Image sent to WebSocket: 15390 bytes (8.5fps)[0m
+[0;32mI (136797) websocket_client: Image sent to WebSocket: 15329 bytes (1.7fps)[0m
+[0;32mI (136981) websocket_client: Image sent to WebSocket: 15249 bytes (5.5fps)[0m
+[0;32mI (137059) websocket_client: Image sent to WebSocket: 15251 bytes (13.0fps)[0m
+[0;32mI (137140) websocket_client: Image sent to WebSocket: 15226 bytes (12.5fps)[0m
+[0;32mI (137227) websocket_client: Image sent to WebSocket: 15375 bytes (11.6fps)[0m
+[0;32mI (137720) websocket_client: Image sent to WebSocket: 15263 bytes (2.0fps)[0m
+[0;32mI (138460) websocket_client: Image sent to WebSocket: 15273 bytes (1.4fps)[0m
+[0;32mI (138681) websocket_client: Image sent to WebSocket: 15392 bytes (4.5fps)[0m
+[0;32mI (138996) websocket_client: Image sent to WebSocket: 15296 bytes (3.2fps)[0m
+[0;32mI (139100) websocket_client: Image sent to WebSocket: 15257 bytes (9.6fps)[0m
+[0;32mI (139194) websocket_client: Image sent to WebSocket: 15307 bytes (10.8fps)[0m
+[0;32mI (139333) websocket_client: Image sent to WebSocket: 15270 bytes (7.2fps)[0m
+[0;32mI (139422) websocket_client: Image sent to WebSocket: 15343 bytes (11.2fps)[0m
+[0;32mI (139504) websocket_client: Image sent to WebSocket: 15320 bytes (12.3fps)[0m
+[0;32mI (139588) websocket_client: Image sent to WebSocket: 15370 bytes (11.9fps)[0m
+[0;32mI (139756) websocket_client: Image sent to WebSocket: 15249 bytes (6.0fps)[0m
+[0;32mI (142260) esp32cam_security_gate: System information, channel: 5, layer: 2, self mac: 08:a6:f7:11:51:a8, parent bssid: c8:2e:18:25:e0:81, parent rssi: -59, free heap: 3916584[0m
+I (145765) wifi:bcn_timeout,ap_probe_send_start
+I (148268) wifi:ap_probe_send over, resett wifi status to disassoc
+I (148269) wifi:state: run -> init (0xc800)
+I (148270) wifi:pm stop, total sleep time: 0 us / 142236342 us
+
+I (148273) wifi:new:<5,0>, old:<5,1>, ap:<5,1>, sta:<5,1>, prof:1, snd_ch_cfg:0x0
+[0;31mE (148285) transport_base: tcp_write error, errno=Software caused connection abort[0m
+[0;31mE (148292) websocket_client: esp_transport_write() returned -1, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=113[0m
+[0;31mE (148301) websocket_client: WebSocket client error[0m
+[0;32mI (148312) websocket_client: Reconnect after 1000 ms[0m
+[0;32mI (148312) websocket_client: WebSocket client connected[0m
+[0;31mE (148318) websocket_client: Failed to send the buffer[0m
+[0;33mW (148324) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+W (152260) wifi:Haven't to connect to a suitable AP now!
+[0;32mI (152261) esp32cam_security_gate: System information, channel: 5, layer: 0, self mac: 08:a6:f7:11:51:a8, parent bssid: 00:00:00:00:00:00, parent rssi: -120, free heap: 3924748[0m
+[0;32mI (153216) [vendor_ie]: esp_mesh_lite_wifi_connect return ESP_OK [0m
+[0;32mI (153217) [ESP_Mesh_Lite_Comm]: Retry to connect to the AP [0m
+[0;32mI (158214) [vendor_ie]: RTC store: temp_mesh_id:15; ssid:Tran Con; bssid:00:00:00:00:00:00; crc:1706981673 [0m
+[0;32mI (158219) [vendor_ie]: esp_mesh_lite_wifi_connect return ESP_OK [0m
+[0;32mI (158221) [ESP_Mesh_Lite_Comm]: Retry to connect to the AP [0m
+I (158397) wifi:ap channel adjust o:5,1 n:1,1
+I (158398) wifi:new:<1,0>, old:<5,0>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0
+I (158403) wifi:state: init -> auth (0xb0)
+I (158411) wifi:state: auth -> assoc (0x0)
+I (158416) wifi:state: assoc -> run (0x10)
+I (158518) wifi:connected with Tran Con, aid = 3, channel 1, BW20, bssid = d8:e8:44:03:77:28
+I (158518) wifi:security: WPA2-PSK, phy: bgn, rssi: -90
+I (158521) wifi:pm start, type: 1
+
+I (158523) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (158532) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;31mE (159337) esp-tls: [sock=59] select() timeout[0m
+[0;31mE (159338) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (159338) transport_ws: Error connecting to host 192.168.2.88:3000[0m
+[0;31mE (159346) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[0;31mE (159363) websocket_client: WebSocket client error[0m
+[0;32mI (159369) websocket_client: Reconnect after 1000 ms[0m
+[0;32mI (159375) websocket_client: WebSocket client connected[0m
+[0;31mE (159380) websocket_client: Websocket client is not connected[0m
+[0;33mW (159387) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;31mE (160398) esp-tls: [sock=59] connect() error: Host is unreachable[0m
+[0;31mE (160399) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (160401) transport_ws: Error connecting to host 192.168.2.88:3000[0m
+[0;31mE (160408) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=118[0m
+[0;31mE (160426) websocket_client: WebSocket client error[0m
+[0;32mI (160432) websocket_client: Reconnect after 1000 ms[0m
+[0;32mI (160437) websocket_client: WebSocket client connected[0m
+[0;31mE (160443) websocket_client: Websocket client is not connected[0m
+[0;33mW (160450) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;33mW (160461) cam_hal: NO-SOI[0m
+[0;31mE (161459) esp-tls: [sock=59] connect() error: Host is unreachable[0m
+[0;31mE (161461) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (161463) transport_ws: Error connecting to host 192.168.2.88:3000[0m
+[0;31mE (161470) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=118[0m
+[0;31mE (161488) websocket_client: WebSocket client error[0m
+[0;32mI (161494) websocket_client: Reconnect after 1000 ms[0m
+[0;32mI (161499) websocket_client: WebSocket client connected[0m
+[0;31mE (161505) websocket_client: Websocket client is not connected[0m
+[0;33mW (161511) websocket_client: Waiting for WebSocket connection to resume sending image...[0m
+[0;32mI (161546) esp_netif_handlers: sta ip: 192.168.2.13, mask: 255.255.255.0, gw: 192.168.2.253[0m
+[0;32mI (161547) bridge_wifi: Connected with IP Address:192.168.2.13[0m
+[0;32mI (161552) [vendor_ie]: RTC store: temp_mesh_id:13; ssid:Tran Con; bssid:00:00:00:00:00:00; crc:2117468965 [0m
+[0;32mI (162260) esp32cam_security_gate: System information, channel: 1, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: d8:e8:44:03:77:28, parent rssi: -87, free heap: 3924540[0m
+[0;32mI (162642) websocket_client: WebSocket client connected[0m
+[0;32mI (162931) websocket_client: Image sent to WebSocket: 15455 bytes (0.0fps)[0m
+[0;32mI (163139) websocket_client: Image sent to WebSocket: 15541 bytes (4.8fps)[0m
+[0;32mI (163390) websocket_client: Image sent to WebSocket: 15376 bytes (4.0fps)[0m
+[0;32mI (163655) websocket_client: Image sent to WebSocket: 15237 bytes (3.8fps)[0m
+[0;32mI (163916) websocket_client: Image sent to WebSocket: 15329 bytes (3.8fps)[0m
+[0;32mI (164283) websocket_client: Image sent to WebSocket: 15491 bytes (2.7fps)[0m
+[0;32mI (164581) websocket_client: Image sent to WebSocket: 15228 bytes (3.4fps)[0m
+[0;32mI (164911) websocket_client: Image sent to WebSocket: 15413 bytes (3.0fps)[0m
+[0;32mI (165215) websocket_client: Image sent to WebSocket: 15357 bytes (3.3fps)[0m
+[0;32mI (165443) websocket_client: Image sent to WebSocket: 15410 bytes (4.4fps)[0m
+[0;32mI (165787) websocket_client: Image sent to WebSocket: 15400 bytes (2.9fps)[0m
+[0;32mI (166109) websocket_client: Image sent to WebSocket: 15319 bytes (3.1fps)[0m
+[0;32mI (166354) websocket_client: Image sent to WebSocket: 15345 bytes (4.1fps)[0m
+[0;32mI (166561) websocket_client: Image sent to WebSocket: 15333 bytes (4.8fps)[0m
+[0;32mI (166839) websocket_client: Image sent to WebSocket: 15362 bytes (3.6fps)[0m
+[0;32mI (167067) websocket_client: Image sent to WebSocket: 15396 bytes (4.4fps)[0m
+[0;32mI (167303) websocket_client: Image sent to WebSocket: 15539 bytes (4.2fps)[0m
+[0;32mI (167544) websocket_client: Image sent to WebSocket: 15349 bytes (4.2fps)[0m
+[0;32mI (167788) websocket_client: Image sent to WebSocket: 15348 bytes (4.1fps)[0m
+[0;32mI (168085) websocket_client: Image sent to WebSocket: 15382 bytes (3.4fps)[0m
+[0;32mI (168306) websocket_client: Image sent to WebSocket: 15365 bytes (4.5fps)[0m
+[0;32mI (168569) websocket_client: Image sent to WebSocket: 15687 bytes (3.8fps)[0m
+[0;32mI (168788) websocket_client: Image sent to WebSocket: 15436 bytes (4.6fps)[0m
+[0;32mI (169092) websocket_client: Image sent to WebSocket: 15481 bytes (3.3fps)[0m
+[0;32mI (169420) websocket_client: Image sent to WebSocket: 15352 bytes (3.1fps)[0m
+[0;32mI (169642) websocket_client: Image sent to WebSocket: 15338 bytes (4.5fps)[0m
+[0;32mI (169894) websocket_client: Image sent to WebSocket: 15488 bytes (4.0fps)[0m
+[0;32mI (170221) websocket_client: Image sent to WebSocket: 15565 bytes (3.1fps)[0m
+[0;32mI (170503) websocket_client: Image sent to WebSocket: 15332 bytes (3.5fps)[0m
+[0;32mI (170780) websocket_client: Image sent to WebSocket: 15474 bytes (3.6fps)[0m
+[0;32mI (171068) websocket_client: Image sent to WebSocket: 15429 bytes (3.5fps)[0m
+[0;32mI (171347) websocket_client: Image sent to WebSocket: 15272 bytes (3.6fps)[0m
+[0;32mI (171681) websocket_client: Image sent to WebSocket: 15425 bytes (3.0fps)[0m
+[0;32mI (171968) websocket_client: Image sent to WebSocket: 15531 bytes (3.5fps)[0m
+[0;32mI (172260) esp32cam_security_gate: System information, channel: 1, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: d8:e8:44:03:77:28, parent rssi: -87, free heap: 3918160[0m
+[0;32mI (172355) websocket_client: Image sent to WebSocket: 15478 bytes (2.6fps)[0m
+[0;32mI (172562) websocket_client: Image sent to WebSocket: 15480 bytes (4.9fps)[0m
+[0;32mI (172870) websocket_client: Image sent to WebSocket: 15305 bytes (3.3fps)[0m
+[0;32mI (173101) websocket_client: Image sent to WebSocket: 15475 bytes (4.3fps)[0m
+[0;32mI (173382) websocket_client: Image sent to WebSocket: 15405 bytes (3.6fps)[0m
+[0;32mI (173628) websocket_client: Image sent to WebSocket: 15328 bytes (4.1fps)[0m
+[0;32mI (173921) websocket_client: Image sent to WebSocket: 15410 bytes (3.4fps)[0m
+[0;32mI (174328) websocket_client: Image sent to WebSocket: 15353 bytes (2.5fps)[0m
+[0;32mI (174573) websocket_client: Image sent to WebSocket: 15488 bytes (4.1fps)[0m
+[0;32mI (174915) websocket_client: Image sent to WebSocket: 15328 bytes (2.9fps)[0m
+[0;32mI (175165) websocket_client: Image sent to WebSocket: 15385 bytes (4.0fps)[0m
+[0;32mI (175503) websocket_client: Image sent to WebSocket: 15431 bytes (3.0fps)[0m
+[0;32mI (175789) websocket_client: Image sent to WebSocket: 15492 bytes (3.5fps)[0m
+[0;32mI (176051) websocket_client: Image sent to WebSocket: 15269 bytes (3.8fps)[0m
+[0;32mI (176416) websocket_client: Image sent to WebSocket: 15240 bytes (2.7fps)[0m
+[0;32mI (176791) websocket_client: Image sent to WebSocket: 15384 bytes (2.7fps)[0m
+[0;32mI (177098) websocket_client: Image sent to WebSocket: 15395 bytes (3.3fps)[0m
+[0;32mI (177488) websocket_client: Image sent to WebSocket: 15427 bytes (2.6fps)[0m
+[0;32mI (177719) websocket_client: Image sent to WebSocket: 15285 bytes (4.3fps)[0m
+[0;32mI (178093) websocket_client: Image sent to WebSocket: 15308 bytes (2.7fps)[0m
+[0;32mI (178383) websocket_client: Image sent to WebSocket: 15354 bytes (3.5fps)[0m
+[0;32mI (178666) websocket_client: Image sent to WebSocket: 15333 bytes (3.5fps)[0m
+[0;32mI (178956) websocket_client: Image sent to WebSocket: 15329 bytes (3.4fps)[0m
+[0;32mI (179271) websocket_client: Image sent to WebSocket: 15478 bytes (3.2fps)[0m
+[0;32mI (179482) websocket_client: Image sent to WebSocket: 15428 bytes (4.8fps)[0m
+[0;32mI (179768) websocket_client: Image sent to WebSocket: 15346 bytes (3.5fps)[0m
+[0;32mI (180059) websocket_client: Image sent to WebSocket: 15299 bytes (3.4fps)[0m
+[0;32mI (180353) websocket_client: Image sent to WebSocket: 15341 bytes (3.4fps)[0m
+[0;32mI (180589) websocket_client: Image sent to WebSocket: 15349 bytes (4.2fps)[0m
+[0;32mI (181198) websocket_client: Image sent to WebSocket: 15421 bytes (1.6fps)[0m
+[0;32mI (182260) esp32cam_security_gate: System information, channel: 1, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: d8:e8:44:03:77:28, parent rssi: -87, free heap: 3919692[0m
+[0;32mI (183989) websocket_client: Image sent to WebSocket: 15484 bytes (0.4fps)[0m
+[0;32mI (184238) websocket_client: Image sent to WebSocket: 15429 bytes (4.0fps)[0m
+[0;32mI (184526) websocket_client: Image sent to WebSocket: 15514 bytes (3.5fps)[0m
+[0;32mI (184818) websocket_client: Image sent to WebSocket: 15337 bytes (3.4fps)[0m
+[0;32mI (185112) websocket_client: Image sent to WebSocket: 15380 bytes (3.4fps)[0m
+[0;32mI (185363) websocket_client: Image sent to WebSocket: 15401 bytes (4.0fps)[0m
+[0;32mI (185623) websocket_client: Image sent to WebSocket: 15387 bytes (3.8fps)[0m
+[0;32mI (185941) websocket_client: Image sent to WebSocket: 15356 bytes (3.1fps)[0m
+[0;32mI (186227) websocket_client: Image sent to WebSocket: 15287 bytes (3.5fps)[0m
+[0;32mI (186486) websocket_client: Image sent to WebSocket: 15397 bytes (3.9fps)[0m
+[0;32mI (186746) websocket_client: Image sent to WebSocket: 15530 bytes (3.9fps)[0m
+[0;32mI (187038) websocket_client: Image sent to WebSocket: 15325 bytes (3.4fps)[0m
+[0;32mI (187340) websocket_client: Image sent to WebSocket: 15516 bytes (3.3fps)[0m
+[0;32mI (187615) websocket_client: Image sent to WebSocket: 15458 bytes (3.6fps)[0m
+[0;32mI (187925) websocket_client: Image sent to WebSocket: 15328 bytes (3.2fps)[0m
+[0;32mI (188229) websocket_client: Image sent to WebSocket: 15329 bytes (3.3fps)[0m
+[0;32mI (188463) websocket_client: Image sent to WebSocket: 15383 bytes (4.3fps)[0m
+[0;32mI (188834) websocket_client: Image sent to WebSocket: 15392 bytes (2.7fps)[0m
+[0;32mI (189075) websocket_client: Image sent to WebSocket: 15363 bytes (4.1fps)[0m
+[0;32mI (189525) websocket_client: Image sent to WebSocket: 15415 bytes (2.2fps)[0m
+[0;32mI (189799) websocket_client: Image sent to WebSocket: 15234 bytes (3.7fps)[0m
+[0;32mI (190032) websocket_client: Image sent to WebSocket: 15478 bytes (4.3fps)[0m
+[0;32mI (190276) websocket_client: Image sent to WebSocket: 15302 bytes (4.1fps)[0m
+[0;32mI (190575) websocket_client: Image sent to WebSocket: 15448 bytes (3.4fps)[0m
+[0;32mI (190887) websocket_client: Image sent to WebSocket: 15336 bytes (3.2fps)[0m
+[0;32mI (191197) websocket_client: Image sent to WebSocket: 15326 bytes (3.2fps)[0m
+[0;32mI (191544) websocket_client: Image sent to WebSocket: 15387 bytes (2.9fps)[0m
+[0;32mI (191819) websocket_client: Image sent to WebSocket: 15324 bytes (3.6fps)[0m
+[0;32mI (192073) websocket_client: Image sent to WebSocket: 15194 bytes (3.9fps)[0m
+[0;32mI (192260) esp32cam_security_gate: System information, channel: 1, layer: 1, self mac: 08:a6:f7:11:51:a8, parent bssid: d8:e8:44:03:77:28, parent rssi: -88, free heap: 3916584[0m
+[0;32mI (192324) websocket_client: Image sent to WebSocket: 15409 bytes (4.0fps)[0m
+[0;32mI (192592) websocket_client: Image sent to WebSocket: 15371 bytes (3.7fps)[0m
+[0;32mI (192885) websocket_client: Image sent to WebSocket: 15431 bytes (3.4fps)[0m
+[0;32mI (193184) websocket_client: Image sent to WebSocket: 15323 bytes (3.3fps)[0m
+[0;32mI (193523) websocket_client: Image sent to WebSocket: 15337 bytes (3.0fps)[0m
+[0;32mI (193786) websocket_client: Image sent to WebSocket: 15297 bytes (3.8fps)[0m
+[0;32mI (194098) websocket_client: Image sent to WebSocket: 15340 bytes (3.2fps)[0m
+[0;32mI (194363) websocket_client: Image sent to WebSocket: 15427 bytes (3.8fps)[0m
+[0;32mI (194701) websocket_client: Image sent to WebSocket: 15308 bytes (3.0fps)[0m
+[0;32mI (194976) websocket_client: Image sent to WebSocket: 15224 bytes (3.6fps)[0m
+[0;32mI (195278) websocket_client: Image sent to WebSocket: 15283 bytes (3.3fps)[0m
+[0;32mI (195534) websocket_client: Image sent to WebSocket: 15320 bytes (3.9fps)[0m
+[0;32mI (195807) websocket_client: Image sent to WebSocket: 15366 bytes (3.7fps)[0m
+[0;32mI (196083) websocket_client: Image sent to WebSocket: 15284 bytes (3.6fps)[0m
+[0;32mI (196349) websocket_client: Image sent to WebSocket: 15271 bytes (3.8fps)[0m
+[0;32mI (196679) websocket_client: Image sent to WebSocket: 15336 bytes (3.0fps)[0m
+[0;32mI (197062) websocket_client: Image sent to WebSocket: 15467 bytes (2.6fps)[0m
+[0;32mI (197349) websocket_client: Image sent to WebSocket: 15415 bytes (3.5fps)[0m
+[0;32mI (197610) websocket_client: Image sent to WebSocket: 15251 bytes (3.8fps)[0m
+[0;32mI (197894) websocket_client: Image sent to WebSocket: 15394 bytes (3.5fps)[0m
+[0;32mI (198163) websocket_client: Image sent to WebSocket: 15295 bytes (3.7fps)[0m
+[0;32mI (198438) websocket_client: Image sent to WebSocket: 15188 bytes (3.6fps)[0m

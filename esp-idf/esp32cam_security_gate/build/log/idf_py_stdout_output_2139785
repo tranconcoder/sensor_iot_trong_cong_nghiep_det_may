@@ -1,0 +1,2847 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (29) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (29) boot: Unicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (82) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (97) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (105) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (112) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (120) boot: End of partition table[0m
+[0;32mI (124) boot: No factory image, trying OTA 0[0m
+[0;32mI (129) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (199) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (206) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (468) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (470) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (534) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (540) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (540) boot: Disabling RNG early entropy source...[0m
+[0;32mI (551) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (552) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (552) esp_psram: Speed: 40MHz[0m
+[0;32mI (556) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (563) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (572) cpu_start: Unicore app[0m
+[0;32mI (576) cpu_start: Single core mode[0m
+[0;32mI (1505) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1513) cpu_start: Pro cpu start user code[0m
+[0;32mI (1514) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1514) app_init: Application information:[0m
+[0;32mI (1517) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1523) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1528) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1534) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1540) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1545) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1550) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1555) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1560) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1567) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1573) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1579) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1586) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1592) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1598) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1605) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1614) spi_flash: detected chip: generic[0m
+[0;32mI (1617) spi_flash: flash io: dio[0m
+[0;33mW (1621) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1644) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1645) main_task: Started on CPU0[0m
+[0;32mI (1645) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1653) main_task: Calling app_main()[0m
+[0;32mI (1672) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1675) wifi:wifi driver task: 3ffbd604, prio:23, stack:6656, core=0
+I (1678) wifi:wifi firmware version: 0caa81945
+I (1679) wifi:wifi certification version: v7.0
+I (1682) wifi:config NVS flash: enabled
+I (1685) wifi:config nano formating: disabled
+I (1690) wifi:Init data frame dynamic rx buffer num: 32
+I (1694) wifi:Init static rx mgmt buffer num: 5
+I (1698) wifi:Init management short buffer num: 32
+I (1703) wifi:Init static tx buffer num: 16
+I (1707) wifi:Init tx cache buffer num: 32
+I (1711) wifi:Init static rx buffer size: 1600
+I (1715) wifi:Init static rx buffer num: 10
+I (1719) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1724) wifi_init: accept mbox: 6[0m
+[0;32mI (1727) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1731) wifi_init: udp mbox: 6[0m
+[0;32mI (1734) wifi_init: tcp mbox: 6[0m
+[0;32mI (1738) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1742) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1747) wifi_init: tcp mss: 1440[0m
+[0;32mI (1751) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1755) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1761) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1767) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (682) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1636) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1803) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1805) wifi:wifi driver task: 3ffbd618, prio:23, stack:6656, core=0
+I (1808) wifi:wifi firmware version: 0caa81945
+I (1809) wifi:wifi certification version: v7.0
+I (1813) wifi:config NVS flash: enabled
+I (1816) wifi:config nano formating: disabled
+I (1821) wifi:Init data frame dynamic rx buffer num: 32
+I (1825) wifi:Init static rx mgmt buffer num: 5
+I (1829) wifi:Init management short buffer num: 32
+I (1834) wifi:Init static tx buffer num: 16
+I (1838) wifi:Init tx cache buffer num: 32
+I (1842) wifi:Init static rx buffer size: 1600
+I (1846) wifi:Init static rx buffer num: 10
+I (1850) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1855) wifi_init: accept mbox: 6[0m
+[0;32mI (1858) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1862) wifi_init: udp mbox: 6[0m
+[0;32mI (1865) wifi_init: tcp mbox: 6[0m
+[0;32mI (1869) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1874) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1878) wifi_init: tcp mss: 1440[0m
+[0;32mI (1882) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1886) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1892) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1898) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (682) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1803) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1805) wifi:wifi driver task: 3ffbd618, prio:23, stack:6656, core=0
+I (1808) wifi:wifi firmware version: 0caa81945
+I (1809) wifi:wifi certification version: v7.0
+I (1813) wifi:config NVS flash: enabled
+I (1816) wifi:config nano formating: disabled
+I (1821) wifi:Init data frame dynamic rx buffer num: 32
+I (1825) wifi:Init static rx mgmt buffer num: 5
+I (1829) wifi:Init management short buffer num: 32
+I (1834) wifi:Init static tx buffer num: 16
+I (1838) wifi:Init tx cache buffer num: 32
+I (1842) wifi:Init static rx buffer size: 1600
+I (1846) wifi:Init static rx buffer num: 10
+I (1850) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1855) wifi_init: accept mbox: 6[0m
+[0;32mI (1858) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1862) wifi_init: udp mbox: 6[0m
+[0;32mI (1865) wifi_init: tcp mbox: 6[0m
+[0;32mI (1869) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1874) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1878) wifi_init: tcp mss: 1440[0m
+[0;32mI (1882) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1886) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1892) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1898) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (683) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1803) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1805) wifi:wifi driver task: 3ffbd618, prio:23, stack:6656, core=0
+I (1808) wifi:wifi firmware version: 0caa81945
+I (1809) wifi:wifi certification version: v7.0
+I (1813) wifi:config NVS flash: enabled
+I (1816) wifi:config nano formating: disabled
+I (1821) wifi:Init data frame dynamic rx buffer num: 32
+I (1825) wifi:Init static rx mgmt buffer num: 5
+I (1829) wifi:Init management short buffer num: 32
+I (1834) wifi:Init static tx buffer num: 16
+I (1838) wifi:Init tx cache buffer num: 32
+I (1842) wifi:Init static rx buffer size: 1600
+I (1846) wifi:Init static rx buffer num: 10
+I (1850) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1855) wifi_init: accept mbox: 6[0m
+[0;32mI (1858) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1862) wifi_init: udp mbox: 6[0m
+[0;32mI (1865) wifi_init: tcp mbox: 6[0m
+[0;32mI (1869) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1874) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1878) wifi_init: tcp mss: 1440[0m
+[0;32mI (1882) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1886) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1892) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1898) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (682) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1803) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1805) wifi:wifi driver task: 3ffbd618, prio:23, stack:6656, core=0
+I (1808) wifi:wifi firmware version: 0caa81945
+I (1809) wifi:wifi certification version: v7.0
+I (1813) wifi:config NVS flash: enabled
+I (1816) wifi:config nano formating: disabled
+I (1821) wifi:Init data frame dynamic rx buffer num: 32
+I (1825) wifi:Init static rx mgmt buffer num: 5
+I (1829) wifi:Init management short buffer num: 32
+I (1834) wifi:Init static tx buffer num: 16
+I (1838) wifi:Init tx cache buffer num: 32
+I (1842) wifi:Init static rx buffer size: 1600
+I (1846) wifi:Init static rx buffer num: 10
+I (1850) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1855) wifi_init: accept mbox: 6[0m
+[0;32mI (1858) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1862) wifi_init: udp mbox: 6[0m
+[0;32mI (1865) wifi_init: tcp mbox: 6[0m
+[0;32mI (1869) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1874) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1878) wifi_init: tcp mss: 1440[0m
+[0;32mI (1882) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1886) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1892) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1898) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (682) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1803) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1805) wifi:wifi driver task: 3ffbd618, prio:23, stack:6656, core=0
+I (1808) wifi:wifi firmware version: 0caa81945
+I (1809) wifi:wifi certification version: v7.0
+I (1813) wifi:config NVS flash: enabled
+I (1816) wifi:config nano formating: disabled
+I (1821) wifi:Init data frame dynamic rx buffer num: 32
+I (1825) wifi:Init static rx mgmt buffer num: 5
+I (1829) wifi:Init management short buffer num: 32
+I (1834) wifi:Init static tx buffer num: 16
+I (1838) wifi:Init tx cache buffer num: 32
+I (1842) wifi:Init static rx buffer size: 1600
+I (1846) wifi:Init static rx buffer num: 10
+I (1850) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1855) wifi_init: accept mbox: 6[0m
+[0;32mI (1858) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1862) wifi_init: udp mbox: 6[0m
+[0;32mI (1865) wifi_init: tcp mbox: 6[0m
+[0;32mI (1869) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1874) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1878) wifi_init: tcp mss: 1440[0m
+[0;32mI (1882) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1886) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1892) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1898) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (682) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1803) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1805) wifi:wifi driver task: 3ffbd618, prio:23, stack:6656, core=0
+I (1808) wifi:wifi firmware version: 0caa81945
+I (1809) wifi:wifi certification version: v7.0
+I (1813) wifi:config NVS flash: enabled
+I (1816) wifi:config nano formating: disabled
+I (1821) wifi:Init data frame dynamic rx buffer num: 32
+I (1825) wifi:Init static rx mgmt buffer num: 5
+I (1829) wifi:Init management short buffer num: 32
+I (1834) wifi:Init static tx buffer num: 16
+I (1838) wifi:Init tx cache buffer num: 32
+I (1842) wifi:Init static rx buffer size: 1600
+I (1846) wifi:Init static rx buffer num: 10
+I (1850) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1855) wifi_init: accept mbox: 6[0m
+[0;32mI (1858) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1862) wifi_init: udp mbox: 6[0m
+[0;32mI (1865) wifi_init: tcp mbox: 6[0m
+[0;32mI (1869) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1874) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1878) wifi_init: tcp mss: 1440[0m
+[0;32mI (1882) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1886) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1892) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1898) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (683) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1803) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1805) wifi:wifi driver task: 3ffbd618, prio:23, stack:6656, core=0
+I (1808) wifi:wifi firmware version: 0caa81945
+I (1809) wifi:wifi certification version: v7.0
+I (1813) wifi:config NVS flash: enabled
+I (1816) wifi:config nano formating: disabled
+I (1821) wifi:Init data frame dynamic rx buffer num: 32
+I (1825) wifi:Init static rx mgmt buffer num: 5
+I (1829) wifi:Init management short buffer num: 32
+I (1834) wifi:Init static tx buffer num: 16
+I (1838) wifi:Init tx cache buffer num: 32
+I (1842) wifi:Init static rx buffer size: 1600
+I (1846) wifi:Init static rx buffer num: 10
+I (1850) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1855) wifi_init: accept mbox: 6[0m
+[0;32mI (1858) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1862) wifi_init: udp mbox: 6[0m
+[0;32mI (1865) wifi_init: tcp mbox: 6[0m
+[0;32mI (1869) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1874) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1878) wifi_init: tcp mss: 1440[0m
+[0;32mI (1882) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1886) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1892) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1898) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (682) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1803) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1805) wifi:wifi driver task: 3ffbd618, prio:23, stack:6656, core=0
+I (1808) wifi:wifi firmware version: 0caa81945
+I (1809) wifi:wifi certification version: v7.0
+I (1813) wifi:config NVS flash: enabled
+I (1816) wifi:config nano formating: disabled
+I (1821) wifi:Init data frame dynamic rx buffer num: 32
+I (1825) wifi:Init static rx mgmt buffer num: 5
+I (1829) wifi:Init management short buffer num: 32
+I (1834) wifi:Init static tx buffer num: 16
+I (1838) wifi:Init tx cache buffer num: 32
+I (1842) wifi:Init static rx buffer size: 1600
+I (1846) wifi:Init static rx buffer num: 10
+I (1850) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1855) wifi_init: accept mbox: 6[0m
+[0;32mI (1858) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1862) wifi_init: udp mbox: 6[0m
+[0;32mI (1865) wifi_init: tcp mbox: 6[0m
+[0;32mI (1869) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1874) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1878) wifi_init: tcp mss: 1440[0m
+[0;32mI (1882) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1886) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1892) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1898) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (682) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1803) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1805) wifi:wifi driver task: 3ffbd618, prio:23, stack:6656, core=0
+I (1808) wifi:wifi firmware version: 0caa81945
+I (1809) wifi:wifi certification version: v7.0
+I (1813) wifi:config NVS flash: enabled
+I (1816) wifi:config nano formating: disabled
+I (1821) wifi:Init data frame dynamic rx buffer num: 32
+I (1825) wifi:Init static rx mgmt buffer num: 5
+I (1829) wifi:Init management short buffer num: 32
+I (1834) wifi:Init static tx buffer num: 16
+I (1838) wifi:Init tx cache buffer num: 32
+I (1842) wifi:Init static rx buffer size: 1600
+I (1846) wifi:Init static rx buffer num: 10
+I (1850) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1855) wifi_init: accept mbox: 6[0m
+[0;32mI (1858) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1862) wifi_init: udp mbox: 6[0m
+[0;32mI (1865) wifi_init: tcp mbox: 6[0m
+[0;32mI (1869) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1874) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1878) wifi_init: tcp mss: 1440[0m
+[0;32mI (1882) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1886) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1892) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1898) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (1960) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+I (1971) wifi:mode : null
+I (1974) wifi:mode : softAP (08:a6:f7:11:51:a9)
+I (1976) wifi:Total power save buffer number: 8
+I (1976) wifi:Init max length of beacon: 752/752
+I (1979) wifi:Init max length of beacon: 752/752
+[0;32mI (1985) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+Add netif ap with f4bea835(commit id)
+[0;32mI (1995) bridge_common: netif list add success[0m
+[0;31mE (2000) NVS: Failed to open NVS namespace[0m
+[0;32mI (2004) bridge_common: IP Address:192.168.5.1[0m
+[0;32mI (2009) bridge_common: GW Address:192.168.5.1[0m
+[0;32mI (2015) bridge_common: NM Address:255.255.255.0[0m
+[0;32mI (2020) bridge_common: [WIFI_AP_DEF ][0m
+[0;32mI (2025) bridge_common: Set ip info:192.168.5.1[0m
+[0;32mI (2030) bridge_wifi: SoftAP IP network segment has changed, deauth all station[0m
+I (2041) wifi:Disabled PMF config for SoftAP
+I (2043) wifi:Total power save buffer number: 8
+[0;32mI (2049) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (2055) bridge_common: [WIFI_AP_DEF ]Name Server1: 114.114.114.114[0m
+[0;32mI (2061) bridge_common: DHCPS Restart, deauth all station[0m
+Add netif sta with f4bea835(commit id)
+[0;32mI (2071) bridge_common: netif list add success[0m
+I (2077) wifi:mode : sta (08:a6:f7:11:51:a8) + softAP (08:a6:f7:11:51:a9)
+I (2083) wifi:enable tsf
+[0;31mE (2087) NVS: Failed to read IP info from NVS[0m
+I (2090) wifi:Disabled PMF config for STA
+[0;32mI (2094) bridge_wifi: [esp_bridge_wifi_set_config] sta ssid: Tran Con Dev password: password[0m
+[0;32mI (2103) bridge_wifi: [esp_bridge_wifi_set_config] softap ssid: ESP_Bridge_1151a9 password: 12345678[0m
+I (2286) wifi:Total power save buffer number: 8
+[0;32mI (2290) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (2291) bridge_wifi: SoftAP config changed, deauth all station[0m
+[0;32mI (2295) Mesh-Lite: esp-mesh-lite component version: 1.0.0[0m
+I (2302) ESPNOW: espnow [version: 1.0] init
+[0;32mI (2305) [vendor_ie]: Mesh-Lite commit id: bc9302d
+ [0m
+[0;31mE (2312) [vendor_ie]: Error Get! [0m
+[0;33mW (2315) [vendor_ie]: Mesh ID is not saved in flash [0m
+[0;32mI (2321) [vendor_ie]: Mesh ID: 77 [0m
+[0;33mW (2325) [vendor_ie]: Error Get[4354] [0m
+[0;33mW (2329) [vendor_ie]: Error Get[4354] [0m
+[0;32mI (2335) [ESP_Mesh_Lite_Comm]: msg action add success [0m
+[0;32mI (2341) [ESP_Mesh_Lite_Comm]: Bind Socket 54, port 6364 [0m
+[0;32mI (2345) [ESP_Mesh_Lite_Comm]: Bind Socket 55, port 6363 [0m
+[0;32mI (2351) [ESP_Mesh_Lite_Comm]: Bind Socket 56, port 6366 [0m
+[0;32mI (2357) [ESP_Mesh_Lite_Comm]: Bind Socket 57, port 6365 [0m
+[0;32mI (2364) [mesh-lite-espnow]: Start espnow task [0m
+[0;32mI (2371) Mesh-Lite: Mesh-Lite connecting[0m
+[0;32mI (2376) [vendor_ie]: esp_mesh_lite_wifi_scan_start return ESP_OK [0m
+[0;32mI (2380) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (2391) cam_hal: cam init ok[0m
+[0;32mI (2393) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (2397) sccb: sccb_i2c_port=1[0m
+[0;32mI (2402) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2440) camera: Detected camera at address=0x30[0m
+[0;32mI (2442) camera: Detected OV2640 camera[0m
+[0;32mI (2442) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (2508) cam_hal: buffer_size: 32768, half_buffer_size: 4096, node_buffer_size: 2048, node_cnt: 16, total_cnt: 2[0m
+[0;32mI (2509) cam_hal: Allocating 11520 Byte frame buffer in PSRAM[0m
+
+assert failed: xTaskCreatePinnedToCore freertos_tasks_c_additions.h:162 (( ( ( ( BaseType_t ) xCoreID ) >= 0 && ( ( BaseType_t ) xCoreID ) < 1 ) ? ( ( BaseType_t ) 1 ) : ( ( BaseType_t ) 0 ) ) == ( (
+
+
+Backtrace: 0x40081919:0x3ffb12f0 0x4008e6d9:0x3ffb1310 0x400966b1:0x3ffb1330 0x40091e14:0x3ffb1450 0x400e4dfb:0x3ffb1490 0x400e4535:0x3ffb14c0 0x400e420a:0x3ffb1500 0x400e422b:0x3ffb1520 0x400da420:0x3ffb1540 0x4018886f:0x3ffb1580 0x4008f61d:0x3ffb15b0
+
+
+
+
+ELF file SHA256: 9c353c703
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (29) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (29) boot: Unicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (37) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (67) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (82) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (97) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (105) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (112) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (120) boot: End of partition table[0m
+[0;32mI (124) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (194) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (201) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (463) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (464) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (529) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (529) boot: Disabling RNG early entropy source...[0m
+[0;32mI (541) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (542) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (542) esp_psram: Speed: 40MHz[0m
+[0;32mI (545) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (553) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (562) cpu_start: Unicore app[0m
+[0;32mI (566) cpu_start: Single core mode[0m
+[0;32mI (1495) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1503) cpu_start: Pro cpu start user code[0m
+[0;32mI (1503) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1503) app_init: Application information:[0m
+[0;32mI (1506) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1512) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1518) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1524) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1529) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1535) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1539) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1544) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1550) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1557) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1563) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1569) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1576) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1582) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1588) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1595) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1603) spi_flash: detected chip: generic[0m
+[0;32mI (1607) spi_flash: flash io: dio[0m
+[0;33mW (1611) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1633) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1634) main_task: Started on CPU0[0m
+[0;32mI (1634) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1642) main_task: Calling app_main()[0m
+[0;32mI (1663) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1666) wifi:wifi driver task: 3ffbd678, prio:23, stack:6656, core=0
+I (1669) wifi:wifi firmware version: 0caa81945
+I (1669) wifi:wifi certification version: v7.0
+I (1673) wifi:config NVS flash: enabled
+I (1676) wifi:config nano formating: disabled
+I (1681) wifi:Init data frame dynamic rx buffer num: 32
+I (1685) wifi:Init static rx mgmt buffer num: 5
+I (1689) wifi:Init management short buffer num: 32
+I (1694) wifi:Init static tx buffer num: 16
+I (1698) wifi:Init tx cache buffer num: 32
+I (1702) wifi:Init static rx buffer size: 1600
+I (1706) wifi:Init static rx buffer num: 10
+I (1710) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1715) wifi_init: accept mbox: 6[0m
+[0;32mI (1718) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1722) wifi_init: udp mbox: 6[0m
+[0;32mI (1726) wifi_init: tcp mbox: 6[0m
+[0;32mI (1729) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1734) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1738) wifi_init: tcp mss: 1440[0m
+[0;32mI (1742) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1746) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1752) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (683) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1805) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1808) wifi:wifi driver task: 3ffbd678, prio:23, stack:6656, core=0
+I (1811) wifi:wifi firmware version: 0caa81945
+I (1811) wifi:wifi certification version: v7.0
+I (1815) wifi:config NVS flash: enabled
+I (1818) wifi:config nano formating: disabled
+I (1823) wifi:Init data frame dynamic rx buffer num: 32
+I (1827) wifi:Init static rx mgmt buffer num: 5
+I (1831) wifi:Init management short buffer num: 32
+I (1836) wifi:Init static tx buffer num: 16
+I (1840) wifi:Init tx cache buffer num: 32
+I (1844) wifi:Init static rx buffer size: 1600
+I (1848) wifi:Init static rx buffer num: 10
+I (1852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1857) wifi_init: accept mbox: 6[0m
+[0;32mI (1860) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1864) wifi_init: udp mbox: 6[0m
+[0;32mI (1868) wifi_init: tcp mbox: 6[0m
+[0;32mI (1871) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1876) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1880) wifi_init: tcp mss: 1440[0m
+[0;32mI (1884) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1888) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1894) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (1957) wifi:mode : null
+I (1959) wifi:mode : softAP (08:a6:f7:11:51:a9)
+I (1961) wifi:Total power save buffer number: 8
+I (1961) wifi:Init max length of beacon: 752/752
+I (1964) wifi:Init max length of beacon: 752/752
+[0;32mI (1971) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+Add netif ap with f4bea835(commit id)
+[0;32mI (1980) bridge_common: netif list add success[0m
+[0;32mI (1986) bridge_common: [WIFI_AP_DEF ][0m
+[0;32mI (1991) bridge_common: Set ip info:192.168.5.1[0m
+[0;32mI (1995) bridge_wifi: SoftAP IP network segment has changed, deauth all station[0m
+I (2005) wifi:Disabled PMF config for SoftAP
+I (2008) wifi:Total power save buffer number: 8
+[0;32mI (2014) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (2020) bridge_common: [WIFI_AP_DEF ]Name Server1: 114.114.114.114[0m
+[0;32mI (2027) bridge_common: DHCPS Restart, deauth all station[0m
+Add netif sta with f4bea835(commit id)
+[0;32mI (2036) bridge_common: netif list add success[0m
+I (2042) wifi:mode : sta (08:a6:f7:11:51:a8) + softAP (08:a6:f7:11:51:a9)
+I (2048) wifi:enable tsf
+[0;31mE (2052) NVS: Failed to read IP info from NVS[0m
+I (2055) wifi:Disabled PMF config for STA
+[0;32mI (2059) bridge_wifi: [esp_bridge_wifi_set_config] sta ssid: Tran Con Dev password: password[0m
+[0;32mI (2069) bridge_wifi: [esp_bridge_wifi_set_config] softap ssid: ESP_Bridge_1151a9 password: 12345678[0m
+I (2251) wifi:Total power save buffer number: 8�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (682) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1636) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1805) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1808) wifi:wifi driver task: 3ffbd678, prio:23, stack:6656, core=0
+I (1811) wifi:wifi firmware version: 0caa81945
+I (1811) wifi:wifi certification version: v7.0
+I (1815) wifi:config NVS flash: enabled
+I (1818) wifi:config nano formating: disabled
+I (1823) wifi:Init data frame dynamic rx buffer num: 32
+I (1827) wifi:Init static rx mgmt buffer num: 5
+I (1831) wifi:Init management short buffer num: 32
+I (1836) wifi:Init static tx buffer num: 16
+I (1840) wifi:Init tx cache buffer num: 32
+I (1844) wifi:Init static rx buffer size: 1600
+I (1848) wifi:Init static rx buffer num: 10
+I (1852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1857) wifi_init: accept mbox: 6[0m
+[0;32mI (1860) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1864) wifi_init: udp mbox: 6[0m
+[0;32mI (1868) wifi_init: tcp mbox: 6[0m
+[0;32mI (1871) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1876) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1880) wifi_init: tcp mss: 1440[0m
+[0;32mI (1884) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1888) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1894) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (683) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1805) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1808) wifi:wifi driver task: 3ffbd678, prio:23, stack:6656, core=0
+I (1811) wifi:wifi firmware version: 0caa81945
+I (1811) wifi:wifi certification version: v7.0
+I (1815) wifi:config NVS flash: enabled
+I (1818) wifi:config nano formating: disabled
+I (1823) wifi:Init data frame dynamic rx buffer num: 32
+I (1827) wifi:Init static rx mgmt buffer num: 5
+I (1831) wifi:Init management short buffer num: 32
+I (1836) wifi:Init static tx buffer num: 16
+I (1840) wifi:Init tx cache buffer num: 32
+I (1844) wifi:Init static rx buffer size: 1600
+I (1848) wifi:Init static rx buffer num: 10
+I (1852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1857) wifi_init: accept mbox: 6[0m
+[0;32mI (1860) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1864) wifi_init: udp mbox: 6[0m
+[0;32mI (1868) wifi_init: tcp mbox: 6[0m
+[0;32mI (1871) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1876) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1880) wifi_init: tcp mss: 1440[0m
+[0;32mI (1884) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1888) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1894) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (683) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1805) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1808) wifi:wifi driver task: 3ffbd678, prio:23, stack:6656, core=0
+I (1811) wifi:wifi firmware version: 0caa81945
+I (1811) wifi:wifi certification version: v7.0
+I (1815) wifi:config NVS flash: enabled
+I (1818) wifi:config nano formating: disabled
+I (1823) wifi:Init data frame dynamic rx buffer num: 32
+I (1827) wifi:Init static rx mgmt buffer num: 5
+I (1831) wifi:Init management short buffer num: 32
+I (1836) wifi:Init static tx buffer num: 16
+I (1840) wifi:Init tx cache buffer num: 32
+I (1844) wifi:Init static rx buffer size: 1600
+I (1848) wifi:Init static rx buffer num: 10
+I (1852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1857) wifi_init: accept mbox: 6[0m
+[0;32mI (1860) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1864) wifi_init: udp mbox: 6[0m
+[0;32mI (1868) wifi_init: tcp mbox: 6[0m
+[0;32mI (1871) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1876) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1880) wifi_init: tcp mss: 1440[0m
+[0;32mI (1884) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1888) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1894) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (683) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1805) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1808) wifi:wifi driver task: 3ffbd678, prio:23, stack:6656, core=0
+I (1811) wifi:wifi firmware version: 0caa81945
+I (1811) wifi:wifi certification version: v7.0
+I (1815) wifi:config NVS flash: enabled
+I (1818) wifi:config nano formating: disabled
+I (1823) wifi:Init data frame dynamic rx buffer num: 32
+I (1827) wifi:Init static rx mgmt buffer num: 5
+I (1831) wifi:Init management short buffer num: 32
+I (1836) wifi:Init static tx buffer num: 16
+I (1840) wifi:Init tx cache buffer num: 32
+I (1844) wifi:Init static rx buffer size: 1600
+I (1848) wifi:Init static rx buffer num: 10
+I (1852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1857) wifi_init: accept mbox: 6[0m
+[0;32mI (1860) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1864) wifi_init: udp mbox: 6[0m
+[0;32mI (1868) wifi_init: tcp mbox: 6[0m
+[0;32mI (1871) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1876) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1880) wifi_init: tcp mss: 1440[0m
+[0;32mI (1884) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1888) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1894) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (682) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1805) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1808) wifi:wifi driver task: 3ffbd678, prio:23, stack:6656, core=0
+I (1811) wifi:wifi firmware version: 0caa81945
+I (1811) wifi:wifi certification version: v7.0
+I (1815) wifi:config NVS flash: enabled
+I (1818) wifi:config nano formating: disabled
+I (1823) wifi:Init data frame dynamic rx buffer num: 32
+I (1827) wifi:Init static rx mgmt buffer num: 5
+I (1831) wifi:Init management short buffer num: 32
+I (1836) wifi:Init static tx buffer num: 16
+I (1840) wifi:Init tx cache buffer num: 32
+I (1844) wifi:Init static rx buffer size: 1600
+I (1848) wifi:Init static rx buffer num: 10
+I (1852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1857) wifi_init: accept mbox: 6[0m
+[0;32mI (1860) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1864) wifi_init: udp mbox: 6[0m
+[0;32mI (1868) wifi_init: tcp mbox: 6[0m
+[0;32mI (1871) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1876) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1880) wifi_init: tcp mss: 1440[0m
+[0;32mI (1884) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1888) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1894) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (683) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1805) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1808) wifi:wifi driver task: 3ffbd678, prio:23, stack:6656, core=0
+I (1811) wifi:wifi firmware version: 0caa81945
+I (1811) wifi:wifi certification version: v7.0
+I (1815) wifi:config NVS flash: enabled
+I (1818) wifi:config nano formating: disabled
+I (1823) wifi:Init data frame dynamic rx buffer num: 32
+I (1827) wifi:Init static rx mgmt buffer num: 5
+I (1831) wifi:Init management short buffer num: 32
+I (1836) wifi:Init static tx buffer num: 16
+I (1840) wifi:Init tx cache buffer num: 32
+I (1844) wifi:Init static rx buffer size: 1600
+I (1848) wifi:Init static rx buffer num: 10
+I (1852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1857) wifi_init: accept mbox: 6[0m
+[0;32mI (1860) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1864) wifi_init: udp mbox: 6[0m
+[0;32mI (1868) wifi_init: tcp mbox: 6[0m
+[0;32mI (1871) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1876) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1880) wifi_init: tcp mss: 1440[0m
+[0;32mI (1884) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1888) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1894) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (682) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate y�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (29) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (29) boot: Unicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (82) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (97) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (105) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (112) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (120) boot: End of partition table[0m
+[0;32mI (124) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (194) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (201) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (463) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (465) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (529) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (529) boot: Disabling RNG early entropy source...[0m
+[0;32mI (541) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (542) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (542) esp_psram: Speed: 40MHz[0m
+[0;32mI (545) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (553) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (562) cpu_start: Unicore app[0m
+[0;32mI (566) cpu_start: Single core mode[0m
+[0;32mI (1495) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1503) cpu_start: Pro cpu start user code[0m
+[0;32mI (1503) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1503) app_init: Application information:[0m
+[0;32mI (1507) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1512) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1518) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1524) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1529) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1535) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1540) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1545) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1550) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1557) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1563) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1569) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1576) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1582) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1588) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1595) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1603) spi_flash: detected chip: generic[0m
+[0;32mI (1607) spi_flash: flash io: dio[0m
+[0;33mW (1611) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1633) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1634) main_task: Started on CPU0[0m
+[0;32mI (1634) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1642) main_task: Calling app_main()[0m
+[0;32mI (1663) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1666) wifi:wifi driver task: 3ffbd678, prio:23, stack:6656, core=0
+I (1669) wifi:wifi firmware version: 0caa81945
+I (1669) wifi:wifi certification version: v7.0
+I (1673) wifi:config NVS flash: enabled
+I (1676) wifi:config nano formating: disabled
+I (1681) wifi:Init data frame dynamic rx buffer num: 32
+I (1685) wifi:Init static rx mgmt buffer num: 5
+I (1689) wifi:Init management short buffer num: 32
+I (1694) wifi:Init static tx buffer num: 16
+I (1698) wifi:Init tx cache buffer num: 32
+I (1702) wifi:Init static rx buffer size: 1600
+I (1706) wifi:Init static rx buffer num: 10
+I (1710) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1715) wifi_init: accept mbox: 6[0m
+[0;32mI (1718) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1722) wifi_init: udp mbox: 6[0m
+[0;32mI (1726) wifi_init: tcp mbox: 6[0m
+[0;32mI (1729) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1734) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1738) wifi_init: tcp mss: 1440[0m
+[0;32mI (1742) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1746) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1752) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (682) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1805) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1808) wifi:wifi driver task: 3ffbd678, prio:23, stack:6656, core=0
+I (1811) wifi:wifi firmware version: 0caa81945
+I (1811) wifi:wifi certification version: v7.0
+I (1815) wifi:config NVS flash: enabled
+I (1818) wifi:config nano formating: disabled
+I (1823) wifi:Init data frame dynamic rx buffer num: 32
+I (1827) wifi:Init static rx mgmt buffer num: 5
+I (1831) wifi:Init management short buffer num: 32
+I (1836) wifi:Init static tx buffer num: 16
+I (1840) wifi:Init tx cache buffer num: 32
+I (1844) wifi:Init static rx buffer size: 1600
+I (1848) wifi:Init static rx buffer num: 10
+I (1852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1857) wifi_init: accept mbox: 6[0m
+[0;32mI (1860) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1864) wifi_init: udp mbox: 6[0m
+[0;32mI (1868) wifi_init: tcp mbox: 6[0m
+[0;32mI (1871) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1876) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1880) wifi_init: tcp mss: 1440[0m
+[0;32mI (1884) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1888) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1894) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (682) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1805) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1808) wifi:wifi driver task: 3ffbd678, prio:23, stack:6656, core=0
+I (1811) wifi:wifi firmware version: 0caa81945
+I (1811) wifi:wifi certification version: v7.0
+I (1815) wifi:config NVS flash: enabled
+I (1818) wifi:config nano formating: disabled
+I (1823) wifi:Init data frame dynamic rx buffer num: 32
+I (1827) wifi:Init static rx mgmt buffer num: 5
+I (1831) wifi:Init management short buffer num: 32
+I (1836) wifi:Init static tx buffer num: 16
+I (1840) wifi:Init tx cache buffer num: 32
+I (1844) wifi:Init static rx buffer size: 1600
+I (1848) wifi:Init static rx buffer num: 10
+I (1852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1857) wifi_init: accept mbox: 6[0m
+[0;32mI (1860) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1864) wifi_init: udp mbox: 6[0m
+[0;32mI (1868) wifi_init: tcp mbox: 6[0m
+[0;32mI (1871) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1876) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1880) wifi_init: tcp mss: 1440[0m
+[0;32mI (1884) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1888) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1894) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (682) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1805) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1808) wifi:wifi driver task: 3ffbd678, prio:23, stack:6656, core=0
+I (1811) wifi:wifi firmware version: 0caa81945
+I (1811) wifi:wifi certification version: v7.0
+I (1815) wifi:config NVS flash: enabled
+I (1818) wifi:config nano formating: disabled
+I (1823) wifi:Init data frame dynamic rx buffer num: 32
+I (1827) wifi:Init static rx mgmt buffer num: 5
+I (1831) wifi:Init management short buffer num: 32
+I (1836) wifi:Init static tx buffer num: 16
+I (1840) wifi:Init tx cache buffer num: 32
+I (1844) wifi:Init static rx buffer size: 1600
+I (1848) wifi:Init static rx buffer num: 10
+I (1852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1857) wifi_init: accept mbox: 6[0m
+[0;32mI (1860) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1864) wifi_init: udp mbox: 6[0m
+[0;32mI (1868) wifi_init: tcp mbox: 6[0m
+[0;32mI (1871) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1876) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1880) wifi_init: tcp mss: 1440[0m
+[0;32mI (1884) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1888) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1894) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (682) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1636) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1805) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1808) wifi:wifi driver task: 3ffbd678, prio:23, stack:6656, core=0
+I (1811) wifi:wifi firmware version: 0caa81945
+I (1811) wifi:wifi certification version: v7.0
+I (1815) wifi:config NVS flash: enabled
+I (1818) wifi:config nano formating: disabled
+I (1823) wifi:Init data frame dynamic rx buffer num: 32
+I (1827) wifi:Init static rx mgmt buffer num: 5
+I (1831) wifi:Init management short buffer num: 32
+I (1836) wifi:Init static tx buffer num: 16
+I (1840) wifi:Init tx cache buffer num: 32
+I (1844) wifi:Init static rx buffer size: 1600
+I (1848) wifi:Init static rx buffer num: 10
+I (1852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1857) wifi_init: accept mbox: 6[0m
+[0;32mI (1860) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1864) wifi_init: udp mbox: 6[0m
+[0;32mI (1868) wifi_init: tcp mbox: 6[0m
+[0;32mI (1871) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1876) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1880) wifi_init: tcp mss: 1440[0m
+[0;32mI (1884) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1888) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1894) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (682) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1805) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1808) wifi:wifi driver task: 3ffbd678, prio:23, stack:6656, core=0
+I (1811) wifi:wifi firmware version: 0caa81945
+I (1811) wifi:wifi certification version: v7.0
+I (1815) wifi:config NVS flash: enabled
+I (1818) wifi:config nano formating: disabled
+I (1823) wifi:Init data frame dynamic rx buffer num: 32
+I (1827) wifi:Init static rx mgmt buffer num: 5
+I (1831) wifi:Init management short buffer num: 32
+I (1836) wifi:Init static tx buffer num: 16
+I (1840) wifi:Init tx cache buffer num: 32
+I (1844) wifi:Init static rx buffer size: 1600
+I (1848) wifi:Init static rx buffer num: 10
+I (1852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1857) wifi_init: accept mbox: 6[0m
+[0;32mI (1860) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1864) wifi_init: udp mbox: 6[0m
+[0;32mI (1868) wifi_init: tcp mbox: 6[0m
+[0;32mI (1871) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1876) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1880) wifi_init: tcp mss: 1440[0m
+[0;32mI (1884) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1888) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1894) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (682) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1805) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1808) wifi:wifi driver task: 3ffbd678, prio:23, stack:6656, core=0
+I (1811) wifi:wifi firmware version: 0caa81945
+I (1811) wifi:wifi certification version: v7.0
+I (1815) wifi:config NVS flash: enabled
+I (1818) wifi:config nano formating: disabled
+I (1823) wifi:Init data frame dynamic rx buffer num: 32
+I (1827) wifi:Init static rx mgmt buffer num: 5
+I (1831) wifi:Init management short buffer num: 32
+I (1836) wifi:Init static tx buffer num: 16
+I (1840) wifi:Init tx cache buffer num: 32
+I (1844) wifi:Init static rx buffer size: 1600
+I (1848) wifi:Init static rx buffer num: 10
+I (1852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1857) wifi_init: accept mbox: 6[0m
+[0;32mI (1860) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1864) wifi_init: udp mbox: 6[0m
+[0;32mI (1868) wifi_init: tcp mbox: 6[0m
+[0;32mI (1871) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1876) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1880) wifi_init: tcp mss: 1440[0m
+[0;32mI (1884) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1888) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1894) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (682) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1805) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1808) wifi:wifi driver task: 3ffbd678, prio:23, stack:6656, core=0
+I (1811) wifi:wifi firmware version: 0caa81945
+I (1811) wifi:wifi certification version: v7.0
+I (1815) wifi:config NVS flash: enabled
+I (1818) wifi:config nano formating: disabled
+I (1823) wifi:Init data frame dynamic rx buffer num: 32
+I (1827) wifi:Init static rx mgmt buffer num: 5
+I (1831) wifi:Init management short buffer num: 32
+I (1836) wifi:Init static tx buffer num: 16
+I (1840) wifi:Init tx cache buffer num: 32
+I (1844) wifi:Init static rx buffer size: 1600
+I (1848) wifi:Init static rx buffer num: 10
+I (1852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1857) wifi_init: accept mbox: 6[0m
+[0;32mI (1860) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1864) wifi_init: udp mbox: 6[0m
+[0;32mI (1868) wifi_init: tcp mbox: 6[0m
+[0;32mI (1871) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1876) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1880) wifi_init: tcp mss: 1440[0m
+[0;32mI (1884) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1888) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1894) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (682) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1636) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1805) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1808) wifi:wifi driver task: 3ffbd678, prio:23, stack:6656, core=0
+I (1811) wifi:wifi firmware version: 0caa81945
+I (1811) wifi:wifi certification version: v7.0
+I (1815) wifi:config NVS flash: enabled
+I (1818) wifi:config nano formating: disabled
+I (1823) wifi:Init data frame dynamic rx buffer num: 32
+I (1827) wifi:Init static rx mgmt buffer num: 5
+I (1831) wifi:Init management short buffer num: 32
+I (1836) wifi:Init static tx buffer num: 16
+I (1840) wifi:Init tx cache buffer num: 32
+I (1844) wifi:Init static rx buffer size: 1600
+I (1848) wifi:Init static rx buffer num: 10
+I (1852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1857) wifi_init: accept mbox: 6[0m
+[0;32mI (1860) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1864) wifi_init: udp mbox: 6[0m
+[0;32mI (1868) wifi_init: tcp mbox: 6[0m
+[0;32mI (1871) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1876) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1880) wifi_init: tcp mss: 1440[0m
+[0;32mI (1884) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1888) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1894) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (683) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m
+[0;32mI (1637) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1645) cpu_start: Pro cpu start user code[0m
+[0;32mI (1645) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1645) app_init: Application information:[0m
+[0;32mI (1648) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1654) app_init: App version:      f4bea835-dirty[0m
+[0;32mI (1659) app_init: Compile time:     Aug 24 2024 21:42:34[0m
+[0;32mI (1665) app_init: ELF file SHA256:  9c353c703...[0m
+[0;32mI (1671) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1676) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1681) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1686) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1691) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1698) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1704) heap_init: At 3FFC7B08 len 000184F8 (97 KiB): DRAM[0m
+[0;32mI (1711) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1717) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1723) heap_init: At 4009CC6C len 00003394 (12 KiB): IRAM[0m
+[0;32mI (1730) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1736) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1745) spi_flash: detected chip: generic[0m
+[0;32mI (1748) spi_flash: flash io: dio[0m
+[0;33mW (1752) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1775) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1776) main_task: Started on CPU0[0m
+[0;32mI (1776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1784) main_task: Calling app_main()[0m
+[0;32mI (1805) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1808) wifi:wifi driver task: 3ffbd678, prio:23, stack:6656, core=0
+I (1811) wifi:wifi firmware version: 0caa81945
+I (1811) wifi:wifi certification version: v7.0
+I (1815) wifi:config NVS flash: enabled
+I (1818) wifi:config nano formating: disabled
+I (1823) wifi:Init data frame dynamic rx buffer num: 32
+I (1827) wifi:Init static rx mgmt buffer num: 5
+I (1831) wifi:Init management short buffer num: 32
+I (1836) wifi:Init static tx buffer num: 16
+I (1840) wifi:Init tx cache buffer num: 32
+I (1844) wifi:Init static rx buffer size: 1600
+I (1848) wifi:Init static rx buffer num: 10
+I (1852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1857) wifi_init: accept mbox: 6[0m
+[0;32mI (1860) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1864) wifi_init: udp mbox: 6[0m
+[0;32mI (1868) wifi_init: tcp mbox: 6[0m
+[0;32mI (1871) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1876) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1880) wifi_init: tcp mss: 1440[0m
+[0;32mI (1884) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1888) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1894) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7168
+load:0x40078000,len:15452
+load:0x40080400,len:4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (169) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (169) boot: compile time Aug 24 2024 21:42:39[0m
+[0;33mW (169) boot: Unicore bootloader[0m
+[0;32mI (174) boot: chip revision: v3.1[0m
+[0;32mI (178) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (183) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (187) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (192) boot: Enabling RNG early entropy source...[0m
+[0;32mI (197) boot: Partition Table:[0m
+[0;32mI (201) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (208) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (216) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (224) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (231) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (239) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (246) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (254) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (261) boot: End of partition table[0m
+[0;32mI (266) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bc34h (179252) map[0m
+[0;32mI (336) esp_image: segment 1: paddr=0003bc5c vaddr=3ffbdb60 size=043bch ( 17340) load[0m
+[0;32mI (342) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ba8f0h (764144) map[0m
+[0;32mI (604) esp_image: segment 3: paddr=000fa918 vaddr=3ffc1f1c size=00d80h (  3456) load[0m
+[0;32mI (606) esp_image: segment 4: paddr=000fb6a0 vaddr=40080000 size=1cc6ch (117868) load[0m
+[0;32mI (671) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (671) boot: Disabling RNG early entropy source...[0m
+[0;32mI (682) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (683) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (683) esp_psram: Speed: 40MHz[0m
+[0;32mI (687) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (694) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (703) cpu_start: Unicore app[0m
+[0;32mI (707) cpu_start: Single core mode[0m

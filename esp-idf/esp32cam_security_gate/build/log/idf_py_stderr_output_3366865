@@ -1,0 +1,196 @@
+CMake Error at /home/tvconss/esp/esp-idf/tools/cmake/build.cmake:552 (message):
+  WARNING: hint: Using 'master' as the name for the initial branch.  This
+  default branch name
+
+  hint: is subject to change.  To configure the initial branch name to use in
+  all
+
+  hint: of your new repositories, which will suppress this warning, call:
+
+  hint:
+
+  hint: 	git config --global init.defaultBranch <name>
+
+  hint:
+
+  hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+
+  hint: 'development'.  The just-created branch can be renamed via this
+  command:
+
+  hint:
+
+  hint: 	git branch -m <name>
+
+
+
+  WARNING: From https://github.com/espressif/esp32-camera
+
+   * [new branch]      feat/add_libjpeg    -> feat/add_libjpeg
+   * [new branch]      feature/lcd_cam_hw  -> feature/lcd_cam_hw
+   * [new branch]      master              -> master
+   * [new ref]         refs/pull/1/head    -> refs/pull/1/head
+   * [new ref]         refs/pull/100/head  -> refs/pull/100/head
+   * [new ref]         refs/pull/106/head  -> refs/pull/106/head
+   * [new ref]         refs/pull/109/head  -> refs/pull/109/head
+   * [new ref]         refs/pull/11/head   -> refs/pull/11/head
+   * [new ref]         refs/pull/114/head  -> refs/pull/114/head
+   * [new ref]         refs/pull/120/head  -> refs/pull/120/head
+   * [new ref]         refs/pull/124/head  -> refs/pull/124/head
+   * [new ref]         refs/pull/129/head  -> refs/pull/129/head
+   * [new ref]         refs/pull/132/head  -> refs/pull/132/head
+   * [new ref]         refs/pull/137/head  -> refs/pull/137/head
+   * [new ref]         refs/pull/138/head  -> refs/pull/138/head
+   * [new ref]         refs/pull/139/head  -> refs/pull/139/head
+   * [new ref]         refs/pull/145/head  -> refs/pull/145/head
+   * [new ref]         refs/pull/161/head  -> refs/pull/161/head
+   * [new ref]         refs/pull/164/head  -> refs/pull/164/head
+   * [new ref]         refs/pull/173/head  -> refs/pull/173/head
+   * [new ref]         refs/pull/176/head  -> refs/pull/176/head
+   * [new ref]         refs/pull/177/head  -> refs/pull/177/head
+   * [new ref]         refs/pull/178/head  -> refs/pull/178/head
+   * [new ref]         refs/pull/181/head  -> refs/pull/181/head
+   * [new ref]         refs/pull/188/head  -> refs/pull/188/head
+   * [new ref]         refs/pull/194/head  -> refs/pull/194/head
+   * [new ref]         refs/pull/215/head  -> refs/pull/215/head
+   * [new ref]         refs/pull/216/head  -> refs/pull/216/head
+   * [new ref]         refs/pull/219/head  -> refs/pull/219/head
+   * [new ref]         refs/pull/226/head  -> refs/pull/226/head
+   * [new ref]         refs/pull/240/head  -> refs/pull/240/head
+   * [new ref]         refs/pull/241/head  -> refs/pull/241/head
+   * [new ref]         refs/pull/253/head  -> refs/pull/253/head
+   * [new ref]         refs/pull/263/head  -> refs/pull/263/head
+   * [new ref]         refs/pull/265/head  -> refs/pull/265/head
+   * [new ref]         refs/pull/267/head  -> refs/pull/267/head
+   * [new ref]         refs/pull/268/head  -> refs/pull/268/head
+   * [new ref]         refs/pull/269/head  -> refs/pull/269/head
+   * [new ref]         refs/pull/27/head   -> refs/pull/27/head
+   * [new ref]         refs/pull/279/head  -> refs/pull/279/head
+   * [new ref]         refs/pull/280/head  -> refs/pull/280/head
+   * [new ref]         refs/pull/288/head  -> refs/pull/288/head
+   * [new ref]         refs/pull/292/head  -> refs/pull/292/head
+   * [new ref]         refs/pull/293/head  -> refs/pull/293/head
+   * [new ref]         refs/pull/296/head  -> refs/pull/296/head
+   * [new ref]         refs/pull/298/head  -> refs/pull/298/head
+   * [new ref]         refs/pull/30/head   -> refs/pull/30/head
+   * [new ref]         refs/pull/302/head  -> refs/pull/302/head
+   * [new ref]         refs/pull/311/head  -> refs/pull/311/head
+   * [new ref]         refs/pull/313/head  -> refs/pull/313/head
+   * [new ref]         refs/pull/333/head  -> refs/pull/333/head
+   * [new ref]         refs/pull/335/head  -> refs/pull/335/head
+   * [new ref]         refs/pull/337/head  -> refs/pull/337/head
+   * [new ref]         refs/pull/340/head  -> refs/pull/340/head
+   * [new ref]         refs/pull/348/head  -> refs/pull/348/head
+   * [new ref]         refs/pull/349/head  -> refs/pull/349/head
+   * [new ref]         refs/pull/350/head  -> refs/pull/350/head
+   * [new ref]         refs/pull/351/head  -> refs/pull/351/head
+   * [new ref]         refs/pull/352/head  -> refs/pull/352/head
+   * [new ref]         refs/pull/353/head  -> refs/pull/353/head
+   * [new ref]         refs/pull/356/head  -> refs/pull/356/head
+   * [new ref]         refs/pull/362/head  -> refs/pull/362/head
+   * [new ref]         refs/pull/365/head  -> refs/pull/365/head
+   * [new ref]         refs/pull/374/head  -> refs/pull/374/head
+   * [new ref]         refs/pull/382/head  -> refs/pull/382/head
+   * [new ref]         refs/pull/394/head  -> refs/pull/394/head
+   * [new ref]         refs/pull/395/head  -> refs/pull/395/head
+   * [new ref]         refs/pull/396/head  -> refs/pull/396/head
+   * [new ref]         refs/pull/397/head  -> refs/pull/397/head
+   * [new ref]         refs/pull/398/head  -> refs/pull/398/head
+   * [new ref]         refs/pull/405/head  -> refs/pull/405/head
+   * [new ref]         refs/pull/407/head  -> refs/pull/407/head
+   * [new ref]         refs/pull/408/head  -> refs/pull/408/head
+   * [new ref]         refs/pull/412/head  -> refs/pull/412/head
+   * [new ref]         refs/pull/413/head  -> refs/pull/413/head
+   * [new ref]         refs/pull/414/head  -> refs/pull/414/head
+   * [new ref]         refs/pull/419/head  -> refs/pull/419/head
+   * [new ref]         refs/pull/42/head   -> refs/pull/42/head
+   * [new ref]         refs/pull/421/head  -> refs/pull/421/head
+   * [new ref]         refs/pull/425/head  -> refs/pull/425/head
+   * [new ref]         refs/pull/428/head  -> refs/pull/428/head
+   * [new ref]         refs/pull/430/head  -> refs/pull/430/head
+   * [new ref]         refs/pull/437/head  -> refs/pull/437/head
+   * [new ref]         refs/pull/438/head  -> refs/pull/438/head
+   * [new ref]         refs/pull/441/head  -> refs/pull/441/head
+   * [new ref]         refs/pull/442/head  -> refs/pull/442/head
+   * [new ref]         refs/pull/445/head  -> refs/pull/445/head
+   * [new ref]         refs/pull/448/head  -> refs/pull/448/head
+   * [new ref]         refs/pull/451/head  -> refs/pull/451/head
+   * [new ref]         refs/pull/452/head  -> refs/pull/452/head
+   * [new ref]         refs/pull/456/head  -> refs/pull/456/head
+   * [new ref]         refs/pull/462/head  -> refs/pull/462/head
+   * [new ref]         refs/pull/470/head  -> refs/pull/470/head
+   * [new ref]         refs/pull/474/head  -> refs/pull/474/head
+   * [new ref]         refs/pull/475/head  -> refs/pull/475/head
+   * [new ref]         refs/pull/480/head  -> refs/pull/480/head
+   * [new ref]         refs/pull/484/head  -> refs/pull/484/head
+   * [new ref]         refs/pull/487/head  -> refs/pull/487/head
+   * [new ref]         refs/pull/491/head  -> refs/pull/491/head
+   * [new ref]         refs/pull/493/head  -> refs/pull/493/head
+   * [new ref]         refs/pull/50/head   -> refs/pull/50/head
+   * [new ref]         refs/pull/500/head  -> refs/pull/500/head
+   * [new ref]         refs/pull/511/head  -> refs/pull/511/head
+   * [new ref]         refs/pull/516/head  -> refs/pull/516/head
+   * [new ref]         refs/pull/517/head  -> refs/pull/517/head
+   * [new ref]         refs/pull/519/head  -> refs/pull/519/head
+   * [new ref]         refs/pull/523/head  -> refs/pull/523/head
+   * [new ref]         refs/pull/524/head  -> refs/pull/524/head
+   * [new ref]         refs/pull/525/head  -> refs/pull/525/head
+   * [new ref]         refs/pull/527/head  -> refs/pull/527/head
+   * [new ref]         refs/pull/529/head  -> refs/pull/529/head
+   * [new ref]         refs/pull/539/head  -> refs/pull/539/head
+   * [new ref]         refs/pull/541/head  -> refs/pull/541/head
+   * [new ref]         refs/pull/542/head  -> refs/pull/542/head
+   * [new ref]         refs/pull/550/head  -> refs/pull/550/head
+   * [new ref]         refs/pull/553/head  -> refs/pull/553/head
+   * [new ref]         refs/pull/557/head  -> refs/pull/557/head
+   * [new ref]         refs/pull/578/head  -> refs/pull/578/head
+   * [new ref]         refs/pull/581/head  -> refs/pull/581/head
+   * [new ref]         refs/pull/588/head  -> refs/pull/588/head
+   * [new ref]         refs/pull/589/head  -> refs/pull/589/head
+   * [new ref]         refs/pull/597/head  -> refs/pull/597/head
+   * [new ref]         refs/pull/6/head    -> refs/pull/6/head
+   * [new ref]         refs/pull/61/head   -> refs/pull/61/head
+   * [new ref]         refs/pull/616/head  -> refs/pull/616/head
+   * [new ref]         refs/pull/621/head  -> refs/pull/621/head
+   * [new ref]         refs/pull/623/head  -> refs/pull/623/head
+   * [new ref]         refs/pull/624/head  -> refs/pull/624/head
+   * [new ref]         refs/pull/625/head  -> refs/pull/625/head
+   * [new ref]         refs/pull/629/head  -> refs/pull/629/head
+   * [new ref]         refs/pull/638/head  -> refs/pull/638/head
+   * [new ref]         refs/pull/645/head  -> refs/pull/645/head
+   * [new ref]         refs/pull/648/head  -> refs/pull/648/head
+   * [new ref]         refs/pull/654/head  -> refs/pull/654/head
+   * [new ref]         refs/pull/667/head  -> refs/pull/667/head
+   * [new ref]         refs/pull/67/head   -> refs/pull/67/head
+   * [new ref]         refs/pull/671/head  -> refs/pull/671/head
+   * [new ref]         refs/pull/671/merge -> refs/pull/671/merge
+   * [new ref]         refs/pull/70/head   -> refs/pull/70/head
+   * [new ref]         refs/pull/88/head   -> refs/pull/88/head
+   * [new tag]         v2.0.0              -> v2.0.0
+   * [new tag]         v2.0.1              -> v2.0.1
+   * [new tag]         v2.0.10             -> v2.0.10
+   * [new tag]         v2.0.2              -> v2.0.2
+   * [new tag]         v2.0.3              -> v2.0.3
+   * [new tag]         v2.0.4              -> v2.0.4
+   * [new tag]         v2.0.5              -> v2.0.5
+   * [new tag]         v2.0.6              -> v2.0.6
+   * [new tag]         v2.0.7              -> v2.0.7
+   * [new tag]         v2.0.8              -> v2.0.8
+   * [new tag]         v2.0.9              -> v2.0.9
+
+  
+
+  ERROR: Because no versions of av_record match >*
+
+   and av_record (*) depends on espressif/usb_stream (^1.0.2), av_record (>=*) requires espressif/usb_stream (^1.0.2).
+
+  So, because no versions of espressif/usb_stream match ^1.0.2
+
+   and project depends on av_record (*), version solving failed.
+
+Call Stack (most recent call first):
+  /home/tvconss/esp/esp-idf/tools/cmake/project.cmake:710 (idf_build_process)
+  CMakeLists.txt:7 (project)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

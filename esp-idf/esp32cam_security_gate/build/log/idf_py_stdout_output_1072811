@@ -1,0 +1,100 @@
+[1/10] Building C object esp-idf/setup_esp32_cam/CMakeFiles/__idf_setup_esp32_cam.dir/setup_esp32_cam.c.obj
+[2/10] Linking C static library esp-idf/setup_esp32_cam/libsetup_esp32_cam.a
+[3/10] Performing build step for 'bootloader'
+[1/1] cd /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/bootloader/esp-idf/esptool_py && /home/tvconss/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/tvconss/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/bootloader/bootloader.bin
+Bootloader binary size 0x6730 bytes. 0x8d0 bytes (8%) free.
+[4/10] No install step for 'bootloader'
+[5/10] Completed 'bootloader'
+[6/10] Generating ld/sections.ld
+warning: the int symbol BRIDGE_SOFTAP_MAX_CONNECT_NUMBER (defined at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/managed_components/espressif__iot_bridge/Kconfig:108) has a non-int default BRIDGE_CUSTOM_MAX_CONNECT_NUMBER (undefined)
+[7/10] Linking CXX executable mesh_local_control.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.8.dev4
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/mesh_local_control.bin
+[9/10] cd /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/esp-idf/esptool_py && /home/tvconss/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/tvconss/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/partition_table/partition-table.bin /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/mesh_local_control.bin
+mesh_local_control.bin binary size 0x112320 bytes. Smallest app partition is 0x1e0000 bytes. 0xcdce0 bytes (43%) free.
+[9/10] cd /home/tvconss/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/tvconss/esp/esp-idf -D "SERIAL_TOOL=/home/tvconss/.espressif/python_env/idf5.3_py3.12_env/bin/python;;/home/tvconss/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build -P /home/tvconss/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size detect 0x1000 bootloader/bootloader.bin 0x10000 mesh_local_control.bin 0x8000 partition_table/partition-table.bin 0xd000 ota_data_initial.bin
+esptool.py v4.8.dev4
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 08:a6:f7:11:51:a8
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Auto-detected Flash size: 4MB
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00122fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000d000 to 0x0000efff...
+SHA digest in image updated
+Compressed 26416 bytes to 16236...
+Writing at 0x00001000... (100 %)
+Wrote 26416 bytes (16236 compressed) at 0x00001000 in 0.5 seconds (effective 419.1 kbit/s)...
+Hash of data verified.
+Compressed 1123104 bytes to 691578...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001d7a7... (4 %)
+Writing at 0x000296b9... (6 %)
+Writing at 0x0002ff19... (9 %)
+Writing at 0x00035107... (11 %)
+Writing at 0x0003fe48... (13 %)
+Writing at 0x00045c23... (16 %)
+Writing at 0x0004bdf8... (18 %)
+Writing at 0x000512de... (20 %)
+Writing at 0x00057031... (23 %)
+Writing at 0x0005ee09... (25 %)
+Writing at 0x000649ff... (27 %)
+Writing at 0x0006abb5... (30 %)
+Writing at 0x0007096f... (32 %)
+Writing at 0x00076944... (34 %)
+Writing at 0x0007cadf... (37 %)
+Writing at 0x00082949... (39 %)
+Writing at 0x00088cf9... (41 %)
+Writing at 0x0008e8ad... (44 %)
+Writing at 0x00094881... (46 %)
+Writing at 0x0009adff... (48 %)
+Writing at 0x000a0e69... (51 %)
+Writing at 0x000a6cac... (53 %)
+Writing at 0x000ac13e... (55 %)
+Writing at 0x000b1330... (58 %)
+Writing at 0x000b6a7e... (60 %)
+Writing at 0x000bc1ef... (62 %)
+Writing at 0x000c1550... (65 %)
+Writing at 0x000c6b23... (67 %)
+Writing at 0x000cc6a4... (69 %)
+Writing at 0x000d2224... (72 %)
+Writing at 0x000d8030... (74 %)
+Writing at 0x000dddbf... (76 %)
+Writing at 0x000e388d... (79 %)
+Writing at 0x000e94ec... (81 %)
+Writing at 0x000f3d5c... (83 %)
+Writing at 0x000fc364... (86 %)
+Writing at 0x00101ea0... (88 %)
+Writing at 0x00109db6... (90 %)
+Writing at 0x0010f804... (93 %)
+Writing at 0x00115613... (95 %)
+Writing at 0x0011b865... (97 %)
+Writing at 0x00120c77... (100 %)
+Wrote 1123104 bytes (691578 compressed) at 0x00010000 in 15.5 seconds (effective 578.0 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 162...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (162 compressed) at 0x00008000 in 0.0 seconds (effective 1549.8 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 31...
+Writing at 0x0000d000... (100 %)
+Wrote 8192 bytes (31 compressed) at 0x0000d000 in 0.0 seconds (effective 2400.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

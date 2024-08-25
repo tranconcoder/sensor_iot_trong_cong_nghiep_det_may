@@ -1,0 +1,140 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/bootloader/esp-idf/esptool_py && /home/tvconss/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/tvconss/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/bootloader/bootloader.bin
+Bootloader binary size 0x6730 bytes. 0x8d0 bytes (8%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Building C object esp-idf/setup_esp_websocket_client/CMakeFiles/__idf_setup_esp_websocket_client.dir/setup_esp_websocket_client.c.obj
+In file included from /home/tvconss/esp/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:20,
+                 from /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:1533,
+                 from /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/components/esp-websocket_client/include/esp_websocket_client.h:14,
+                 from /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client/include/setup_esp_websocket_client.h:1,
+                 from /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client/setup_esp_websocket_client.c:1:
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client/setup_esp_websocket_client.c: In function 'task_send_image_to_websocket':
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client/setup_esp_websocket_client.c:69:32: warning: passing argument 1 of 'xTaskDelayUntil' from incompatible pointer type [-Wincompatible-pointer-types]
+   69 |                vTaskDelayUntil(&current_time, pdMS_TO_TICKS(1000 / 15));
+/home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:908:37: note: in definition of macro 'vTaskDelayUntil'
+  908 |         ( void ) xTaskDelayUntil( ( pxPreviousWakeTime ), ( xTimeIncrement ) ); \
+      |                                     ^~~~~~~~~~~~~~~~~~
+/home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:897:48: note: expected 'TickType_t * const' {aka 'long unsigned int * const'} but argument is of type 'uint64_t *' {aka 'long long unsigned int *'}
+  897 | BaseType_t xTaskDelayUntil( TickType_t * const pxPreviousWakeTime,
+      |                             ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client/setup_esp_websocket_client.c:55:18: warning: unused variable 'img_byte_len' [-Wunused-variable]
+   55 |           size_t img_byte_len = fb->len;
+      |                  ^~~~~~~~~~~~
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client/setup_esp_websocket_client.c:41:17: warning: unused variable 'current_tick' [-Wunused-variable]
+   41 |      TickType_t current_tick;
+      |                 ^~~~~~~~~~~~
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client/setup_esp_websocket_client.c: In function 'setup_esp_websocket_client_init':
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client/setup_esp_websocket_client.c:84:10: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+   84 |          task_send_image_to_websocket,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |          |
+      |          void (*)(struct esp_websocket_client *)
+/home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:371:44: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'void (*)(struct esp_websocket_client *)'
+  371 |     BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+      |                             ~~~~~~~~~~~~~~~^~~~~~~~~~
+In file included from /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client/include/setup_esp_websocket_client.h:2:
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp32_cam/include/setup_esp32_cam.h: At top level:
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp32_cam/include/setup_esp32_cam.h:28:18: warning: 'init_camera' declared 'static' but never defined [-Wunused-function]
+   28 | static esp_err_t init_camera(void);
+      |                  ^~~~~~~~~~~
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client/include/setup_esp_websocket_client.h:9:13: warning: 'websocket_connecting' defined but not used [-Wunused-variable]
+    9 | static bool websocket_connecting;
+      |             ^~~~~~~~~~~~~~~~~~~~
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp32_cam/include/setup_esp32_cam.h:26:13: warning: 'camera_init_done' defined but not used [-Wunused-variable]
+   26 | static bool camera_init_done;
+      |             ^~~~~~~~~~~~~~~~
+[4/10] Completed 'bootloader'
+[5/10] Linking C static library esp-idf/setup_esp_websocket_client/libsetup_esp_websocket_client.a
+[6/10] Generating ld/sections.ld
+warning: the int symbol BRIDGE_SOFTAP_MAX_CONNECT_NUMBER (defined at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/managed_components/espressif__iot_bridge/Kconfig:108) has a non-int default BRIDGE_CUSTOM_MAX_CONNECT_NUMBER (undefined)
+[7/10] Linking CXX executable mesh_local_control.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.8.dev4
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/mesh_local_control.bin
+[9/10] cd /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/esp-idf/esptool_py && /home/tvconss/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/tvconss/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/partition_table/partition-table.bin /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/mesh_local_control.bin
+mesh_local_control.bin binary size 0x112000 bytes. Smallest app partition is 0x1e0000 bytes. 0xce000 bytes (43%) free.
+[9/10] cd /home/tvconss/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/tvconss/esp/esp-idf -D "SERIAL_TOOL=/home/tvconss/.espressif/python_env/idf5.3_py3.12_env/bin/python;;/home/tvconss/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build -P /home/tvconss/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size detect 0x1000 bootloader/bootloader.bin 0x10000 mesh_local_control.bin 0x8000 partition_table/partition-table.bin 0xd000 ota_data_initial.bin
+esptool.py v4.8.dev4
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 08:a6:f7:11:51:a8
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Auto-detected Flash size: 4MB
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00121fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000d000 to 0x0000efff...
+SHA digest in image updated
+Compressed 26416 bytes to 16236...
+Writing at 0x00001000... (100 %)
+Wrote 26416 bytes (16236 compressed) at 0x00001000 in 0.5 seconds (effective 419.8 kbit/s)...
+Hash of data verified.
+Compressed 1122304 bytes to 691081...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001d863... (4 %)
+Writing at 0x0002965b... (6 %)
+Writing at 0x0002fec0... (9 %)
+Writing at 0x0003509e... (11 %)
+Writing at 0x0003fdc1... (13 %)
+Writing at 0x00045b68... (16 %)
+Writing at 0x0004bd1f... (18 %)
+Writing at 0x0005123d... (20 %)
+Writing at 0x00056f65... (23 %)
+Writing at 0x0005ed5b... (25 %)
+Writing at 0x0006493f... (27 %)
+Writing at 0x0006ab26... (30 %)
+Writing at 0x000708cc... (32 %)
+Writing at 0x00076874... (34 %)
+Writing at 0x0007ca23... (37 %)
+Writing at 0x0008287d... (39 %)
+Writing at 0x00088c2a... (41 %)
+Writing at 0x0008e7e0... (44 %)
+Writing at 0x000947cc... (46 %)
+Writing at 0x0009ad13... (48 %)
+Writing at 0x000a0d9f... (51 %)
+Writing at 0x000a6bf6... (53 %)
+Writing at 0x000ac063... (55 %)
+Writing at 0x000b1242... (58 %)
+Writing at 0x000b69bb... (60 %)
+Writing at 0x000bc128... (62 %)
+Writing at 0x000c14b0... (65 %)
+Writing at 0x000c6a5e... (67 %)
+Writing at 0x000cc66f... (69 %)
+Writing at 0x000d2149... (72 %)
+Writing at 0x000d7fab... (74 %)
+Writing at 0x000ddd14... (76 %)
+Writing at 0x000e377a... (79 %)
+Writing at 0x000e941c... (81 %)
+Writing at 0x000f3d6a... (83 %)
+Writing at 0x000fc296... (86 %)
+Writing at 0x00101e4d... (88 %)
+Writing at 0x00109cbe... (90 %)
+Writing at 0x0010f7c3... (93 %)
+Writing at 0x00115574... (95 %)
+Writing at 0x0011b7b5... (97 %)
+Writing at 0x00120c73... (100 %)
+Wrote 1122304 bytes (691081 compressed) at 0x00010000 in 15.5 seconds (effective 578.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 162...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (162 compressed) at 0x00008000 in 0.0 seconds (effective 1373.2 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 31...
+Writing at 0x0000d000... (100 %)
+Wrote 8192 bytes (31 compressed) at 0x0000d000 in 0.0 seconds (effective 2298.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

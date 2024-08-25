@@ -1,0 +1,39 @@
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32
+Manifest files have changed, solving dependencies.
+NOTICE: Skipping optional dependency: usb_device
+Using component placed at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/av_record for dependency "av_record", specified in /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/idf_component.yml
+Using component placed at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/components/common_struct for dependency "common_struct", specified in /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/idf_component.yml
+Using component placed at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/config_http_client for dependency "config_http_client", specified in /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/idf_component.yml
+Using component placed at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/components/esp-idf-rc522 for dependency "esp-idf-rc522", specified in /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/idf_component.yml
+Using component placed at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/components/esp-websocket_client for dependency "esp-websocket_client", specified in /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/idf_component.yml
+Using component placed at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/rtmp_push_app for dependency "rtmp_push_app", specified in /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/idf_component.yml
+Using component placed at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp32_cam for dependency "setup_esp32_cam", specified in /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/idf_component.yml
+Using component placed at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client for dependency "setup_esp_websocket_client", specified in /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/idf_component.yml
+Using component placed at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_rc522 for dependency "setup_rc522", specified in /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/idf_component.yml
+.HINT: Component "espressif/usb_stream" has suitable versions for other targets: "esp32s3", "esp32s2". Is your current target "esp32" set correctly?
+.........NOTICE: Skipping optional dependency: espressif/esp_modem_usb_dte
+NOTICE: Skipping optional dependency: espressif/esp_tinyusb
+...........NOTICE: Skipping optional dependency: usb_device
+Using component placed at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/av_record for dependency "av_record", specified in /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/idf_component.yml
+Using component placed at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/components/common_struct for dependency "common_struct", specified in /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/idf_component.yml
+Using component placed at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/config_http_client for dependency "config_http_client", specified in /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/idf_component.yml
+Using component placed at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/components/esp-idf-rc522 for dependency "esp-idf-rc522", specified in /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/idf_component.yml
+Using component placed at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/components/esp-websocket_client for dependency "esp-websocket_client", specified in /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/idf_component.yml
+Using component placed at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/rtmp_push_app for dependency "rtmp_push_app", specified in /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/idf_component.yml
+Using component placed at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp32_cam for dependency "setup_esp32_cam", specified in /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/idf_component.yml
+Using component placed at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client for dependency "setup_esp_websocket_client", specified in /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/idf_component.yml
+Using component placed at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_rc522 for dependency "setup_rc522", specified in /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/idf_component.yml
+.HINT: Component "espressif/usb_stream" has suitable versions for other targets: "esp32s3", "esp32s2". Is your current target "esp32" set correctly?
+.......NOTICE: Skipping optional dependency: espressif/esp_modem_usb_dte
+NOTICE: Skipping optional dependency: espressif/esp_tinyusb
+..................NOTICE: Skipping optional dependency: espressif/esp_modem_usb_dte
+NOTICE: Skipping optional dependency: espressif/esp_tinyusb
+.............NOTICE: Skipping optional dependency: espressif/esp_modem_usb_dte
+NOTICE: Skipping optional dependency: espressif/esp_tinyusb
+..NOTICE: Skipping optional dependency: espressif/esp_modem_usb_dte
+NOTICE: Skipping optional dependency: espressif/esp_tinyusb
+.........NOTICE: Skipping optional dependency: usb_device
+-- Configuring incomplete, errors occurred!
+FAILED: build.ninja 
+/usr/bin/cmake --regenerate-during-build -S/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate -B/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build

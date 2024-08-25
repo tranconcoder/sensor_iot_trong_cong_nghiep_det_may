@@ -1,0 +1,60 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40090c82: xTaskDelayUntil at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1486
+[0m
+[0;33m0x4008b062: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:150
+0x4008b06d: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:160
+[0m
+[0;33m0x40090c7f: xTaskDelayUntil at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1483
+0x400e2c81: task_send_image_to_websocket at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client/setup_esp_websocket_client.c:69
+0x4008f23d: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40090c82: xTaskDelayUntil at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1486
+[0m
+[0;33m0x4008b062: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:150
+0x4008b06d: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:160
+[0m
+[0;33m0x40090c7f: xTaskDelayUntil at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1483
+0x400e2c81: task_send_image_to_websocket at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client/setup_esp_websocket_client.c:69
+0x4008f23d: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40090c82: xTaskDelayUntil at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1486
+[0m
+[0;33m0x4008b062: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:150
+0x4008b06d: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:160
+[0m
+[0;33m0x40090c7f: xTaskDelayUntil at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1483
+0x400e2c81: task_send_image_to_websocket at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client/setup_esp_websocket_client.c:69
+0x4008f23d: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40090c82: xTaskDelayUntil at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1486
+[0m
+[0;33m0x4008b062: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:150
+0x4008b06d: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:160
+[0m
+[0;33m0x40090c7f: xTaskDelayUntil at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1483
+0x400e2c81: task_send_image_to_websocket at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client/setup_esp_websocket_client.c:69
+0x4008f23d: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40090c82: xTaskDelayUntil at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1486
+[0m
+[0;33m0x4008b062: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:150
+0x4008b06d: memset at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memset.S:160
+[0m
+[0;33m0x40090c7f: xTaskDelayUntil at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1483
+0x400e2c81: task_send_image_to_websocket at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client/setup_esp_websocket_client.c:69
+0x4008f23d: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m

@@ -1,0 +1,6 @@
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32
+Invalid field "dependencies:rtmp_push_app": Unknown fields "pth" under "dependencies" field that may affect build result
+-- Configuring incomplete, errors occurred!
+FAILED: build.ninja 
+/usr/bin/cmake --regenerate-during-build -S/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate -B/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build

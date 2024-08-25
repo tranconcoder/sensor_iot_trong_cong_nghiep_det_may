@@ -1,0 +1,19 @@
+{
+	"files.associations": {
+		"*.js": "javascript",
+		"common_struct.h": "c",
+		"compare": "c",
+		"cstdint": "c",
+		"setup_esp_websocket_client.h": "c",
+		"esp_websocket_client.h": "c",
+		"stdio.h": "c",
+		"esp_mesh_lite.h": "c",
+		"esp_log.h": "c",
+		"esp_camera.h": "c",
+		"rtmp_push_app.h": "c",
+		"rtmp_app_setting.h": "c",
+		"config_http_client.h": "c",
+		"esp_netif.h": "c"
+	},
+	"git.ignoreLimitWarning": true
+}

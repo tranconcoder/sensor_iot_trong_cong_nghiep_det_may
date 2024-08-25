@@ -1,0 +1,212 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7536
+load:0x40078000,len:15964
+load:0x40080400,len:4
+load:0x40080404,len:4756
+entry 0x400806a4
+[0;32mI (29) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 24 2024 16:18:19[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (75) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (83) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (90) boot: End of partition table[0m
+[0;32mI (5094) boot: Detect a condition of the factory reset[0m
+[0;32mI (5094) boot: Data partitions to erase: nvs[0m
+[0;32mI (5094) boot_comm: ## Label            Usage Offset   Length   Cleaned[0m
+[0;32mI (5132) boot_comm:  0 nvs              data  00009000 00006000 [yes][0m
+[0;32mI (5133) boot_comm:  1 phy_init         data  0000f000 00001000 [no][0m
+[0;32mI (5135) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2cd88h (183688) map[0m
+[0;32mI (5207) esp_image: segment 1: paddr=0003cdb0 vaddr=3ffbdb60 size=03268h ( 12904) load[0m
+[0;32mI (5212) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=b6d80h (748928) map[0m
+[0;32mI (5469) esp_image: segment 3: paddr=000f6da8 vaddr=3ffc0dc8 size=028ech ( 10476) load[0m
+[0;32mI (5474) esp_image: segment 4: paddr=000f969c vaddr=40080000 size=1a8fch (108796) load[0m
+[0;32mI (5532) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (5532) boot: Disabling RNG early entropy source...[0m
+[0;32mI (5544) cpu_start: Multicore app[0m
+[0;32mI (5552) cpu_start: Pro cpu start user code[0m
+[0;32mI (5552) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (5552) app_init: Application information:[0m
+[0;32mI (5556) app_init: Project name:     mesh_local_control[0m
+[0;32mI (5561) app_init: App version:      07dadcaa-dirty[0m
+[0;32mI (5567) app_init: Compile time:     Aug 24 2024 16:18:14[0m
+[0;32mI (5573) app_init: ELF file SHA256:  89b48c34a...[0m
+[0;32mI (5578) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (5584) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (5589) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (5594) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (5599) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (5606) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (5612) heap_init: At 3FFC8528 len 00017AD8 (94 KiB): DRAM[0m
+[0;32mI (5618) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (5625) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (5631) heap_init: At 4009A8FC len 00005704 (21 KiB): IRAM[0m
+[0;32mI (5639) spi_flash: detected chip: generic[0m
+[0;32mI (5642) spi_flash: flash io: dio[0m
+[0;33mW (5646) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (5658) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (0) main_task: Started on CPU1[0m
+[0;32mI (10) main_task: Calling app_main()[0m
+[0;32mI (20) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (40) wifi:wifi driver task: 3ffb82c4, prio:23, stack:6656, core=0
+I (5748) wifi:wifi firmware version: 0caa81945
+I (5748) wifi:wifi certification version: v7.0
+I (5748) wifi:config NVS flash: enabled
+I (5748) wifi:config nano formating: disabled
+I (5758) wifi:Init data frame dynamic rx buffer num: 32
+I (5758) wifi:Init static rx mgmt buffer num: 5
+I (5768) wifi:Init management short buffer num: 32
+I (5768) wifi:Init static tx buffer num: 16
+I (5768) wifi:Init static rx buffer size: 1600
+I (5778) wifi:Init static rx buffer num: 10
+I (5778) wifi:Init dynamic rx buffer num: 32
+[0;32mI (5788) wifi_init: rx ba win: 6[0m
+[0;32mI (5788) wifi_init: accept mbox: 6[0m
+[0;32mI (5788) wifi_init: tcpip mbox: 32[0m
+[0;32mI (5798) wifi_init: udp mbox: 6[0m
+[0;32mI (5798) wifi_init: tcp mbox: 6[0m
+[0;32mI (5808) wifi_init: tcp tx win: 5760[0m
+[0;32mI (5808) wifi_init: tcp rx win: 5760[0m
+[0;32mI (5808) wifi_init: tcp mss: 1440[0m
+[0;32mI (5818) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (5818) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (5828) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (5828) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (5898) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+I (5908) wifi:mode : null
+I (5908) wifi:mode : softAP (08:a6:f7:11:51:a9)
+I (5918) wifi:Total power save buffer number: 8
+I (5918) wifi:Init max length of beacon: 752/752
+I (5918) wifi:Init max length of beacon: 752/752
+Add netif ap with 07dadcaa(commit id)
+[0;32mI (5928) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (5938) bridge_common: netif list add success[0m
+[0;31mE (5938) NVS: Failed to open NVS namespace[0m
+[0;32mI (5948) bridge_common: IP Address:192.168.5.1[0m
+[0;32mI (5948) bridge_common: GW Address:192.168.5.1[0m
+[0;32mI (5958) bridge_common: NM Address:255.255.255.0[0m
+[0;32mI (5958) bridge_common: [WIFI_AP_DEF ][0m
+[0;32mI (5968) bridge_common: Set ip info:192.168.5.1[0m
+[0;32mI (5968) bridge_wifi: SoftAP IP network segment has changed, deauth all station[0m
+I (5978) wifi:Disabled PMF config for SoftAP
+I (5978) wifi:Total power save buffer number: 8
+[0;32mI (5988) bridge_common: DHCPS Restart, deauth all station[0m
+[0;32mI (5988) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (5998) bridge_common: [WIFI_AP_DEF ]Name Server1: 114.114.114.114[0m
+Add netif sta with 07dadcaa(commit id)
+[0;32mI (6008) bridge_common: netif list add success[0m
+I (6018) wifi:mode : sta (08:a6:f7:11:51:a8) + softAP (08:a6:f7:11:51:a9)
+I (6018) wifi:enable tsf
+[0;31mE (6028) NVS: Failed to read IP info from NVS[0m
+I (6028) wifi:Disabled PMF config for STA
+[0;32mI (6028) bridge_wifi: [esp_bridge_wifi_set_config] sta ssid: Tran Con Dev password: password[0m
+[0;32mI (6038) bridge_wifi: [esp_bridge_wifi_set_config] softap ssid: ESP_Bridge password: 12345678[0m
+I (6218) wifi:Total power save buffer number: 8
+[0;32mI (6228) bridge_wifi: SoftAP config changed, deauth all station[0m
+[0;32mI (6228) Mesh-Lite: esp-mesh-lite component version: 1.0.0[0m
+[0;32mI (6228) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+I (6238) ESPNOW: espnow [version: 1.0] init
+[0;32mI (6238) [vendor_ie]: Mesh-Lite commit id: bc9302d
+ [0m
+[0;31mE (6248) [vendor_ie]: Error Get! [0m
+[0;33mW (6248) [vendor_ie]: Mesh ID is not saved in flash [0m
+[0;32mI (6258) [vendor_ie]: Mesh ID: 77 [0m
+[0;33mW (6258) [vendor_ie]: Error Get[4354] [0m
+[0;33mW (6268) [vendor_ie]: Error Get[4354] [0m
+[0;32mI (6268) [ESP_Mesh_Lite_Comm]: msg action add success [0m
+[0;32mI (6278) [ESP_Mesh_Lite_Comm]: Bind Socket 54, port 6364 [0m
+[0;32mI (6278) [ESP_Mesh_Lite_Comm]: Bind Socket 55, port 6363 [0m
+[0;32mI (6288) [ESP_Mesh_Lite_Comm]: Bind Socket 56, port 6366 [0m
+[0;32mI (6298) [ESP_Mesh_Lite_Comm]: Bind Socket 57, port 6365 [0m
+[0;32mI (6298) [mesh-lite-espnow]: Start espnow task [0m
+[0;32mI (6308) Mesh-Lite: Mesh-Lite connecting[0m
+[0;32mI (6308) [vendor_ie]: esp_mesh_lite_wifi_scan_start return ESP_OK [0m
+[0;32mI (6318) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (6328) cam_hal: cam init ok[0m
+[0;32mI (6328) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (6338) sccb: sccb_i2c_port=1[0m
+[0;32mI (6338) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6378) camera: Detected camera at address=0x30[0m
+[0;32mI (6378) camera: Detected OV2640 camera[0m
+[0;32mI (6378) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (6428) cam_hal: buffer_size: 32768, half_buffer_size: 4096, node_buffer_size: 2048, node_cnt: 16, total_cnt: 5[0m
+[0;32mI (6428) cam_hal: Allocating 23680 Byte frame buffer in PSRAM[0m
+[0;31mE (6438) cam_hal: cam_dma_config(301): frame buffer malloc failed[0m
+[0;31mE (6448) cam_hal: cam_config(389): cam_dma_config failed[0m
+[0;31mE (6448) camera: Camera config failed with error 0xffffffff[0m
+[0;31mE (6458) setup_esp32_cam: Camera Init Failed[0m
+[0;32mI (7698) [vendor_ie]: Mesh-Lite Scan done [0m
+[0;32mI (7698) [vendor_ie]: RTC store: temp_mesh_id:255; ssid:Tran Con Dev; bssid:00:00:00:00:00:00; crc:2891781910 [0m
+[0;32mI (7708) [vendor_ie]: wifi_cfg Tran Con Dev router_config Tran Con Dev [0m
+[0;32mI (7718) [vendor_ie]: esp_mesh_lite_wifi_connect return ESP_OK [0m
+I (8348) wifi:ap channel adjust o:1,1 n:4,1
+I (8348) wifi:new:<4,0>, old:<1,1>, ap:<4,1>, sta:<4,0>, prof:1, snd_ch_cfg:0x0
+I (8348) wifi:state: init -> auth (0xb0)
+I (8348) wifi:state: auth -> assoc (0x0)
+I (8358) wifi:state: assoc -> run (0x10)
+I (8398) wifi:connected with Tran Con Dev, aid = 2, channel 4, BW20, bssid = e4:ca:12:bd:52:70
+I (8398) wifi:security: WPA2-PSK, phy: bgn, rssi: -60
+I (8408) wifi:pm start, type: 1
+
+I (8408) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (8418) wifi:<ba-add>idx:0 (ifx:0, e4:ca:12:bd:52:70), tid:0, ssn:0, winSize:64
+I (8488) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (10488) bridge_common: [WIFI_AP_DEF ]Name Server1: 203.113.131.2[0m
+[0;32mI (11428) esp_netif_handlers: sta ip: 192.168.1.3, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (11428) bridge_wifi: Connected with IP Address:192.168.1.3[0m
+[0;32mI (11428) [vendor_ie]: RTC store: temp_mesh_id:[0;31mE (11438) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (11448) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (11448) task_wdt: Tasks currently running:[0m
+[0;31mE (11458) task_wdt: CPU 0: sys_evt[0m
+[0;31mE (11458) task_wdt: CPU 1: main[0m
+[0;31mE (11458) task_wdt: Print CPU 1 (current core) backtrace[0m
+
+
+Backtrace: 0x400E9973:0x3FFC0690 0x400E9D38:0x3FFC06B0 0x400838D5:0x3FFC06E0 0x400E3993:0x3FFB1E00 0x400D9975:0x3FFB1E20 0x40184D0F:0x3FFB1E60 0x4008C73D:0x3FFB1E90
+
+3; ssid:Tran Con Dev; bssid:00:00:00:00:00:00; crc:66671796 [0m
+[0;31mE (11488) [ESP_Mesh_Lite_Comm]: Error Get! [0m
+[0;33mW (11488) [ESP_Mesh_Lite_Comm]: argot is not saved in flash [0m
+[0;32mI (11508) esp32cam_security_gate: TCP client write task is running[0m
+[0;31mE (16438) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (16438) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (16438) task_wdt: Tasks currently running:[0m
+[0;31mE (16438) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (16448) task_wdt: CPU 1: main[0m
+[0;31mE (16448) task_wdt: Print CPU 1 (current core) backtrace[0m
+
+
+Backtrace: 0x400E9973:0x3FFC0690 0x400E9D38:0x3FFC06B0 0x400838D5:0x3FFC06E0 0x400E3990:0x3FFB1E00 0x400D9975:0x3FFB1E20 0x40184D0F:0x3FFB1E60 0x4008C73D:0x3FFB1E90
+
+[0;31mE (21438) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (21438) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (21438) task_wdt: Tasks currently running:[0m
+[0;31mE (21438) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (21448) task_wdt: CPU 1: main[0m
+[0;31mE (21448) task_wdt: Print CPU 1 (current core) backtrace[0m
+
+
+Backtrace: 0x400E9973:0x3FFC0690 0x400E9D38:0x3FFC06B0 0x400838D5:0x3FFC06E0 0x400E3990:0x3FFB1E00 0x400D9975:0x3FFB1E20 0x40184D0F:0x3FFB1E60 0x4008C73D:0x3FFB1E90
+
+[0;31mE (26438) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (26438) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (26438) task_wdt: Tasks currently running:[0m
+[0;31mE (26438) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (26448) task_wdt: CPU 1: main[0m
+[0;31mE (26448) task_wdt: Print CPU 1 (current core) backtrace[0m
+
+
+Backtrace: 0x400E9973:0x3FFC0690 0x400E9D38:0x3FFC06B0 0x400838D5:0x3FFC06E0 0x400E39A9:0x3FFB1E00 0x400D9975:0x3FFB1E20 0x40184D0F:0x3FFB1E60 0x4008C73D:0x3FFB1E90
+

@@ -1,0 +1,3 @@
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32
+NOTICE: Skipping optional dependency: usb_device

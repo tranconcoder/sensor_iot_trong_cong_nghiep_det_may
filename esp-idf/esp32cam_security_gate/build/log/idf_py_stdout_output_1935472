@@ -1,0 +1,127 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/bootloader/esp-idf/esptool_py && /home/tvconss/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/tvconss/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/bootloader/bootloader.bin
+Bootloader binary size 0x6730 bytes. 0x8d0 bytes (8%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/esp32cam_security_gate.c.obj
+In file included from /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client/include/setup_esp_websocket_client.h:2,
+                 from /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c:23:
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp32_cam/include/setup_esp32_cam.h:28:18: warning: 'init_camera' declared 'static' but never defined [-Wunused-function]
+   28 | static esp_err_t init_camera(void);
+      |                  ^~~~~~~~~~~
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c:32:12: warning: array 'howsmyssl_com_root_cert_pem_start' assumed to have one element
+   32 | const char howsmyssl_com_root_cert_pem_start[] asm("_binary_howsmyssl_com_root_cert_pem_start");
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client/include/setup_esp_websocket_client.h:9:13: warning: 'websocket_connecting' defined but not used [-Wunused-variable]
+    9 | static bool websocket_connecting;
+      |             ^~~~~~~~~~~~~~~~~~~~
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp32_cam/include/setup_esp32_cam.h:26:13: warning: 'camera_init_done' defined but not used [-Wunused-variable]
+   26 | static bool camera_init_done;
+      |             ^~~~~~~~~~~~~~~~
+In file included from /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c:19:
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_rc522/include/setup_rc522.h:6:20: warning: 'SETUP_RC522_TAG' defined but not used [-Wunused-variable]
+    6 | static const char *SETUP_RC522_TAG;
+      |                    ^~~~~~~~~~~~~~~
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_rc522/include/setup_rc522.h:5:23: warning: 'scanner' defined but not used [-Wunused-variable]
+    5 | static rc522_handle_t scanner;
+      |                       ^~~~~~~
+In file included from /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/managed_components/espressif__mesh_lite/include/esp_mesh_lite.h:16,
+                 from /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c:8:
+/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/managed_components/espressif__mesh_lite/include/esp_mesh_lite_espnow.h:16:16: warning: 's_broadcast_mac' defined but not used [-Wunused-variable]
+   16 | static uint8_t s_broadcast_mac[ESP_NOW_ETH_ALEN] = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF };
+      |                ^~~~~~~~~~~~~~~
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+warning: the int symbol BRIDGE_SOFTAP_MAX_CONNECT_NUMBER (defined at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/managed_components/espressif__iot_bridge/Kconfig:108) has a non-int default BRIDGE_CUSTOM_MAX_CONNECT_NUMBER (undefined)
+[7/10] Linking CXX executable mesh_local_control.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.8.dev4
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/mesh_local_control.bin
+[9/10] cd /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/esp-idf/esptool_py && /home/tvconss/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/tvconss/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/partition_table/partition-table.bin /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build/mesh_local_control.bin
+mesh_local_control.bin binary size 0x11a690 bytes. Smallest app partition is 0x1e0000 bytes. 0xc5970 bytes (41%) free.
+[9/10] cd /home/tvconss/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/tvconss/esp/esp-idf -D "SERIAL_TOOL=/home/tvconss/.espressif/python_env/idf5.3_py3.12_env/bin/python;;/home/tvconss/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build -P /home/tvconss/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size detect 0x1000 bootloader/bootloader.bin 0x10000 mesh_local_control.bin 0x8000 partition_table/partition-table.bin 0xd000 ota_data_initial.bin
+esptool.py v4.8.dev4
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 08:a6:f7:11:51:a8
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Auto-detected Flash size: 4MB
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0012afff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000d000 to 0x0000efff...
+SHA digest in image updated
+Compressed 26416 bytes to 16239...
+Writing at 0x00001000... (100 %)
+Wrote 26416 bytes (16239 compressed) at 0x00001000 in 0.5 seconds (effective 416.3 kbit/s)...
+Hash of data verified.
+Compressed 1156752 bytes to 709983...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001d7a0... (4 %)
+Writing at 0x0002a4e5... (6 %)
+Writing at 0x000314e8... (9 %)
+Writing at 0x000364a4... (11 %)
+Writing at 0x0003fa6d... (13 %)
+Writing at 0x00045a90... (15 %)
+Writing at 0x0004bc62... (18 %)
+Writing at 0x00051134... (20 %)
+Writing at 0x00056e81... (22 %)
+Writing at 0x0005ec41... (25 %)
+Writing at 0x00064bcd... (27 %)
+Writing at 0x0006afee... (29 %)
+Writing at 0x00070e81... (31 %)
+Writing at 0x00076e8e... (34 %)
+Writing at 0x0007ce42... (36 %)
+Writing at 0x00082dea... (38 %)
+Writing at 0x00088e8e... (40 %)
+Writing at 0x0008eec4... (43 %)
+Writing at 0x00094c9c... (45 %)
+Writing at 0x0009b6f7... (47 %)
+Writing at 0x000a13bc... (50 %)
+Writing at 0x000a72b5... (52 %)
+Writing at 0x000acd28... (54 %)
+Writing at 0x000b1ecc... (56 %)
+Writing at 0x000b721e... (59 %)
+Writing at 0x000bc92c... (61 %)
+Writing at 0x000c2226... (63 %)
+Writing at 0x000c751b... (65 %)
+Writing at 0x000ccc72... (68 %)
+Writing at 0x000d2ad7... (70 %)
+Writing at 0x000d8482... (72 %)
+Writing at 0x000de2b2... (75 %)
+Writing at 0x000e3f81... (77 %)
+Writing at 0x000e9941... (79 %)
+Writing at 0x000f035c... (81 %)
+Writing at 0x000fba62... (84 %)
+Writing at 0x0010218a... (86 %)
+Writing at 0x0010ab8e... (88 %)
+Writing at 0x00111475... (90 %)
+Writing at 0x00116d73... (93 %)
+Writing at 0x0011cbdf... (95 %)
+Writing at 0x001231aa... (97 %)
+Writing at 0x0012849d... (100 %)
+Wrote 1156752 bytes (709983 compressed) at 0x00010000 in 15.9 seconds (effective 581.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 162...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (162 compressed) at 0x00008000 in 0.0 seconds (effective 1342.9 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 31...
+Writing at 0x0000d000... (100 %)
+Wrote 8192 bytes (31 compressed) at 0x0000d000 in 0.0 seconds (effective 2274.2 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

@@ -28,15 +28,9 @@
 
 // TASK STACK SIZE
 #define STACK_SIZE 4 * 1024
-// HTTP CLIENT
-#define MAX_HTTP_RECV_BUFFER 64
-#define MAX_HTTP_OUTPUT_BUFFER 128
-
-const char howsmyssl_com_root_cert_pem_start[] asm("_binary_howsmyssl_com_root_cert_pem_start");
 
 static int g_sockfd = -1;
-static const char *TAG = "esp32cam_security_gate";
-// static const uint8_t ESP32_MAC[] = {0xc8, 0x2e, 0x18, 0x25, 0xe0, 0x80};
+static const char *TAG = "main";
 
 static int socket_tcp_client_create(const char *ip, uint16_t port)
 {
@@ -96,7 +90,7 @@ void tcp_client_write_task(void *arg)
 
     ESP_LOGI(TAG, "TCP client write task is running");
 
-    while (1)
+    while (true)
     {
         if (g_sockfd == -1)
         {
@@ -144,7 +138,7 @@ static void ip_event_sta_got_ip_handler(void *arg, esp_event_base_t event_base,
         xTaskCreate(
             tcp_client_write_task,
             "tcp_client_write_task",
-            4 * 1024,
+            STACK_SIZE,
             NULL,
             1,
             NULL);
@@ -219,18 +213,21 @@ void app_main()
 
     ESP_ERROR_CHECK(esp_event_handler_instance_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &ip_event_sta_got_ip_handler, NULL, NULL));
 
+    // Init camera
     esp_err_t init_camera = setup_esp32_cam();
     while (init_camera != ESP_OK)
     {
-        ESP_LOGI(TAG, "Camera initialization");
+        ESP_LOGI(TAG, "Camera deiniting...");
         init_camera = esp_camera_deinit();
+        vTaskDelay(pdMS_TO_TICKS(3000));
     }
 
+    // Config camera
     sensor_t *s = esp_camera_sensor_get();
-    s->set_vflip(s, 1);
-    s->set_hmirror(s, 1);
+    s->set_brightness(s, 3);
 
     setup_esp_websocket_client_init();
+    setup_rc522();
 
     while (true)
     {

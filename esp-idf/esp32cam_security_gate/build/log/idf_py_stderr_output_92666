@@ -1,0 +1,33 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400819e1: panic_abort at /home/tvconss/esp/esp-idf/components/esp_system/panic.c:463
+0x4008f535: esp_system_abort at /home/tvconss/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40097db1: __assert_func at /home/tvconss/esp/esp-idf/components/newlib/assert.c:80
+0x40092c70: xTaskCreatePinnedToCore at /home/tvconss/esp/esp-idf/components/freertos/esp_additions/freertos_tasks_c_additions.h:162 (discriminator 1)
+0x400e4fc7: cam_config at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/managed_components/espressif__esp32-camera/driver/cam_hal.c:412
+0x400e4701: esp_camera_init at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/managed_components/espressif__esp32-camera/driver/esp_camera.c:302
+0x400e43d6: init_camera at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp32_cam/setup_esp32_cam.c:45
+0x400e43f7: setup_esp32_cam at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp32_cam/setup_esp32_cam.c:59
+0x400da568: app_main at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c:217
+0x4018bc9b: main_task at /home/tvconss/esp/esp-idf/components/freertos/app_startup.c:208
+0x40090479: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400819e1: panic_abort at /home/tvconss/esp/esp-idf/components/esp_system/panic.c:463
+0x4008f535: esp_system_abort at /home/tvconss/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40097db1: __assert_func at /home/tvconss/esp/esp-idf/components/newlib/assert.c:80
+0x40092c70: xTaskCreatePinnedToCore at /home/tvconss/esp/esp-idf/components/freertos/esp_additions/freertos_tasks_c_additions.h:162 (discriminator 1)
+0x400e4fc7: cam_config at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/managed_components/espressif__esp32-camera/driver/cam_hal.c:412
+0x400e4701: esp_camera_init at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/managed_components/espressif__esp32-camera/driver/esp_camera.c:302
+0x400e43d6: init_camera at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp32_cam/setup_esp32_cam.c:45
+0x400e43f7: setup_esp32_cam at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp32_cam/setup_esp32_cam.c:59
+0x400da568: app_main at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/esp32cam_security_gate.c:217
+0x4018bc9b: main_task at /home/tvconss/esp/esp-idf/components/freertos/app_startup.c:208
+0x40090479: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m

@@ -10,7 +10,7 @@ const esp_websocket_client_config_t ws_cfg = {
     .port = 3000,
     .path = "/?source=esp32cam_security_gate_send_img",
     .buffer_size = 16 * 1024,
-    .reconnect_timeout_ms = 5000,
+    .reconnect_timeout_ms = 500,
     .network_timeout_ms = 5000,
 };
 
@@ -52,9 +52,6 @@ void task_send_image_to_websocket(esp_websocket_client_handle_t ws_client)
 
           int send_result = esp_websocket_client_send_bin(ws_client, (char *)fb->buf, fb->len, 5000 / portTICK_PERIOD_MS);
 
-          size_t img_byte_len = fb->len;
-          esp_camera_fb_return(fb);
-
           if (send_result != -1)
           {
                uint64_t current_time = esp_timer_get_time();
@@ -66,11 +63,9 @@ void task_send_image_to_websocket(esp_websocket_client_handle_t ws_client)
 
                last_send_time = current_time;
           }
-          else
-          {
-               ESP_LOGW(TAG, "Waiting for WebSocket connection to resume sending image...");
-               vTaskSuspend(NULL);
-          }
+          else ESP_LOGW(TAG, "Send frame error!");
+
+          esp_camera_fb_return(fb);
      }
 }
 

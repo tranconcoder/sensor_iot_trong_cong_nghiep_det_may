@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "mesh_local_control",
-    "project_version":    "f4bea835-dirty",
+    "project_version":    "d1ba481-dirty",
     "project_path":       "/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate",
     "idf_path":           "/home/tvconss/esp/esp-idf",
     "build_dir":          "/home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/build",

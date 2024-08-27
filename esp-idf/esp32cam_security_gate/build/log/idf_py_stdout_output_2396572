@@ -1,0 +1,1709 @@
+�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:7168
+load:0x40078000,len:15464
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (31) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug 27 2024 13:57:19[0m
+[0;33mW (31) boot: Unicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (77) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (92) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (107) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (114) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (122) boot: End of partition table[0m
+[0;32mI (126) boot: No factory image, trying OTA 0[0m
+[0;32mI (131) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2d7fch (186364) map[0m
+[0;32mI (192) esp_image: segment 1: paddr=0003d824 vaddr=3ffbdb60 size=027f4h ( 10228) load[0m
+[0;32mI (196) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=bdd14h (777492) map[0m
+[0;32mI (418) esp_image: segment 3: paddr=000fdd3c vaddr=3ffc0354 size=02a6ch ( 10860) load[0m
+[0;32mI (422) esp_image: segment 4: paddr=001007b0 vaddr=40080000 size=1e61ch (124444) load[0m
+[0;32mI (480) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (486) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (486) boot: Disabling RNG early entropy source...[0m
+[0;32mI (497) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (498) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (498) esp_psram: Speed: 80MHz[0m
+[0;32mI (501) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (509) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (518) cpu_start: Unicore app[0m
+[0;32mI (522) cpu_start: Single core mode[0m
+[0;32mI (1059) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1067) cpu_start: Pro cpu start user code[0m
+[0;32mI (1067) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1067) app_init: Application information:[0m
+[0;32mI (1070) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1076) app_init: App version:      d1ba481-dirty[0m
+[0;32mI (1082) app_init: Compile time:     Aug 27 2024 14:08:14[0m
+[0;32mI (1088) app_init: ELF file SHA256:  7413c02c3...[0m
+[0;32mI (1093) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1098) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1103) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1108) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1113) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1120) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1127) heap_init: At 3FFC7C60 len 000183A0 (96 KiB): DRAM[0m
+[0;32mI (1133) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1139) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1146) heap_init: At 4009E61C len 000019E4 (6 KiB): IRAM[0m
+[0;32mI (1152) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1158) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1166) spi_flash: detected chip: generic[0m
+[0;32mI (1170) spi_flash: flash io: dio[0m
+[0;33mW (1174) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1197) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1197) main_task: Started on CPU0[0m
+[0;32mI (1197) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1205) main_task: Calling app_main()[0m
+[0;32mI (1218) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1221) wifi:wifi driver task: 3ffbd604, prio:23, stack:6656, core=0
+I (1224) wifi:wifi firmware version: 0caa81945
+I (1226) wifi:wifi certification version: v7.0
+I (1230) wifi:config NVS flash: enabled
+I (1233) wifi:config nano formating: disabled
+I (1237) wifi:Init data frame dynamic rx buffer num: 32
+I (1242) wifi:Init static rx mgmt buffer num: 5
+I (1246) wifi:Init management short buffer num: 32
+I (1251) wifi:Init static tx buffer num: 16
+I (1255) wifi:Init tx cache buffer num: 32
+I (1259) wifi:Init static rx buffer size: 1600
+I (1263) wifi:Init static rx buffer num: 10
+I (1267) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1271) wifi_init: accept mbox: 6[0m
+[0;32mI (1275) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1279) wifi_init: udp mbox: 6[0m
+[0;32mI (1282) wifi_init: tcp mbox: 6[0m
+[0;32mI (1286) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1291) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1295) wifi_init: tcp mss: 1440[0m
+[0;32mI (1299) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1303) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1308) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1315) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (1376) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+I (1386) wifi:mode : null
+I (1387) wifi:mode : softAP (08:a6:f7:11:51:a9)
+I (1388) wifi:Total power save buffer number: 8
+I (1389) wifi:Init max length of beacon: 752/752
+I (1391) wifi:Init max length of beacon: 752/752
+[0;32mI (1397) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+Add netif ap with d1ba481(commit id)
+[0;32mI (1407) bridge_common: netif list add success[0m
+[0;31mE (1412) NVS: Failed to open NVS namespace[0m
+[0;32mI (1417) bridge_common: IP Address:192.168.5.1[0m
+[0;32mI (1422) bridge_common: GW Address:192.168.5.1[0m
+[0;32mI (1427) bridge_common: NM Address:255.255.255.0[0m
+[0;32mI (1433) bridge_common: [WIFI_AP_DEF ][0m
+[0;32mI (1438) bridge_common: Set ip info:192.168.5.1[0m
+[0;32mI (1442) bridge_wifi: SoftAP IP network segment has changed, deauth all station[0m
+I (1453) wifi:Disabled PMF config for SoftAP
+I (1455) wifi:Total power save buffer number: 8
+[0;32mI (1460) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (1467) bridge_common: [WIFI_AP_DEF ]Name Server1: 114.114.114.114[0m
+[0;32mI (1474) bridge_common: DHCPS Restart, deauth all station[0m
+Add netif sta with d1ba481(commit id)
+[0;32mI (1484) bridge_common: netif list add success[0m
+I (1489) wifi:mode : sta (08:a6:f7:11:51:a8) + softAP (08:a6:f7:11:51:a9)
+I (1495) wifi:enable tsf
+[0;31mE (1498) NVS: Failed to read IP info from NVS[0m
+I (1503) wifi:Disabled PMF config for STA
+[0;32mI (1506) bridge_wifi: [esp_bridge_wifi_set_config] sta ssid: Tran Con Dev password: password[0m
+[0;32mI (1516) bridge_wifi: [esp_bridge_wifi_set_config] softap ssid: ESP_Bridge_1151a9 password: 12345678[0m
+I (1696) wifi:Total power save buffer number: 8
+[0;32mI (1699) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (1700) bridge_wifi: SoftAP config changed, deauth all station[0m
+[0;32mI (1706) Mesh-Lite: esp-mesh-lite component version: 1.0.0[0m
+I (1712) ESPNOW: espnow [version: 1.0] init
+[0;32mI (1715) [vendor_ie]: Mesh-Lite commit id: bc9302d
+ [0m
+[0;31mE (1722) [vendor_ie]: Error Get! [0m
+[0;33mW (1725) [vendor_ie]: Mesh ID is not saved in flash [0m
+[0;32mI (1731) [vendor_ie]: Mesh ID: 77 [0m
+[0;33mW (1735) [vendor_ie]: Error Get[4354] [0m
+[0;33mW (1739) [vendor_ie]: Error Get[4354] [0m
+[0;32mI (1745) [ESP_Mesh_Lite_Comm]: msg action add success [0m
+[0;32mI (1751) [ESP_Mesh_Lite_Comm]: Bind Socket 54, port 6364 [0m
+[0;32mI (1756) [ESP_Mesh_Lite_Comm]: Bind Socket 55, port 6363 [0m
+[0;32mI (1762) [ESP_Mesh_Lite_Comm]: Bind Socket 56, port 6366 [0m
+[0;32mI (1768) [ESP_Mesh_Lite_Comm]: Bind Socket 57, port 6365 [0m
+[0;32mI (1774) [mesh-lite-espnow]: Start espnow task [0m
+[0;32mI (1781) Mesh-Lite: Mesh-Lite connecting[0m
+[0;32mI (1785) [vendor_ie]: esp_mesh_lite_wifi_scan_start return ESP_OK [0m
+[0;32mI (1790) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (1801) cam_hal: cam init ok[0m
+[0;32mI (1803) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (1807) sccb: sccb_i2c_port=1[0m
+[0;32mI (1812) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1850) camera: Detected camera at address=0x30[0m
+[0;32mI (1852) camera: Detected OV2640 camera[0m
+[0;32mI (1852) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (1918) cam_hal: buffer_size: 32768, half_buffer_size: 4096, node_buffer_size: 2048, node_cnt: 16, total_cnt: 15[0m
+[0;32mI (1918) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (1924) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (1931) cam_hal: cam config ok[0m
+[0;32mI (1934) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8[0m
+[0;32mI (2014) rc522: Initialized (firmware v2.0)[0m
+[0;32mI (3172) [vendor_ie]: Mesh-Lite Scan done [0m
+[0;32mI (3173) [vendor_ie]: RTC store: temp_mesh_id:255; ssid:Tran Con Dev; bssid:00:00:00:00:00:00; crc:2891781910 [0m
+[0;32mI (3177) [vendor_ie]: wifi_cfg Tran Con Dev router_config Tran Con Dev [0m
+[0;32mI (3185) [vendor_ie]: esp_mesh_lite_wifi_connect return ESP_OK [0m
+I (3813) wifi:ap channel adjust o:1,1 n:4,1
+I (3813) wifi:new:<4,0>, old:<1,1>, ap:<4,1>, sta:<4,0>, prof:1, snd_ch_cfg:0x0
+I (3814) wifi:state: init -> auth (0xb0)
+I (3821) wifi:state: auth -> assoc (0x0)
+I (3828) wifi:state: assoc -> run (0x10)
+I (3866) wifi:connected with Tran Con Dev, aid = 1, channel 4, BW20, bssid = e4:ca:12:bd:52:70
+I (3867) wifi:security: WPA2-PSK, phy: bgn, rssi: -47
+I (3869) wifi:pm start, type: 1
+
+I (3872) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (3893) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;31mE (7013) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (7014) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (7014) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (7021) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (7038) websocket_client: WebSocket client error[0m
+[0;32mI (7043) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (7049) websocket_client: WebSocket client connected[0m
+[0;31mE (7054) websocket_client: Websocket client is not connected[0m
+[0;33mW (7060) websocket_client: Send frame error![0m
+[0;31mE (7066) websocket_client: Websocket client is not connected[0m
+[0;33mW (7072) websocket_client: Send frame error![0m
+[0;31mE (7127) websocket_client: Websocket client is not connected[0m
+[0;33mW (7128) websocket_client: Send frame error![0m
+[0;31mE (7167) websocket_client: Websocket client is not connected[0m
+[0;33mW (7167) websocket_client: Send frame error![0m
+[0;31mE (7207) websocket_client: Websocket client is not connected[0m
+[0;33mW (7207) websocket_client: Send frame error![0m
+[0;31mE (7247) websocket_client: Websocket client is not connected[0m
+[0;33mW (7247) websocket_client: Send frame error![0m
+[0;31mE (7287) websocket_client: Websocket client is not connected[0m
+[0;33mW (7287) websocket_client: Send frame error![0m
+[0;31mE (7327) websocket_client: Websocket client is not connected[0m
+[0;33mW (7327) websocket_client: Send frame error![0m
+[0;31mE (7367) websocket_client: Websocket client is not connected[0m
+[0;33mW (7367) websocket_client: Send frame error![0m
+[0;31mE (7407) websocket_client: Websocket client is not connected[0m
+[0;33mW (7407) websocket_client: Send frame error![0m
+[0;31mE (7447) websocket_client: Websocket client is not connected[0m
+[0;33mW (7447) websocket_client: Send frame error![0m
+[0;31mE (7487) websocket_client: Websocket client is not connected[0m
+[0;33mW (7487) websocket_client: Send frame error![0m
+[0;31mE (7527) websocket_client: Websocket client is not connected[0m
+[0;33mW (7527) websocket_client: Send frame error![0m
+[0;31mE (7567) websocket_client: Websocket client is not connected[0m
+[0;33mW (7567) websocket_client: Send frame error![0m
+[0;31mE (7578) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (7579) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (7581) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (7588) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (7605) websocket_client: WebSocket client error[0m
+[0;32mI (7611) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (7616) websocket_client: WebSocket client connected[0m
+[0;31mE (7622) websocket_client: Websocket client is not connected[0m
+[0;33mW (7628) websocket_client: Send frame error![0m
+[0;33mW (7636) cam_hal: NO-SOI[0m
+[0;31mE (7687) websocket_client: Websocket client is not connected[0m
+[0;33mW (7687) websocket_client: Send frame error![0m
+[0;31mE (7727) websocket_client: Websocket client is not connected[0m
+[0;33mW (7727) websocket_client: Send frame error![0m
+[0;31mE (7767) websocket_client: Websocket client is not connected[0m
+[0;33mW (7767) websocket_client: Send frame error![0m
+[0;31mE (7807) websocket_client: Websocket client is not connected[0m
+[0;33mW (7807) websocket_client: Send frame error![0m
+[0;31mE (7847) websocket_client: Websocket client is not connected[0m
+[0;33mW (7847) websocket_client: Send frame error![0m
+[0;31mE (7887) websocket_client: Websocket client is not connected[0m
+[0;33mW (7888) websocket_client: Send frame error![0m
+[0;31mE (7927) websocket_client: Websocket client is not connected[0m
+[0;33mW (7927) websocket_client: Send frame error![0m
+[0;31mE (7967) websocket_client: Websocket client is not connected[0m
+[0;33mW (7967) websocket_client: Send frame error![0m
+[0;31mE (8007) websocket_client: Websocket client is not connected[0m
+[0;33mW (8007) websocket_client: Send frame error![0m
+[0;31mE (8047) websocket_client: Websocket client is not connected[0m
+[0;33mW (8047) websocket_client: Send frame error![0m
+[0;31mE (8087) websocket_client: Websocket client is not connected[0m
+[0;33mW (8087) websocket_client: Send frame error![0m
+[0;31mE (8127) websocket_client: Websocket client is not connected[0m
+[0;33mW (8127) websocket_client: Send frame error![0m
+[0;31mE (8134) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (8135) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (8140) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (8148) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (8165) websocket_client: WebSocket client error[0m
+[0;32mI (8170) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (8176) websocket_client: WebSocket client connected[0m
+[0;31mE (8181) websocket_client: Websocket client is not connected[0m
+[0;33mW (8188) websocket_client: Send frame error![0m
+[0;33mW (8196) cam_hal: NO-SOI[0m
+[0;31mE (8247) websocket_client: Websocket client is not connected[0m
+[0;33mW (8247) websocket_client: Send frame error![0m
+[0;31mE (8287) websocket_client: Websocket client is not connected[0m
+[0;33mW (8287) websocket_client: Send frame error![0m
+[0;31mE (8327) websocket_client: Websocket client is not connected[0m
+[0;33mW (8327) websocket_client: Send frame error![0m
+[0;31mE (8367) websocket_client: Websocket client is not connected[0m
+[0;33mW (8367) websocket_client: Send frame error![0m
+[0;31mE (8407) websocket_client: Websocket client is not connected[0m
+[0;33mW (8407) websocket_client: Send frame error![0m
+[0;31mE (8447) websocket_client: Websocket client is not connected[0m
+[0;33mW (8447) websocket_client: Send frame error![0m
+[0;31mE (8487) websocket_client: Websocket client is not connected[0m
+[0;33mW (8487) websocket_client: Send frame error![0m
+[0;31mE (8527) websocket_client: Websocket client is not connected[0m
+[0;33mW (8527) websocket_client: Send frame error![0m
+[0;31mE (8567) websocket_client: Websocket client is not connected[0m
+[0;33mW (8567) websocket_client: Send frame error![0m
+[0;31mE (8607) websocket_client: Websocket client is not connected[0m
+[0;33mW (8607) websocket_client: Send frame error![0m
+[0;31mE (8647) websocket_client: Websocket client is not connected[0m
+[0;33mW (8647) websocket_client: Send frame error![0m
+[0;31mE (8687) websocket_client: Websocket client is not connected[0m
+[0;33mW (8687) websocket_client: Send frame error![0m
+[0;31mE (8694) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (8695) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (8700) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (8707) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (8725) websocket_client: WebSocket client error[0m
+[0;32mI (8730) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (8736) websocket_client: WebSocket client connected[0m
+[0;31mE (8741) websocket_client: Websocket client is not connected[0m
+[0;33mW (8748) websocket_client: Send frame error![0m
+[0;33mW (8756) cam_hal: NO-SOI[0m
+[0;31mE (8807) websocket_client: Websocket client is not connected[0m
+[0;33mW (8807) websocket_client: Send frame error![0m
+[0;31mE (8846) websocket_client: Websocket client is not connected[0m
+[0;33mW (8847) websocket_client: Send frame error![0m
+[0;31mE (8886) websocket_client: Websocket client is not connected[0m
+[0;33mW (8887) websocket_client: Send frame error![0m
+[0;31mE (8926) websocket_client: Websocket client is not connected[0m
+[0;33mW (8927) websocket_client: Send frame error![0m
+[0;31mE (8966) websocket_client: Websocket client is not connected[0m
+[0;33mW (8967) websocket_client: Send frame error![0m
+[0;31mE (9006) websocket_client: Websocket client is not connected[0m
+[0;33mW (9007) websocket_client: Send frame error![0m
+[0;31mE (9046) websocket_client: Websocket client is not connected[0m
+[0;33mW (9047) websocket_client: Send frame error![0m
+[0;31mE (9086) websocket_client: Websocket client is not connected[0m
+[0;33mW (9087) websocket_client: Send frame error![0m
+[0;31mE (9126) websocket_client: Websocket client is not connected[0m
+[0;33mW (9127) websocket_client: Send frame error![0m
+[0;31mE (9166) websocket_client: Websocket client is not connected[0m
+[0;33mW (9167) websocket_client: Send frame error![0m
+[0;31mE (9206) websocket_client: Websocket client is not connected[0m
+[0;33mW (9207) websocket_client: Send frame error![0m
+[0;31mE (9246) websocket_client: Websocket client is not connected[0m
+[0;33mW (9247) websocket_client: Send frame error![0m
+[0;31mE (9254) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (9255) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (9260) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (9267) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (9285) websocket_client: WebSocket client error[0m
+[0;32mI (9290) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (9295) websocket_client: WebSocket client connected[0m
+[0;31mE (9301) websocket_client: Websocket client is not connected[0m
+[0;33mW (9307) websocket_client: Send frame error![0m
+[0;33mW (9315) cam_hal: NO-SOI[0m
+[0;31mE (9366) websocket_client: Websocket client is not connected[0m
+[0;33mW (9367) websocket_client: Send frame error![0m
+[0;31mE (9406) websocket_client: Websocket client is not connected[0m
+[0;33mW (9407) websocket_client: Send frame error![0m
+[0;31mE (9446) websocket_client: Websocket client is not connected[0m
+[0;33mW (9447) websocket_client: Send frame error![0m
+[0;31mE (9486) websocket_client: Websocket client is not connected[0m
+[0;33mW (9487) websocket_client: Send frame error![0m
+[0;31mE (9526) websocket_client: Websocket client is not connected[0m
+[0;33mW (9527) websocket_client: Send frame error![0m
+[0;31mE (9566) websocket_client: Websocket client is not connected[0m
+[0;33mW (9566) websocket_client: Send frame error![0m
+[0;31mE (9606) websocket_client: Websocket client is not connected[0m
+[0;33mW (9606) websocket_client: Send frame error![0m
+[0;31mE (9646) websocket_client: Websocket client is not connected[0m
+[0;33mW (9646) websocket_client: Send frame error![0m
+[0;31mE (9686) websocket_client: Websocket client is not connected[0m
+[0;33mW (9687) websocket_client: Send frame error![0m
+[0;31mE (9726) websocket_client: Websocket client is not connected[0m
+[0;33mW (9726) websocket_client: Send frame error![0m
+[0;31mE (9766) websocket_client: Websocket client is not connected[0m
+[0;33mW (9766) websocket_client: Send frame error![0m
+[0;31mE (9806) websocket_client: Websocket client is not connected[0m
+[0;33mW (9806) websocket_client: Send frame error![0m
+[0;31mE (9813) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (9814) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (9820) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (9827) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (9845) websocket_client: WebSocket client error[0m
+[0;32mI (9850) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (9855) websocket_client: WebSocket client connected[0m
+[0;31mE (9861) websocket_client: Websocket client is not connected[0m
+[0;33mW (9867) websocket_client: Send frame error![0m
+[0;33mW (9875) cam_hal: NO-SOI[0m
+[0;31mE (9926) websocket_client: Websocket client is not connected[0m
+[0;33mW (9926) websocket_client: Send frame error![0m
+[0;31mE (9966) websocket_client: Websocket client is not connected[0m
+[0;33mW (9966) websocket_client: Send frame error![0m
+[0;31mE (10006) websocket_client: Websocket client is not connected[0m
+[0;33mW (10006) websocket_client: Send frame error![0m
+[0;31mE (10046) websocket_client: Websocket client is not connected[0m
+[0;33mW (10046) websocket_client: Send frame error![0m
+[0;31mE (10086) websocket_client: Websocket client is not connected[0m
+[0;33mW (10086) websocket_client: Send frame error![0m
+[0;31mE (10126) websocket_client: Websocket client is not connected[0m
+[0;33mW (10126) websocket_client: Send frame error![0m
+[0;31mE (10166) websocket_client: Websocket client is not connected[0m
+[0;33mW (10166) websocket_client: Send frame error![0m
+[0;31mE (10206) websocket_client: Websocket client is not connected[0m
+[0;33mW (10206) websocket_client: Send frame error![0m
+[0;31mE (10246) websocket_client: Websocket client is not connected[0m
+[0;33mW (10246) websocket_client: Send frame error![0m
+[0;31mE (10286) websocket_client: Websocket client is not connected[0m
+[0;33mW (10286) websocket_client: Send frame error![0m
+[0;31mE (10326) websocket_client: Websocket client is not connected[0m
+[0;33mW (10326) websocket_client: Send frame error![0m
+[0;31mE (10366) websocket_client: Websocket client is not connected[0m
+[0;33mW (10366) websocket_client: Send frame error![0m
+[0;31mE (10373) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (10374) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (10380) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (10387) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (10405) websocket_client: WebSocket client error[0m
+[0;32mI (10410) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (10416) websocket_client: WebSocket client connected[0m
+[0;31mE (10421) websocket_client: Websocket client is not connected[0m
+[0;33mW (10428) websocket_client: Send frame error![0m
+[0;33mW (10436) cam_hal: NO-SOI[0m
+[0;31mE (10486) websocket_client: Websocket client is not connected[0m
+[0;33mW (10486) websocket_client: Send frame error![0m
+[0;31mE (10526) websocket_client: Websocket client is not connected[0m
+[0;33mW (10526) websocket_client: Send frame error![0m
+[0;31mE (10566) websocket_client: Websocket client is not connected[0m
+[0;33mW (10566) websocket_client: Send frame error![0m
+[0;31mE (10606) websocket_client: Websocket client is not connected[0m
+[0;33mW (10606) websocket_client: Send frame error![0m
+[0;31mE (10646) websocket_client: Websocket client is not connected[0m
+[0;33mW (10646) websocket_client: Send frame error![0m
+[0;31mE (10686) websocket_client: Websocket client is not connected[0m
+[0;33mW (10686) websocket_client: Send frame error![0m
+[0;31mE (10726) websocket_client: Websocket client is not connected[0m
+[0;33mW (10726) websocket_client: Send frame error![0m
+[0;31mE (10766) websocket_client: Websocket client is not connected[0m
+[0;33mW (10766) websocket_client: Send frame error![0m
+[0;31mE (10806) websocket_client: Websocket client is not connected[0m
+[0;33mW (10806) websocket_client: Send frame error![0m
+[0;31mE (10846) websocket_client: Websocket client is not connected[0m
+[0;33mW (10846) websocket_client: Send frame error![0m
+[0;31mE (10886) websocket_client: Websocket client is not connected[0m
+[0;33mW (10886) websocket_client: Send frame error![0m
+[0;31mE (10926) websocket_client: Websocket client is not connected[0m
+[0;33mW (10926) websocket_client: Send frame error![0m
+[0;31mE (10934) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (10935) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (10940) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (10947) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (10965) websocket_client: WebSocket client error[0m
+[0;32mI (10970) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (10975) websocket_client: WebSocket client connected[0m
+[0;31mE (10981) websocket_client: Websocket client is not connected[0m
+[0;33mW (10988) websocket_client: Send frame error![0m
+[0;33mW (10996) cam_hal: NO-SOI[0m
+[0;31mE (11046) websocket_client: Websocket client is not connected[0m
+[0;33mW (11046) websocket_client: Send frame error![0m
+[0;31mE (11086) websocket_client: Websocket client is not connected[0m
+[0;33mW (11086) websocket_client: Send frame error![0m
+[0;31mE (11126) websocket_client: Websocket client is not connected[0m
+[0;33mW (11126) websocket_client: Send frame error![0m
+[0;31mE (11166) websocket_client: Websocket client is not connected[0m
+[0;33mW (11166) websocket_client: Send frame error![0m
+[0;31mE (11205) websocket_client: Websocket client is not connected[0m
+[0;33mW (11206) websocket_client: Send frame error![0m
+[0;31mE (11245) websocket_client: Websocket client is not connected[0m
+[0;33mW (11246) websocket_client: Send frame error![0m
+[0;31mE (11285) websocket_client: Websocket client is not connected[0m
+[0;33mW (11286) websocket_client: Send frame error![0m
+[0;31mE (11325) websocket_client: Websocket client is not connected[0m
+[0;33mW (11326) websocket_client: Send frame error![0m
+[0;31mE (11365) websocket_client: Websocket client is not connected[0m
+[0;33mW (11366) websocket_client: Send frame error![0m
+[0;31mE (11405) websocket_client: Websocket client is not connected[0m
+[0;33mW (11406) websocket_client: Send frame error![0m
+[0;31mE (11445) websocket_client: Websocket client is not connected[0m
+[0;33mW (11446) websocket_client: Send frame error![0m
+[0;31mE (11485) websocket_client: Websocket client is not connected[0m
+[0;33mW (11486) websocket_client: Send frame error![0m
+[0;31mE (11494) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (11495) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (11499) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (11507) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (11524) websocket_client: WebSocket client error[0m
+[0;32mI (11530) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (11535) websocket_client: WebSocket client connected[0m
+[0;31mE (11541) websocket_client: Websocket client is not connected[0m
+[0;33mW (11547) websocket_client: Send frame error![0m
+[0;33mW (11556) cam_hal: NO-SOI[0m
+[0;31mE (11605) websocket_client: Websocket client is not connected[0m
+[0;33mW (11606) websocket_client: Send frame error![0m
+[0;31mE (11645) websocket_client: Websocket client is not connected[0m
+[0;33mW (11646) websocket_client: Send frame error![0m
+[0;31mE (11685) websocket_client: Websocket client is not connected[0m
+[0;33mW (11686) websocket_client: Send frame error![0m
+[0;31mE (11725) websocket_client: Websocket client is not connected[0m
+[0;33mW (11725) websocket_client: Send frame error![0m
+[0;31mE (11765) websocket_client: Websocket client is not connected[0m
+[0;33mW (11766) websocket_client: Send frame error![0m
+[0;31mE (11805) websocket_client: Websocket client is not connected[0m
+[0;33mW (11806) websocket_client: Send frame error![0m
+[0;31mE (11845) websocket_client: Websocket client is not connected[0m
+[0;33mW (11846) websocket_client: Send frame error![0m
+[0;31mE (11885) websocket_client: Websocket client is not connected[0m
+[0;33mW (11886) websocket_client: Send frame error![0m
+[0;31mE (11925) websocket_client: Websocket client is not connected[0m
+[0;33mW (11925) websocket_client: Send frame error![0m
+[0;31mE (11965) websocket_client: Websocket client is not connected[0m
+[0;33mW (11965) websocket_client: Send frame error![0m
+[0;31mE (12005) websocket_client: Websocket client is not connected[0m
+[0;33mW (12005) websocket_client: Send frame error![0m
+[0;31mE (12045) websocket_client: Websocket client is not connected[0m
+[0;33mW (12045) websocket_client: Send frame error![0m
+[0;31mE (12054) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (12055) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (12059) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (12066) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (12084) websocket_client: WebSocket client error[0m
+[0;32mI (12089) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (12095) websocket_client: WebSocket client connected[0m
+[0;31mE (12101) websocket_client: Websocket client is not connected[0m
+[0;33mW (12107) websocket_client: Send frame error![0m
+[0;33mW (12115) cam_hal: NO-SOI[0m
+[0;31mE (12165) websocket_client: Websocket client is not connected[0m
+[0;33mW (12165) websocket_client: Send frame error![0m
+[0;31mE (12205) websocket_client: Websocket client is not connected[0m
+[0;33mW (12205) websocket_client: Send frame error![0m
+[0;31mE (12245) websocket_client: Websocket client is not connected[0m
+[0;33mW (12245) websocket_client: Send frame error![0m
+[0;31mE (12285) websocket_client: Websocket client is not connected[0m
+[0;33mW (12285) websocket_client: Send frame error![0m
+[0;31mE (12325) websocket_client: Websocket client is not connected[0m
+[0;33mW (12325) websocket_client: Send frame error![0m
+[0;31mE (12365) websocket_client: Websocket client is not connected[0m
+[0;33mW (12365) websocket_client: Send frame error![0m
+[0;31mE (12405) websocket_client: Websocket client is not connected[0m
+[0;33mW (12405) websocket_client: Send frame error![0m
+[0;31mE (12445) websocket_client: Websocket client is not connected[0m
+[0;33mW (12445) websocket_client: Send frame error![0m
+[0;31mE (12485) websocket_client: Websocket client is not connected[0m
+[0;33mW (12485) websocket_client: Send frame error![0m
+[0;31mE (12525) websocket_client: Websocket client is not connected[0m
+[0;33mW (12525) websocket_client: Send frame error![0m
+[0;31mE (12565) websocket_client: Websocket client is not connected[0m
+[0;33mW (12565) websocket_client: Send frame error![0m
+[0;31mE (12605) websocket_client: Websocket client is not connected[0m
+[0;33mW (12605) websocket_client: Send frame error![0m
+[0;31mE (12613) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (12613) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (12619) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (12626) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (12644) websocket_client: WebSocket client error[0m
+[0;32mI (12649) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (12655) websocket_client: WebSocket client connected[0m
+[0;31mE (12660) websocket_client: Websocket client is not connected[0m
+[0;33mW (12667) websocket_client: Send frame error![0m
+[0;33mW (12675) cam_hal: NO-SOI[0m
+[0;31mE (12725) websocket_client: Websocket client is not connected[0m
+[0;33mW (12725) websocket_client: Send frame error![0m
+[0;31mE (12765) websocket_client: Websocket client is not connected[0m
+[0;33mW (12765) websocket_client: Send frame error![0m
+[0;31mE (12805) websocket_client: Websocket client is not connected[0m
+[0;33mW (12805) websocket_client: Send frame error![0m
+[0;31mE (12845) websocket_client: Websocket client is not connected[0m
+[0;33mW (12845) websocket_client: Send frame error![0m
+[0;31mE (12885) websocket_client: Websocket client is not connected[0m
+[0;33mW (12885) websocket_client: Send frame error![0m
+[0;31mE (12925) websocket_client: Websocket client is not connected[0m
+[0;33mW (12925) websocket_client: Send frame error![0m
+[0;31mE (12965) websocket_client: Websocket client is not connected[0m
+[0;33mW (12965) websocket_client: Send frame error![0m
+[0;31mE (13005) websocket_client: Websocket client is not connected[0m
+[0;33mW (13005) websocket_client: Send frame error![0m
+[0;31mE (13045) websocket_client: Websocket client is not connected[0m
+[0;33mW (13045) websocket_client: Send frame error![0m
+[0;31mE (13085) websocket_client: Websocket client is not connected[0m
+[0;33mW (13085) websocket_client: Send frame error![0m
+[0;31mE (13125) websocket_client: Websocket client is not connected[0m
+[0;33mW (13125) websocket_client: Send frame error![0m
+[0;31mE (13165) websocket_client: Websocket client is not connected[0m
+[0;33mW (13165) websocket_client: Send frame error![0m
+[0;31mE (13173) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (13174) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (13179) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (13186) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (13203) websocket_client: WebSocket client error[0m
+[0;32mI (13209) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (13214) websocket_client: WebSocket client connected[0m
+[0;31mE (13220) websocket_client: Websocket client is not connected[0m
+[0;33mW (13226) websocket_client: Send frame error![0m
+[0;33mW (13235) cam_hal: NO-SOI[0m
+[0;31mE (13285) websocket_client: Websocket client is not connected[0m
+[0;33mW (13285) websocket_client: Send frame error![0m
+[0;31mE (13325) websocket_client: Websocket client is not connected[0m
+[0;33mW (13325) websocket_client: Send frame error![0m
+[0;31mE (13365) websocket_client: Websocket client is not connected[0m
+[0;33mW (13365) websocket_client: Send frame error![0m
+[0;31mE (13405) websocket_client: Websocket client is not connected[0m
+[0;33mW (13405) websocket_client: Send frame error![0m
+[0;31mE (13445) websocket_client: Websocket client is not connected[0m
+[0;33mW (13445) websocket_client: Send frame error![0m
+[0;31mE (13485) websocket_client: Websocket client is not connected[0m
+[0;33mW (13485) websocket_client: Send frame error![0m
+[0;31mE (13525) websocket_client: Websocket client is not connected[0m
+[0;33mW (13525) websocket_client: Send frame error![0m
+[0;31mE (13565) websocket_client: Websocket client is not connected[0m
+[0;33mW (13565) websocket_client: Send frame error![0m
+[0;31mE (13605) websocket_client: Websocket client is not connected[0m
+[0;33mW (13605) websocket_client: Send frame error![0m
+[0;31mE (13644) websocket_client: Websocket client is not connected[0m
+[0;33mW (13645) websocket_client: Send frame error![0m
+[0;31mE (13684) websocket_client: Websocket client is not connected[0m
+[0;33mW (13685) websocket_client: Send frame error![0m
+[0;31mE (13724) websocket_client: Websocket client is not connected[0m
+[0;33mW (13725) websocket_client: Send frame error![0m
+[0;31mE (13734) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (13735) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (13738) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (13746) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (13763) websocket_client: WebSocket client error[0m
+[0;32mI (13769) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (13774) websocket_client: WebSocket client connected[0m
+[0;31mE (13780) websocket_client: Websocket client is not connected[0m
+[0;33mW (13786) websocket_client: Send frame error![0m
+[0;33mW (13795) cam_hal: NO-SOI[0m
+[0;31mE (13844) websocket_client: Websocket client is not connected[0m
+[0;33mW (13845) websocket_client: Send frame error![0m
+[0;31mE (13884) websocket_client: Websocket client is not connected[0m
+[0;33mW (13885) websocket_client: Send frame error![0m
+[0;31mE (13924) websocket_client: Websocket client is not connected[0m
+[0;33mW (13925) websocket_client: Send frame error![0m
+[0;31mE (13964) websocket_client: Websocket client is not connected[0m
+[0;33mW (13965) websocket_client: Send frame error![0m
+[0;31mE (14005) websocket_client: Websocket client is not connected[0m
+[0;33mW (14005) websocket_client: Send frame error![0m
+[0;31mE (14044) websocket_client: Websocket client is not connected[0m
+[0;33mW (14045) websocket_client: Send frame error![0m
+[0;31mE (14084) websocket_client: Websocket client is not connected[0m
+[0;33mW (14085) websocket_client: Send frame error![0m
+[0;31mE (14124) websocket_client: Websocket client is not connected[0m
+[0;33mW (14125) websocket_client: Send frame error![0m
+[0;31mE (14164) websocket_client: Websocket client is not connected[0m
+[0;33mW (14165) websocket_client: Send frame error![0m
+[0;31mE (14204) websocket_client: Websocket client is not connected[0m
+[0;33mW (14205) websocket_client: Send frame error![0m
+[0;31mE (14244) websocket_client: Websocket client is not connected[0m
+[0;33mW (14245) websocket_client: Send frame error![0m
+[0;31mE (14284) websocket_client: Websocket client is not connected[0m
+[0;33mW (14284) websocket_client: Send frame error![0m
+[0;31mE (14293) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (14294) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (14298) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (14305) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (14323) websocket_client: WebSocket client error[0m
+[0;32mI (14328) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (14334) websocket_client: WebSocket client connected[0m
+[0;31mE (14340) websocket_client: Websocket client is not connected[0m
+[0;33mW (14346) websocket_client: Send frame error![0m
+[0;33mW (14355) cam_hal: NO-SOI[0m
+[0;31mE (14404) websocket_client: Websocket client is not connected[0m
+[0;33mW (14405) websocket_client: Send frame error![0m
+[0;31mE (14444) websocket_client: Websocket client is not connected[0m
+[0;33mW (14445) websocket_client: Send frame error![0m
+[0;31mE (14484) websocket_client: Websocket client is not connected[0m
+[0;33mW (14484) websocket_client: Send frame error![0m
+[0;31mE (14524) websocket_client: Websocket client is not connected[0m
+[0;33mW (14524) websocket_client: Send frame error![0m
+[0;31mE (14564) websocket_client: Websocket client is not connected[0m
+[0;33mW (14564) websocket_client: Send frame error![0m
+[0;31mE (14604) websocket_client: Websocket client is not connected[0m
+[0;33mW (14604) websocket_client: Send frame error![0m
+[0;31mE (14644) websocket_client: Websocket client is not connected[0m
+[0;33mW (14644) websocket_client: Send frame error![0m
+[0;31mE (14684) websocket_client: Websocket client is not connected[0m
+[0;33mW (14684) websocket_client: Send frame error![0m
+[0;31mE (14724) websocket_client: Websocket client is not connected[0m
+[0;33mW (14725) websocket_client: Send frame error![0m
+[0;31mE (14764) websocket_client: Websocket client is not connected[0m
+[0;33mW (14764) websocket_client: Send frame error![0m
+[0;31mE (14804) websocket_client: Websocket client is not connected[0m
+[0;33mW (14804) websocket_client: Send frame error![0m
+[0;31mE (14844) websocket_client: Websocket client is not connected[0m
+[0;33mW (14844) websocket_client: Send frame error![0m
+[0;31mE (14853) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (14854) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (14858) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (14865) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (14883) websocket_client: WebSocket client error[0m
+[0;32mI (14888) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (14894) websocket_client: WebSocket client connected[0m
+[0;31mE (14899) websocket_client: Websocket client is not connected[0m
+[0;33mW (14906) websocket_client: Send frame error![0m
+[0;33mW (14914) cam_hal: NO-SOI[0m
+[0;31mE (14964) websocket_client: Websocket client is not connected[0m
+[0;33mW (14964) websocket_client: Send frame error![0m
+[0;31mE (15004) websocket_client: Websocket client is not connected[0m
+[0;33mW (15004) websocket_client: Send frame error![0m
+[0;31mE (15044) websocket_client: Websocket client is not connected[0m
+[0;33mW (15044) websocket_client: Send frame error![0m
+[0;31mE (15084) websocket_client: Websocket client is not connected[0m
+[0;33mW (15084) websocket_client: Send frame error![0m
+[0;31mE (15124) websocket_client: Websocket client is not connected[0m
+[0;33mW (15124) websocket_client: Send frame error![0m
+[0;31mE (15164) websocket_client: Websocket client is not connected[0m
+[0;33mW (15164) websocket_client: Send frame error![0m
+[0;31mE (15204) websocket_client: Websocket client is not connected[0m
+[0;33mW (15204) websocket_client: Send frame error![0m
+[0;31mE (15244) websocket_client: Websocket client is not connected[0m
+[0;33mW (15244) websocket_client: Send frame error![0m
+[0;31mE (15284) websocket_client: Websocket client is not connected[0m
+[0;33mW (15284) websocket_client: Send frame error![0m
+[0;31mE (15324) websocket_client: Websocket client is not connected[0m
+[0;33mW (15324) websocket_client: Send frame error![0m
+[0;31mE (15364) websocket_client: Websocket client is not connected[0m
+[0;33mW (15364) websocket_client: Send frame error![0m
+[0;31mE (15404) websocket_client: Websocket client is not connected[0m
+[0;33mW (15404) websocket_client: Send frame error![0m
+[0;31mE (15413) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (15414) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (15418) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (15425) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (15443) websocket_client: WebSocket client error[0m
+[0;32mI (15448) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (15453) websocket_client: WebSocket client connected[0m
+[0;31mE (15459) websocket_client: Websocket client is not connected[0m
+[0;33mW (15466) websocket_client: Send frame error![0m
+[0;33mW (15475) cam_hal: NO-SOI[0m
+[0;31mE (15524) websocket_client: Websocket client is not connected[0m
+[0;33mW (15524) websocket_client: Send frame error![0m
+[0;31mE (15564) websocket_client: Websocket client is not connected[0m
+[0;33mW (15564) websocket_client: Send frame error![0m
+[0;31mE (15604) websocket_client: Websocket client is not connected[0m
+[0;33mW (15604) websocket_client: Send frame error![0m
+[0;31mE (15644) websocket_client: Websocket client is not connected[0m
+[0;33mW (15644) websocket_client: Send frame error![0m
+[0;31mE (15684) websocket_client: Websocket client is not connected[0m
+[0;33mW (15684) websocket_client: Send frame error![0m
+[0;31mE (15724) websocket_client: Websocket client is not connected[0m
+[0;33mW (15724) websocket_client: Send frame error![0m
+[0;31mE (15764) websocket_client: Websocket client is not connected[0m
+[0;33mW (15764) websocket_client: Send frame error![0m
+[0;31mE (15804) websocket_client: Websocket client is not connected[0m
+[0;33mW (15804) websocket_client: Send frame error![0m
+[0;31mE (15844) websocket_client: Websocket client is not connected[0m
+[0;33mW (15844) websocket_client: Send frame error![0m
+[0;31mE (15884) websocket_client: Websocket client is not connected[0m
+[0;33mW (15884) websocket_client: Send frame error![0m
+[0;31mE (15924) websocket_client: Websocket client is not connected[0m
+[0;33mW (15924) websocket_client: Send frame error![0m
+[0;31mE (15964) websocket_client: Websocket client is not connected[0m
+[0;33mW (15964) websocket_client: Send frame error![0m
+[0;31mE (15973) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (15974) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (15977) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (15985) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (16002) websocket_client: WebSocket client error[0m
+[0;32mI (16008) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (16013) websocket_client: WebSocket client connected[0m
+[0;31mE (16019) websocket_client: Websocket client is not connected[0m
+[0;33mW (16025) websocket_client: Send frame error![0m
+[0;33mW (16034) cam_hal: NO-SOI[0m
+[0;31mE (16084) websocket_client: Websocket client is not connected[0m
+[0;33mW (16084) websocket_client: Send frame error![0m
+[0;31mE (16124) websocket_client: Websocket client is not connected[0m
+[0;33mW (16124) websocket_client: Send frame error![0m
+[0;31mE (16164) websocket_client: Websocket client is not connected[0m
+[0;33mW (16164) websocket_client: Send frame error![0m
+[0;31mE (16204) websocket_client: Websocket client is not connected[0m
+[0;33mW (16204) websocket_client: Send frame error![0m
+[0;31mE (16244) websocket_client: Websocket client is not connected[0m
+[0;33mW (16244) websocket_client: Send frame error![0m
+[0;31mE (16284) websocket_client: Websocket client is not connected[0m
+[0;33mW (16284) websocket_client: Send frame error![0m
+[0;31mE (16324) websocket_client: Websocket client is not connected[0m
+[0;33mW (16324) websocket_client: Send frame error![0m
+[0;31mE (16364) websocket_client: Websocket client is not connected[0m
+[0;33mW (16364) websocket_client: Send frame error![0m
+[0;31mE (16404) websocket_client: Websocket client is not connected[0m
+[0;33mW (16404) websocket_client: Send frame error![0m
+[0;31mE (16444) websocket_client: Websocket client is not connected[0m
+[0;33mW (16444) websocket_client: Send frame error![0m
+[0;31mE (16484) websocket_client: Websocket client is not connected[0m
+[0;33mW (16484) websocket_client: Send frame error![0m
+[0;31mE (16523) websocket_client: Websocket client is not connected[0m
+[0;33mW (16524) websocket_client: Send frame error![0m
+[0;31mE (16531) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (16532) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (16537) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (16545) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (16562) websocket_client: WebSocket client error[0m
+[0;32mI (16568) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (16573) websocket_client: WebSocket client connected[0m
+[0;31mE (16579) websocket_client: Websocket client is not connected[0m
+[0;33mW (16585) websocket_client: Send frame error![0m
+[0;33mW (16594) cam_hal: NO-SOI[0m
+[0;31mE (16643) websocket_client: Websocket client is not connected[0m
+[0;33mW (16644) websocket_client: Send frame error![0m
+[0;31mE (16683) websocket_client: Websocket client is not connected[0m
+[0;33mW (16684) websocket_client: Send frame error![0m
+[0;31mE (16723) websocket_client: Websocket client is not connected[0m
+[0;33mW (16724) websocket_client: Send frame error![0m
+[0;31mE (16763) websocket_client: Websocket client is not connected[0m
+[0;33mW (16764) websocket_client: Send frame error![0m
+[0;31mE (16803) websocket_client: Websocket client is not connected[0m
+[0;33mW (16804) websocket_client: Send frame error![0m
+[0;31mE (16843) websocket_client: Websocket client is not connected[0m
+[0;33mW (16844) websocket_client: Send frame error![0m
+[0;31mE (16883) websocket_client: Websocket client is not connected[0m
+[0;33mW (16884) websocket_client: Send frame error![0m
+[0;31mE (16923) websocket_client: Websocket client is not connected[0m
+[0;33mW (16924) websocket_client: Send frame error![0m
+[0;31mE (16963) websocket_client: Websocket client is not connected[0m
+[0;33mW (16964) websocket_client: Send frame error![0m
+[0;31mE (17003) websocket_client: Websocket client is not connected[0m
+[0;33mW (17004) websocket_client: Send frame error![0m
+[0;31mE (17043) websocket_client: Websocket client is not connected[0m
+[0;33mW (17044) websocket_client: Send frame error![0m
+[0;31mE (17083) websocket_client: Websocket client is not connected[0m
+[0;33mW (17084) websocket_client: Send frame error![0m
+[0;31mE (17092) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (17092) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (17097) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (17104) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (17122) websocket_client: WebSocket client error[0m
+[0;32mI (17128) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (17133) websocket_client: WebSocket client connected[0m
+[0;31mE (17139) websocket_client: Websocket client is not connected[0m
+[0;33mW (17145) websocket_client: Send frame error![0m
+[0;33mW (17153) cam_hal: NO-SOI[0m
+[0;31mE (17203) websocket_client: Websocket client is not connected[0m
+[0;33mW (17204) websocket_client: Send frame error![0m
+[0;31mE (17243) websocket_client: Websocket client is not connected[0m
+[0;33mW (17243) websocket_client: Send frame error![0m
+[0;31mE (17283) websocket_client: Websocket client is not connected[0m
+[0;33mW (17283) websocket_client: Send frame error![0m
+[0;31mE (17323) websocket_client: Websocket client is not connected[0m
+[0;33mW (17323) websocket_client: Send frame error![0m
+[0;31mE (17363) websocket_client: Websocket client is not connected[0m
+[0;33mW (17363) websocket_client: Send frame error![0m
+[0;31mE (17403) websocket_client: Websocket client is not connected[0m
+[0;33mW (17403) websocket_client: Send frame error![0m
+[0;31mE (17443) websocket_client: Websocket client is not connected[0m
+[0;33mW (17443) websocket_client: Send frame error![0m
+[0;31mE (17483) websocket_client: Websocket client is not connected[0m
+[0;33mW (17483) websocket_client: Send frame error![0m
+[0;31mE (17523) websocket_client: Websocket client is not connected[0m
+[0;33mW (17523) websocket_client: Send frame error![0m
+[0;31mE (17563) websocket_client: Websocket client is not connected[0m
+[0;33mW (17563) websocket_client: Send frame error![0m
+[0;31mE (17603) websocket_client: Websocket client is not connected[0m
+[0;33mW (17603) websocket_client: Send frame error![0m
+[0;31mE (17643) websocket_client: Websocket client is not connected[0m
+[0;33mW (17643) websocket_client: Send frame error![0m
+[0;31mE (17651) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (17652) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (17657) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (17664) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (17682) websocket_client: WebSocket client error[0m
+[0;32mI (17687) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (17693) websocket_client: WebSocket client connected[0m
+[0;31mE (17698) websocket_client: Websocket client is not connected[0m
+[0;33mW (17705) websocket_client: Send frame error![0m
+[0;33mW (17713) cam_hal: NO-SOI[0m
+[0;31mE (17763) websocket_client: Websocket client is not connected[0m
+[0;33mW (17763) websocket_client: Send frame error![0m
+[0;31mE (17803) websocket_client: Websocket client is not connected[0m
+[0;33mW (17803) websocket_client: Send frame error![0m
+[0;31mE (17843) websocket_client: Websocket client is not connected[0m
+[0;33mW (17843) websocket_client: Send frame error![0m
+[0;31mE (17883) websocket_client: Websocket client is not connected[0m
+[0;33mW (17883) websocket_client: Send frame error![0m
+[0;31mE (17923) websocket_client: Websocket client is not connected[0m
+[0;33mW (17923) websocket_client: Send frame error![0m
+[0;31mE (17963) websocket_client: Websocket client is not connected[0m
+[0;33mW (17963) websocket_client: Send frame error![0m
+[0;31mE (18003) websocket_client: Websocket client is not connected[0m
+[0;33mW (18003) websocket_client: Send frame error![0m
+[0;31mE (18043) websocket_client: Websocket client is not connected[0m
+[0;33mW (18043) websocket_client: Send frame error![0m
+[0;31mE (18083) websocket_client: Websocket client is not connected[0m
+[0;33mW (18083) websocket_client: Send frame error![0m
+[0;31mE (18123) websocket_client: Websocket client is not connected[0m
+[0;33mW (18123) websocket_client: Send frame error![0m
+[0;31mE (18163) websocket_client: Websocket client is not connected[0m
+[0;33mW (18163) websocket_client: Send frame error![0m
+[0;31mE (18203) websocket_client: Websocket client is not connected[0m
+[0;33mW (18203) websocket_client: Send frame error![0m
+[0;31mE (18211) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (18211) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (18217) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (18224) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (18242) websocket_client: WebSocket client error[0m
+[0;32mI (18247) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (18252) websocket_client: WebSocket client connected[0m
+[0;31mE (18258) websocket_client: Websocket client is not connected[0m
+[0;33mW (18264) websocket_client: Send frame error![0m
+[0;33mW (18272) cam_hal: NO-SOI[0m
+[0;31mE (18323) websocket_client: Websocket client is not connected[0m
+[0;33mW (18323) websocket_client: Send frame error![0m
+[0;31mE (18363) websocket_client: Websocket client is not connected[0m
+[0;33mW (18363) websocket_client: Send frame error![0m
+[0;31mE (18403) websocket_client: Websocket client is not connected[0m
+[0;33mW (18403) websocket_client: Send frame error![0m
+[0;31mE (18443) websocket_client: Websocket client is not connected[0m
+[0;33mW (18443) websocket_client: Send frame error![0m
+[0;31mE (18483) websocket_client: Websocket client is not connected[0m
+[0;33mW (18483) websocket_client: Send frame error![0m
+[0;31mE (18523) websocket_client: Websocket client is not connected[0m
+[0;33mW (18523) websocket_client: Send frame error![0m
+[0;31mE (18563) websocket_client: Websocket client is not connected[0m
+[0;33mW (18563) websocket_client: Send frame error![0m
+[0;31mE (18603) websocket_client: Websocket client is not connected[0m
+[0;33mW (18603) websocket_client: Send frame error![0m
+[0;31mE (18642) websocket_client: Websocket client is not connected[0m
+[0;33mW (18643) websocket_client: Send frame error![0m
+[0;31mE (18682) websocket_client: Websocket client is not connected[0m
+[0;33mW (18683) websocket_client: Send frame error![0m
+[0;31mE (18723) websocket_client: Websocket client is not connected[0m
+[0;33mW (18723) websocket_client: Send frame error![0m
+[0;31mE (18763) websocket_client: Websocket client is not connected[0m
+[0;33mW (18763) websocket_client: Send frame error![0m
+[0;31mE (18771) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (18771) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (18777) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (18784) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (18802) websocket_client: WebSocket client error[0m
+[0;32mI (18807) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (18812) websocket_client: WebSocket client connected[0m
+[0;31mE (18818) websocket_client: Websocket client is not connected[0m
+[0;33mW (18824) websocket_client: Send frame error![0m
+[0;33mW (18832) cam_hal: NO-SOI[0m
+[0;31mE (18883) websocket_client: Websocket client is not connected[0m
+[0;33mW (18883) websocket_client: Send frame error![0m
+[0;31mE (18923) websocket_client: Websocket client is not connected[0m
+[0;33mW (18923) websocket_client: Send frame error![0m
+[0;31mE (18963) websocket_client: Websocket client is not connected[0m
+[0;33mW (18963) websocket_client: Send frame error![0m
+[0;31mE (19002) websocket_client: Websocket client is not connected[0m
+[0;33mW (19003) websocket_client: Send frame error![0m
+[0;31mE (19042) websocket_client: Websocket client is not connected[0m
+[0;33mW (19043) websocket_client: Send frame error![0m
+[0;31mE (19082) websocket_client: Websocket client is not connected[0m
+[0;33mW (19083) websocket_client: Send frame error![0m
+[0;31mE (19122) websocket_client: Websocket client is not connected[0m
+[0;33mW (19123) websocket_client: Send frame error![0m
+[0;31mE (19162) websocket_client: Websocket client is not connected[0m
+[0;33mW (19163) websocket_client: Send frame error![0m
+[0;31mE (19202) websocket_client: Websocket client is not connected[0m
+[0;33mW (19203) websocket_client: Send frame error![0m
+[0;31mE (19242) websocket_client: Websocket client is not connected[0m
+[0;33mW (19243) websocket_client: Send frame error![0m
+[0;31mE (19282) websocket_client: Websocket client is not connected[0m
+[0;33mW (19283) websocket_client: Send frame error![0m
+[0;31mE (19322) websocket_client: Websocket client is not connected[0m
+[0;33mW (19323) websocket_client: Send frame error![0m
+[0;31mE (19331) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (19331) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (19336) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (19344) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (19361) websocket_client: WebSocket client error[0m
+[0;32mI (19367) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (19372) websocket_client: WebSocket client connected[0m
+[0;31mE (19378) websocket_client: Websocket client is not connected[0m
+[0;33mW (19384) websocket_client: Send frame error![0m
+[0;33mW (19392) cam_hal: NO-SOI[0m
+[0;31mE (19442) websocket_client: Websocket client is not connected[0m
+[0;33mW (19443) websocket_client: Send frame error![0m
+[0;31mE (19482) websocket_client: Websocket client is not connected[0m
+[0;33mW (19483) websocket_client: Send frame error![0m
+[0;31mE (19522) websocket_client: Websocket client is not connected[0m
+[0;33mW (19522) websocket_client: Send frame error![0m
+[0;31mE (19562) websocket_client: Websocket client is not connected[0m
+[0;33mW (19563) websocket_client: Send frame error![0m
+[0;31mE (19602) websocket_client: Websocket client is not connected[0m
+[0;33mW (19602) websocket_client: Send frame error![0m
+[0;31mE (19642) websocket_client: Websocket client is not connected[0m
+[0;33mW (19642) websocket_client: Send frame error![0m
+[0;31mE (19682) websocket_client: Websocket client is not connected[0m
+[0;33mW (19682) websocket_client: Send frame error![0m
+[0;31mE (19722) websocket_client: Websocket client is not connected[0m
+[0;33mW (19722) websocket_client: Send frame error![0m
+[0;31mE (19762) websocket_client: Websocket client is not connected[0m
+[0;33mW (19762) websocket_client: Send frame error![0m
+[0;31mE (19802) websocket_client: Websocket client is not connected[0m
+[0;33mW (19802) websocket_client: Send frame error![0m
+[0;31mE (19842) websocket_client: Websocket client is not connected[0m
+[0;33mW (19842) websocket_client: Send frame error![0m
+[0;31mE (19882) websocket_client: Websocket client is not connected[0m
+[0;33mW (19882) websocket_client: Send frame error![0m
+[0;31mE (19890) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (19891) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (19896) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (19903) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (19921) websocket_client: WebSocket client error[0m
+[0;32mI (19926) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (19932) websocket_client: WebSocket client connected[0m
+[0;31mE (19937) websocket_client: Websocket client is not connected[0m
+[0;33mW (19944) websocket_client: Send frame error![0m
+[0;33mW (19952) cam_hal: NO-SOI[0m
+[0;31mE (20002) websocket_client: Websocket client is not connected[0m
+[0;33mW (20002) websocket_client: Send frame error![0m
+[0;31mE (20042) websocket_client: Websocket client is not connected[0m
+[0;33mW (20042) websocket_client: Send frame error![0m
+[0;31mE (20082) websocket_client: Websocket client is not connected[0m
+[0;33mW (20082) websocket_client: Send frame error![0m
+[0;31mE (20122) websocket_client: Websocket client is not connected[0m
+[0;33mW (20122) websocket_client: Send frame error![0m
+[0;31mE (20162) websocket_client: Websocket client is not connected[0m
+[0;33mW (20162) websocket_client: Send frame error![0m
+[0;31mE (20202) websocket_client: Websocket client is not connected[0m
+[0;33mW (20202) websocket_client: Send frame error![0m
+[0;31mE (20242) websocket_client: Websocket client is not connected[0m
+[0;33mW (20242) websocket_client: Send frame error![0m
+[0;31mE (20282) websocket_client: Websocket client is not connected[0m
+[0;33mW (20282) websocket_client: Send frame error![0m
+[0;31mE (20322) websocket_client: Websocket client is not connected[0m
+[0;33mW (20322) websocket_client: Send frame error![0m
+[0;31mE (20362) websocket_client: Websocket client is not connected[0m
+[0;33mW (20362) websocket_client: Send frame error![0m
+[0;31mE (20402) websocket_client: Websocket client is not connected[0m
+[0;33mW (20402) websocket_client: Send frame error![0m
+[0;31mE (20442) websocket_client: Websocket client is not connected[0m
+[0;33mW (20442) websocket_client: Send frame error![0m
+[0;31mE (20450) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (20450) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (20456) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (20463) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (20481) websocket_client: WebSocket client error[0m
+[0;32mI (20486) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (20492) websocket_client: WebSocket client connected[0m
+[0;31mE (20497) websocket_client: Websocket client is not connected[0m
+[0;33mW (20504) websocket_client: Send frame error![0m
+[0;33mW (20513) cam_hal: NO-SOI[0m
+[0;31mE (20562) websocket_client: Websocket client is not connected[0m
+[0;33mW (20562) websocket_client: Send frame error![0m
+[0;31mE (20602) websocket_client: Websocket client is not connected[0m
+[0;33mW (20602) websocket_client: Send frame error![0m
+[0;31mE (20642) websocket_client: Websocket client is not connected[0m
+[0;33mW (20642) websocket_client: Send frame error![0m
+[0;31mE (20682) websocket_client: Websocket client is not connected[0m
+[0;33mW (20682) websocket_client: Send frame error![0m
+[0;31mE (20722) websocket_client: Websocket client is not connected[0m
+[0;33mW (20722) websocket_client: Send frame error![0m
+[0;31mE (20762) websocket_client: Websocket client is not connected[0m
+[0;33mW (20762) websocket_client: Send frame error![0m
+[0;31mE (20802) websocket_client: Websocket client is not connected[0m
+[0;33mW (20802) websocket_client: Send frame error![0m
+[0;31mE (20842) websocket_client: Websocket client is not connected[0m
+[0;33mW (20842) websocket_client: Send frame error![0m
+[0;31mE (20882) websocket_client: Websocket client is not connected[0m
+[0;33mW (20882) websocket_client: Send frame error![0m
+[0;31mE (20922) websocket_client: Websocket client is not connected[0m
+[0;33mW (20922) websocket_client: Send frame error![0m
+[0;31mE (20962) websocket_client: Websocket client is not connected[0m
+[0;33mW (20962) websocket_client: Send frame error![0m
+[0;31mE (21002) websocket_client: Websocket client is not connected[0m
+[0;33mW (21002) websocket_client: Send frame error![0m
+[0;31mE (21011) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (21012) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (21016) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (21023) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (21041) websocket_client: WebSocket client error[0m
+[0;32mI (21046) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (21051) websocket_client: WebSocket client connected[0m
+[0;31mE (21057) websocket_client: Websocket client is not connected[0m
+[0;33mW (21064) websocket_client: Send frame error![0m
+[0;33mW (21072) cam_hal: NO-SOI[0m
+[0;31mE (21122) websocket_client: Websocket client is not connected[0m
+[0;33mW (21122) websocket_client: Send frame error![0m
+[0;31mE (21162) websocket_client: Websocket client is not connected[0m
+[0;33mW (21162) websocket_client: Send frame error![0m
+[0;31mE (21202) websocket_client: Websocket client is not connected[0m
+[0;33mW (21202) websocket_client: Send frame error![0m
+[0;31mE (21242) websocket_client: Websocket client is not connected[0m
+[0;33mW (21242) websocket_client: Send frame error![0m
+[0;31mE (21282) websocket_client: Websocket client is not connected[0m
+[0;33mW (21282) websocket_client: Send frame error![0m
+[0;31mE (21322) websocket_client: Websocket client is not connected[0m
+[0;33mW (21322) websocket_client: Send frame error![0m
+[0;31mE (21362) websocket_client: Websocket client is not connected[0m
+[0;33mW (21362) websocket_client: Send frame error![0m
+[0;31mE (21401) websocket_client: Websocket client is not connected[0m
+[0;33mW (21402) websocket_client: Send frame error![0m
+[0;31mE (21441) websocket_client: Websocket client is not connected[0m
+[0;33mW (21442) websocket_client: Send frame error![0m
+[0;31mE (21481) websocket_client: Websocket client is not connected[0m
+[0;33mW (21482) websocket_client: Send frame error![0m
+[0;31mE (21521) websocket_client: Websocket client is not connected[0m
+[0;33mW (21522) websocket_client: Send frame error![0m
+[0;31mE (21561) websocket_client: Websocket client is not connected[0m
+[0;33mW (21562) websocket_client: Send frame error![0m
+[0;31mE (21570) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (21571) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (21575) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (21583) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (21600) websocket_client: WebSocket client error[0m
+[0;32mI (21606) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (21611) websocket_client: WebSocket client connected[0m
+[0;31mE (21617) websocket_client: Websocket client is not connected[0m
+[0;33mW (21623) websocket_client: Send frame error![0m
+[0;33mW (21632) cam_hal: NO-SOI[0m
+[0;31mE (21681) websocket_client: Websocket client is not connected[0m
+[0;33mW (21682) websocket_client: Send frame error![0m
+[0;31mE (21721) websocket_client: Websocket client is not connected[0m
+[0;33mW (21722) websocket_client: Send frame error![0m
+[0;32mI (21746) [vendor_ie]: esp_mesh_lite_wifi_scan_start return ESP_OK [0m
+[0;31mE (21761) websocket_client: Websocket client is not connected[0m
+[0;33mW (21762) websocket_client: Send frame error![0m
+[0;31mE (21801) websocket_client: Websocket client is not connected[0m
+[0;33mW (21802) websocket_client: Send frame error![0m
+[0;31mE (21841) websocket_client: Websocket client is not connected[0m
+[0;33mW (21842) websocket_client: Send frame error![0m
+[0;31mE (21881) websocket_client: Websocket client is not connected[0m
+[0;33mW (21882) websocket_client: Send frame error![0m
+[0;31mE (21921) websocket_client: Websocket client is not connected[0m
+[0;33mW (21922) websocket_client: Send frame error![0m
+[0;31mE (21961) websocket_client: Websocket client is not connected[0m
+[0;33mW (21962) websocket_client: Send frame error![0m
+[0;31mE (22002) websocket_client: Websocket client is not connected[0m
+[0;33mW (22002) websocket_client: Send frame error![0m
+[0;31mE (22041) websocket_client: Websocket client is not connected[0m
+[0;33mW (22042) websocket_client: Send frame error![0m
+[0;31mE (22081) websocket_client: Websocket client is not connected[0m
+[0;33mW (22082) websocket_client: Send frame error![0m
+[0;31mE (22121) websocket_client: Websocket client is not connected[0m
+[0;33mW (22122) websocket_client: Send frame error![0m
+[0;31mE (22130) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (22131) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (22135) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (22142) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (22160) websocket_client: WebSocket client error[0m
+[0;32mI (22166) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (22171) websocket_client: WebSocket client connected[0m
+[0;31mE (22177) websocket_client: Websocket client is not connected[0m
+[0;33mW (22183) websocket_client: Send frame error![0m
+[0;33mW (22191) cam_hal: NO-SOI[0m
+[0;31mE (22241) websocket_client: Websocket client is not connected[0m
+[0;33mW (22242) websocket_client: Send frame error![0m
+[0;32mI (22247) [ESP_Mesh_Lite_Comm]: Mesh-Lite Comm Scan done [0m
+[0;32mI (22248) [ESP_Mesh_Lite_Comm]: approved: 1 [0m
+[0;31mE (22281) websocket_client: Websocket client is not connected[0m
+[0;33mW (22282) websocket_client: Send frame error![0m
+[0;31mE (22321) websocket_client: Websocket client is not connected[0m
+[0;33mW (22321) websocket_client: Send frame error![0m
+[0;31mE (22361) websocket_client: Websocket client is not connected[0m
+[0;33mW (22361) websocket_client: Send frame error![0m
+[0;31mE (22401) websocket_client: Websocket client is not connected[0m
+[0;33mW (22401) websocket_client: Send frame error![0m
+[0;31mE (22441) websocket_client: Websocket client is not connected[0m
+[0;33mW (22441) websocket_client: Send frame error![0m
+[0;31mE (22481) websocket_client: Websocket client is not connected[0m
+[0;33mW (22481) websocket_client: Send frame error![0m
+[0;31mE (22521) websocket_client: Websocket client is not connected[0m
+[0;33mW (22521) websocket_client: Send frame error![0m
+[0;31mE (22561) websocket_client: Websocket client is not connected[0m
+[0;33mW (22561) websocket_client: Send frame error![0m
+[0;31mE (22601) websocket_client: Websocket client is not connected[0m
+[0;33mW (22601) websocket_client: Send frame error![0m
+[0;31mE (22641) websocket_client: Websocket client is not connected[0m
+[0;33mW (22641) websocket_client: Send frame error![0m
+[0;31mE (22681) websocket_client: Websocket client is not connected[0m
+[0;33mW (22681) websocket_client: Send frame error![0m
+[0;31mE (22690) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (22691) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (22695) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (22702) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (22720) websocket_client: WebSocket client error[0m
+[0;32mI (22725) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (22731) websocket_client: WebSocket client connected[0m
+[0;31mE (22736) websocket_client: Websocket client is not connected[0m
+[0;33mW (22743) websocket_client: Send frame error![0m
+[0;33mW (22752) cam_hal: NO-SOI[0m
+[0;31mE (22801) websocket_client: Websocket client is not connected[0m
+[0;33mW (22801) websocket_client: Send frame error![0m
+[0;31mE (22841) websocket_client: Websocket client is not connected[0m
+[0;33mW (22841) websocket_client: Send frame error![0m
+[0;31mE (22881) websocket_client: Websocket client is not connected[0m
+[0;33mW (22881) websocket_client: Send frame error![0m
+[0;31mE (22921) websocket_client: Websocket client is not connected[0m
+[0;33mW (22921) websocket_client: Send frame error![0m
+[0;31mE (22961) websocket_client: Websocket client is not connected[0m
+[0;33mW (22961) websocket_client: Send frame error![0m
+[0;31mE (23001) websocket_client: Websocket client is not connected[0m
+[0;33mW (23001) websocket_client: Send frame error![0m
+[0;31mE (23041) websocket_client: Websocket client is not connected[0m
+[0;33mW (23041) websocket_client: Send frame error![0m
+[0;31mE (23081) websocket_client: Websocket client is not connected[0m
+[0;33mW (23081) websocket_client: Send frame error![0m
+[0;31mE (23121) websocket_client: Websocket client is not connected[0m
+[0;33mW (23121) websocket_client: Send frame error![0m
+[0;31mE (23161) websocket_client: Websocket client is not connected[0m
+[0;33mW (23161) websocket_client: Send frame error![0m
+[0;31mE (23201) websocket_client: Websocket client is not connected[0m
+[0;33mW (23201) websocket_client: Send frame error![0m
+[0;31mE (23241) websocket_client: Websocket client is not connected[0m
+[0;33mW (23241) websocket_client: Send frame error![0m
+[0;31mE (23250) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (23251) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (23255) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (23262) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (23280) websocket_client: WebSocket client error[0m
+[0;32mI (23285) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (23290) websocket_client: WebSocket client connected[0m
+[0;31mE (23296) websocket_client: Websocket client is not connected[0m
+[0;33mW (23303) websocket_client: Send frame error![0m
+[0;33mW (23311) cam_hal: NO-SOI[0m
+[0;31mE (23361) websocket_client: Websocket client is not connected[0m
+[0;33mW (23361) websocket_client: Send frame error![0m
+[0;31mE (23401) websocket_client: Websocket client is not connected[0m
+[0;33mW (23401) websocket_client: Send frame error![0m
+[0;31mE (23441) websocket_client: Websocket client is not connected[0m
+[0;33mW (23441) websocket_client: Send frame error![0m
+[0;31mE (23481) websocket_client: Websocket client is not connected[0m
+[0;33mW (23481) websocket_client: Send frame error![0m
+[0;31mE (23521) websocket_client: Websocket client is not connected[0m
+[0;33mW (23521) websocket_client: Send frame error![0m
+[0;31mE (23561) websocket_client: Websocket client is not connected[0m
+[0;33mW (23561) websocket_client: Send frame error![0m
+[0;31mE (23601) websocket_client: Websocket client is not connected[0m
+[0;33mW (23601) websocket_client: Send frame error![0m
+[0;31mE (23641) websocket_client: Websocket client is not connected[0m
+[0;33mW (23641) websocket_client: Send frame error![0m
+[0;31mE (23681) websocket_client: Websocket client is not connected[0m
+[0;33mW (23681) websocket_client: Send frame error![0m
+[0;31mE (23721) websocket_client: Websocket client is not connected[0m
+[0;33mW (23721) websocket_client: Send frame error![0m
+[0;31mE (23761) websocket_client: Websocket client is not connected[0m
+[0;33mW (23761) websocket_client: Send frame error![0m
+[0;31mE (23800) websocket_client: Websocket client is not connected[0m
+[0;33mW (23801) websocket_client: Send frame error![0m
+[0;31mE (23809) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (23810) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (23814) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (23822) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (23839) websocket_client: WebSocket client error[0m
+[0;32mI (23845) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (23850) websocket_client: WebSocket client connected[0m
+[0;31mE (23856) websocket_client: Websocket client is not connected[0m
+[0;33mW (23862) websocket_client: Send frame error![0m
+[0;33mW (23871) cam_hal: NO-SOI[0m
+[0;31mE (23920) websocket_client: Websocket client is not connected[0m
+[0;33mW (23921) websocket_client: Send frame error![0m
+[0;31mE (23960) websocket_client: Websocket client is not connected[0m
+[0;33mW (23961) websocket_client: Send frame error![0m
+[0;31mE (24000) websocket_client: Websocket client is not connected[0m
+[0;33mW (24001) websocket_client: Send frame error![0m
+[0;31mE (24040) websocket_client: Websocket client is not connected[0m
+[0;33mW (24041) websocket_client: Send frame error![0m
+[0;31mE (24080) websocket_client: Websocket client is not connected[0m
+[0;33mW (24081) websocket_client: Send frame error![0m
+[0;31mE (24120) websocket_client: Websocket client is not connected[0m
+[0;33mW (24121) websocket_client: Send frame error![0m
+[0;31mE (24160) websocket_client: Websocket client is not connected[0m
+[0;33mW (24161) websocket_client: Send frame error![0m
+[0;31mE (24200) websocket_client: Websocket client is not connected[0m
+[0;33mW (24201) websocket_client: Send frame error![0m
+[0;31mE (24240) websocket_client: Websocket client is not connected[0m
+[0;33mW (24241) websocket_client: Send frame error![0m
+[0;31mE (24280) websocket_client: Websocket client is not connected[0m
+[0;33mW (24281) websocket_client: Send frame error![0m
+[0;31mE (24320) websocket_client: Websocket client is not connected[0m
+[0;33mW (24320) websocket_client: Send frame error![0m
+[0;31mE (24360) websocket_client: Websocket client is not connected[0m
+[0;33mW (24361) websocket_client: Send frame error![0m
+[0;31mE (24369) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (24370) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (24374) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (24381) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (24399) websocket_client: WebSocket client error[0m
+[0;32mI (24405) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (24410) websocket_client: WebSocket client connected[0m
+[0;31mE (24416) websocket_client: Websocket client is not connected[0m
+[0;33mW (24422) websocket_client: Send frame error![0m
+[0;33mW (24430) cam_hal: NO-SOI[0m
+[0;31mE (24480) websocket_client: Websocket client is not connected[0m
+[0;33mW (24481) websocket_client: Send frame error![0m
+[0;31mE (24520) websocket_client: Websocket client is not connected[0m
+[0;33mW (24520) websocket_client: Send frame error![0m
+[0;31mE (24560) websocket_client: Websocket client is not connected[0m
+[0;33mW (24560) websocket_client: Send frame error![0m
+[0;31mE (24600) websocket_client: Websocket client is not connected[0m
+[0;33mW (24601) websocket_client: Send frame error![0m
+[0;31mE (24640) websocket_client: Websocket client is not connected[0m
+[0;33mW (24640) websocket_client: Send frame error![0m
+[0;31mE (24680) websocket_client: Websocket client is not connected[0m
+[0;33mW (24680) websocket_client: Send frame error![0m
+[0;31mE (24720) websocket_client: Websocket client is not connected[0m
+[0;33mW (24720) websocket_client: Send frame error![0m
+[0;31mE (24760) websocket_client: Websocket client is not connected[0m
+[0;33mW (24760) websocket_client: Send frame error![0m
+[0;31mE (24800) websocket_client: Websocket client is not connected[0m
+[0;33mW (24800) websocket_client: Send frame error![0m
+[0;31mE (24840) websocket_client: Websocket client is not connected[0m
+[0;33mW (24840) websocket_client: Send frame error![0m
+[0;31mE (24880) websocket_client: Websocket client is not connected[0m
+[0;33mW (24881) websocket_client: Send frame error![0m
+[0;31mE (24920) websocket_client: Websocket client is not connected[0m
+[0;33mW (24920) websocket_client: Send frame error![0m
+[0;31mE (24928) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (24929) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (24934) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (24941) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (24959) websocket_client: WebSocket client error[0m
+[0;32mI (24964) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (24970) websocket_client: WebSocket client connected[0m
+[0;31mE (24976) websocket_client: Websocket client is not connected[0m
+[0;33mW (24982) websocket_client: Send frame error![0m
+[0;33mW (24990) cam_hal: NO-SOI[0m
+[0;31mE (25040) websocket_client: Websocket client is not connected[0m
+[0;33mW (25040) websocket_client: Send frame error![0m
+[0;31mE (25080) websocket_client: Websocket client is not connected[0m
+[0;33mW (25080) websocket_client: Send frame error![0m
+[0;31mE (25120) websocket_client: Websocket client is not connected[0m
+[0;33mW (25120) websocket_client: Send frame error![0m
+[0;31mE (25160) websocket_client: Websocket client is not connected[0m
+[0;33mW (25160) websocket_client: Send frame error![0m
+[0;31mE (25200) websocket_client: Websocket client is not connected[0m
+[0;33mW (25200) websocket_client: Send frame error![0m
+[0;31mE (25240) websocket_client: Websocket client is not connected[0m
+[0;33mW (25240) websocket_client: Send frame error![0m
+[0;31mE (25280) websocket_client: Websocket client is not connected[0m
+[0;33mW (25280) websocket_client: Send frame error![0m
+[0;31mE (25320) websocket_client: Websocket client is not connected[0m
+[0;33mW (25320) websocket_client: Send frame error![0m
+[0;31mE (25360) websocket_client: Websocket client is not connected[0m
+[0;33mW (25360) websocket_client: Send frame error![0m
+[0;31mE (25400) websocket_client: Websocket client is not connected[0m
+[0;33mW (25400) websocket_client: Send frame error![0m
+[0;31mE (25440) websocket_client: Websocket client is not connected[0m
+[0;33mW (25440) websocket_client: Send frame error![0m
+[0;31mE (25480) websocket_client: Websocket client is not connected[0m
+[0;33mW (25480) websocket_client: Send frame error![0m
+[0;31mE (25488) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (25488) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (25494) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (25501) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (25519) websocket_client: WebSocket client error[0m
+[0;32mI (25524) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (25530) websocket_client: WebSocket client connected[0m
+[0;31mE (25535) websocket_client: Websocket client is not connected[0m
+[0;33mW (25542) websocket_client: Send frame error![0m
+[0;33mW (25549) cam_hal: NO-SOI[0m
+[0;31mE (25600) websocket_client: Websocket client is not connected[0m
+[0;33mW (25600) websocket_client: Send frame error![0m
+[0;31mE (25640) websocket_client: Websocket client is not connected[0m
+[0;33mW (25640) websocket_client: Send frame error![0m
+[0;31mE (25680) websocket_client: Websocket client is not connected[0m
+[0;33mW (25680) websocket_client: Send frame error![0m
+[0;31mE (25720) websocket_client: Websocket client is not connected[0m
+[0;33mW (25720) websocket_client: Send frame error![0m
+[0;31mE (25760) websocket_client: Websocket client is not connected[0m
+[0;33mW (25760) websocket_client: Send frame error![0m
+[0;31mE (25800) websocket_client: Websocket client is not connected[0m
+[0;33mW (25800) websocket_client: Send frame error![0m
+[0;31mE (25840) websocket_client: Websocket client is not connected[0m
+[0;33mW (25840) websocket_client: Send frame error![0m
+[0;31mE (25880) websocket_client: Websocket client is not connected[0m
+[0;33mW (25880) websocket_client: Send frame error![0m
+[0;31mE (25920) websocket_client: Websocket client is not connected[0m
+[0;33mW (25920) websocket_client: Send frame error![0m
+[0;31mE (25960) websocket_client: Websocket client is not connected[0m
+[0;33mW (25960) websocket_client: Send frame error![0m
+[0;31mE (26000) websocket_client: Websocket client is not connected[0m
+[0;33mW (26000) websocket_client: Send frame error![0m
+[0;31mE (26040) websocket_client: Websocket client is not connected[0m
+[0;33mW (26040) websocket_client: Send frame error![0m
+[0;31mE (26048) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (26049) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (26054) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (26061) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (26078) websocket_client: WebSocket client error[0m
+[0;32mI (26084) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (26089) websocket_client: WebSocket client connected[0m
+[0;31mE (26095) websocket_client: Websocket client is not connected[0m
+[0;33mW (26101) websocket_client: Send frame error![0m
+[0;33mW (26109) cam_hal: NO-SOI[0m
+[0;31mE (26160) websocket_client: Websocket client is not connected[0m
+[0;33mW (26160) websocket_client: Send frame error![0m
+[0;31mE (26199) websocket_client: Websocket client is not connected[0m
+[0;33mW (26200) websocket_client: Send frame error![0m
+[0;31mE (26239) websocket_client: Websocket client is not connected[0m
+[0;33mW (26240) websocket_client: Send frame error![0m
+[0;31mE (26280) websocket_client: Websocket client is not connected[0m
+[0;33mW (26280) websocket_client: Send frame error![0m
+[0;31mE (26320) websocket_client: Websocket client is not connected[0m
+[0;33mW (26320) websocket_client: Send frame error![0m
+[0;31mE (26360) websocket_client: Websocket client is not connected[0m
+[0;33mW (26360) websocket_client: Send frame error![0m
+[0;31mE (26399) websocket_client: Websocket client is not connected[0m
+[0;33mW (26400) websocket_client: Send frame error![0m
+[0;31mE (26439) websocket_client: Websocket client is not connected[0m
+[0;33mW (26440) websocket_client: Send frame error![0m
+[0;31mE (26479) websocket_client: Websocket client is not connected[0m
+[0;33mW (26480) websocket_client: Send frame error![0m
+[0;31mE (26519) websocket_client: Websocket client is not connected[0m
+[0;33mW (26520) websocket_client: Send frame error![0m
+[0;31mE (26559) websocket_client: Websocket client is not connected[0m
+[0;33mW (26560) websocket_client: Send frame error![0m
+[0;31mE (26599) websocket_client: Websocket client is not connected[0m
+[0;33mW (26600) websocket_client: Send frame error![0m
+[0;31mE (26608) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (26608) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (26613) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (26621) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (26638) websocket_client: WebSocket client error[0m
+[0;32mI (26644) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (26649) websocket_client: WebSocket client connected[0m
+[0;31mE (26655) websocket_client: Websocket client is not connected[0m
+[0;33mW (26661) websocket_client: Send frame error![0m
+[0;33mW (26670) cam_hal: NO-SOI[0m
+[0;31mE (26719) websocket_client: Websocket client is not connected[0m
+[0;33mW (26720) websocket_client: Send frame error![0m
+[0;31mE (26759) websocket_client: Websocket client is not connected[0m
+[0;33mW (26760) websocket_client: Send frame error![0m
+[0;31mE (26799) websocket_client: Websocket client is not connected[0m
+[0;33mW (26800) websocket_client: Send frame error![0m
+[0;31mE (26839) websocket_client: Websocket client is not connected[0m
+[0;33mW (26840) websocket_client: Send frame error![0m
+[0;31mE (26879) websocket_client: Websocket client is not connected[0m
+[0;33mW (26879) websocket_client: Send frame error![0m
+[0;31mE (26919) websocket_client: Websocket client is not connected[0m
+[0;33mW (26919) websocket_client: Send frame error![0m
+[0;31mE (26959) websocket_client: Websocket client is not connected[0m
+[0;33mW (26960) websocket_client: Send frame error![0m
+[0;31mE (26999) websocket_client: Websocket client is not connected[0m
+[0;33mW (27000) websocket_client: Send frame error![0m
+[0;31mE (27039) websocket_client: Websocket client is not connected[0m
+[0;33mW (27040) websocket_client: Send frame error![0m
+[0;31mE (27079) websocket_client: Websocket client is not connected[0m
+[0;33mW (27079) websocket_client: Send frame error![0m
+[0;31mE (27119) websocket_client: Websocket client is not connected[0m
+[0;33mW (27120) websocket_client: Send frame error![0m
+[0;31mE (27159) websocket_client: Websocket client is not connected[0m
+[0;33mW (27159) websocket_client: Send frame error![0m
+[0;31mE (27167) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (27168) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (27173) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (27180) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (27198) websocket_client: WebSocket client error[0m
+[0;32mI (27203) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (27209) websocket_client: WebSocket client connected[0m
+[0;31mE (27215) websocket_client: Websocket client is not connected[0m
+[0;33mW (27221) websocket_client: Send frame error![0m
+[0;33mW (27229) cam_hal: NO-SOI[0m
+[0;31mE (27279) websocket_client: Websocket client is not connected[0m
+[0;33mW (27279) websocket_client: Send frame error![0m
+[0;31mE (27319) websocket_client: Websocket client is not connected[0m
+[0;33mW (27319) websocket_client: Send frame error![0m
+[0;31mE (27359) websocket_client: Websocket client is not connected[0m
+[0;33mW (27359) websocket_client: Send frame error![0m
+[0;31mE (27399) websocket_client: Websocket client is not connected[0m
+[0;33mW (27399) websocket_client: Send frame error![0m
+[0;31mE (27439) websocket_client: Websocket client is not connected[0m
+[0;33mW (27439) websocket_client: Send frame error![0m
+[0;31mE (27479) websocket_client: Websocket client is not connected[0m
+[0;33mW (27479) websocket_client: Send frame error![0m
+[0;31mE (27519) websocket_client: Websocket client is not connected[0m
+[0;33mW (27519) websocket_client: Send frame error![0m
+[0;31mE (27559) websocket_client: Websocket client is not connected[0m
+[0;33mW (27559) websocket_client: Send frame error![0m
+[0;31mE (27599) websocket_client: Websocket client is not connected[0m
+[0;33mW (27599) websocket_client: Send frame error![0m
+[0;31mE (27639) websocket_client: Websocket client is not connected[0m
+[0;33mW (27639) websocket_client: Send frame error![0m
+[0;31mE (27679) websocket_client: Websocket client is not connected[0m
+[0;33mW (27679) websocket_client: Send frame error![0m
+[0;31mE (27719) websocket_client: Websocket client is not connected[0m
+[0;33mW (27719) websocket_client: Send frame error![0m
+[0;31mE (27727) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (27727) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (27733) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (27740) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (27758) websocket_client: WebSocket client error[0m
+[0;32mI (27763) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (27769) websocket_client: WebSocket client connected[0m
+[0;31mE (27774) websocket_client: Websocket client is not connected[0m
+[0;33mW (27781) websocket_client: Send frame error![0m
+[0;33mW (27789) cam_hal: NO-SOI[0m
+[0;31mE (27839) websocket_client: Websocket client is not connected[0m
+[0;33mW (27839) websocket_client: Send frame error![0m
+[0;31mE (27879) websocket_client: Websocket client is not connected[0m
+[0;33mW (27879) websocket_client: Send frame error![0m
+[0;31mE (27919) websocket_client: Websocket client is not connected[0m
+[0;33mW (27919) websocket_client: Send frame error![0m
+[0;31mE (27959) websocket_client: Websocket client is not connected[0m
+[0;33mW (27959) websocket_client: Send frame error![0m
+[0;31mE (27999) websocket_client: Websocket client is not connected[0m
+[0;33mW (27999) websocket_client: Send frame error![0m
+[0;31mE (28039) websocket_client: Websocket client is not connected[0m
+[0;33mW (28039) websocket_client: Send frame error![0m
+[0;31mE (28079) websocket_client: Websocket client is not connected[0m
+[0;33mW (28079) websocket_client: Send frame error![0m
+[0;31mE (28119) websocket_client: Websocket client is not connected[0m
+[0;33mW (28119) websocket_client: Send frame error![0m
+[0;31mE (28159) websocket_client: Websocket client is not connected[0m
+[0;33mW (28159) websocket_client: Send frame error![0m
+[0;31mE (28199) websocket_client: Websocket client is not connected[0m
+[0;33mW (28199) websocket_client: Send frame error![0m
+[0;31mE (28239) websocket_client: Websocket client is not connected[0m
+[0;33mW (28239) websocket_client: Send frame error![0m
+[0;31mE (28279) websocket_client: Websocket client is not connected[0m
+[0;33mW (28279) websocket_client: Send frame error![0m
+[0;31mE (28287) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (28287) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (28293) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (28300) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (28318) websocket_client: WebSocket client error[0m
+[0;32mI (28323) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (28329) websocket_client: WebSocket client connected[0m
+[0;31mE (28334) websocket_client: Websocket client is not connected[0m
+[0;33mW (28341) websocket_client: Send frame error![0m
+[0;33mW (28349) cam_hal: NO-SOI[0m
+[0;31mE (28399) websocket_client: Websocket client is not connected[0m
+[0;33mW (28399) websocket_client: Send frame error![0m
+[0;31mE (28439) websocket_client: Websocket client is not connected[0m
+[0;33mW (28439) websocket_client: Send frame error![0m
+[0;31mE (28479) websocket_client: Websocket client is not connected[0m
+[0;33mW (28479) websocket_client: Send frame error![0m
+[0;31mE (28519) websocket_client: Websocket client is not connected[0m
+[0;33mW (28519) websocket_client: Send frame error![0m
+[0;31mE (28559) websocket_client: Websocket client is not connected[0m
+[0;33mW (28559) websocket_client: Send frame error![0m
+[0;31mE (28599) websocket_client: Websocket client is not connected[0m
+[0;33mW (28599) websocket_client: Send frame error![0m
+[0;31mE (28639) websocket_client: Websocket client is not connected[0m
+[0;33mW (28639) websocket_client: Send frame error![0m
+[0;31mE (28679) websocket_client: Websocket client is not connected[0m
+[0;33mW (28679) websocket_client: Send frame error![0m
+[0;31mE (28719) websocket_client: Websocket client is not connected[0m
+[0;33mW (28719) websocket_client: Send frame error![0m
+[0;31mE (28759) websocket_client: Websocket client is not connected[0m
+[0;33mW (28759) websocket_client: Send frame error![0m
+[0;31mE (28799) websocket_client: Websocket client is not connected[0m
+[0;33mW (28799) websocket_client: Send frame error![0m
+[0;31mE (28839) websocket_client: Websocket client is not connected[0m
+[0;33mW (28839) websocket_client: Send frame error![0m
+[0;31mE (28847) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (28847) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (28853) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (28860) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (28877) websocket_client: WebSocket client error[0m
+[0;32mI (28883) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (28888) websocket_client: WebSocket client connected[0m
+[0;31mE (28894) websocket_client: Websocket client is not connected[0m
+[0;33mW (28900) websocket_client: Send frame error![0m
+[0;33mW (28909) cam_hal: NO-SOI[0m
+[0;31mE (28959) websocket_client: Websocket client is not connected[0m
+[0;33mW (28959) websocket_client: Send frame error![0m
+[0;31mE (28998) websocket_client: Websocket client is not connected[0m
+[0;33mW (28999) websocket_client: Send frame error![0m
+[0;31mE (29038) websocket_client: Websocket client is not connected[0m
+[0;33mW (29039) websocket_client: Send frame error![0m
+[0;31mE (29078) websocket_client: Websocket client is not connected[0m
+[0;33mW (29079) websocket_client: Send frame error![0m
+[0;31mE (29118) websocket_client: Websocket client is not connected[0m
+[0;33mW (29119) websocket_client: Send frame error![0m
+[0;31mE (29158) websocket_client: Websocket client is not connected[0m
+[0;33mW (29159) websocket_client: Send frame error![0m
+[0;31mE (29198) websocket_client: Websocket client is not connected[0m
+[0;33mW (29199) websocket_client: Send frame error![0m
+[0;31mE (29238) websocket_client: Websocket client is not connected[0m
+[0;33mW (29239) websocket_client: Send frame error![0m
+[0;31mE (29278) websocket_client: Websocket client is not connected[0m
+[0;33mW (29279) websocket_client: Send frame error![0m
+[0;31mE (29318) websocket_client: Websocket client is not connected[0m
+[0;33mW (29319) websocket_client: Send frame error![0m
+[0;31mE (29358) websocket_client: Websocket client is not connected[0m
+[0;33mW (29359) websocket_client: Send frame error![0m
+[0;31mE (29398) websocket_client: Websocket client is not connected[0m
+[0;33mW (29399) websocket_client: Send frame error![0m
+[0;31mE (29407) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (29407) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (29412) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (29420) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (29437) websocket_client: WebSocket client error[0m
+[0;32mI (29443) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (29448) websocket_client: WebSocket client connected[0m
+[0;31mE (29454) websocket_client: Websocket client is not connected[0m
+[0;33mW (29460) websocket_client: Send frame error![0m
+[0;33mW (29469) cam_hal: NO-SOI[0m
+[0;31mE (29518) websocket_client: Websocket client is not connected[0m
+[0;33mW (29519) websocket_client: Send frame error![0m
+[0;31mE (29558) websocket_client: Websocket client is not connected[0m
+[0;33mW (29559) websocket_client: Send frame error![0m
+[0;31mE (29598) websocket_client: Websocket client is not connected[0m
+[0;33mW (29599) websocket_client: Send frame error![0m
+[0;31mE (29638) websocket_client: Websocket client is not connected[0m
+[0;33mW (29638) websocket_client: Send frame error![0m
+[0;31mE (29678) websocket_client: Websocket client is not connected[0m
+[0;33mW (29678) websocket_client: Send frame error![0m
+[0;31mE (29718) websocket_client: Websocket client is not connected[0m
+[0;33mW (29719) websocket_client: Send frame error![0m
+[0;31mE (29758) websocket_client: Websocket client is not connected[0m
+[0;33mW (29759) websocket_client: Send frame error![0m
+[0;31mE (29798) websocket_client: Websocket client is not connected[0m
+[0;33mW (29798) websocket_client: Send frame error![0m
+[0;31mE (29838) websocket_client: Websocket client is not connected[0m
+[0;33mW (29838) websocket_client: Send frame error![0m
+[0;31mE (29878) websocket_client: Websocket client is not connected[0m
+[0;33mW (29878) websocket_client: Send frame error![0m
+[0;31mE (29918) websocket_client: Websocket client is not connected[0m
+[0;33mW (29918) websocket_client: Send frame error![0m
+[0;31mE (29958) websocket_client: Websocket client is not connected[0m
+[0;33mW (29958) websocket_client: Send frame error![0m
+[0;31mE (29967) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (29968) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (29972) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (29979) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (29997) websocket_client: WebSocket client error[0m
+[0;32mI (30002) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (30008) websocket_client: WebSocket client connected[0m
+[0;31mE (30013) websocket_client: Websocket client is not connected[0m
+[0;33mW (30020) websocket_client: Send frame error![0m
+[0;33mW (30029) cam_hal: NO-SOI[0m
+[0;31mE (30078) websocket_client: Websocket client is not connected[0m
+[0;33mW (30078) websocket_client: Send frame error![0m
+[0;31mE (30118) websocket_client: Websocket client is not connected[0m
+[0;33mW (30118) websocket_client: Send frame error![0m
+[0;31mE (30158) websocket_client: Websocket client is not connected[0m
+[0;33mW (30158) websocket_client: Send frame error![0m
+[0;31mE (30198) websocket_client: Websocket client is not connected[0m
+[0;33mW (30198) websocket_client: Send frame error![0m
+[0;31mE (30238) websocket_client: Websocket client is not connected[0m
+[0;33mW (30238) websocket_client: Send frame error![0m
+[0;31mE (30278) websocket_client: Websocket client is not connected[0m
+[0;33mW (30278) websocket_client: Send frame error![0m
+[0;31mE (30318) websocket_client: Websocket client is not connected[0m
+[0;33mW (30318) websocket_client: Send frame error![0m
+[0;31mE (30358) websocket_client: Websocket client is not connected[0m
+[0;33mW (30358) websocket_client: Send frame error![0m
+[0;31mE (30398) websocket_client: Websocket client is not connected[0m
+[0;33mW (30398) websocket_client: Send frame error![0m
+[0;31mE (30438) websocket_client: Websocket client is not connected[0m
+[0;33mW (30438) websocket_client: Send frame error![0m
+[0;31mE (30478) websocket_client: Websocket client is not connected[0m
+[0;33mW (30478) websocket_client: Send frame error![0m
+[0;31mE (30518) websocket_client: Websocket client is not connected[0m
+[0;33mW (30519) websocket_client: Send frame error![0m
+[0;31mE (30527) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (30527) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (30532) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (30540) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (30557) websocket_client: WebSocket client error[0m
+[0;32mI (30563) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (30568) websocket_client: WebSocket client connected[0m
+[0;31mE (30574) websocket_client: Websocket client is not connected[0m
+[0;33mW (30580) websocket_client: Send frame error![0m
+[0;33mW (30588) cam_hal: NO-SOI[0m
+[0;31mE (30638) websocket_client: Websocket client is not connected[0m
+[0;33mW (30638) websocket_client: Send frame error![0m
+[0;31mE (30678) websocket_client: Websocket client is not connected[0m
+[0;33mW (30678) websocket_client: Send frame error![0m
+[0;31mE (30718) websocket_client: Websocket client is not connected[0m
+[0;33mW (30718) websocket_client: Send frame error![0m
+[0;31mE (30758) websocket_client: Websocket client is not connected[0m
+[0;33mW (30758) websocket_client: Send frame error![0m
+[0;31mE (30798) websocket_client: Websocket client is not connected[0m
+[0;33mW (30798) websocket_client: Send frame error![0m
+[0;31mE (30838) websocket_client: Websocket client is not connected[0m
+[0;33mW (30838) websocket_client: Send frame error![0m
+[0;31mE (30878) websocket_client: Websocket client is not connected[0m
+[0;33mW (30878) websocket_client: Send frame error![0m
+[0;31mE (30918) websocket_client: Websocket client is not connected[0m
+[0;33mW (30918) websocket_client: Send frame error![0m
+[0;31mE (30958) websocket_client: Websocket client is not connected[0m
+[0;33mW (30958) websocket_client: Send frame error![0m
+[0;31mE (30998) websocket_client: Websocket client is not connected[0m
+[0;33mW (30998) websocket_client: Send frame error![0m
+[0;31mE (31038) websocket_client: Websocket client is not connected[0m
+[0;33mW (31038) websocket_client: Send frame error![0m
+[0;31mE (31078) websocket_client: Websocket client is not connected[0m
+[0;33mW (31078) websocket_client: Send frame error![0m
+[0;31mE (31087) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (31088) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (31092) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (31099) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (31116) websocket_client: WebSocket client error[0m
+[0;32mI (31122) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (31127) websocket_client: WebSocket client connected[0m
+[0;31mE (31133) websocket_client: Websocket client is not connected[0m
+[0;33mW (31139) websocket_client: Send frame error![0m
+[0;33mW (31148) cam_hal: NO-SOI[0m
+[0;31mE (31198) websocket_client: Websocket client is not connected[0m
+[0;33mW (31198) websocket_client: Send frame error![0m
+[0;31mE (31238) websocket_client: Websocket client is not connected[0m
+[0;33mW (31238) websocket_client: Send frame error![0m
+[0;31mE (31278) websocket_client: Websocket client is not connected[0m
+[0;33mW (31278) websocket_client: Send frame error![0m
+[0;31mE (31318) websocket_client: Websocket client is not connected[0m
+[0;33mW (31318) websocket_client: Send frame error![0m
+[0;31mE (31358) websocket_client: Websocket client is not connected[0m
+[0;33mW (31358) websocket_client: Send frame error![0m
+[0;31mE (31397) websocket_client: Websocket client is not connected[0m
+[0;33mW (31398) websocket_client: Send frame error![0m
+[0;31mE (31437) websocket_client: Websocket client is not connected[0m
+[0;33mW (31438) websocket_client: Send frame error![0m
+[0;31mE (31478) websocket_client: Websocket client is not connected[0m
+[0;33mW (31478) websocket_client: Send frame error![0m
+[0;32mI (31489) bridge_common: [WIFI_AP_DEF ]Name Server1: 203.113.131.2[0m
+[0;31mE (31517) websocket_client: Websocket client is not connected[0m
+[0;33mW (31518) websocket_client: Send frame error![0m
+[0;31mE (31557) websocket_client: Websocket client is not connected[0m
+[0;33mW (31558) websocket_client: Send frame error![0m
+[0;31mE (31597) websocket_client: Websocket client is not connected[0m
+[0;33mW (31598) websocket_client: Send frame error![0m
+[0;31mE (31637) websocket_client: Websocket client is not connected[0m
+[0;33mW (31638) websocket_client: Send frame error![0m
+[0;31mE (31646) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (31647) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (31651) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (31659) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (31676) websocket_client: WebSocket client error[0m
+[0;32mI (31682) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (31687) websocket_client: WebSocket client connected[0m
+[0;31mE (31693) websocket_client: Websocket client is not connected[0m
+[0;33mW (31699) websocket_client: Send frame error![0m
+[0;33mW (31708) cam_hal: NO-SOI[0m
+[0;31mE (31757) websocket_client: Websocket client is not connected[0m
+[0;33mW (31758) websocket_client: Send frame error![0m
+[0;31mE (31797) websocket_client: Websocket client is not connected[0m
+[0;33mW (31797) websocket_client: Send frame error![0m
+[0;31mE (31837) websocket_client: Websocket client is not connected[0m
+[0;33mW (31838) websocket_client: Send frame error![0m
+[0;31mE (31877) websocket_client: Websocket client is not connected[0m
+[0;33mW (31878) websocket_client: Send frame error![0m
+[0;31mE (31917) websocket_client: Websocket client is not connected[0m
+[0;33mW (31918) websocket_client: Send frame error![0m
+[0;31mE (31957) websocket_client: Websocket client is not connected[0m
+[0;33mW (31958) websocket_client: Send frame error![0m
+[0;31mE (31997) websocket_client: Websocket client is not connected[0m
+[0;33mW (31997) websocket_client: Send frame error![0m
+[0;31mE (32037) websocket_client: Websocket client is not connected[0m
+[0;33mW (32038) websocket_client: Send frame error![0m
+[0;31mE (32077) websocket_client: Websocket client is not connected[0m
+[0;33mW (32078) websocket_client: Send frame error![0m
+[0;31mE (32117) websocket_client: Websocket client is not connected[0m
+[0;33mW (32118) websocket_client: Send frame error![0m
+[0;31mE (32157) websocket_client: Websocket client is not connected[0m
+[0;33mW (32158) websocket_client: Send frame error![0m

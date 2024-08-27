@@ -1,0 +1,41 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40119748: esp_http_client_perform at /home/tvconss/esp/esp-idf/components/esp_http_client/esp_http_client.c:1270
+[0m
+[0;33m0x4008c7dd: strlen at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/strlen.S:84
+0x4008c7ed: strlen at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/strlen.S:96
+[0m
+[0;33m0x40119745: esp_http_client_perform at /home/tvconss/esp/esp-idf/components/esp_http_client/esp_http_client.c:1270
+0x400e6c1d: on_tag_scanned at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_rc522/setup_rc522.c:33
+0x400e6c51: rc522_handler at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_rc522/setup_rc522.c:19
+0x40190329: handler_execute at /home/tvconss/esp/esp-idf/components/esp_event/esp_event.c:135
+0x4018fd8a: esp_event_loop_run at /home/tvconss/esp/esp-idf/components/esp_event/esp_event.c:584
+0x400e7431: rc522_dispatch_event at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/components/esp-idf-rc522/src/rc522.c:664
+0x400e7497: rc522_task at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/components/esp-idf-rc522/src/rc522.c:760
+0x40090479: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40119748: esp_http_client_perform at /home/tvconss/esp/esp-idf/components/esp_http_client/esp_http_client.c:1270
+[0m
+[0;33m0x4008c7dd: strlen at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/strlen.S:84
+0x4008c7ed: strlen at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/strlen.S:96
+[0m
+[0;33m0x40119745: esp_http_client_perform at /home/tvconss/esp/esp-idf/components/esp_http_client/esp_http_client.c:1270
+0x400e6c1d: on_tag_scanned at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_rc522/setup_rc522.c:33
+0x400e6c51: rc522_handler at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_rc522/setup_rc522.c:19
+0x40190329: handler_execute at /home/tvconss/esp/esp-idf/components/esp_event/esp_event.c:135
+0x4018fd8a: esp_event_loop_run at /home/tvconss/esp/esp-idf/components/esp_event/esp_event.c:584
+0x400e7431: rc522_dispatch_event at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/components/esp-idf-rc522/src/rc522.c:664
+0x400e7497: rc522_task at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/components/esp-idf-rc522/src/rc522.c:760
+0x40090479: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m

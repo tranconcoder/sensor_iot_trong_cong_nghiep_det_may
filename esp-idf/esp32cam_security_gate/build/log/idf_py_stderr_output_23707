@@ -1,3 +1,0 @@
-warning: the int symbol BRIDGE_SOFTAP_MAX_CONNECT_NUMBER (defined at /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/managed_components/espressif__iot_bridge/Kconfig:108) has a non-int default BRIDGE_CUSTOM_MAX_CONNECT_NUMBER (undefined)
-error: patch failed: src/core/ipv4/ip4.c:332
-error: src/core/ipv4/ip4.c: patch does not apply

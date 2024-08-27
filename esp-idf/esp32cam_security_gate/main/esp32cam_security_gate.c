@@ -224,7 +224,6 @@ void app_main()
 
     // Config camera
     sensor_t *s = esp_camera_sensor_get();
-    s->set_brightness(s, 3);
 
     setup_esp_websocket_client_init();
     setup_rc522();

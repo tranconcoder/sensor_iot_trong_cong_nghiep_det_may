@@ -1,0 +1,1667 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:7168
+load:0x40078000,len:15464
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (31) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug 28 2024 01:45:36[0m
+[0;33mW (31) boot: Unicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (77) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (92) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (107) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (114) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (122) boot: End of partition table[0m
+[0;32mI (126) boot: No factory image, trying OTA 0[0m
+[0;32mI (131) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2f1bch (192956) map[0m
+[0;32mI (194) esp_image: segment 1: paddr=0003f1e4 vaddr=3ffbdb60 size=00e34h (  3636) load[0m
+[0;32mI (196) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=c36f8h (800504) map[0m
+[0;32mI (426) esp_image: segment 3: paddr=00103720 vaddr=3ffbe994 size=044bch ( 17596) load[0m
+[0;32mI (432) esp_image: segment 4: paddr=00107be4 vaddr=40080000 size=1e61ch (124444) load[0m
+[0;32mI (489) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (494) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (494) boot: Disabling RNG early entropy source...[0m
+[0;32mI (506) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (506) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (506) esp_psram: Speed: 80MHz[0m
+[0;32mI (510) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (517) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (526) cpu_start: Unicore app[0m
+[0;32mI (530) cpu_start: Single core mode[0m
+[0;32mI (1068) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1075) cpu_start: Pro cpu start user code[0m
+[0;32mI (1075) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1076) app_init: Application information:[0m
+[0;32mI (1079) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1085) app_init: App version:      44d7b81-dirty[0m
+[0;32mI (1090) app_init: Compile time:     Aug 28 2024 01:45:30[0m
+[0;32mI (1096) app_init: ELF file SHA256:  e1a434d14...[0m
+[0;32mI (1102) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1107) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1112) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1117) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1122) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1129) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1135) heap_init: At 3FFC7CF0 len 00018310 (96 KiB): DRAM[0m
+[0;32mI (1141) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1148) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1154) heap_init: At 4009E61C len 000019E4 (6 KiB): IRAM[0m
+[0;32mI (1160) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1167) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1175) spi_flash: detected chip: generic[0m
+[0;32mI (1179) spi_flash: flash io: dio[0m
+[0;33mW (1183) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1205) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1206) main_task: Started on CPU0[0m
+[0;32mI (1206) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1214) main_task: Calling app_main()[0m
+[0;32mI (1227) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1230) wifi:wifi driver task: 3ffbd604, prio:23, stack:6656, core=0
+I (1233) wifi:wifi firmware version: 0caa81945
+I (1235) wifi:wifi certification version: v7.0
+I (1239) wifi:config NVS flash: enabled
+I (1242) wifi:config nano formating: disabled
+I (1246) wifi:Init data frame dynamic rx buffer num: 32
+I (1251) wifi:Init static rx mgmt buffer num: 5
+I (1255) wifi:Init management short buffer num: 32
+I (1260) wifi:Init static tx buffer num: 16
+I (1264) wifi:Init tx cache buffer num: 32
+I (1268) wifi:Init static rx buffer size: 1600
+I (1272) wifi:Init static rx buffer num: 10
+I (1276) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1280) wifi_init: accept mbox: 6[0m
+[0;32mI (1284) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1288) wifi_init: udp mbox: 6[0m
+[0;32mI (1292) wifi_init: tcp mbox: 6[0m
+[0;32mI (1295) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1300) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1304) wifi_init: tcp mss: 1440[0m
+[0;32mI (1308) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1312) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1318) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1324) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (1384) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+I (1393) wifi:mode : null
+I (1395) wifi:mode : softAP (08:a6:f7:11:51:a9)
+I (1396) wifi:Total power save buffer number: 8
+I (1396) wifi:Init max length of beacon: 752/752
+I (1399) wifi:Init max length of beacon: 752/752
+[0;32mI (1405) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+Add netif ap with 44d7b81(commit id)
+[0;32mI (1415) bridge_common: netif list add success[0m
+[0;31mE (1420) NVS: Failed to open NVS namespace[0m
+[0;32mI (1425) bridge_common: IP Address:192.168.5.1[0m
+[0;32mI (1430) bridge_common: GW Address:192.168.5.1[0m
+[0;32mI (1435) bridge_common: NM Address:255.255.255.0[0m
+[0;32mI (1440) bridge_common: [WIFI_AP_DEF ][0m
+[0;32mI (1445) bridge_common: Set ip info:192.168.5.1[0m
+[0;32mI (1450) bridge_wifi: SoftAP IP network segment has changed, deauth all station[0m
+I (1461) wifi:Disabled PMF config for SoftAP
+I (1462) wifi:Total power save buffer number: 8
+[0;32mI (1468) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (1475) bridge_common: [WIFI_AP_DEF ]Name Server1: 114.114.114.114[0m
+[0;32mI (1482) bridge_common: DHCPS Restart, deauth all station[0m
+Add netif sta with 44d7b81(commit id)
+[0;32mI (1491) bridge_common: netif list add success[0m
+I (1497) wifi:mode : sta (08:a6:f7:11:51:a8) + softAP (08:a6:f7:11:51:a9)
+I (1503) wifi:enable tsf
+[0;31mE (1506) NVS: Failed to read IP info from NVS[0m
+I (1510) wifi:Disabled PMF config for STA
+[0;32mI (1514) bridge_wifi: [esp_bridge_wifi_set_config] sta ssid: Tran Con Dev password: password[0m
+[0;32mI (1523) bridge_wifi: [esp_bridge_wifi_set_config] softap ssid: ESP_Bridge_1151a9 password: 12345678[0m
+I (1704) wifi:Total power save buffer number: 8
+[0;32mI (1707) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (1707) bridge_wifi: SoftAP config changed, deauth all station[0m
+[0;32mI (1713) Mesh-Lite: esp-mesh-lite component version: 1.0.0[0m
+I (1720) ESPNOW: espnow [version: 1.0] init
+[0;32mI (1723) [vendor_ie]: Mesh-Lite commit id: bc9302d
+ [0m
+[0;31mE (1730) [vendor_ie]: Error Get! [0m
+[0;33mW (1733) [vendor_ie]: Mesh ID is not saved in flash [0m
+[0;32mI (1739) [vendor_ie]: Mesh ID: 77 [0m
+[0;33mW (1743) [vendor_ie]: Error Get[4354] [0m
+[0;33mW (1747) [vendor_ie]: Error Get[4354] [0m
+[0;32mI (1753) [ESP_Mesh_Lite_Comm]: msg action add success [0m
+[0;32mI (1759) [ESP_Mesh_Lite_Comm]: Bind Socket 54, port 6364 [0m
+[0;32mI (1764) [ESP_Mesh_Lite_Comm]: Bind Socket 55, port 6363 [0m
+[0;32mI (1770) [ESP_Mesh_Lite_Comm]: Bind Socket 56, port 6366 [0m
+[0;32mI (1776) [ESP_Mesh_Lite_Comm]: Bind Socket 57, port 6365 [0m
+[0;32mI (1782) [mesh-lite-espnow]: Start espnow task [0m
+[0;32mI (1789) Mesh-Lite: Mesh-Lite connecting[0m
+[0;32mI (1793) [vendor_ie]: esp_mesh_lite_wifi_scan_start return ESP_OK [0m
+[0;32mI (1798) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (1808) cam_hal: cam init ok[0m
+[0;32mI (1811) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (1815) sccb: sccb_i2c_port=1[0m
+[0;32mI (1819) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1858) camera: Detected camera at address=0x30[0m
+[0;32mI (1860) camera: Detected OV2640 camera[0m
+[0;32mI (1860) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (1926) cam_hal: buffer_size: 32768, half_buffer_size: 4096, node_buffer_size: 2048, node_cnt: 16, total_cnt: 7[0m
+[0;32mI (1926) cam_hal: Allocating 30720 Byte frame buffer in PSRAM[0m
+[0;32mI (1932) cam_hal: Allocating 30720 Byte frame buffer in PSRAM[0m
+[0;32mI (1939) cam_hal: cam config ok[0m
+[0;32mI (1943) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8[0m
+[0;32mI (2021) rc522: Initialized (firmware v2.0)[0m
+[0;32mI (3482) [vendor_ie]: Mesh-Lite Scan done [0m
+[0;32mI (3483) [vendor_ie]: RTC store: temp_mesh_id:255; ssid:Tran Con Dev; bssid:00:00:00:00:00:00; crc:2891781910 [0m
+[0;32mI (3487) [vendor_ie]: wifi_cfg Tran Con Dev router_config Tran Con Dev [0m
+[0;32mI (3495) [vendor_ie]: esp_mesh_lite_wifi_connect return ESP_OK [0m
+I (4122) wifi:ap channel adjust o:1,1 n:4,1
+I (4122) wifi:new:<4,0>, old:<1,1>, ap:<4,1>, sta:<4,0>, prof:1, snd_ch_cfg:0x0
+I (4123) wifi:state: init -> auth (0xb0)
+I (4128) wifi:state: auth -> assoc (0x0)
+I (4133) wifi:state: assoc -> run (0x10)
+I (4170) wifi:connected with Tran Con Dev, aid = 1, channel 4, BW20, bssid = e4:ca:12:bd:52:70
+I (4171) wifi:security: WPA2-PSK, phy: bgn, rssi: -45
+I (4173) wifi:pm start, type: 1
+
+I (4176) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (4199) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (6176) bridge_common: [WIFI_AP_DEF ]Name Server1: 203.113.131.2[0m
+[0;32mI (6685) esp_netif_handlers: sta ip: 192.168.1.3, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (6686) bridge_wifi: Connected with IP Address:192.168.1.3[0m
+[0;32mI (6690) [vendor_ie]: RTC store: temp_mesh_id:3; ssid:Tran Con Dev; bssid:00:00:00:00:00:00; crc:13300945 [0m
+[0;31mE (6700) [ESP_Mesh_Lite_Comm]: Error Get! [0m
+[0;33mW (6705) [ESP_Mesh_Lite_Comm]: argot is not saved in flash [0m
+[0;32mI (6714) main: TCP client write task is running[0m
+[0;31mE (7020) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (7020) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (7021) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (7028) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (7045) websocket_client: WebSocket client error[0m
+[0;32mI (7050) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (7056) websocket_client: WebSocket client connected[0m
+[0;31mE (7061) websocket_client: Websocket client is not connected[0m
+[0;33mW (7067) websocket_client: Send frame error![0m
+[0;31mE (7072) websocket_client: Websocket client is not connected[0m
+[0;33mW (7079) websocket_client: Send frame error![0m
+[0;31mE (7133) websocket_client: Websocket client is not connected[0m
+[0;33mW (7133) websocket_client: Send frame error![0m
+[0;31mE (7173) websocket_client: Websocket client is not connected[0m
+[0;33mW (7173) websocket_client: Send frame error![0m
+[0;31mE (7213) websocket_client: Websocket client is not connected[0m
+[0;33mW (7213) websocket_client: Send frame error![0m
+[0;31mE (7253) websocket_client: Websocket client is not connected[0m
+[0;33mW (7253) websocket_client: Send frame error![0m
+[0;31mE (7293) websocket_client: Websocket client is not connected[0m
+[0;33mW (7293) websocket_client: Send frame error![0m
+[0;31mE (7333) websocket_client: Websocket client is not connected[0m
+[0;33mW (7333) websocket_client: Send frame error![0m
+[0;31mE (7373) websocket_client: Websocket client is not connected[0m
+[0;33mW (7373) websocket_client: Send frame error![0m
+[0;31mE (7413) websocket_client: Websocket client is not connected[0m
+[0;33mW (7413) websocket_client: Send frame error![0m
+[0;31mE (7453) websocket_client: Websocket client is not connected[0m
+[0;33mW (7453) websocket_client: Send frame error![0m
+[0;31mE (7493) websocket_client: Websocket client is not connected[0m
+[0;33mW (7493) websocket_client: Send frame error![0m
+[0;31mE (7533) websocket_client: Websocket client is not connected[0m
+[0;33mW (7533) websocket_client: Send frame error![0m
+[0;31mE (7573) websocket_client: Websocket client is not connected[0m
+[0;33mW (7573) websocket_client: Send frame error![0m
+[0;32mI (7771) websocket_client: WebSocket client connected[0m
+[0;32mI (7789) websocket_client: Image sent to WebSocket: 5813 bytes (0.2fps)[0m
+[0;32mI (7800) websocket_client: Image sent to WebSocket: 5813 bytes (100.0fps)[0m
+[0;32mI (7865) websocket_client: Image sent to WebSocket: 5813 bytes (15.6fps)[0m
+[0;32mI (7904) websocket_client: Image sent to WebSocket: 5813 bytes (25.6fps)[0m
+[0;32mI (7943) websocket_client: Image sent to WebSocket: 5813 bytes (26.3fps)[0m
+[0;32mI (7990) websocket_client: Image sent to WebSocket: 5813 bytes (21.3fps)[0m
+[0;32mI (8024) websocket_client: Image sent to WebSocket: 5813 bytes (29.4fps)[0m
+[0;32mI (8067) websocket_client: Image sent to WebSocket: 5813 bytes (23.8fps)[0m
+[0;32mI (8104) websocket_client: Image sent to WebSocket: 5813 bytes (27.0fps)[0m
+[0;32mI (8147) websocket_client: Image sent to WebSocket: 5813 bytes (23.8fps)[0m
+[0;32mI (8182) websocket_client: Image sent to WebSocket: 5813 bytes (28.6fps)[0m
+[0;32mI (8223) websocket_client: Image sent to WebSocket: 5813 bytes (25.0fps)[0m
+[0;32mI (8266) websocket_client: Image sent to WebSocket: 5813 bytes (23.3fps)[0m
+[0;32mI (8305) websocket_client: Image sent to WebSocket: 5813 bytes (26.3fps)[0m
+[0;32mI (8345) websocket_client: Image sent to WebSocket: 5813 bytes (25.0fps)[0m
+[0;32mI (8383) websocket_client: Image sent to WebSocket: 5813 bytes (26.3fps)[0m
+[0;32mI (8422) websocket_client: Image sent to WebSocket: 5813 bytes (26.3fps)[0m
+[0;32mI (8462) websocket_client: Image sent to WebSocket: 5813 bytes (25.0fps)[0m
+[0;32mI (8508) websocket_client: Image sent to WebSocket: 5813 bytes (22.2fps)[0m
+[0;32mI (8546) websocket_client: Image sent to WebSocket: 5813 bytes (26.3fps)[0m
+[0;32mI (8585) websocket_client: Image sent to WebSocket: 5813 bytes (26.3fps)[0m
+[0;32mI (8624) websocket_client: Image sent to WebSocket: 5813 bytes (25.6fps)[0m
+[0;32mI (8662) websocket_client: Image sent to WebSocket: 5813 bytes (26.3fps)[0m
+[0;32mI (8708) websocket_client: Image sent to WebSocket: 5813 bytes (22.2fps)[0m
+[0;32mI (8743) websocket_client: Image sent to WebSocket: 5813 bytes (29.4fps)[0m
+[0;32mI (8788) websocket_client: Image sent to WebSocket: 5813 bytes (22.7fps)[0m
+[0;32mI (8823) websocket_client: Image sent to WebSocket: 5813 bytes (28.6fps)[0m
+[0;32mI (8862) websocket_client: Image sent to WebSocket: 5813 bytes (26.3fps)[0m
+[0;32mI (8905) websocket_client: Image sent to WebSocket: 5813 bytes (23.8fps)[0m
+[0;32mI (8943) websocket_client: Image sent to WebSocket: 5813 bytes (26.3fps)[0m
+[0;32mI (8984) websocket_client: Image sent to WebSocket: 5813 bytes (24.4fps)[0m
+[0;32mI (9027) websocket_client: Image sent to WebSocket: 5813 bytes (23.8fps)[0m
+[0;32mI (9062) websocket_client: Image sent to WebSocket: 5813 bytes (28.6fps)[0m
+[0;32mI (9103) websocket_client: Image sent to WebSocket: 5813 bytes (25.0fps)[0m
+[0;32mI (9143) websocket_client: Image sent to WebSocket: 5813 bytes (25.0fps)[0m
+[0;32mI (9185) websocket_client: Image sent to WebSocket: 5813 bytes (24.4fps)[0m
+[0;32mI (9224) websocket_client: Image sent to WebSocket: 5813 bytes (26.3fps)[0m
+[0;32mI (9264) websocket_client: Image sent to WebSocket: 5813 bytes (25.6fps)[0m
+[0;32mI (9302) websocket_client: Image sent to WebSocket: 5813 bytes (26.3fps)[0m
+[0;32mI (9344) websocket_client: Image sent to WebSocket: 5813 bytes (23.8fps)[0m
+[0;32mI (9384) websocket_client: Image sent to WebSocket: 5813 bytes (25.6fps)[0m
+[0;32mI (9426) websocket_client: Image sent to WebSocket: 5813 bytes (24.4fps)[0m
+[0;32mI (9465) websocket_client: Image sent to WebSocket: 5813 bytes (25.6fps)[0m
+[0;32mI (9504) websocket_client: Image sent to WebSocket: 5813 bytes (26.3fps)[0m
+[0;32mI (9540) websocket_client: Image sent to WebSocket: 5813 bytes (27.8fps)[0m
+[0;32mI (9580) websocket_client: Image sent to WebSocket: 5813 bytes (25.6fps)[0m
+[0;32mI (9631) websocket_client: Image sent to WebSocket: 5813 bytes (19.6fps)[0m
+[0;32mI (9662) websocket_client: Image sent to WebSocket: 5813 bytes (33.3fps)[0m
+[0;32mI (9706) websocket_client: Image sent to WebSocket: 5813 bytes (22.7fps)[0m
+[0;32mI (9743) websocket_client: Image sent to WebSocket: 5813 bytes (27.8fps)[0m
+[0;32mI (9780) websocket_client: Image sent to WebSocket: 5813 bytes (27.0fps)[0m
+[0;32mI (9821) websocket_client: Image sent to WebSocket: 5813 bytes (24.4fps)[0m
+[0;32mI (9861) websocket_client: Image sent to WebSocket: 5813 bytes (25.6fps)[0m
+[0;32mI (9903) websocket_client: Image sent to WebSocket: 5813 bytes (23.8fps)[0m
+[0;32mI (9944) websocket_client: Image sent to WebSocket: 5813 bytes (25.0fps)[0m
+[0;32mI (9981) websocket_client: Image sent to WebSocket: 5813 bytes (27.0fps)[0m
+[0;32mI (10024) websocket_client: Image sent to WebSocket: 5813 bytes (23.3fps)[0m
+[0;32mI (10061) websocket_client: Image sent to WebSocket: 5813 bytes (27.0fps)[0m
+[0;32mI (10107) websocket_client: Image sent to WebSocket: 5813 bytes (21.7fps)[0m
+[0;32mI (10142) websocket_client: Image sent to WebSocket: 5813 bytes (29.4fps)[0m
+[0;32mI (10185) websocket_client: Image sent to WebSocket: 5813 bytes (23.8fps)[0m
+[0;32mI (10225) websocket_client: Image sent to WebSocket: 5813 bytes (25.0fps)[0m
+[0;32mI (10263) websocket_client: Image sent to WebSocket: 5813 bytes (26.3fps)[0m
+[0;32mI (10303) websocket_client: Image sent to WebSocket: 5813 bytes (25.6fps)[0m
+[0;32mI (10348) websocket_client: Image sent to WebSocket: 5813 bytes (22.2fps)[0m
+[0;32mI (10381) websocket_client: Image sent to WebSocket: 5813 bytes (31.2fps)[0m
+[0;32mI (10425) websocket_client: Image sent to WebSocket: 5813 bytes (23.3fps)[0m
+[0;32mI (10461) websocket_client: Image sent to WebSocket: 5813 bytes (28.6fps)[0m
+[0;32mI (10501) websocket_client: Image sent to WebSocket: 5813 bytes (25.6fps)[0m
+[0;32mI (10540) websocket_client: Image sent to WebSocket: 5813 bytes (25.6fps)[0m
+[0;32mI (10580) websocket_client: Image sent to WebSocket: 5813 bytes (25.0fps)[0m
+[0;32mI (10624) websocket_client: Image sent to WebSocket: 5813 bytes (23.3fps)[0m
+[0;32mI (10662) websocket_client: Image sent to WebSocket: 5813 bytes (26.3fps)[0m
+[0;32mI (10702) websocket_client: Image sent to WebSocket: 5813 bytes (25.0fps)[0m
+[0;32mI (10757) websocket_client: Image sent to WebSocket: 5813 bytes (18.5fps)[0m
+[0;32mI (10795) websocket_client: Image sent to WebSocket: 5813 bytes (26.3fps)[0m
+[0;32mI (11166) websocket_client: Image sent to WebSocket: 5813 bytes (2.7fps)[0m
+[0;32mI (11370) websocket_client: Image sent to WebSocket: 5813 bytes (4.9fps)[0m
+[0;32mI (11381) websocket_client: Image sent to WebSocket: 5813 bytes (90.9fps)[0m
+[0;32mI (11416) websocket_client: Image sent to WebSocket: 5116 bytes (28.6fps)[0m
+[0;32mI (11462) websocket_client: Image sent to WebSocket: 5813 bytes (22.2fps)[0m
+[0;32mI (11497) websocket_client: Image sent to WebSocket: 5082 bytes (29.4fps)[0m
+[0;32mI (11536) websocket_client: Image sent to WebSocket: 5093 bytes (25.6fps)[0m
+[0;32mI (11581) websocket_client: Image sent to WebSocket: 5813 bytes (22.7fps)[0m
+[0;32mI (11616) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (11663) websocket_client: Image sent to WebSocket: 5813 bytes (21.7fps)[0m
+[0;32mI (11701) websocket_client: Image sent to WebSocket: 5813 bytes (26.3fps)[0m
+[0;32mI (11736) websocket_client: Image sent to WebSocket: 5114 bytes (28.6fps)[0m
+[0;32mI (11783) websocket_client: Image sent to WebSocket: 5813 bytes (21.3fps)[0m
+[0;32mI (11816) websocket_client: Image sent to WebSocket: 5097 bytes (31.2fps)[0m
+[0;32mI (11862) websocket_client: Image sent to WebSocket: 5813 bytes (22.2fps)[0m
+[0;32mI (11896) websocket_client: Image sent to WebSocket: 5080 bytes (29.4fps)[0m
+[0;32mI (11936) websocket_client: Image sent to WebSocket: 5076 bytes (25.6fps)[0m
+[0;32mI (11986) websocket_client: Image sent to WebSocket: 5813 bytes (20.0fps)[0m
+[0;32mI (12016) websocket_client: Image sent to WebSocket: 5100 bytes (34.5fps)[0m
+[0;32mI (12056) websocket_client: Image sent to WebSocket: 5100 bytes (25.6fps)[0m
+[0;32mI (12096) websocket_client: Image sent to WebSocket: 5097 bytes (25.0fps)[0m
+[0;32mI (12136) websocket_client: Image sent to WebSocket: 5097 bytes (25.6fps)[0m
+[0;32mI (12180) websocket_client: Image sent to WebSocket: 5813 bytes (22.7fps)[0m
+[0;32mI (12221) websocket_client: Image sent to WebSocket: 5813 bytes (25.0fps)[0m
+[0;32mI (12256) websocket_client: Image sent to WebSocket: 5117 bytes (28.6fps)[0m
+[0;32mI (12296) websocket_client: Image sent to WebSocket: 5117 bytes (25.0fps)[0m
+[0;32mI (12342) websocket_client: Image sent to WebSocket: 5813 bytes (22.2fps)[0m
+[0;32mI (12381) websocket_client: Image sent to WebSocket: 5813 bytes (25.6fps)[0m
+[0;32mI (12416) websocket_client: Image sent to WebSocket: 5079 bytes (29.4fps)[0m
+[0;32mI (12455) websocket_client: Image sent to WebSocket: 5079 bytes (25.6fps)[0m
+[0;32mI (12502) websocket_client: Image sent to WebSocket: 5813 bytes (21.7fps)[0m
+[0;32mI (12536) websocket_client: Image sent to WebSocket: 5028 bytes (30.3fps)[0m
+[0;32mI (12576) websocket_client: Image sent to WebSocket: 5031 bytes (25.0fps)[0m
+[0;32mI (12616) websocket_client: Image sent to WebSocket: 5031 bytes (25.0fps)[0m
+[0;32mI (12656) websocket_client: Image sent to WebSocket: 5031 bytes (25.6fps)[0m
+[0;32mI (12696) websocket_client: Image sent to WebSocket: 5031 bytes (25.0fps)[0m
+[0;32mI (12736) websocket_client: Image sent to WebSocket: 5031 bytes (25.6fps)[0m
+[0;32mI (12775) websocket_client: Image sent to WebSocket: 5031 bytes (25.6fps)[0m
+[0;32mI (12816) websocket_client: Image sent to WebSocket: 5031 bytes (25.0fps)[0m
+[0;32mI (12855) websocket_client: Image sent to WebSocket: 5031 bytes (25.6fps)[0m
+[0;32mI (12895) websocket_client: Image sent to WebSocket: 5031 bytes (25.6fps)[0m
+[0;32mI (12935) websocket_client: Image sent to WebSocket: 5031 bytes (25.6fps)[0m
+[0;32mI (12975) websocket_client: Image sent to WebSocket: 5031 bytes (25.0fps)[0m
+[0;32mI (13015) websocket_client: Image sent to WebSocket: 5031 bytes (25.0fps)[0m
+[0;32mI (13055) websocket_client: Image sent to WebSocket: 5031 bytes (25.6fps)[0m
+[0;32mI (13095) websocket_client: Image sent to WebSocket: 5031 bytes (25.6fps)[0m
+[0;32mI (13135) websocket_client: Image sent to WebSocket: 5031 bytes (25.0fps)[0m
+[0;32mI (13175) websocket_client: Image sent to WebSocket: 5031 bytes (25.0fps)[0m
+[0;32mI (13215) websocket_client: Image sent to WebSocket: 5031 bytes (25.6fps)[0m
+[0;32mI (13255) websocket_client: Image sent to WebSocket: 5031 bytes (25.6fps)[0m
+[0;32mI (13295) websocket_client: Image sent to WebSocket: 5031 bytes (25.0fps)[0m
+[0;32mI (13335) websocket_client: Image sent to WebSocket: 5031 bytes (25.0fps)[0m
+[0;32mI (13375) websocket_client: Image sent to WebSocket: 5031 bytes (25.6fps)[0m
+[0;32mI (13414) websocket_client: Image sent to WebSocket: 5031 bytes (25.6fps)[0m
+[0;32mI (13454) websocket_client: Image sent to WebSocket: 5031 bytes (25.6fps)[0m
+[0;32mI (13495) websocket_client: Image sent to WebSocket: 5031 bytes (25.0fps)[0m
+[0;32mI (13535) websocket_client: Image sent to WebSocket: 5031 bytes (25.0fps)[0m
+[0;32mI (13575) websocket_client: Image sent to WebSocket: 5031 bytes (25.6fps)[0m
+[0;32mI (13615) websocket_client: Image sent to WebSocket: 5031 bytes (25.0fps)[0m
+[0;32mI (13655) websocket_client: Image sent to WebSocket: 5031 bytes (25.0fps)[0m
+[0;32mI (13695) websocket_client: Image sent to WebSocket: 5031 bytes (25.6fps)[0m
+[0;32mI (13735) websocket_client: Image sent to WebSocket: 5031 bytes (25.0fps)[0m
+[0;32mI (13775) websocket_client: Image sent to WebSocket: 5031 bytes (25.6fps)[0m
+[0;32mI (13815) websocket_client: Image sent to WebSocket: 5031 bytes (25.6fps)[0m
+[0;32mI (13855) websocket_client: Image sent to WebSocket: 5031 bytes (25.0fps)[0m
+[0;32mI (13895) websocket_client: Image sent to WebSocket: 5031 bytes (25.0fps)[0m
+[0;32mI (13935) websocket_client: Image sent to WebSocket: 5031 bytes (25.6fps)[0m
+[0;32mI (13974) websocket_client: Image sent to WebSocket: 5031 bytes (25.6fps)[0m
+[0;32mI (14021) websocket_client: Image sent to WebSocket: 5045 bytes (21.3fps)[0m
+[0;32mI (14058) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (14100) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (14140) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (14179) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (14221) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (14261) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (14294) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (14340) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (14380) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (14418) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (14458) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (14499) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (14546) websocket_client: Image sent to WebSocket: 5045 bytes (21.3fps)[0m
+[0;32mI (14578) websocket_client: Image sent to WebSocket: 5045 bytes (31.2fps)[0m
+[0;32mI (14622) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (14658) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (14694) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (14738) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (14780) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (14820) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (14859) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (14898) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (14938) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (14978) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (15018) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (15056) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (15101) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (15141) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (15180) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (15218) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (15262) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (15303) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (15335) websocket_client: Image sent to WebSocket: 5045 bytes (32.3fps)[0m
+[0;32mI (15378) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (15416) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (15455) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (15497) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (15538) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (15575) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (15616) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (15657) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (15695) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (15740) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (15779) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (15815) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (15857) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (15897) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (15935) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (15979) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (16021) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (16054) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (16097) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (16137) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (16174) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (16217) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (16262) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (16295) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (16336) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (16377) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (16414) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (16461) websocket_client: Image sent to WebSocket: 5045 bytes (21.7fps)[0m
+[0;32mI (16497) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (16534) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (16579) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (16618) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (16654) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (16699) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (16740) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (16774) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (16816) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (16857) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (16894) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (16936) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (16979) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (17014) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (17057) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (17096) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (17134) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (17182) websocket_client: Image sent to WebSocket: 5045 bytes (20.8fps)[0m
+[0;32mI (17217) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (17254) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (17297) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (17341) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (17374) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (17418) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (17457) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (17494) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (17538) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (17577) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (17613) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (17660) websocket_client: Image sent to WebSocket: 5045 bytes (21.7fps)[0m
+[0;32mI (17697) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (17734) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (17777) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (17822) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (17854) websocket_client: Image sent to WebSocket: 5045 bytes (32.3fps)[0m
+[0;32mI (17899) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (17937) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (17974) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (18016) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (18056) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (18094) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (18137) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (18176) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (18214) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (18257) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (18298) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (18335) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (18377) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (18417) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (18453) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (18495) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (18538) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (18573) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (18617) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (18659) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (18693) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (18742) websocket_client: Image sent to WebSocket: 5045 bytes (20.4fps)[0m
+[0;32mI (18776) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (18813) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (18856) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (18896) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (18933) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (18977) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (19018) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (19054) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (19095) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (19136) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (19173) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (19215) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (19258) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (19293) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (19337) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (19375) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (19413) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (19459) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (19500) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (19533) websocket_client: Image sent to WebSocket: 5045 bytes (31.2fps)[0m
+[0;32mI (19576) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (19616) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (19653) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (19695) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (19736) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (19773) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (19815) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (19856) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (19893) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (19933) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (19974) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (20018) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (20056) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (20093) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (20136) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (20177) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (20213) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (20255) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (20296) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (20333) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (20375) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (20416) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (20452) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (20496) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (20535) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (20573) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (20615) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (20656) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (20693) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (20735) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (20775) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (20813) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (20855) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (20897) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (20932) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (20975) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (21015) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (21052) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (21098) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (21138) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (21172) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (21215) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (21255) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (21293) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (21335) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (21376) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (21413) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (21455) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (21495) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (21533) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (21578) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (21616) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (21652) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (21695) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (21736) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (21772) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (21816) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (21858) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (21892) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (21936) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (21975) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (22012) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (22055) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (22098) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (22132) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (22175) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (22215) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (22252) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (22296) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (22335) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (22372) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (22415) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (22455) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (22492) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (22536) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (22574) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (22612) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (22655) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (22694) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (22732) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (22777) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (22815) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (22851) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (22894) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (22935) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (22976) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (23014) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (23051) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (23094) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (23135) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (23176) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (23217) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (23254) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (23294) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (23335) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (23374) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (23411) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (23454) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (23497) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (23535) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (23576) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (23616) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (23659) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (23692) websocket_client: Image sent to WebSocket: 5045 bytes (31.2fps)[0m
+[0;32mI (23737) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (23775) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (23811) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (23853) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (23897) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (23932) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (23974) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (24015) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (24051) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (24092) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (24135) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (24176) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (24211) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (24254) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (24294) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (24331) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (24376) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (24415) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (24451) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (24493) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (24533) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (24571) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (24614) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (24656) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (24691) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (24734) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (24773) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (24811) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (24851) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (24891) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (24933) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (24974) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (25011) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (25057) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (25092) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (25130) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (25174) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (25214) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (25251) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (25296) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (25333) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (25371) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (25413) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (25455) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (25491) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (25533) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (25574) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (25611) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (25654) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (25693) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (25731) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (25776) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (25814) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (25851) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (25893) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (25933) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (25971) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (26015) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (26055) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (26090) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (26133) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (26176) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (26211) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (26253) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (26296) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (26331) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (26373) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (26413) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (26450) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (26494) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (26536) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (26571) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (26612) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (26652) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (26690) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (26735) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (26773) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (26810) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (26852) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (26893) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (26930) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (26970) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (27016) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (27052) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (27090) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (27139) websocket_client: Image sent to WebSocket: 5045 bytes (20.4fps)[0m
+[0;32mI (27174) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (27210) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (27254) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (27292) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (27330) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (27370) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (27410) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (27455) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (27495) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (27530) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (27570) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (27614) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (27654) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (27690) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (27738) websocket_client: Image sent to WebSocket: 5045 bytes (20.8fps)[0m
+[0;32mI (27773) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (27810) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (27850) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (27896) websocket_client: Image sent to WebSocket: 5045 bytes (21.7fps)[0m
+[0;32mI (27934) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (27970) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (28012) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (28052) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (28090) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (28138) websocket_client: Image sent to WebSocket: 5045 bytes (21.3fps)[0m
+[0;32mI (28173) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (28210) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (28253) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (28294) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (28330) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (28372) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (28412) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (28449) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (28490) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (28533) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (28574) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (28609) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (28653) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (28693) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (28730) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (28779) websocket_client: Image sent to WebSocket: 5045 bytes (20.4fps)[0m
+[0;32mI (28811) websocket_client: Image sent to WebSocket: 5045 bytes (32.3fps)[0m
+[0;32mI (28850) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (28891) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (28932) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (28969) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (29013) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (29054) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (29089) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (29129) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (29171) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (29212) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (29249) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (29291) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (29335) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (29369) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (29412) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (29451) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (29489) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (29532) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (29576) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (29609) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (29649) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (29699) websocket_client: Image sent to WebSocket: 5045 bytes (20.4fps)[0m
+[0;32mI (29733) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (29769) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (29810) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (29854) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (29893) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (29929) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (29969) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (30009) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (30052) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (30091) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (30129) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (30171) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (30214) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (30249) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (30292) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (30332) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (30369) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (30416) websocket_client: Image sent to WebSocket: 5045 bytes (21.3fps)[0m
+[0;32mI (30452) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (30488) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (30529) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (30571) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (30611) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (30649) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (30693) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (30731) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (30768) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (30811) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (30855) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (30888) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (30932) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (30971) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (31009) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (31052) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (31091) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (31129) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (31174) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (31214) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (31248) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (31292) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (31333) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (31369) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (31411) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (31450) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (31488) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (31531) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (31572) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (31608) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (31652) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (31691) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (31728) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (31771) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (31812) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (31849) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (31892) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (31932) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (31969) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (32011) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (32055) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (32088) websocket_client: Image sent to WebSocket: 5045 bytes (31.2fps)[0m
+[0;32mI (32134) websocket_client: Image sent to WebSocket: 5045 bytes (21.7fps)[0m
+[0;32mI (32171) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (32208) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (32256) websocket_client: Image sent to WebSocket: 5045 bytes (21.3fps)[0m
+[0;32mI (32290) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (32328) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (32368) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (32411) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (32451) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (32488) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (32533) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (32572) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (32608) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (32650) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (32691) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (32728) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (32776) websocket_client: Image sent to WebSocket: 5045 bytes (20.8fps)[0m
+[0;32mI (32812) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (32847) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (32891) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (32931) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (32980) websocket_client: Image sent to WebSocket: 5045 bytes (20.4fps)[0m
+[0;32mI (33007) websocket_client: Image sent to WebSocket: 5045 bytes (38.5fps)[0m
+[0;32mI (33055) websocket_client: Image sent to WebSocket: 5045 bytes (21.3fps)[0m
+[0;32mI (33093) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (33132) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (33170) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (33212) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (33247) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (33292) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (33327) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (33371) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (33410) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (33451) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (33490) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (33532) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (33571) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (33610) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (33651) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (33693) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (33730) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (33772) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (33811) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (33850) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (33886) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (33932) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (33976) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (34011) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (34051) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (34092) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (34130) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (34166) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (34211) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (34252) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (34291) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (34331) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (34372) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (34406) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (34456) websocket_client: Image sent to WebSocket: 5045 bytes (20.0fps)[0m
+[0;32mI (34492) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (34530) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (34571) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (34615) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (34650) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (34695) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (34730) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (34771) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (34806) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (34850) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (34891) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (34931) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (34970) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (35011) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (35049) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (35093) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (35131) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (35170) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (35206) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (35254) websocket_client: Image sent to WebSocket: 5045 bytes (21.3fps)[0m
+[0;32mI (35290) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (35326) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (35374) websocket_client: Image sent to WebSocket: 5045 bytes (21.3fps)[0m
+[0;32mI (35411) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (35450) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (35491) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (35536) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (35566) websocket_client: Image sent to WebSocket: 5045 bytes (34.5fps)[0m
+[0;32mI (35610) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (35653) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (35686) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (35731) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (35772) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (35806) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (35850) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (35891) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (35930) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (35970) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (36011) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (36051) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (36095) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (36129) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (36169) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (36210) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (36255) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (36290) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (36331) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (36372) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (36410) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (36454) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (36498) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (36535) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (36569) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (36611) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (36649) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (36696) websocket_client: Image sent to WebSocket: 5045 bytes (21.3fps)[0m
+[0;32mI (36726) websocket_client: Image sent to WebSocket: 5045 bytes (34.5fps)[0m
+[0;32mI (36767) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (36809) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (36852) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (36886) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (36926) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (36966) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (37012) websocket_client: Image sent to WebSocket: 5045 bytes (21.7fps)[0m
+[0;32mI (37049) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (37086) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (37129) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (37171) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (37206) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (37252) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (37289) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (37326) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (37369) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (37408) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (37446) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (37489) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (37529) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (37566) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (37609) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (37650) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (37687) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (37730) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (37769) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (37806) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (37848) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (37895) websocket_client: Image sent to WebSocket: 5045 bytes (21.7fps)[0m
+[0;32mI (37926) websocket_client: Image sent to WebSocket: 5045 bytes (32.3fps)[0m
+[0;32mI (37971) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (38011) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (38046) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (38100) websocket_client: Image sent to WebSocket: 5045 bytes (18.9fps)[0m
+[0;32mI (38128) websocket_client: Image sent to WebSocket: 5045 bytes (37.0fps)[0m
+[0;32mI (38166) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (38209) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (38248) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (38286) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (38328) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (38371) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (38407) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (38447) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (38487) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (38526) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (38568) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (38613) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (38645) websocket_client: Image sent to WebSocket: 5045 bytes (31.2fps)[0m
+[0;32mI (38689) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (38728) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (38766) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (38813) websocket_client: Image sent to WebSocket: 5045 bytes (21.3fps)[0m
+[0;32mI (38848) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (38886) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (38928) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (38969) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (39005) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (39049) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (39090) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (39126) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (39168) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (39208) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (39245) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (39287) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (39330) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (39365) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (39407) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (39448) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (39485) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (39531) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (39570) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (39605) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (39649) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (39687) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (39725) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (39769) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (39812) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (39845) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (39888) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (39930) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (39965) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (40009) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (40048) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (40085) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (40128) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (40168) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (40205) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (40250) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (40290) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (40325) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (40367) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (40407) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (40445) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (40487) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (40531) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (40565) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (40608) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (40648) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (40685) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (40729) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (40767) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (40805) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (40848) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (40889) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (40924) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (40965) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (41006) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (41047) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (41084) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (41129) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (41170) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (41204) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (41249) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (41288) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (41325) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (41373) websocket_client: Image sent to WebSocket: 5045 bytes (20.8fps)[0m
+[0;32mI (41407) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (41444) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (41488) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (41528) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (41564) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (41608) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (41650) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (41685) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (41727) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (41767) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (41805) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (41847) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (41886) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (41923) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (41967) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (42007) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (42044) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (42091) websocket_client: Image sent to WebSocket: 5045 bytes (21.7fps)[0m
+[0;32mI (42126) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (42164) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (42207) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (42246) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (42284) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (42326) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (42368) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (42404) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (42446) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (42487) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (42524) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (42568) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (42607) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (42644) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (42687) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (42726) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (42763) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (42810) websocket_client: Image sent to WebSocket: 5045 bytes (21.7fps)[0m
+[0;32mI (42851) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (42884) websocket_client: Image sent to WebSocket: 5045 bytes (31.2fps)[0m
+[0;32mI (42928) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (42967) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (43016) websocket_client: Image sent to WebSocket: 5045 bytes (20.8fps)[0m
+[0;32mI (43046) websocket_client: Image sent to WebSocket: 5045 bytes (33.3fps)[0m
+[0;32mI (43090) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (43126) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (43167) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (43206) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (43246) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (43295) websocket_client: Image sent to WebSocket: 5045 bytes (20.8fps)[0m
+[0;32mI (43324) websocket_client: Image sent to WebSocket: 5045 bytes (35.7fps)[0m
+[0;32mI (43366) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (43407) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (43444) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (43486) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (43528) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (43563) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (43608) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (43646) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (43683) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (43729) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (43769) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (43803) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (43847) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (43886) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (43924) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (43968) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (44006) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (44044) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (44087) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (44127) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (44163) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (44209) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (44246) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (44283) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (44326) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (44367) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (44403) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (44447) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (44488) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (44523) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (44563) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (44605) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (44650) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (44683) websocket_client: Image sent to WebSocket: 5045 bytes (31.2fps)[0m
+[0;32mI (44730) websocket_client: Image sent to WebSocket: 5045 bytes (21.7fps)[0m
+[0;32mI (44766) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (44803) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (44854) websocket_client: Image sent to WebSocket: 5045 bytes (19.6fps)[0m
+[0;32mI (44885) websocket_client: Image sent to WebSocket: 5045 bytes (32.3fps)[0m
+[0;32mI (44923) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (44967) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (45007) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (45043) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (45087) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (45128) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (45164) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (45206) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (45245) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (45283) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (45326) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (45368) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (45403) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (45447) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (45486) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (45523) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (45563) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (45605) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (45645) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (45683) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (45726) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (45766) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (45802) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (45848) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (45886) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (45923) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (45965) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (46007) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (46042) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (46086) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (46126) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (46163) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (46205) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (46245) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (46282) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (46324) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (46369) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (46403) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (46447) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (46484) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (46522) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (46563) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (46604) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (46646) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (46682) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (46726) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (46767) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (46803) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (46844) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (46885) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (46922) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (46965) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (47007) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (47042) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (47085) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (47125) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (47162) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (47210) websocket_client: Image sent to WebSocket: 5045 bytes (20.8fps)[0m
+[0;32mI (47244) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (47282) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (47326) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (47365) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (47402) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (47449) websocket_client: Image sent to WebSocket: 5045 bytes (21.7fps)[0m
+[0;32mI (47486) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (47522) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (47562) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (47605) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (47645) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (47682) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (47725) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (47767) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (47802) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (47844) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (47884) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (47922) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (47970) websocket_client: Image sent to WebSocket: 5045 bytes (21.3fps)[0m
+[0;32mI (48006) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (48042) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (48084) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (48128) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (48162) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (48205) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (48244) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (48281) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (48324) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (48364) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (48401) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (48446) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (48484) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (48521) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (48562) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (48604) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (48646) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (48681) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (48724) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (48764) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (48802) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (48848) websocket_client: Image sent to WebSocket: 5045 bytes (21.7fps)[0m
+[0;32mI (48884) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (48921) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (48961) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (49004) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (49044) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (49081) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (49125) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (49164) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (49201) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (49244) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (49284) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (49321) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (49364) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (49403) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (49441) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (49483) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (49532) websocket_client: Image sent to WebSocket: 5045 bytes (20.4fps)[0m
+[0;32mI (49561) websocket_client: Image sent to WebSocket: 5045 bytes (34.5fps)[0m
+[0;32mI (49606) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (49646) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (49681) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (49724) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (49766) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (49801) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (49844) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (49883) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (49921) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (49962) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (50004) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (50041) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (50083) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (50123) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (50161) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (50203) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (50243) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (50282) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (50326) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (50363) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (50401) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (50443) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (50487) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (50521) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (50561) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (50603) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (50643) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (50681) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (50723) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (50764) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (50801) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (50844) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (50883) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (50921) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (50965) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (51005) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (51041) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (51083) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (51123) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (51161) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (51206) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (51244) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (51280) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (51323) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (51364) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (51401) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (51440) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (51486) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (51526) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (51560) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (51609) websocket_client: Image sent to WebSocket: 5045 bytes (20.8fps)[0m
+[0;32mI (51643) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (51680) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (51720) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (51760) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (51803) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (51843) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (51880) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (51921) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (51963) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (52004) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (52040) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (52083) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (52125) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (52160) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (52206) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (52242) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (52280) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (52330) websocket_client: Image sent to WebSocket: 5045 bytes (20.0fps)[0m
+[0;32mI (52363) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (52400) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (52443) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (52485) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (52520) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (52560) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (52604) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (52644) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (52680) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (52724) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (52763) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (52800) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (52844) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (52885) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (52920) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (52962) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (53002) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (53047) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (53083) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (53126) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (53159) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (53202) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (53243) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (53283) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (53324) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (53362) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (53402) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (53439) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (53484) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (53528) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (53560) websocket_client: Image sent to WebSocket: 5045 bytes (32.3fps)[0m
+[0;32mI (53603) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (53642) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (53682) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (53722) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (53765) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (53808) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (53838) websocket_client: Image sent to WebSocket: 5045 bytes (33.3fps)[0m
+[0;32mI (53885) websocket_client: Image sent to WebSocket: 5045 bytes (21.3fps)[0m
+[0;32mI (53921) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (53965) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (54003) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (54038) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (54083) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (54123) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (54162) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (54202) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (54238) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (54283) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (54322) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (54363) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (54402) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (54445) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (54483) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (54528) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (54559) websocket_client: Image sent to WebSocket: 5045 bytes (32.3fps)[0m
+[0;32mI (54602) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (54642) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (54679) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (54721) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (54764) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (54799) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (54841) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (54886) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (54919) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (54962) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (55003) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (55039) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (55081) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (55121) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (55159) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (55203) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (55241) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (55279) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (55321) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (55362) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (55399) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (55444) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (55482) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (55519) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (55559) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (55609) websocket_client: Image sent to WebSocket: 5045 bytes (20.0fps)[0m
+[0;32mI (55641) websocket_client: Image sent to WebSocket: 5045 bytes (31.2fps)[0m
+[0;32mI (55679) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (55722) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (55763) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (55799) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (55842) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (55883) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (55919) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (55959) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (56001) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (56042) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (56078) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (56122) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (56163) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (56198) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (56239) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (56278) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (56318) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (56360) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (56404) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (56439) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (56478) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (56518) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (56563) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (56601) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (56638) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (56678) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (56722) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (56762) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (56798) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (56842) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (56881) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (56918) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (56961) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (57001) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (57038) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (57083) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (57121) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (57158) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (57200) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (57246) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (57278) websocket_client: Image sent to WebSocket: 5045 bytes (31.2fps)[0m
+[0;32mI (57324) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (57361) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (57398) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (57441) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (57480) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (57518) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (57563) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (57600) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (57638) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (57681) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (57723) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (57759) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (57800) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (57840) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (57878) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (57920) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (57963) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (57998) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (58044) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (58081) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (58118) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (58167) websocket_client: Image sent to WebSocket: 5045 bytes (20.4fps)[0m
+[0;32mI (58201) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (58238) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (58281) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (58320) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (58358) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (58401) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (58443) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (58478) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (58520) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (58560) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (58598) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (58641) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (58680) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (58717) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (58760) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (58800) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (58838) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (58884) websocket_client: Image sent to WebSocket: 5045 bytes (21.7fps)[0m
+[0;32mI (58920) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (58957) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (58999) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (59040) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (59077) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (59119) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (59160) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (59197) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (59240) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (59280) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (59318) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (59361) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (59403) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (59437) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (59480) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (59519) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (59557) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (59602) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (59643) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (59676) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (59719) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (59760) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (59797) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (59840) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (59879) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (59917) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (59957) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (60000) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (60041) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (60077) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (60119) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (60159) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (60197) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (60239) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (60279) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (60318) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (60361) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (60398) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (60437) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (60479) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (60523) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (60557) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (60602) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (60641) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (60677) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (60719) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (60760) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (60797) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (60841) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (60879) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (60916) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (60960) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (61001) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (61037) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (61076) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (61119) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (61161) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (61196) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (61242) websocket_client: Image sent to WebSocket: 5045 bytes (21.7fps)[0m
+[0;32mI (61282) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (61316) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (61360) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (61398) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (61436) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (61478) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (61524) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (61557) websocket_client: Image sent to WebSocket: 5045 bytes (31.2fps)[0m
+[0;32mI (61599) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (61639) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (61676) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (61720) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (61758) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (61796) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (61838) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (61879) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (61916) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (61959) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (62000) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (62036) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (62078) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (62118) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (62156) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (62202) websocket_client: Image sent to WebSocket: 5045 bytes (21.7fps)[0m
+[0;32mI (62240) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (62276) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (62319) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (62368) websocket_client: Image sent to WebSocket: 5045 bytes (20.4fps)[0m
+[0;32mI (62396) websocket_client: Image sent to WebSocket: 5045 bytes (37.0fps)[0m
+[0;32mI (62439) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (62479) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (62516) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (62559) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (62599) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (62636) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (62679) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (62718) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (62755) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (62799) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (62839) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (62876) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (62925) websocket_client: Image sent to WebSocket: 5045 bytes (20.4fps)[0m
+[0;32mI (62959) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (62996) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (63039) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (63083) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (63118) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (63161) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (63195) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (63240) websocket_client: Image sent to WebSocket: 5045 bytes (22.2fps)[0m
+[0;32mI (63278) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (63319) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (63359) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (63395) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (63439) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (63483) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (63519) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (63561) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (63599) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (63640) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (63680) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (63719) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (63757) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (63801) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (63841) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (63874) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (63918) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (63958) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (64006) websocket_client: Image sent to WebSocket: 5045 bytes (21.3fps)[0m
+[0;32mI (64040) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (64074) websocket_client: Image sent to WebSocket: 5045 bytes (29.4fps)[0m
+[0;32mI (64118) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (64159) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (64194) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (64238) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (64278) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (64318) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (64359) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (64399) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (64439) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (64474) websocket_client: Image sent to WebSocket: 5045 bytes (28.6fps)[0m
+[0;32mI (64518) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (64559) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (64599) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (64639) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (64678) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (64714) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (64762) websocket_client: Image sent to WebSocket: 5045 bytes (21.3fps)[0m
+[0;32mI (64801) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (64838) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (64877) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (64914) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (64957) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (64994) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (65038) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (65078) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (65119) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (65158) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (65194) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (65239) websocket_client: Image sent to WebSocket: 5045 bytes (22.7fps)[0m
+[0;32mI (65280) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (65318) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (65354) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (65397) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (65440) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (65480) websocket_client: Image sent to WebSocket: 5045 bytes (25.0fps)[0m
+[0;32mI (65514) websocket_client: Image sent to WebSocket: 5045 bytes (30.3fps)[0m
+[0;32mI (65557) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (65597) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (65646) websocket_client: Image sent to WebSocket: 5045 bytes (20.4fps)[0m
+[0;32mI (65679) websocket_client: Image sent to WebSocket: 5045 bytes (31.2fps)[0m
+[0;32mI (65721) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (65758) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (65796) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m
+[0;32mI (65838) websocket_client: Image sent to WebSocket: 5045 bytes (24.4fps)[0m
+[0;32mI (65880) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (65918) websocket_client: Image sent to WebSocket: 5045 bytes (27.0fps)[0m
+[0;32mI (65957) websocket_client: Image sent to WebSocket: 5045 bytes (25.6fps)[0m
+[0;32mI (65994) websocket_client: Image sent to WebSocket: 5045 bytes (27.8fps)[0m
+[0;32mI (66037) websocket_client: Image sent to WebSocket: 5045 bytes (23.3fps)[0m
+[0;32mI (66080) websocket_client: Image sent to WebSocket: 5045 bytes (23.8fps)[0m
+[0;32mI (66119) websocket_client: Image sent to WebSocket: 5045 bytes (26.3fps)[0m

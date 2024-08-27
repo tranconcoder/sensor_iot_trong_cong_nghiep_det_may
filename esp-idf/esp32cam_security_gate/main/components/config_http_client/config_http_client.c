@@ -39,3 +39,10 @@ esp_err_t _http_event_handle(esp_http_client_event_t *evt)
      }
      return ESP_OK;
 }
+
+
+static esp_http_client_config_t http_webserver_config = {
+    .host = CONFIG_SERVER_IP,
+    .port = CONFIG_SERVER_PORT,
+    .event_handler = _http_event_handle,
+};

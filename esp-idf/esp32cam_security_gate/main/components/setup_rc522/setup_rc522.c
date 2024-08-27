@@ -1,8 +1,10 @@
 #include "setup_rc522.h"
+#include "config_http_client.h"
+#include "esp_http_client.h"
+#include <stdio.h>
 
 static rc522_handle_t scanner;
 static const char *SETUP_RC522_TAG = "setup_rc522";
-
 
 static void rc522_handler(void (*on_tag_scanned)(uint64_t serial_number), esp_event_base_t base, int32_t event_id, void *event_data)
 {
@@ -24,13 +26,26 @@ static void rc522_handler(void (*on_tag_scanned)(uint64_t serial_number), esp_ev
      }
 }
 
-void on_tag_scanned(uint64_t serial_number) {
-    gpio_set_direction(4, GPIO_MODE_OUTPUT);
-    gpio_set_level(4, 1);
-    vTaskDelay(pdMS_TO_TICKS(1000));
-    gpio_set_level(4, 0);
+void on_tag_scanned(uint64_t serial_number)
+{
+    char serial_number_char[43];
+    sprintf(serial_number_char, "{\"serial_number\":\"%022llu\"}", serial_number);
+    ESP_LOGI(SETUP_RC522_TAG, "TAG SCANNED: %s", serial_number_char);
+    esp_http_client_config_t http_webserver_config = {
+        .host = "192.168.1.88",
+        .port = 3000,
+        .path = "/api/security-gate/auth-serial-number",
+        .event_handler = _http_event_handle,
+    };
+    esp_http_client_handle_t client = esp_http_client_init(&http_webserver_config);
 
-    ESP_LOGI(SETUP_RC522_TAG, "TAG SCANNED!!!!!!!!!!");
+    esp_http_client_set_method(client, HTTP_METHOD_POST);
+    esp_http_client_set_header(client, "Content-Type", "application/json");
+    esp_http_client_set_post_field(client, serial_number_char, strlen(serial_number_char));
+
+    esp_http_client_perform(client);
+
+    esp_http_client_cleanup(client);
 }
 
 void setup_rc522()

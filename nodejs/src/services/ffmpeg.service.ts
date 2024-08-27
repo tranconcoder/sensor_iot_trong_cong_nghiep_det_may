@@ -11,7 +11,7 @@ import {
 import { ConfigFilterVideo } from "../types/ffmpeg";
 import { FRAMESIZES } from "../config/ffmpeg.config";
 
-const FRAMESIZE = FRAMESIZES.VGA;
+const FRAMESIZE = FRAMESIZES.HVGA;
 const FRAME_PADDING_X = 8;
 const FRAME_PADDING_Y = 8;
 
@@ -34,16 +34,16 @@ export const ffmpegCommand = Ffmpeg({ priority: 0 })
     .outputOptions([
         "-preset ultrafast",
         "-c:v libx264",
-        `-vf drawtext=${convertObjectConfigToString(
+        `-vf hflip,drawtext=${convertObjectConfigToString(
             videoFilterConfig,
             "=",
             ":"
         )}`,
-        "-b:v 1M",
+        "-b:v 2M",
         "-fps_mode auto",
         "-pix_fmt yuv420p",
         "-frame_drop_threshold -5.0",
-        "-thread_queue_size 1M",
+        "-thread_queue_size 8M",
     ])
     .noAudio()
     .format("flv")

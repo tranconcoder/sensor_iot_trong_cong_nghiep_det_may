@@ -24,4 +24,16 @@ config SERVER_PORT
         help
             Server port.
 
+config WEBSERVER_IP
+    string "Webserver IP address"
+        default "192.168.2.1"
+        help
+            Webserver IP address.
+
+config WEBSERVER_PORT
+    int "Webserver port"
+        default 3000
+        help
+            Webserver port
+
 endmenu

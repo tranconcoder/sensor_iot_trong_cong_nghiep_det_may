@@ -4939,6 +4939,26 @@
                 "range": null,
                 "title": "Server port",
                 "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "Webserver IP address.",
+                "id": "WEBSERVER_IP",
+                "name": "WEBSERVER_IP",
+                "range": null,
+                "title": "Webserver IP address",
+                "type": "string"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "Webserver port",
+                "id": "WEBSERVER_PORT",
+                "name": "WEBSERVER_PORT",
+                "range": null,
+                "title": "Webserver port",
+                "type": "int"
             }
         ],
         "depends_on": null,

@@ -1,0 +1,980 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:7168
+load:0x40078000,len:15464
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (31) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug 28 2024 01:45:36[0m
+[0;33mW (31) boot: Unicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (77) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (92) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (107) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (114) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (122) boot: End of partition table[0m
+[0;32mI (126) boot: No factory image, trying OTA 0[0m
+[0;32mI (131) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2f22ch (193068) map[0m
+[0;32mI (194) esp_image: segment 1: paddr=0003f254 vaddr=3ffbdb60 size=00dc4h (  3524) load[0m
+[0;32mI (196) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=c37cch (800716) map[0m
+[0;32mI (426) esp_image: segment 3: paddr=001037f4 vaddr=3ffbe924 size=0449ch ( 17564) load[0m
+[0;32mI (432) esp_image: segment 4: paddr=00107c98 vaddr=40080000 size=1e61ch (124444) load[0m
+[0;32mI (489) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (493) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (493) boot: Disabling RNG early entropy source...[0m
+[0;32mI (506) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (506) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (506) esp_psram: Speed: 80MHz[0m
+[0;32mI (510) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (517) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (527) cpu_start: Unicore app[0m
+[0;32mI (530) cpu_start: Single core mode[0m
+[0;32mI (1068) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1076) cpu_start: Pro cpu start user code[0m
+[0;32mI (1076) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1076) app_init: Application information:[0m
+[0;32mI (1079) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1085) app_init: App version:      d92472c-dirty[0m
+[0;32mI (1090) app_init: Compile time:     Aug 28 2024 09:25:09[0m
+[0;32mI (1096) app_init: ELF file SHA256:  900278639...[0m
+[0;32mI (1102) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1107) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1112) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1117) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1122) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1129) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1135) heap_init: At 3FFC7C60 len 000183A0 (96 KiB): DRAM[0m
+[0;32mI (1141) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1148) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1154) heap_init: At 4009E61C len 000019E4 (6 KiB): IRAM[0m
+[0;32mI (1160) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1167) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1175) spi_flash: detected chip: generic[0m
+[0;32mI (1179) spi_flash: flash io: dio[0m
+[0;33mW (1183) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1205) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1206) main_task: Started on CPU0[0m
+[0;32mI (1206) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1214) main_task: Calling app_main()[0m
+[0;32mI (1227) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1230) wifi:wifi driver task: 3ffbd604, prio:23, stack:6656, core=0
+I (1233) wifi:wifi firmware version: 0caa81945
+I (1235) wifi:wifi certification version: v7.0
+I (1239) wifi:config NVS flash: enabled
+I (1242) wifi:config nano formating: disabled
+I (1246) wifi:Init data frame dynamic rx buffer num: 32
+I (1251) wifi:Init static rx mgmt buffer num: 5
+I (1255) wifi:Init management short buffer num: 32
+I (1260) wifi:Init static tx buffer num: 16
+I (1264) wifi:Init tx cache buffer num: 32
+I (1268) wifi:Init static rx buffer size: 1600
+I (1272) wifi:Init static rx buffer num: 10
+I (1276) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1280) wifi_init: accept mbox: 6[0m
+[0;32mI (1284) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1288) wifi_init: udp mbox: 6[0m
+[0;32mI (1292) wifi_init: tcp mbox: 6[0m
+[0;32mI (1295) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1300) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1304) wifi_init: tcp mss: 1440[0m
+[0;32mI (1308) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1312) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1318) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1324) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (1383) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+I (1392) wifi:mode : null
+I (1394) wifi:mode : softAP (08:a6:f7:11:51:a9)
+I (1395) wifi:Total power save buffer number: 8
+I (1396) wifi:Init max length of beacon: 752/752
+I (1398) wifi:Init max length of beacon: 752/752
+[0;32mI (1404) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+Add netif ap with d92472c(commit id)
+[0;32mI (1414) bridge_common: netif list add success[0m
+[0;31mE (1419) NVS: Failed to open NVS namespace[0m
+[0;32mI (1424) bridge_common: IP Address:192.168.5.1[0m
+[0;32mI (1429) bridge_common: GW Address:192.168.5.1[0m
+[0;32mI (1434) bridge_common: NM Address:255.255.255.0[0m
+[0;32mI (1440) bridge_common: [WIFI_AP_DEF ][0m
+[0;32mI (1445) bridge_common: Set ip info:192.168.5.1[0m
+[0;32mI (1449) bridge_wifi: SoftAP IP network segment has changed, deauth all station[0m
+I (1460) wifi:Disabled PMF config for SoftAP
+I (1462) wifi:Total power save buffer number: 8
+[0;32mI (1467) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (1474) bridge_common: [WIFI_AP_DEF ]Name Server1: 114.114.114.114[0m
+[0;32mI (1481) bridge_common: DHCPS Restart, deauth all station[0m
+Add netif sta with d92472c(commit id)
+[0;32mI (1491) bridge_common: netif list add success[0m
+I (1496) wifi:mode : sta (08:a6:f7:11:51:a8) + softAP (08:a6:f7:11:51:a9)
+I (1502) wifi:enable tsf
+[0;31mE (1505) NVS: Failed to read IP info from NVS[0m
+I (1510) wifi:Disabled PMF config for STA
+[0;32mI (1513) bridge_wifi: [esp_bridge_wifi_set_config] sta ssid: Tran Con Dev password: password[0m
+[0;32mI (1523) bridge_wifi: [esp_bridge_wifi_set_config] softap ssid: ESP_Bridge_1151a9 password: 12345678[0m
+I (1703) wifi:Total power save buffer number: 8
+[0;32mI (1706) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (1707) bridge_wifi: SoftAP config changed, deauth all station[0m
+[0;32mI (1713) Mesh-Lite: esp-mesh-lite component version: 1.0.0[0m
+I (1719) ESPNOW: espnow [version: 1.0] init
+[0;32mI (1722) [vendor_ie]: Mesh-Lite commit id: bc9302d
+ [0m
+[0;31mE (1729) [vendor_ie]: Error Get! [0m
+[0;33mW (1732) [vendor_ie]: Mesh ID is not saved in flash [0m
+[0;32mI (1738) [vendor_ie]: Mesh ID: 77 [0m
+[0;33mW (1742) [vendor_ie]: Error Get[4354] [0m
+[0;33mW (1746) [vendor_ie]: Error Get[4354] [0m
+[0;32mI (1752) [ESP_Mesh_Lite_Comm]: msg action add success [0m
+[0;32mI (1758) [ESP_Mesh_Lite_Comm]: Bind Socket 54, port 6364 [0m
+[0;32mI (1763) [ESP_Mesh_Lite_Comm]: Bind Socket 55, port 6363 [0m
+[0;32mI (1769) [ESP_Mesh_Lite_Comm]: Bind Socket 56, port 6366 [0m
+[0;32mI (1775) [ESP_Mesh_Lite_Comm]: Bind Socket 57, port 6365 [0m
+[0;32mI (1781) [mesh-lite-espnow]: Start espnow task [0m
+[0;32mI (1788) Mesh-Lite: Mesh-Lite connecting[0m
+[0;32mI (1792) [vendor_ie]: esp_mesh_lite_wifi_scan_start return ESP_OK [0m
+[0;32mI (1797) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (1808) cam_hal: cam init ok[0m
+[0;32mI (1810) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (1814) sccb: sccb_i2c_port=1[0m
+[0;32mI (1819) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1857) camera: Detected camera at address=0x30[0m
+[0;32mI (1859) camera: Detected OV2640 camera[0m
+[0;32mI (1859) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (1925) cam_hal: buffer_size: 32768, half_buffer_size: 4096, node_buffer_size: 2048, node_cnt: 16, total_cnt: 5[0m
+[0;32mI (1925) cam_hal: Allocating 23680 Byte frame buffer in PSRAM[0m
+[0;32mI (1931) cam_hal: Allocating 23680 Byte frame buffer in PSRAM[0m
+[0;32mI (1938) cam_hal: Allocating 23680 Byte frame buffer in PSRAM[0m
+[0;32mI (1944) cam_hal: Allocating 23680 Byte frame buffer in PSRAM[0m
+[0;32mI (1951) cam_hal: cam config ok[0m
+[0;32mI (1954) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8[0m
+[0;32mI (2032) rc522: Initialized (firmware v2.0)[0m
+[0;33mW (2049) cam_hal: FB-OVF[0m
+[0;33mW (2058) cam_hal: FB-OVF[0m
+[0;33mW (2070) cam_hal: FB-OVF[0m
+[0;33mW (2078) cam_hal: FB-OVF[0m
+[0;33mW (2089) cam_hal: FB-OVF[0m
+[0;33mW (2098) cam_hal: FB-OVF[0m
+[0;33mW (2109) cam_hal: FB-OVF[0m
+[0;33mW (2118) cam_hal: FB-OVF[0m
+[0;32mI (3482) [vendor_ie]: Mesh-Lite Scan done [0m
+[0;32mI (3483) [vendor_ie]: RTC store: temp_mesh_id:255; ssid:Tran Con Dev; bssid:00:00:00:00:00:00; crc:2891781910 [0m
+[0;32mI (3487) [vendor_ie]: wifi_cfg Tran Con Dev router_config Tran Con Dev [0m
+[0;32mI (3495) [vendor_ie]: esp_mesh_lite_wifi_connect return ESP_OK [0m
+I (3972) wifi:ap channel adjust o:1,1 n:3,1
+I (3972) wifi:new:<3,0>, old:<1,1>, ap:<3,1>, sta:<3,0>, prof:1, snd_ch_cfg:0x0
+I (3973) wifi:state: init -> auth (0xb0)
+I (3980) wifi:state: auth -> assoc (0x0)
+I (3985) wifi:state: assoc -> run (0x10)
+I (4025) wifi:connected with Tran Con Dev, aid = 1, channel 3, BW20, bssid = e4:ca:12:bd:52:70
+I (4025) wifi:security: WPA2-PSK, phy: bgn, rssi: -38
+I (4027) wifi:pm start, type: 1
+
+I (4030) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (4060) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;31mE (7031) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (7032) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (7032) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (7039) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (7056) websocket_client: WebSocket client error[0m
+[0;32mI (7061) websocket_client: Reconnect after 500 ms[0m
+[0;33mW (7072) cam_hal: NO-EOI[0m
+[0;31mE (7072) websocket_client: Camera Capture Failed[0m
+[0;33mW (7080) cam_hal: NO-EOI[0m
+[0;33mW (7086) cam_hal: NO-EOI[0m
+[0;33mW (7091) cam_hal: NO-EOI[0m
+[0;32mI (7091) websocket_client: WebSocket client connected[0m
+[0;33mW (7092) cam_hal: NO-SOI[0m
+[0;33mW (7111) cam_hal: FB-OVF[0m
+[0;33mW (7116) cam_hal: FB-OVF[0m
+[0;33mW (7120) cam_hal: NO-EOI[0m
+[0;33mW (7121) cam_hal: NO-SOI[0m
+[0;33mW (7151) cam_hal: FB-OVF[0m
+[0;33mW (7156) cam_hal: FB-OVF[0m
+[0;33mW (7160) cam_hal: NO-EOI[0m
+[0;33mW (7161) cam_hal: NO-SOI[0m
+[0;33mW (7191) cam_hal: FB-OVF[0m
+[0;33mW (7196) cam_hal: FB-OVF[0m
+[0;33mW (7200) cam_hal: NO-EOI[0m
+[0;33mW (7201) cam_hal: NO-SOI[0m
+[0;33mW (7231) cam_hal: FB-OVF[0m
+[0;33mW (7236) cam_hal: FB-OVF[0m
+[0;33mW (7241) cam_hal: NO-EOI[0m
+[0;33mW (7242) cam_hal: NO-SOI[0m
+[0;33mW (7273) cam_hal: FB-OVF[0m
+[0;33mW (7276) cam_hal: FB-OVF[0m
+[0;33mW (7280) cam_hal: NO-EOI[0m
+[0;33mW (7281) cam_hal: NO-SOI[0m
+[0;33mW (7313) cam_hal: FB-OVF[0m
+[0;33mW (7316) cam_hal: FB-OVF[0m
+[0;33mW (7320) cam_hal: NO-EOI[0m
+[0;33mW (7321) cam_hal: NO-SOI[0m
+[0;33mW (7353) cam_hal: FB-OVF[0m
+[0;33mW (7356) cam_hal: FB-OVF[0m
+[0;33mW (7360) cam_hal: NO-EOI[0m
+[0;33mW (7361) cam_hal: NO-SOI[0m
+[0;33mW (7394) cam_hal: FB-OVF[0m
+[0;33mW (7396) cam_hal: FB-OVF[0m
+[0;33mW (7400) cam_hal: NO-EOI[0m
+[0;33mW (7401) cam_hal: NO-SOI[0m
+[0;33mW (7434) cam_hal: FB-OVF[0m
+[0;33mW (7436) cam_hal: FB-OVF[0m
+[0;33mW (7440) cam_hal: NO-EOI[0m
+[0;33mW (7442) cam_hal: NO-SOI[0m
+[0;33mW (7474) cam_hal: FB-OVF[0m
+[0;33mW (7475) cam_hal: FB-OVF[0m
+[0;33mW (7480) cam_hal: NO-EOI[0m
+[0;33mW (7481) cam_hal: NO-SOI[0m
+[0;33mW (7514) cam_hal: FB-OVF[0m
+[0;33mW (7515) cam_hal: FB-OVF[0m
+[0;33mW (7520) cam_hal: NO-EOI[0m
+[0;33mW (7521) cam_hal: NO-SOI[0m
+[0;33mW (7553) cam_hal: FB-OVF[0m
+[0;33mW (7555) cam_hal: FB-OVF[0m
+[0;33mW (7560) cam_hal: NO-EOI[0m
+[0;33mW (7562) cam_hal: NO-SOI[0m
+[0;31mE (7593) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (7594) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (7596) transport_ws: Error connecting to host 19cam_hal: EV-EOF-OVF
+2.168.1.88:3000[0m
+[0;33mW (7594) cam_hal: FB-OVF[0m
+[0;31mE (7606) websocket_client: esp_transporcam_hal: EV-EOF-OVF
+t_connect() failed with -cam_hal: EV-VSYNC-OVF
+1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (7629) websocket_client: WebSocket client error[0m
+[0;32mI (cam_hal: EV-VSYNC-OVF
+7635) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (7642) websocket_client: WebSocket client connected[0m
+[0;33mW (7609) cam_hal: NO-SOI[0m
+[0;33mW (7675) cam_hal: FB-OVF[0m
+[0;33mW (7675) cam_hal: FB-OVF[0m
+[0;33mW (7680) cam_hal: NO-EOI[0m
+[0;33mW (7681) cam_hal: NO-SOI[0m
+[0;33mW (7714) cam_hal: FB-OVF[0m
+[0;33mW (7715) cam_hal: FB-OVF[0m
+[0;33mW (7720) cam_hal: NO-EOI[0m
+[0;33mW (7721) cam_hal: NO-SOI[0m
+[0;33mW (7752) cam_hal: FB-OVF[0m
+[0;33mW (7755) cam_hal: FB-OVF[0m
+[0;33mW (7760) cam_hal: NO-EOI[0m
+[0;33mW (7762) cam_hal: NO-SOI[0m
+[0;33mW (7793) cam_hal: FB-OVF[0m
+[0;33mW (7795) cam_hal: FB-OVF[0m
+[0;33mW (7800) cam_hal: NO-EOI[0m
+[0;33mW (7801) cam_hal: NO-SOI[0m
+[0;33mW (7833) cam_hal: FB-OVF[0m
+[0;33mW (7835) cam_hal: FB-OVF[0m
+[0;33mW (7840) cam_hal: NO-EOI[0m
+[0;33mW (7841) cam_hal: NO-SOI[0m
+[0;33mW (7874) cam_hal: FB-OVF[0m
+[0;33mW (7875) cam_hal: FB-OVF[0m
+[0;33mW (7880) cam_hal: NO-EOI[0m
+[0;33mW (7881) cam_hal: NO-SOI[0m
+[0;33mW (7914) cam_hal: FB-OVF[0m
+[0;33mW (7915) cam_hal: FB-OVF[0m
+[0;33mW (7920) cam_hal: NO-EOI[0m
+[0;33mW (7921) cam_hal: NO-SOI[0m
+[0;33mW (7954) cam_hal: FB-OVF[0m
+[0;33mW (7956) cam_hal: FB-OVF[0m
+[0;33mW (7960) cam_hal: NO-EOI[0m
+[0;33mW (7962) cam_hal: NO-SOI[0m
+[0;33mW (7994) cam_hal: FB-OVF[0m
+[0;33mW (7995) cam_hal: FB-OVF[0m
+[0;33mW (8000) cam_hal: NO-EOI[0m
+[0;33mW (8001) cam_hal: NO-SOI[0m
+[0;33mW (8035) cam_hal: FB-OVF[0m
+[0;33mW (8035) cam_hal: FB-OVF[0m
+[0;33mW (8040) cam_hal: NO-EOI[0m
+[0;33mW (8041) cam_hal: NO-SOI[0m
+[0;33mW (8073) cam_hal: FB-OVF[0m
+[0;33mW (8075) cam_hal: FB-OVF[0m
+[0;33mW (8080) cam_hal: NO-EOI[0m
+[0;33mW (8082) cam_hal: NO-SOI[0m
+[0;32mI (8110) bridge_common: [WIFI_AP_DEF ]Name Server1: 203.113.131.2[0m
+[0;33mW (8114) cam_hal: FB-OVF[0m
+[0;33mW (8115) cam_hal: FB-OVF[0m
+[0;33mW (8120) cam_hal: NO-EOI[0m
+[0;33mW (8122) cam_hal: NO-SOI[0m
+[0;31mE (8153) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (8154) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (8156) transport_ws: Error connecting to host 192.cam_hal: EV-EOF-OVF
+168.1.88:3000[0m
+[0;33mW (8155) cam_hal: FB-OVF[0m
+[0;31mE (8166) websocket_client: esp_transport_ccam_hal: EV-EOF-OVF
+onnect() failed witcam_hal: EV-VSYNC-OVF
+h -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (8189) websocket_client: WebSocket client error[0m
+[0;32mcam_hal: EV-VSYNC-OVF
+I (8195) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (8202) websocket_client: WebSocket client connected[0m
+[0;33mW (8169) cam_hal: NO-SOI[0m
+[0;33mW (8233) cam_hal: FB-OVF[0m
+[0;33mW (8235) cam_hal: FB-OVF[0m
+[0;33mW (8240) cam_hal: NO-EOI[0m
+[0;33mW (8241) cam_hal: NO-SOI[0m
+[0;33mW (8273) cam_hal: FB-OVF[0m
+[0;33mW (8275) cam_hal: FB-OVF[0m
+[0;33mW (8280) cam_hal: NO-EOI[0m
+[0;33mW (8281) cam_hal: NO-SOI[0m
+[0;33mW (8313) cam_hal: FB-OVF[0m
+[0;33mW (8315) cam_hal: FB-OVF[0m
+[0;33mW (8320) cam_hal: NO-EOI[0m
+[0;33mW (8321) cam_hal: NO-SOI[0m
+[0;33mW (8353) cam_hal: FB-OVF[0m
+[0;33mW (8355) cam_hal: FB-OVF[0m
+[0;33mW (8360) cam_hal: NO-EOI[0m
+[0;33mW (8361) cam_hal: NO-SOI[0m
+[0;33mW (8393) cam_hal: FB-OVF[0m
+[0;33mW (8395) cam_hal: FB-OVF[0m
+[0;33mW (8400) cam_hal: NO-EOI[0m
+[0;33mW (8401) cam_hal: NO-SOI[0m
+[0;33mW (8434) cam_hal: FB-OVF[0m
+[0;33mW (8435) cam_hal: FB-OVF[0m
+[0;33mW (8440) cam_hal: NO-EOI[0m
+[0;33mW (8441) cam_hal: NO-SOI[0m
+[0;33mW (8473) cam_hal: FB-OVF[0m
+[0;33mW (8475) cam_hal: FB-OVF[0m
+[0;33mW (8480) cam_hal: NO-EOI[0m
+[0;33mW (8481) cam_hal: NO-SOI[0m
+[0;33mW (8514) cam_hal: FB-OVF[0m
+[0;33mW (8515) cam_hal: FB-OVF[0m
+[0;33mW (8520) cam_hal: NO-EOI[0m
+[0;33mW (8521) cam_hal: NO-SOI[0m
+[0;33mW (8554) cam_hal: FB-OVF[0m
+[0;33mW (8555) cam_hal: FB-OVF[0m
+[0;33mW (8560) cam_hal: NO-EOI[0m
+[0;33mW (8561) cam_hal: NO-SOI[0m
+[0;33mW (8594) cam_hal: FB-OVF[0m
+[0;33mW (8595) cam_hal: FB-OVF[0m
+[0;33mW (8600) cam_hal: NO-EOI[0m
+[0;33mW (8601) cam_hal: NO-SOI[0m
+[0;33mW (8634) cam_hal: FB-OVF[0m
+[0;33mW (8635) cam_hal: FB-OVF[0m
+[0;33mW (8640) cam_hal: NO-EOI[0m
+[0;33mW (8641) cam_hal: NO-SOI[0m
+[0;33mW (8674) cam_hal: FB-OVF[0m
+[0;33mW (8675) cam_hal: FB-OVF[0m
+[0;33mW (8680) cam_hal: NO-EOI[0m
+[0;33mW (8681) cam_hal: NO-SOI[0m
+[0;31mE (8712) esp-tls: [sock=58] connect() error: Host is unreachable[0m
+[0;31mE (8713) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (8715) transport_ws: Error connecting to host 192.168.1.88:300cam_hal: EV-EOF-OVF
+0[0m
+[0;33mW (8714) cam_hal: FB-OVF[0m
+[0;31mE (8725) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=118[0m
+[0;31mE (8744) websocket_client: WebSocket client error[0m
+[0;32mI (8750) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (8755) websocket_client: WebSocket client connected[0m
+cam_hal: EV-EOF-OVF
+[0;33mW (8755) cam_hal: FB-OVF[0m
+[0;33mW (8794) cam_hal: FB-OVF[0m
+[0;33mW (8795) cam_hal: FB-OVF[0m
+[0;33mW (8800) cam_hal: NO-EOI[0m
+[0;33mW (8801) cam_hal: NO-SOI[0m
+[0;33mW (8834) cam_hal: FB-OVF[0m
+[0;33mW (8835) cam_hal: FB-OVF[0m
+[0;33mW (8840) cam_hal: NO-EOI[0m
+[0;33mW (8841) cam_hal: NO-SOI[0m
+[0;33mW (8875) cam_hal: FB-OVF[0m
+[0;33mW (8876) cam_hal: FB-OVF[0m
+[0;33mW (8881) cam_hal: NO-EOI[0m
+[0;33mW (8883) cam_hal: NO-SOI[0m
+[0;33mW (8915) cam_hal: FB-OVF[0m
+[0;33mW (8920) cam_hal: NO-EOI[0m
+[0;33mW (8921) cam_hal: NO-SOI[0m
+[0;33mW (8955) cam_hal: FB-OVF[0m
+[0;33mW (8960) cam_hal: NO-EOI[0m
+[0;33mW (8961) cam_hal: NO-SOI[0m
+[0;33mW (8995) cam_hal: FB-OVF[0m
+[0;33mW (8995) cam_hal: FB-OVF[0m
+[0;33mW (9000) cam_hal: NO-EOI[0m
+[0;33mW (9001) cam_hal: NO-SOI[0m
+[0;33mW (9035) cam_hal: FB-OVF[0m
+[0;33mW (9040) cam_hal: NO-EOI[0m
+[0;33mW (9041) cam_hal: NO-SOI[0m
+[0;32mI (9044) esp_netif_handlers: sta ip: 192.168.1.3, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (9044) bridge_wifi: Connected with IP Address:192.168.1.3[0m
+[0;32mI (9051) [vendor_ie]: RTC store: temp_mesh_id:3; ssid:Tran Con Dev; bssid:00:00:00:00:00:00; crc:4035341924 [0m
+[0;31mE (9062) [ESP_Mesh_Lite_Comm]: Error Get! [0m
+[0;33mW (9066) [ESP_Mesh_Lite_Comm]: argot is not saved in flash [0m
+[0;33mW (9075) cam_hal: FB-OVF[0m
+[0;33mW (9080) cam_hal: NO-EOI[0m
+[0;33mW (9082) cam_hal: NO-SOI[0m
+[0;32mI (9100) main: TCP client write task is running[0m
+[0;33mW (9115) cam_hal: FB-OVF[0m
+[0;33mW (9115) cam_hal: FB-OVF[0m
+[0;33mW (9120) cam_hal: NO-EOI[0m
+[0;33mW (9121) cam_hal: NO-SOI[0m
+[0;33mW (9154) cam_hal: FB-OVF[0m
+[0;33mW (9155) cam_hal: FB-OVF[0m
+[0;33mW (9159) cam_hal: NO-EOI[0m
+
+***ERROR*** A stack overflow in task send_image_to_w has been detected.
+
+
+Backtrace: 0x400819e1:0x3fff08b0 0x4008f535:0x3fff08d0 0x400906e2:0x3fff08f0 0x40091f49:0x3fff0970 0x400907ec:0x3fff0990 0x4009079e:0x3f407d39 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 900278639
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:7168
+load:0x40078000,len:15464
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (31) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug 28 2024 01:45:36[0m
+[0;33mW (31) boot: Unicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (77) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (92) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (107) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (114) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (122) boot: End of partition table[0m
+[0;32mI (126) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2f22ch (193068) map[0m
+[0;32mI (189) esp_image: segment 1: paddr=0003f254 vaddr=3ffbdb60 size=00dc4h (  3524) load[0m
+[0;32mI (190) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=c37cch (800716) map[0m
+[0;32mI (421) esp_image: segment 3: paddr=001037f4 vaddr=3ffbe924 size=0449ch ( 17564) load[0m
+[0;32mI (427) esp_image: segment 4: paddr=00107c98 vaddr=40080000 size=1e61ch (124444) load[0m
+[0;32mI (484) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (484) boot: Disabling RNG early entropy source...[0m
+[0;32mI (495) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (496) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (496) esp_psram: Speed: 80MHz[0m
+[0;32mI (500) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (507) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (516) cpu_start: Unicore app[0m
+[0;32mI (520) cpu_start: Single core mode[0m
+[0;32mI (1057) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1065) cpu_start: Pro cpu start user code[0m
+[0;32mI (1065) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1065) app_init: Application information:[0m
+[0;32mI (1068) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1074) app_init: App version:      d92472c-dirty[0m
+[0;32mI (1080) app_init: Compile time:     Aug 28 2024 09:25:09[0m
+[0;32mI (1086) app_init: ELF file SHA256:  900278639...[0m
+[0;32mI (1091) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1096) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1101) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1106) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1111) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1119) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1125) heap_init: At 3FFC7C60 len 000183A0 (96 KiB): DRAM[0m
+[0;32mI (1131) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1138) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1144) heap_init: At 4009E61C len 000019E4 (6 KiB): IRAM[0m
+[0;32mI (1150) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1157) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1165) spi_flash: detected chip: generic[0m
+[0;32mI (1169) spi_flash: flash io: dio[0m
+[0;33mW (1173) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1195) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1195) main_task: Started on CPU0[0m
+[0;32mI (1195) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1203) main_task: Calling app_main()[0m
+[0;32mI (1218) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1220) wifi:wifi driver task: 3ffbd678, prio:23, stack:6656, core=0
+I (1224) wifi:wifi firmware version: 0caa81945
+I (1226) wifi:wifi certification version: v7.0
+I (1230) wifi:config NVS flash: enabled
+I (1233) wifi:config nano formating: disabled
+I (1238) wifi:Init data frame dynamic rx buffer num: 32
+I (1243) wifi:Init static rx mgmt buffer num: 5
+I (1247) wifi:Init management short buffer num: 32
+I (1251) wifi:Init static tx buffer num: 16
+I (1255) wifi:Init tx cache buffer num: 32
+I (1259) wifi:Init static rx buffer size: 1600
+I (1263) wifi:Init static rx buffer num: 10
+I (1267) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1272) wifi_init: accept mbox: 6[0m
+[0;32mI (1275) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1279) wifi_init: udp mbox: 6[0m
+[0;32mI (1283) wifi_init: tcp mbox: 6[0m
+[0;32mI (1287) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1291) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1295) wifi_init: tcp mss: 1440[0m
+[0;32mI (1299) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1304) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1309) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1368) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+I (1379) wifi:mode : null
+I (1381) wifi:mode : softAP (08:a6:f7:11:51:a9)
+I (1382) wifi:Total power save buffer number: 8
+I (1382) wifi:Init max length of beacon: 752/752
+I (1384) wifi:Init max length of beacon: 752/752
+[0;32mI (1389) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+Add netif ap with d92472c(commit id)
+[0;32mI (1400) bridge_common: netif list add success[0m
+[0;32mI (1406) bridge_common: [WIFI_AP_DEF ][0m
+[0;32mI (1410) bridge_common: Set ip info:192.168.5.1[0m
+[0;32mI (1415) bridge_wifi: SoftAP IP network segment has changed, deauth all station[0m
+I (1424) wifi:Disabled PMF config for SoftAP
+I (1427) wifi:Total power save buffer number: 8
+[0;32mI (1432) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (1440) bridge_common: [WIFI_AP_DEF ]Name Server1: 114.114.114.114[0m
+[0;32mI (1446) bridge_common: DHCPS Restart, deauth all station[0m
+Add netif sta with d92472c(commit id)
+[0;32mI (1456) bridge_common: netif list add success[0m
+I (1461) wifi:mode : sta (08:a6:f7:11:51:a8) + softAP (08:a6:f7:11:51:a9)
+I (1468) wifi:enable tsf
+[0;31mE (1471) NVS: Failed to read IP info from NVS[0m
+I (1475) wifi:Disabled PMF config for STA
+[0;32mI (1478) bridge_wifi: [esp_bridge_wifi_set_config] sta ssid: Tran Con Dev password: password[0m
+[0;32mI (1488) bridge_wifi: [esp_bridge_wifi_set_config] softap ssid: ESP_Bridge_1151a9 password: 12345678[0m
+I (1669) wifi:Total power save buffer number: 8
+[0;32mI (1671) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (1672) bridge_wifi: SoftAP config changed, deauth all station[0m
+[0;32mI (1678) Mesh-Lite: esp-mesh-lite component version: 1.0.0[0m
+I (1684) ESPNOW: espnow [version: 1.0] init
+[0;32mI (1688) [vendor_ie]: Mesh-Lite commit id: bc9302d
+ [0m
+[0;32mI (1694) [vendor_ie]: Mesh ID: 77 [0m
+[0;32mI (1699) [ESP_Mesh_Lite_Comm]: msg action add success [0m
+[0;32mI (1705) [ESP_Mesh_Lite_Comm]: Bind Socket 54, port 6364 [0m
+[0;32mI (1710) [ESP_Mesh_Lite_Comm]: Bind Socket 55, port 6363 [0m
+[0;32mI (1716) [ESP_Mesh_Lite_Comm]: Bind Socket 56, port 6366 [0m
+[0;32mI (1722) [ESP_Mesh_Lite_Comm]: Bind Socket 57, port 6365 [0m
+[0;32mI (1728) [mesh-lite-espnow]: Start espnow task [0m
+[0;33mW (1734) [vendor_ie]: [Unexpected restart]: the rtc data: temp_mesh_id:3, level:1, ssid:Tran Con Dev, bssid 00:00:00:00:00:00 [0m
+[0;33mW (1745) [vendor_ie]: Try to connect the original parent node [0m
+[0;32mI (1753) [vendor_ie]: esp_mesh_lite_wifi_connect return ESP_OK [0m
+[0;32mI (1758) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (1768) cam_hal: cam init ok[0m
+[0;32mI (1771) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (1775) sccb: sccb_i2c_port=1[0m
+[0;32mI (1779) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1818) camera: Detected camera at address=0x30[0m
+[0;32mI (1820) camera: Detected OV2640 camera[0m
+[0;32mI (1820) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (1886) cam_hal: buffer_size: 32768, half_buffer_size: 4096, node_buffer_size: 2048, node_cnt: 16, total_cnt: 5[0m
+[0;32mI (1886) cam_hal: Allocating 23680 Byte frame buffer in PSRAM[0m
+[0;32mI (1892) cam_hal: Allocating 23680 Byte frame buffer in PSRAM[0m
+[0;32mI (1898) cam_hal: Allocating 23680 Byte frame buffer in PSRAM[0m
+[0;32mI (1905) cam_hal: Allocating 23680 Byte frame buffer in PSRAM[0m
+[0;32mI (1912) cam_hal: cam config ok[0m
+[0;32mI (1915) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8[0m
+[0;32mI (1993) rc522: Initialized (firmware v2.0)[0m
+[0;33mW (2010) cam_hal: FB-OVF[0m
+[0;33mW (2019) cam_hal: FB-OVF[0m
+[0;33mW (2030) cam_hal: FB-OVF[0m
+[0;33mW (2039) cam_hal: FB-OVF[0m
+[0;33mW (2050) cam_hal: FB-OVF[0m
+[0;33mW (2059) cam_hal: FB-OVF[0m
+[0;33mW (2071) cam_hal: FB-OVF[0m
+[0;33mW (2080) cam_hal: FB-OVF[0m
+I (2235) wifi:ap channel adjust o:1,1 n:3,1
+I (2235) wifi:new:<3,0>, old:<1,1>, ap:<3,1>, sta:<3,0>, prof:1, snd_ch_cfg:0x0
+I (2236) wifi:state: init -> auth (0xb0)
+I (2245) wifi:state: auth -> assoc (0x0)
+I (2250) wifi:state: assoc -> run (0x10)
+I (2288) wifi:connected with Tran Con Dev, aid = 1, channel 3, BW20, bssid = e4:ca:12:bd:52:70
+I (2288) wifi:security: WPA2-PSK, phy: bgn, rssi: -40
+I (2290) wifi:pm start, type: 1
+
+I (2293) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (2347) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (4444) bridge_common: [WIFI_AP_DEF ]Name Server1: 203.113.131.2[0m
+[0;32mI (5304) esp_netif_handlers: sta ip: 192.168.1.3, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (5305) bridge_wifi: Connected with IP Address:192.168.1.3[0m
+[0;32mI (5309) [vendor_ie]: RTC store: temp_mesh_id:3; ssid:Tran Con Dev; bssid:00:00:00:00:00:00; crc:1408063634 [0m
+[0;32mI (5322) main: TCP client write task is running[0m
+[0;31mE (6992) esp-tls: [sock=58] select() timeout[0m
+[0;31mE (6993) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (6993) transport_ws: Error connecting to host 192.168.1.88:3000[0m
+[0;31mE (7000) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_CONNECTION_TIMEOUT, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;31mE (7017) websocket_client: WebSocket client error[0m
+[0;32mI (7022) websocket_client: Reconnect after 500 ms[0m
+[0;33mW (7033) cam_hal: NO-EOI[0m
+[0;31mE (7033) websocket_client: Camera Capture Failed[0m
+[0;33mW (7041) cam_hal: NO-EOI[0m
+[0;33mW (7047) cam_hal: NO-EOI[0m
+[0;33mW (7052) cam_hal: NO-EOI[0m
+[0;32mI (7053) websocket_client: WebSocket client connected[0m
+[0;33mW (7054) cam_hal: NO-SOI[0m
+[0;33mW (7077) cam_hal: FB-OVF[0m
+[0;33mW (7077) cam_hal: FB-OVF[0m
+[0;33mW (7082) cam_hal: NO-EOI[0m
+[0;33mW (7083) cam_hal: NO-SOI[0m
+[0;33mW (7116) cam_hal: FB-OVF[0m
+[0;33mW (7117) cam_hal: FB-OVF[0m
+[0;33mW (7121) cam_hal: NO-EOI[0m
+[0;33mW (7123) cam_hal: NO-SOI[0m
+[0;33mW (7157) cam_hal: FB-OVF[0m
+[0;33mW (7157) cam_hal: FB-OVF[0m
+[0;33mW (7162) cam_hal: NO-EOI[0m
+[0;33mW (7164) cam_hal: NO-SOI[0m
+[0;33mW (7197) cam_hal: FB-OVF[0m
+[0;33mW (7197) cam_hal: FB-OVF[0m
+[0;33mW (7202) cam_hal: NO-EOI[0m
+[0;33mW (7203) cam_hal: NO-SOI[0m
+[0;33mW (7235) cam_hal: FB-OVF[0m
+[0;33mW (7237) cam_hal: FB-OVF[0m
+[0;33mW (7241) cam_hal: NO-EOI[0m
+[0;33mW (7243) cam_hal: NO-SOI[0m
+[0;33mW (7277) cam_hal: FB-OVF[0m
+[0;33mW (7277) cam_hal: FB-OVF[0m
+[0;33mW (7282) cam_hal: NO-EOI[0m
+[0;33mW (7283) cam_hal: NO-SOI[0m
+[0;33mW (7316) cam_hal: FB-OVF[0m
+[0;33mW (7317) cam_hal: FB-OVF[0m
+[0;33mW (7321) cam_hal: NO-EOI[0m
+[0;33mW (7323) cam_hal: NO-SOI[0m
+[0;33mW (7356) cam_hal: FB-OVF[0m
+[0;33mW (7357) cam_hal: FB-OVF[0m
+[0;33mW (7361) cam_hal: NO-EOI[0m
+[0;33mW (7363) cam_hal: NO-SOI[0m
+[0;33mW (7397) cam_hal: FB-OVF[0m
+[0;33mW (7397) cam_hal: FB-OVF[0m
+[0;33mW (7401) cam_hal: NO-EOI[0m
+[0;33mW (7403) cam_hal: NO-SOI[0m
+[0;33mW (7436) cam_hal: FB-OVF[0m
+[0;33mW (7437) cam_hal: FB-OVF[0m
+[0;33mW (7441) cam_hal: NO-EOI[0m
+[0;33mW (7443) cam_hal: NO-SOI[0m
+[0;33mW (7477) cam_hal: FB-OVF[0m
+[0;33mW (7477) cam_hal: FB-OVF[0m
+[0;33mW (7482) cam_hal: NO-EOI[0m
+[0;33mW (7483) cam_hal: NO-SOI[0m
+[0;33mW (7516) cam_hal: FB-OVF[0m
+[0;33mW (7517) cam_hal: FB-OVF[0m
+[0;33mW (7521) cam_hal: NO-EOI[0m
+[0;33mW (7522) cam_hal: NO-SOI[0m
+[0;33mW (7556) cam_hal: FB-OVF[0m
+[0;33mW (7557) cam_hal: FB-OVF[0m
+[0;33mW (7562) cam_hal: NO-EOI[0m
+[0;33mW (7563) cam_hal: NO-SOI[0m
+[0;33mW (7596) cam_hal: FB-OVF[0m
+[0;33mW (7597) cam_hal: FB-OVF[0m
+[0;33mW (7602) cam_hal: NO-EOI[0m
+[0;33mW (7603) cam_hal: NO-SOI[0m
+[0;32mI (7605) websocket_client: WebSocket client connected[0m
+[0;33mW (7636) cam_hal: FB-OVF[0m
+[0;33mW (7637) cam_hal: FB-OVF[0m
+[0;33mW (7641) cam_hal: NO-EOI[0m
+[0;33mW (7643) cam_hal: NO-SOI[0m
+[0;33mW (7676) cam_hal: FB-OVF[0m
+[0;33mW (7677) cam_hal: FB-OVF[0m
+[0;33mW (7682) cam_hal: NO-EOI[0m
+[0;33mW (7683) cam_hal: NO-SOI[0m
+[0;33mW (7716) cam_hal: FB-OVF[0m
+[0;33mW (7717) cam_hal: FB-OVF[0m
+[0;33mW (7721) cam_hal: NO-EOI[0m
+[0;33mW (7722) cam_hal: NO-SOI[0m
+[0;33mW (7756) cam_hal: FB-OVF[0m
+[0;33mW (7757) cam_hal: FB-OVF[0m
+[0;33mW (7762) cam_hal: NO-EOI[0m
+[0;33mW (7763) cam_hal: NO-SOI[0m
+[0;33mW (7796) cam_hal: FB-OVF[0m
+[0;33mW (7797) cam_hal: FB-OVF[0m
+[0;33mW (7802) cam_hal: NO-EOI[0m
+[0;33mW (7803) cam_hal: NO-SOI[0m
+[0;33mW (7836) cam_hal: FB-OVF[0m
+[0;33mW (7837) cam_hal: FB-OVF[0m
+[0;33mW (7841) cam_hal: NO-EOI[0m
+[0;33mW (7842) cam_hal: NO-SOI[0m
+[0;33mW (7876) cam_hal: FB-OVF[0m
+[0;33mW (7881) cam_hal: NO-EOI[0m
+[0;33mW (7883) cam_hal: NO-SOI[0m
+[0;33mW (7916) cam_hal: FB-OVF[0m
+[0;33mW (7922) cam_hal: NO-EOI[0m
+[0;33mW (7923) cam_hal: NO-SOI[0m
+[0;33mW (7956) cam_hal: FB-OVF[0m
+[0;33mW (7957) cam_hal: FB-OVF[0m
+[0;33mW (7961) cam_hal: NO-EOI[0m
+[0;33mW (7962) cam_hal: NO-SOI[0m
+[0;33mW (7996) cam_hal: FB-OVF[0m
+[0;33mW (7997) cam_hal: FB-OVF[0m
+[0;33mW (8001) cam_hal: NO-EOI[0m
+[0;33mW (8003) cam_hal: NO-SOI[0m
+[0;33mW (8036) cam_hal: FB-OVF[0m
+[0;33mW (8036) cam_hal: FB-OVF[0m
+[0;33mW (8041) cam_hal: NO-EOI[0m
+[0;33mW (8042) cam_hal: NO-SOI[0m
+[0;33mW (8076) cam_hal: FB-OVF[0m
+[0;33mW (8077) cam_hal: FB-OVF[0m
+[0;33mW (8081) cam_hal: NO-EOI[0m
+[0;33mW (8084) cam_hal: NO-SOI[0m
+[0;33mW (8116) cam_hal: FB-OVF[0m
+[0;33mW (8117) cam_hal: FB-OVF[0m
+[0;33mW (8121) cam_hal: NO-EOI[0m
+[0;33mW (8122) cam_hal: NO-SOI[0m
+[0;33mW (8156) cam_hal: FB-OVF[0m
+[0;33mW (8161) cam_hal: NO-EOI[0m
+[0;33mW (8162) cam_hal: NO-SOI[0m
+[0;33mW (8196) cam_hal: FB-OVF[0m
+[0;33mW (8201) cam_hal: NO-EOI[0m
+[0;33mW (8203) cam_hal: NO-SOI[0m
+[0;33mW (8234) cam_hal: FB-OVF[0m
+[0;33mW (8236) cam_hal: FB-OVF[0m
+[0;33mW (8241) cam_hal: NO-EOI[0m
+[0;33mW (8242) cam_hal: NO-SOI[0m
+[0;33mW (8276) cam_hal: FB-OVF[0m
+[0;33mW (8277) cam_hal: FB-OVF[0m
+[0;33mW (8281) cam_hal: NO-EOI[0m
+[0;33mW (8283) cam_hal: NO-SOI[0m
+[0;33mW (8316) cam_hal: FB-OVF[0m
+[0;33mW (8321) cam_hal: NO-EOI[0m
+[0;33mW (8322) cam_hal: NO-SOI[0m
+[0;33mW (8356) cam_hal: FB-OVF[0m
+[0;33mW (8361) cam_hal: NO-EOI[0m
+[0;33mW (8362) cam_hal: NO-SOI[0m
+[0;33mW (8396) cam_hal: FB-OVF[0m
+[0;33mW (8401) cam_hal: NO-EOI[0m
+[0;33mW (8403) cam_hal: NO-SOI[0m
+[0;33mW (8436) cam_hal: FB-OVF[0m
+[0;33mW (8436) cam_hal: FB-OVF[0m
+[0;33mW (8441) cam_hal: NO-EOI[0m
+[0;33mW (8442) cam_hal: NO-SOI[0m
+[0;33mW (8476) cam_hal: FB-OVF[0m
+[0;33mW (8476) cam_hal: FB-OVF[0m
+[0;33mW (8481) cam_hal: NO-EOI[0m
+[0;33mW (8482) cam_hal: NO-SOI[0m
+[0;33mW (8516) cam_hal: FB-OVF[0m
+[0;33mW (8521) cam_hal: NO-EOI[0m
+[0;33mW (8522) cam_hal: NO-SOI[0m
+[0;33mW (8556) cam_hal: FB-OVF[0m
+[0;33mW (8556) cam_hal: FB-OVF[0m
+[0;33mW (8561) cam_hal: NO-EOI[0m
+[0;33mW (8562) cam_hal: NO-SOI[0m
+[0;33mW (8596) cam_hal: FB-OVF[0m
+[0;33mW (8601) cam_hal: NO-EOI[0m
+[0;33mW (8603) cam_hal: NO-SOI[0m
+[0;33mW (8636) cam_hal: FB-OVF[0m
+[0;33mW (8636) cam_hal: FB-OVF[0m
+[0;33mW (8641) cam_hal: NO-EOI[0m
+[0;33mW (8642) cam_hal: NO-SOI[0m
+[0;33mW (8676) cam_hal: FB-OVF[0m
+[0;33mW (8681) cam_hal: NO-EOI[0m
+[0;33mW (8682) cam_hal: NO-SOI[0m
+[0;33mW (8716) cam_hal: FB-OVF[0m
+[0;33mW (8721) cam_hal: NO-EOI[0m
+[0;33mW (8722) cam_hal: NO-SOI[0m
+[0;33mW (8755) cam_hal: FB-OVF[0m
+[0;33mW (8756) cam_hal: FB-OVF[0m
+[0;33mW (8761) cam_hal: NO-EOI[0m
+[0;33mW (8762) cam_hal: NO-SOI[0m
+[0;33mW (8796) cam_hal: FB-OVF[0m
+[0;33mW (8801) cam_hal: NO-EOI[0m
+[0;33mW (8802) cam_hal: NO-SOI[0m
+[0;33mW (8836) cam_hal: FB-OVF[0m
+[0;33mW (8841) cam_hal: NO-EOI[0m
+[0;33mW (8842) cam_hal: NO-SOI[0m
+[0;33mW (8876) cam_hal: FB-OVF[0m
+[0;33mW (8876) cam_hal: FB-OVF[0m
+[0;33mW (8881) cam_hal: NO-EOI[0m
+
+***ERROR*** A stack overflow in task send_image_to_w has been detected.
+
+
+Backtrace: 0x400819e1:0x3fff0910 0x4008f535:0x3fff0930 0x400906e2:0x3fff0950 0x40091f49:0x3fff09d0 0x400907ec:0x3fff09f0 0x4009079e:0x3f407d39 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 900278639
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:7168
+load:0x40078000,len:15464
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3684
+entry 0x40080614
+[0;32mI (31) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug 28 2024 01:45:36[0m
+[0;33mW (31) boot: Unicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (77) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (92) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (107) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (114) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (122) boot: End of partition table[0m
+[0;32mI (126) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2f22ch (193068) map[0m
+[0;32mI (189) esp_image: segment 1: paddr=0003f254 vaddr=3ffbdb60 size=00dc4h (  3524) load[0m
+[0;32mI (190) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=c37cch (800716) map[0m
+[0;32mI (421) esp_image: segment 3: paddr=001037f4 vaddr=3ffbe924 size=0449ch ( 17564) load[0m
+[0;32mI (427) esp_image: segment 4: paddr=00107c98 vaddr=40080000 size=1e61ch (124444) load[0m
+[0;32mI (484) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (484) boot: Disabling RNG early entropy source...[0m
+[0;32mI (495) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (496) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (496) esp_psram: Speed: 80MHz[0m
+[0;32mI (500) esp_psram: PSRAM initialized, cache is in normal (1-core) mode.[0m
+[0;33mW (507) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (516) cpu_start: Unicore app[0m
+[0;32mI (520) cpu_start: Single core mode[0m
+[0;32mI (1057) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1065) cpu_start: Pro cpu start user code[0m
+[0;32mI (1065) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1065) app_init: Application information:[0m
+[0;32mI (1068) app_init: Project name:     mesh_local_control[0m
+[0;32mI (1074) app_init: App version:      d92472c-dirty[0m
+[0;32mI (1080) app_init: Compile time:     Aug 28 2024 09:25:09[0m
+[0;32mI (1086) app_init: ELF file SHA256:  900278639...[0m
+[0;32mI (1091) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (1096) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1101) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1106) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1111) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1119) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (1125) heap_init: At 3FFC7C60 len 000183A0 (96 KiB): DRAM[0m
+[0;32mI (1131) heap_init: At 3FFE0440 len 0001FBC0 (126 KiB): D/IRAM[0m
+[0;32mI (1138) heap_init: At 40078000 len 00008000 (32 KiB): IRAM[0m
+[0;32mI (1144) heap_init: At 4009E61C len 000019E4 (6 KiB): IRAM[0m
+[0;32mI (1150) heap_init: At 3FF80000 len 00002000 (8 KiB): RTCRAM[0m
+[0;32mI (1157) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1165) spi_flash: detected chip: generic[0m
+[0;32mI (1169) spi_flash: flash io: dio[0m
+[0;33mW (1173) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1195) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (1195) main_task: Started on CPU0[0m
+[0;32mI (1195) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1203) main_task: Calling app_main()[0m
+[0;32mI (1218) bridge_common: esp-iot-bridge version: 0.11.8[0m
+I (1219) wifi:wifi driver task: 3ffbd6fc, prio:23, stack:6656, core=0
+I (1222) wifi:wifi firmware version: 0caa81945
+I (1224) wifi:wifi certification version: v7.0
+I (1228) wifi:config NVS flash: enabled
+I (1231) wifi:config nano formating: disabled
+I (1235) wifi:Init data frame dynamic rx buffer num: 32
+I (1240) wifi:Init static rx mgmt buffer num: 5
+I (1244) wifi:Init management short buffer num: 32
+I (1249) wifi:Init static tx buffer num: 16
+I (1253) wifi:Init tx cache buffer num: 32
+I (1257) wifi:Init static rx buffer size: 1600
+I (1261) wifi:Init static rx buffer num: 10
+I (1265) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1269) wifi_init: accept mbox: 6[0m
+[0;32mI (1273) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1277) wifi_init: udp mbox: 6[0m
+[0;32mI (1281) wifi_init: tcp mbox: 6[0m
+[0;32mI (1284) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1289) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1293) wifi_init: tcp mss: 1440[0m
+[0;32mI (1297) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1301) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1307) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (1367) wifi:mode : null
+I (1369) wifi:mode : softAP (08:a6:f7:11:51:a9)
+I (1370) wifi:Total power save buffer number: 8
+I (1370) wifi:Init max length of beacon: 752/752
+I (1372) wifi:Init max length of beacon: 752/752
+[0;32mI (1377) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+Add netif ap with d92472c(commit id)
+[0;32mI (1388) bridge_common: netif list add success[0m
+[0;32mI (1394) bridge_common: [WIFI_AP_DEF ][0m
+[0;32mI (1398) bridge_common: Set ip info:192.168.5.1[0m
+[0;32mI (1403) bridge_wifi: SoftAP IP network segment has changed, deauth all station[0m
+I (1412) wifi:Disabled PMF config for SoftAP
+I (1415) wifi:Total power save buffer number: 8
+[0;32mI (1420) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (1428) bridge_common: [WIFI_AP_DEF ]Name Server1: 114.114.114.114[0m
+[0;32mI (1435) bridge_common: DHCPS Restart, deauth all station[0m
+Add netif sta with d92472c(commit id)
+[0;32mI (1444) bridge_common: netif list add success[0m
+I (1450) wifi:mode : sta (08:a6:f7:11:51:a8) + softAP (08:a6:f7:11:51:a9)
+I (1456) wifi:enable tsf
+[0;31mE (1459) NVS: Failed to read IP info from NVS[0m
+I (1463) wifi:Disabled PMF config for STA
+[0;32mI (1467) bridge_wifi: [esp_bridge_wifi_set_config] sta ssid: Tran Con Dev password: password[0m
+[0;32mI (1476) bridge_wifi: [esp_bridge_wifi_set_config] softap ssid: ESP_Bridge_1151a9 password: 12345678[0m
+I (1657) wifi:Total power save buffer number: 8
+[0;32mI (1659) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.5.1[0m
+[0;32mI (1660) bridge_wifi: SoftAP config changed, deauth all station[0m
+[0;32mI (1666) Mesh-Lite: esp-mesh-lite component version: 1.0.0[0m
+I (1672) ESPNOW: espnow [version: 1.0] init
+[0;32mI (1676) [vendor_ie]: Mesh-Lite commit id: bc9302d
+ [0m
+[0;32mI (1682) [vendor_ie]: Mesh ID: 77 [0m
+[0;32mI (1688) [ESP_Mesh_Lite_Comm]: msg action add success [0m
+[0;32mI (1693) [ESP_Mesh_Lite_Comm]: Bind Socket 54, port 6364 [0m
+[0;32mI (1698) [ESP_Mesh_Lite_Comm]: Bind Socket 55, port 6363 [0m
+[0;32mI (1704) [ESP_Mesh_Lite_Comm]: Bind Socket 56, port 6366 [0m
+[0;32mI (1710) [ESP_Mesh_Lite_Comm]: Bind Socket 57, port 6365 [0m
+[0;32mI (1716) [mesh-lite-espnow]: Start espnow task [0m
+[0;33mW (1722) [vendor_ie]: [Unexpected restart]: the rtc data: temp_mesh_id:3, level:1, ssid:Tran Con Dev, bssid 00:00:00:00:00:00 [0m
+[0;33mW (1733) [vendor_ie]: Try to connect the original parent node [0m
+[0;32mI (1741) [vendor_ie]: esp_mesh_lite_wifi_connect return ESP_OK [0m
+[0;32mI (1746) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (1756) cam_hal: cam init ok[0m
+[0;32mI (1759) sccb: pin_sda 26 pin_scl 27[0m
+[0;32mI (1763) sccb: sccb_i2c_port=1[0m
+[0;32mI (1767) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1806) camera: Detected camera at address=0x30[0m
+[0;32mI (1808) camera: Detected OV2640 camera[0m
+[0;32mI (1808) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (1874) cam_hal: buffer_size: 32768, half_buffer_size: 4096, node_buffer_size: 2048, node_cnt: 16, total_cnt: 5[0m
+[0;32mI (1874) cam_hal: Allocating 23680 Byte frame buffer in PSRAM[0m
+[0;32mI (1880) cam_hal: Allocating 23680 Byte frame buffer in PSRAM[0m
+[0;32mI (1886) cam_hal: Allocating 23680 Byte frame buffer in PSRAM[0m
+[0;32mI (1893) cam_hal: Allocating 23680 Byte frame buffer in PSRAM[0m
+[0;32mI (1899) cam_hal: cam config ok[0m
+[0;32mI (1903) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8[0m
+[0;32mI (1981) rc522: Initialized (firmware v2.0)[0m
+[0;33mW (2000) cam_hal: FB-OVF[0m
+[0;33mW (2000) cam_hal: FB-OVF[0m
+[0;33mW (2007) cam_hal: FB-OVF[0m
+[0;33mW (2020) cam_hal: FB-OVF[0m
+[0;33mW (2027) cam_hal: FB-OVF[0m
+[0;33mW (2040) cam_hal: FB-OVF[0m
+[0;33mW (2047) cam_hal: FB-OVF[0m
+[0;33mW (2061) cam_hal: FB-OVF[0m
+[0;33mW (2061) cam_hal: FB-OVF[0m
+[0;33mW (2068) cam_hal: FB-OVF[0m
+I (2223) wifi:ap channel adjust o:1,1 n:3,1
+I (2224) wifi:new:<3,0>, old:<1,1>, ap:<3,1>, sta:<3,0>, prof:1, snd_ch_cfg:0x0
+I (2225) wifi:state: init -> auth (0xb0)
+I (2232) wifi:state: auth -> assoc (0x0)
+I (2242) wifi:state: assoc -> run (0x10)
+I (2278) wifi:connected with Tran Con Dev, aid = 1, channel 3, BW20, bssid = e4:ca:12:bd:52:70
+I (2278) wifi:security: WPA2-PSK, phy: bgn, rssi: -40
+I (2281) wifi:pm start, type: 1
+
+I (2283) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (2344) wifi:AP's beacon interval = 102400 us, DTIM period = 1

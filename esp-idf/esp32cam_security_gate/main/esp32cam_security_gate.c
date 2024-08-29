@@ -222,9 +222,6 @@ void app_main()
         vTaskDelay(pdMS_TO_TICKS(3000));
     }
 
-    // Config camera
-    sensor_t *s = esp_camera_sensor_get();
-
     setup_esp_websocket_client_init();
     setup_rc522();
 

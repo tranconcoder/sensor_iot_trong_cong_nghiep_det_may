@@ -31,12 +31,11 @@ const httpServer = createServer(app);
 const wss = new WebSocketServer({
     server: httpServer,
     host: HOST,
-    maxPayload: 128 * 1024,
+    maxPayload: 64 * 1024,
 });
 
-
 //
-// Morgan
+// MORGAN
 //
 app.use(morgan("tiny"));
 

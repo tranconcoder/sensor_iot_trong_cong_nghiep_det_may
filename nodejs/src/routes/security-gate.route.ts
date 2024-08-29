@@ -1,9 +1,9 @@
-import { Router } from 'express';
+import { Router } from "express";
+import SecurityGateController from "../controllers/securityGate.controller";
 
 const securityGateRouter = Router();
+const securityGateController = new SecurityGateController();
 
-securityGateRouter.post('/auth-serial-number', (req, res) => {
-	console.log(Number(req.body?.serial_number as string));
-});
+securityGateRouter.post("/auth-serial-number", securityGateController.authSerialNumber);
 
 export default securityGateRouter;

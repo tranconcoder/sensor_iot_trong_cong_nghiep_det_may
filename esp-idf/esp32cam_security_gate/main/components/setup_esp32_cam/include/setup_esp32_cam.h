@@ -3,7 +3,7 @@
 #include "esp_err.h"
 
 // CAMERA SETTINGS
-#define CAM_FRAMESIZE FRAMESIZE_HVGA
+#define CAM_FRAMESIZE FRAMESIZE_VGA
 #define CAM_PIN_PWDN 32
 #define CAM_PIN_RESET -1 // software reset will be performed
 #define CAM_PIN_XCLK 0
@@ -23,6 +23,5 @@
 #define CAM_PIN_PCLK 22
 #define FLASH_PIN 4
 
-static bool camera_init_done;
 esp_err_t setup_esp32_cam();
 static esp_err_t init_camera(void);

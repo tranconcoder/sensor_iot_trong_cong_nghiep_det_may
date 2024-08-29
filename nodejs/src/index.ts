@@ -11,7 +11,6 @@ import SetupHandlebars from "./services/handlebars.service";
 
 // Http server
 import { createServer } from "http";
-import ip from "ip";
 
 // Websocket Server
 import setupWebsocket from "./services/websocket.service";
@@ -20,10 +19,13 @@ import { WebSocketServer } from "ws";
 // Morgan
 import morgan from "morgan";
 
+// Mongoose
+import connectDb from "./config/database/mongoose.config";
+
 import "dotenv/config";
 
 // Constants
-const HOST = (process.env.HOST as string) || ip.address();
+const HOST = process.env.HOST as string;
 const PORT = Number(process.env.PORT) || 3001;
 
 const app = express();
@@ -88,5 +90,14 @@ app.use(errorHandler);
 httpServer.listen(PORT, HOST, () => {
     console.log(`Server is running on http://${HOST}:${PORT}`);
 });
+
+//
+// MONGOOSE
+//
+    connectDb().then(() => {
+        console.log("Connected to database!")
+    }).catch(() => {
+        console.log("Connect fail to database!");
+    });
 
 export { wss, httpServer, HOST, PORT };

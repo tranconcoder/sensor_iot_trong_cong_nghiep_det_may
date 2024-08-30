@@ -31,7 +31,9 @@ const videoFilterConfig2 = {
     ...videoFilterConfig,
     text: "SecurityCam",
     get x() {
-        return FRAMESIZE_WIDTH - FONTSIZE * (19 / 30) * this.text.length;
+        return parseInt(
+            FRAMESIZE_WIDTH - FONTSIZE * (19 / 30) * this.text.length + ""
+        );
     },
 } as ConfigFilterVideo;
 

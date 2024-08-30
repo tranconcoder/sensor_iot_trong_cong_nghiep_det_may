@@ -1,6 +1,6 @@
-import ws from 'ws';
+import WebSocket from "ws";
 
-export interface WebSocket extends ws {
-	id: string;
-	source: string;
-}
+export type WebSocketCustom = WebSocket & {
+    id: string;
+    source: string;
+};

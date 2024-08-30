@@ -51,7 +51,7 @@ export default function setupWebsocket(
             ws.on("error", console.error);
 
             const worker = new Worker(
-                path.join(__dirname, "./workers/face-detection.worker.ts"),
+                path.join(__dirname, "./workers/face-detection.worker.ts")
             );
             worker.addEventListener("message", (e) => {
                 console.log(e.data);
@@ -62,7 +62,7 @@ export default function setupWebsocket(
                 case WebSocketSourceEnum.ESP32CAM_SECURITY_GATE_SEND_IMG:
                     ws.once("message", async (buffer: Buffer) => {
                         const { ffmpegCommand } = await import(
-                            "./ffmpeg.service"
+                            "./ffmpeg.service.js"
                         );
 
                         ffmpegCommand.run();

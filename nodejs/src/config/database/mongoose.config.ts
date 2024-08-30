@@ -1,5 +1,5 @@
 import mongoose from "mongoose"
-require("dotenv/config");
+import "dotenv/config"
 
 const PASSWORD = process.env.MONGODB_ATLAS_PASSWORD;
 console.log({ PASSWORD });

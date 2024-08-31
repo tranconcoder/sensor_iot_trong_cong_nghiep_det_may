@@ -6,8 +6,6 @@ import url from "url";
 import { WebSocketSourceEnum } from "../enums/ws.enum";
 import { v4 as uuidv4 } from "uuid";
 import { Readable } from "node:stream";
-import path from "path";
-import Worker from "web-worker";
 
 import "dotenv/config";
 
@@ -50,21 +48,12 @@ export default function setupWebsocket(
             console.log(`Client ${ws.id} connected`);
             ws.on("error", console.error);
 
-            const worker = new Worker(
-                path.join(__dirname, "./workers/face-detection.worker.ts")
-            );
-            worker.addEventListener("message", (e) => {
-                console.log(e.data);
-            });
-            worker.postMessage(123);
-
             switch (ws.source) {
                 case WebSocketSourceEnum.ESP32CAM_SECURITY_GATE_SEND_IMG:
                     ws.once("message", async (buffer: Buffer) => {
                         const { ffmpegCommand } = await import(
                             "./ffmpeg.service.js"
                         );
-
                         ffmpegCommand.run();
                     });
 

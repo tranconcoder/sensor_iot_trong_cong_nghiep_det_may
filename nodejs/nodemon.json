@@ -1,5 +1,5 @@
 {
-  "watch": ["src"],
+  "watch": ["./src"],
   "ext": "ts,json,env",
   "ignore": ["src/**/*.spec.ts"],
   "exec": "npx rimraf ./build ; tsc ; npx copyfiles -u 1 src/views/**/*.hbs src/assets/**/* ./build ; node ./build/index.js"

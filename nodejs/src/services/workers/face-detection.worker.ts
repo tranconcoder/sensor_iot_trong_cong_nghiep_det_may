@@ -1,4 +1,4 @@
-import type { HTMLCanvasElementCustom } from "../../types/worker.d";
+import type { FsTemp, HTMLCanvasElementCustom } from "../../types/worker.d";
 
 import path from "path";
 import fs from "fs";
@@ -10,10 +10,10 @@ import {
 } from "../../config/face-api.js";
 
 let initDone = false;
-let fsTemp: any = null;
+let fsTemp: FsTemp;
 const weightDirectory = path.join(__dirname, "../../assets/weights");
 
-addEventListener("message", async (e) => {
+addEventListener("message", async (e: MessageEvent<Buffer>) => {
     if (!initDone) {
         fsTemp = await import("fs-temp");
         await faceDetectionNet.loadFromDisk(weightDirectory);
@@ -28,6 +28,8 @@ addEventListener("message", async (e) => {
     const out = faceApi.createCanvasFromMedia(img) as HTMLCanvasElementCustom;
 
     faceApi.draw.drawDetections(out, detections);
+
+    console.log(detections);
 
     postMessage(out.toBuffer("image/jpeg"));
 

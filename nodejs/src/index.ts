@@ -22,6 +22,14 @@ import morgan from "morgan";
 // Mongoose
 import connectDb from "./config/database/mongoose.config";
 
+import * as faceapi from "face-api.js";
+import {
+    canvas,
+    faceDetectionNet,
+    faceDetectionOptions,
+    saveFile,
+} from "./config/face-api.js";
+
 import "dotenv/config";
 
 // Constants
@@ -101,5 +109,23 @@ connectDb()
     .catch(() => {
         console.log("Connect fail to database!");
     });
+
+/*
+(async function () {
+    const weightDirectory = path.join(__dirname, "./assets/weights");
+    await faceDetectionNet.loadFromDisk(weightDirectory);
+
+    const imgPath = path.join(__dirname, "../detect.png");
+    const img = (await canvas.loadImage(imgPath)) as any;
+    console.log(img);
+    const detections = await faceapi.detectAllFaces(img, faceDetectionOptions);
+
+    const out = faceapi.createCanvasFromMedia(img) as any;
+    faceapi.draw.drawDetections(out, detections);
+
+    saveFile("faceDetection.jpg", out.toBuffer("image/jpeg"));
+    console.log("done, saved results to out/faceDetection.jpg");
+})();
+*/
 
 export { wss, httpServer, HOST, PORT };

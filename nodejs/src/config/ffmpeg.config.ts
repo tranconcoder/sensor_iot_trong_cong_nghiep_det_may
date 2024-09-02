@@ -32,9 +32,9 @@ export const FRAMESIZE = FRAMESIZES.VGA;
 export const [FRAMESIZE_HEIGHT, FRAMESIZE_WIDTH] = FRAMESIZE.split("x").map(
     (x) => Number(x)
 );
-export const FRAME_PADDING_X = 10;
-export const FRAME_PADDING_Y = 10;
-export const FONTSIZE = 22;
+export const FRAME_PADDING_X = 8;
+export const FRAME_PADDING_Y = 8;
+export const FONTSIZE = 10;
 export const LINE_MARGIN_SIZE = 3;
 export const DRAWTEXT_COLOR = "white@0.5";
 export const DRAWTEXT_FONTPATH = path.join(

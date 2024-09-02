@@ -1,9 +1,11 @@
 import type { Request } from "express";
 import type { WebSocketServer } from "ws";
 import type { WebSocketCustom } from "../types/ws";
-
-import url from "url";
 import { WebSocketSourceEnum } from "../enums/ws.enum";
+
+import path from "path";
+import url from "url";
+import Worker from "web-worker";
 import { v4 as uuidv4 } from "uuid";
 import { Readable } from "node:stream";
 
@@ -48,12 +50,25 @@ export default function setupWebsocket(
             console.log(`Client ${ws.id} connected`);
             ws.on("error", console.error);
 
+            const worker = new Worker(
+                path.join(__dirname, "./workers/face-detection.worker.js")
+            );
+            let workerInProcess = false;
+            worker.addEventListener("message", (e) => {
+                readStreamEsp32CamSecurityGateImg.push(e.data);
+                workerInProcess = false;
+            });
+            worker.addEventListener("error", (e) => {
+                console.log(e.message);
+            });
+
             switch (ws.source) {
                 case WebSocketSourceEnum.ESP32CAM_SECURITY_GATE_SEND_IMG:
                     ws.once("message", async (buffer: Buffer) => {
                         const { ffmpegCommand } = await import(
                             "./ffmpeg.service.js"
                         );
+
                         ffmpegCommand.run();
                     });
 
@@ -62,7 +77,10 @@ export default function setupWebsocket(
                         transformInfo.frameCount++;
                         transformInfo.size += buffer.byteLength;
 
-                        readStreamEsp32CamSecurityGateImg.push(buffer);
+                        if (!workerInProcess) {
+                            worker.postMessage(buffer);
+                            workerInProcess = true;
+                        }
                     });
 
                     break;

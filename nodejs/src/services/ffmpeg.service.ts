@@ -1,7 +1,6 @@
 import Ffmpeg from "fluent-ffmpeg";
 import { readStreamEsp32CamSecurityGateImg } from "./websocket.service";
-import path from "path";
-import Worker from "web-worker";
+
 import {
     convertObjectConfigToString,
     handleCodecData,
@@ -42,6 +41,7 @@ const videoFilterConfig2 = {
 export const ffmpegCommand = Ffmpeg({ priority: 0 })
     .input(readStreamEsp32CamSecurityGateImg)
     .inputOptions(["-display_rotation 90", "-re"])
+    //.inputOptions(["-re"])
     .withNativeFramerate()
     .withNoAudio()
     .withSize(FRAMESIZE)
@@ -75,7 +75,3 @@ export const ffmpegCommand = Ffmpeg({ priority: 0 })
     .on("progress", handleProgress)
     .on("end", handleEnd)
     .on("error", handleError);
-
-const worker = new Worker(
-    path.join(__dirname, "./workers/face-detection.worker.js")
-);

@@ -1,5 +1,5 @@
 export interface HTMLCanvasElementCustom extends HTMLCanvasElement {
-    toBuffer: (mimetype?: string) => string;
+    toBuffer: (mimetype?: string) => Buffer;
 }
 
 export interface FsTemp {

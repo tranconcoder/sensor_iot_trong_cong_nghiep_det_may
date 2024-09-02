@@ -6,7 +6,7 @@ const chunkTime = 30;
 const nmsFfmpeg = new NodeMediaServer({
     rtmp: {
         port: 1935,
-        chunk_size: 32 * 1024,
+        chunk_size: 128* 1024,
         gop_cache: false,
         ping: 60,
         ping_timeout: 30,

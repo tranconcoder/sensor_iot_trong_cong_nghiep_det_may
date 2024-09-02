@@ -6,11 +6,11 @@ import "@tensorflow/tfjs-node";
 import * as faceapi from "face-api.js";
 
 // implements nodejs wrappers for HTMLCanvasElement, HTMLImageElement, ImageData
-const canvas = require("canvas");
+import * as _canvas from "canvas";
 
 // patch nodejs environment, we need to provide an implementation of
 // HTMLCanvasElement and HTMLImageElement
-const { Canvas, Image, ImageData } = canvas;
+const { Canvas, Image, ImageData } = _canvas as any;
 faceapi.env.monkeyPatch({ Canvas, Image, ImageData });
 
-export { canvas };
+export const canvas = _canvas as any;

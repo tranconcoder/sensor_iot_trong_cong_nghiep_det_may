@@ -40,17 +40,17 @@ const videoFilterConfig2 = {
 
 export const ffmpegCommand = Ffmpeg({ priority: 0 })
     .input(readStreamEsp32CamSecurityGateImg)
-    .inputOptions(["-display_rotation 90", "-re"])
-    //.inputOptions(["-re"])
+    //.inputOptions(["-display_rotation 90", "-re"])
+    .inputOptions(["-re"])
     .withNativeFramerate()
     .withNoAudio()
-    .withSize(FRAMESIZE)
+    .withSize(FRAMESIZE.split("x").reverse().join("x"))
     .nativeFramerate()
     .outputOptions([
         "-preset ultrafast",
         "-c:v libx264",
         `-vf ` +
-            `hflip,` +
+            //`hflip,` +
             `drawtext=${convertObjectConfigToString(
                 videoFilterConfig,
                 "=",

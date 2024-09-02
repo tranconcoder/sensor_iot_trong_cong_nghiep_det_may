@@ -1,37 +1,52 @@
 import type { FsTemp, HTMLCanvasElementCustom } from "../../types/worker.d";
 
-import path from "path";
 import fs from "fs";
+import path from "path";
 import * as faceApi from "face-api.js";
 import {
     canvas,
-    faceDetectionNet,
     faceDetectionOptions,
+    saveFile,
 } from "../../config/face-api.js";
+import { loadModels } from "../../utils/faceApiJs.util";
+import { createCanvas } from "face-api.js";
 
-let initDone = false;
+let initialize = false;
 let fsTemp: FsTemp;
-const weightDirectory = path.join(__dirname, "../../assets/weights");
 
 addEventListener("message", async (e: MessageEvent<Buffer>) => {
-    if (!initDone) {
+    if (!initialize) {
         fsTemp = await import("fs-temp");
-        await faceDetectionNet.loadFromDisk(weightDirectory);
-        await faceApi.nets.faceLandmark68Net.loadFromDisk(weightDirectory);
-
-        initDone = true;
+        await loadModels();
+        initialize = true;
     }
 
     const imgPath = fsTemp.writeFileSync(e.data);
-    const img = (await canvas.loadImage(imgPath)) as HTMLImageElement;
-    const detections = await faceApi.detectAllFaces(img, faceDetectionOptions);
-    const out = faceApi.createCanvasFromMedia(img) as HTMLCanvasElementCustom;
+    const img = (await canvas.loadImage(imgPath)) as any as HTMLImageElement;
+    // Create canvas
+    const canvasElm = createCanvas({
+        width: img.height,
+        height: img.width,
+    }) as HTMLCanvasElementCustom;
 
-    faceApi.draw.drawDetections(out, detections);
+    // Rotate and flip horizontal image
+    const canvasContext = canvasElm.getContext("2d");
+    canvasContext?.save();
+    canvasContext?.translate(img.height, 0);
+    canvasContext?.scale(-1, 1);
+    canvasContext?.translate(img.height / 2, img.width / 2);
+    canvasContext?.rotate((270 * Math.PI) / 180);
+    canvasContext?.drawImage(img, -img.width / 2, -img.height / 2);
+    canvasContext?.restore();
 
-    console.log(detections);
+    const detections = await faceApi.detectAllFaces(
+        canvasElm,
+        faceDetectionOptions
+    );
 
-    postMessage(out.toBuffer("image/jpeg"));
+    faceApi.draw.drawDetections(canvasElm, detections);
+
+    postMessage(canvasElm.toBuffer("image/jpeg"));
 
     // Cleanup temporary file
     fs.rmSync(imgPath);

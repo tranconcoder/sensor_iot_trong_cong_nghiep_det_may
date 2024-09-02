@@ -1,7 +1,6 @@
 import type { ObjectAnyKey } from "../types/object";
 
 export const handleStart = (cmd: string) => {
-    console.log(cmd);
     console.log("Ffmpeg is started with output: " + cmd.split(" ").at(-1));
 };
 export const handleCodecData = ({

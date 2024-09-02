@@ -222,6 +222,10 @@ void app_main()
         vTaskDelay(pdMS_TO_TICKS(3000));
     }
 
+    sensor_t *s = esp_camera_sensor_get();
+    s->set_brightness(s, 2);
+    s->set_saturation(s, 200);
+    s->set_sharpness(s, 200);
     setup_esp_websocket_client_init();
     setup_rc522();
 

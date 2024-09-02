@@ -54,6 +54,7 @@ export default function setupWebsocket(
                 path.join(__dirname, "./workers/face-detection.worker.js")
             );
             let workerInProcess = false;
+
             worker.addEventListener("message", (e) => {
                 readStreamEsp32CamSecurityGateImg.push(e.data);
                 workerInProcess = false;
@@ -64,13 +65,7 @@ export default function setupWebsocket(
 
             switch (ws.source) {
                 case WebSocketSourceEnum.ESP32CAM_SECURITY_GATE_SEND_IMG:
-                    ws.once("message", async (buffer: Buffer) => {
-                        const { ffmpegCommand } = await import(
-                            "./ffmpeg.service.js"
-                        );
-
-                        ffmpegCommand.run();
-                    });
+                    ws.once("message", async (buffer: Buffer) => {});
 
                     // Handle append video frames to stream
                     ws.on("message", async function message(buffer: Buffer) {

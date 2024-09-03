@@ -28,15 +28,15 @@ export const getEsp32CamSecurityGateSourcePath = () => {
     return path.join(directoryPath, `security_gate_${timestamp}.mp4`);
 };
 
-export const FRAMESIZE = FRAMESIZES.HVGA;
+export const FRAMESIZE = FRAMESIZES.VGA;
 export const [FRAMESIZE_HEIGHT, FRAMESIZE_WIDTH] = FRAMESIZE.split("x").map(
     (x) => Number(x)
 );
-export const FRAME_PADDING_X = 8;
-export const FRAME_PADDING_Y = 8;
-export const FONTSIZE = 12;
+export const FRAME_PADDING_X = 10;
+export const FRAME_PADDING_Y = 10;
+export const FONTSIZE = 18;
 export const LINE_MARGIN_SIZE = 3;
-export const DRAWTEXT_COLOR = "white@0.5";
+export const DRAWTEXT_COLOR = "white@0.8";
 export const DRAWTEXT_FONTPATH = path.join(
     __dirname,
     "../assets/fonts/CaskaydiaCoveNerdFontMono-Regular.ttf"

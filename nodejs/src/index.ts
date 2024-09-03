@@ -23,6 +23,7 @@ import morgan from "morgan";
 import connectDb from "./config/database/mongoose.config";
 
 import "dotenv/config";
+import { loadModels } from "./utils/faceApiJs.util";
 
 // Constants
 const HOST = process.env.HOST as string;
@@ -65,6 +66,7 @@ handleRoute(app);
 
 //
 // SETUP WEBSOCKET, FACE API JS
+//
 // Start streaming came
 import("./services/ffmpeg.service.js")
     .then(({ ffmpegCommand }) => {

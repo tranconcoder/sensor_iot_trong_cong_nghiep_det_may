@@ -1,3 +1,8 @@
+import { ArrayNotEmpty } from "./array";
+
+//
+// Face detection
+//
 export interface HTMLCanvasElementCustom extends HTMLCanvasElement {
     toBuffer: (mimetype?: string) => Buffer;
 }
@@ -5,3 +10,8 @@ export interface HTMLCanvasElementCustom extends HTMLCanvasElement {
 export interface FsTemp {
     writeFileSync: (buffer: Buffer) => string;
 }
+
+//
+// Face recognition - add face
+//
+export interface AddFacePayload extends ArrayNotEmpty<string> {}

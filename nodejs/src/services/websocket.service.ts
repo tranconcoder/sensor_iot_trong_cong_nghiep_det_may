@@ -55,8 +55,8 @@ export default function setupWebsocket(
             );
             let workerInProcess = false;
 
-            worker.addEventListener("message", (e) => {
-                readStreamEsp32CamSecurityGateImg.push(e.data);
+            worker.addEventListener("message", (e: MessageEvent<Buffer>) => {
+                console.log(e.data);
                 workerInProcess = false;
             });
             worker.addEventListener("error", (e) => {
@@ -71,6 +71,8 @@ export default function setupWebsocket(
                     ws.on("message", async function message(buffer: Buffer) {
                         transformInfo.frameCount++;
                         transformInfo.size += buffer.byteLength;
+
+                        readStreamEsp32CamSecurityGateImg.push(buffer);
 
                         if (!workerInProcess) {
                             worker.postMessage(buffer);

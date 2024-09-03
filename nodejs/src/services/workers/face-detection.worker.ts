@@ -15,7 +15,6 @@ addEventListener("message", async (e: MessageEvent<Buffer>) => {
         await loadModels();
         initialize = true;
     }
-    console.log(i++);
 
     // Save buffer img to temp file
     const imgPath = fsTemp.writeFileSync(e.data);
@@ -43,7 +42,6 @@ addEventListener("message", async (e: MessageEvent<Buffer>) => {
     );
 
     postMessage(detections);
-    i--;
 
     // Cleanup temporary file
     fs.rmSync(imgPath);

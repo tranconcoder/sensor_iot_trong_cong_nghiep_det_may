@@ -14,4 +14,7 @@ export interface FsTemp {
 //
 // Face recognition - add face
 //
-export interface AddFacePayload extends ArrayNotEmpty<string> {}
+export interface AddFacePayload {
+    imgPathList: ArrayNotEmpty<string>;
+    label: string;
+}

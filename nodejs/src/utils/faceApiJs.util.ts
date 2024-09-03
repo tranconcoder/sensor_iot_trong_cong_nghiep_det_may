@@ -30,27 +30,3 @@ export async function loadModels() {
 }
 
 export { canvas };
-
-export async function addFace(imageList: Array<string>, label: string) {
-    // Load all image path to HTMLImageElement
-    const imgElmList = await Promise.all(
-        imageList.map((img) => canvas.loadImage(img) as any as HTMLImageElement)
-    );
-
-    // Detections all HTMLImageElement width descriptors
-    const detectionsList = await Promise.all(
-        imgElmList.map((imgElm) =>
-            faceApi
-                .detectAllFaces(
-                    imgElm,
-                    new faceApi.TinyFaceDetectorOptions({ scoreThreshold: 0.5 })
-                )
-                .withFaceLandmarks()
-                .withFaceDescriptors()
-        )
-    ).then((canvasResultList) => {
-        return canvasResultList.map((faceList) =>
-            faceList.map((detections) => detections.descriptor)
-        );
-    });
-}

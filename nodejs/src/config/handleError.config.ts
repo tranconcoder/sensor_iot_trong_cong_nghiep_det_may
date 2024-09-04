@@ -18,6 +18,14 @@ export class RequestError {
     public toString() {
         return `ERROR: ${this.getStatusCode()} ${this.getMessage()}`;
     }
+
+    public getInfo() {
+        return {
+            code: this.getStatusCode(),
+            message: this.getMessage(),
+            error: true,
+        };
+    }
 }
 
 export class RequestNotFoundError extends RequestError {

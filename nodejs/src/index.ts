@@ -22,8 +22,10 @@ import morgan from "morgan";
 // Mongoose
 import connectDb from "./config/database/mongoose.config";
 
+// Error handler
+import handleError from "./utils/handleError.util";
+
 import "dotenv/config";
-import { loadModels } from "./utils/faceApiJs.util";
 
 // Constants
 const HOST = process.env.HOST as string;
@@ -81,18 +83,7 @@ import("./services/ffmpeg.service.js")
 //
 // ERROR HANDLER
 //
-
-function errorHandler(
-    err: Error,
-    req: Request,
-    res: Response,
-    next: NextFunction
-) {
-    if (res.headersSent) return next(err);
-    res.status(500);
-    res.render("error", { error: err });
-}
-app.use(errorHandler);
+app.use(handleError);
 
 //
 // START SERVER

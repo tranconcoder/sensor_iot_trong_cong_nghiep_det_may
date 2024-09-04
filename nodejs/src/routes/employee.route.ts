@@ -8,16 +8,15 @@ employeeRouter.post(
     "/upload-face",
     upload.array("face-img", 10),
     async (req, res, next) => {
-        console.log(123);
-        if (!req.files?.length) {
+        if (!req.files?.length || !req.body.label) {
             next(new RequestPayloadInvalidError("Not found file upload!"));
             return;
         }
 
         const files = req.files as Array<Express.Multer.File>;
-        console.log(files);
+        const imgPathList = files.map((file) => file.path);
 
-        res.json({name: "tranCon"})
+        res.json({ files, body: req.body });
     }
 );
 

@@ -50,8 +50,6 @@ export default async function addFace(
     imgPathList: ArrayNotEmpty<string>,
     label: string
 ) {
-    await loadModels();
-
     // Load HTMLImageELement
     const imgElmList = await Promise.all(
         imgPathList.map((imgPath) => canvas.loadImage(imgPath))
@@ -89,7 +87,7 @@ export default async function addFace(
 
     // Save to mongoose
     const createFace = new FaceModel({
-        employeeId: label,
+        employee_id: label,
         descriptors: descriptorList,
     });
     await createFace.save();
@@ -97,25 +95,35 @@ export default async function addFace(
     return true;
 }
 
-export async function faceRecognition(buffer: Buffer) {
-    const imgPath = fsTemp.writeFileSync(buffer);
-    const img = (await canvas.loadImage(imgPath)) as any as HTMLImageElement;
+export async function faceRecognition(imgPath: string) {
+    const allFace = await FaceModel.find().then((faceList) => {
+        return faceList.map(({ employee_id: label, descriptors }) => {
+            return {
+                label,
+                descriptors: descriptors.map(
+                    (descriptor) => new Float32Array(Object.values(descriptor))
+                ),
+            };
+        });
+    });
+    const faceLabel = await Promise.all(
+        allFace.map(({ label, descriptors }) => {
+            return new faceApi.LabeledFaceDescriptors(
+                label as string,
+                descriptors
+            );
+        })
+    );
+    console.log(faceLabel);
 
     // Create canvas
+    const faceMatcher = new faceApi.FaceMatcher(allFace, 0.6);
+    const img = (await canvas.loadImage(imgPath)) as any as HTMLImageElement;
     const canvasElm = canvas.createCanvas(
         img.height,
         img.width
     ) as any as HTMLCanvasElementCustom;
 
-    // Rotate and flip horizontal image
-    const canvasContext = canvasElm.getContext("2d");
-    canvasContext?.save();
-    canvasContext?.translate(img.height, 0);
-    canvasContext?.scale(-1, 1);
-    canvasContext?.translate(img.height / 2, img.width / 2);
-    canvasContext?.rotate((270 * Math.PI) / 180);
-    canvasContext?.drawImage(img, -img.width / 2, -img.height / 2);
-    canvasContext?.restore();
 
     const detections = await faceApi.detectAllFaces(
         canvasElm,

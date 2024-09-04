@@ -1,4 +1,5 @@
 import type { Request, Response, NextFunction } from "express";
+import type { ArrayNotEmpty } from "../types/array";
 
 // Validator
 import addFaceBodyPayload from "../config/joiSchema/addFaceBodyPayload.joiSchema";
@@ -6,8 +7,16 @@ import {
     RequestError,
     RequestPayloadInvalidError,
 } from "../config/handleError.config";
-import { ArrayNotEmpty } from "../types/array";
-import addFace from "../utils/faceApiJs.util";
+
+// Image processing
+import sharp from "sharp";
+import path from "path";
+import fs from "fs";
+import { v4 } from "uuid";
+import { FRAMESIZE_WIDTH, FRAMESIZE_HEIGHT } from "../config/ffmpeg.config";
+
+// Face Api Js
+import addFace, { faceRecognition } from "../utils/faceApiJs.util";
 
 export default class EmployeeController {
     public async uploadFace(req: Request, res: Response, next: NextFunction) {
@@ -21,16 +30,55 @@ export default class EmployeeController {
                 });
 
             const files = req.files as Array<Express.Multer.File>;
-            const imgPathList = files.map(
-                (file) => file.path
-            ) as ArrayNotEmpty<string>;
 
-            res.json(await addFace(imgPathList, label));
+            // Create directory
+            const dirPath = path.join(
+                __dirname,
+                `../assets/images/faces/${label}`
+            );
+            fs.mkdirSync(dirPath, { recursive: true });
+
+            // Write file list
+            const filePathList = await Promise.all(
+                files.map(({ buffer }) => {
+                    const fileName = `${dirPath}/${v4()}.jpg`;
+
+                    return sharp(buffer)
+                        .rotate()
+                        .resize(FRAMESIZE_WIDTH, FRAMESIZE_HEIGHT, {
+                            fit: "contain",
+                        })
+                        .withMetadata()
+                        .jpeg()
+                        .toFile(fileName)
+                        .then(() => fileName); // return filename to promise
+                })
+            );
+
+            console.log(filePathList);
+
+            res.json(
+                await addFace(filePathList as ArrayNotEmpty<string>, label)
+            );
         } catch (error: any) {
             if (error instanceof RequestError) next(error);
             else {
                 next(new RequestError(400, error?.message || "Unknown error!"));
             }
         }
+    }
+
+    public async uploadRecognitionFace(
+        req: Request,
+        res: Response,
+        next: NextFunction
+    ) {
+        try {
+            const file = req.file as Express.Multer.File;
+            console.log(file);
+            const result = await faceRecognition(file.path);
+
+            res.json({ result });
+        } catch (error) {}
     }
 }

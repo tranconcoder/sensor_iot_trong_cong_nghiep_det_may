@@ -3,12 +3,12 @@ import type { WebSocketServer } from "ws";
 import type { WebSocketCustom } from "../types/ws";
 import { WebSocketSourceEnum } from "../enums/ws.enum";
 
+// Websocket
 import url from "url";
 import { v4 as uuidv4 } from "uuid";
 import { Readable } from "node:stream";
 
 import "dotenv/config";
-import { faceRecognition } from "../utils/faceApiJs.util";
 
 export const readStreamEsp32CamSecurityGateImg = new Readable({
     read() {},
@@ -49,8 +49,6 @@ export default function setupWebsocket(
             console.log(`Client ${ws.id} connected`);
             ws.on("error", console.error);
 
-            let workerInProcess = false;
-
             switch (ws.source) {
                 case WebSocketSourceEnum.ESP32CAM_SECURITY_GATE_SEND_IMG:
                     // Handle append video frames to stream
@@ -59,15 +57,6 @@ export default function setupWebsocket(
                         transformInfo.size += buffer.byteLength;
 
                         readStreamEsp32CamSecurityGateImg.push(buffer);
-
-                        if (!workerInProcess) {
-                            workerInProcess = true;
-
-                            const detections = await faceRecognition(buffer);
-                            console.log(detections);
-
-                            workerInProcess = false
-                        }
                     });
 
                     break;

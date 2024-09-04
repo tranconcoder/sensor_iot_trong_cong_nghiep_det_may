@@ -2,7 +2,10 @@
 import { Router } from "express";
 
 // Middleware
-import { uploadFaceMiddleware } from "../middlewares/multer.middleware";
+import {
+    uploadFaceMiddleware,
+    uploadRecognitionFaceMiddleware,
+} from "../middlewares/multer.middleware";
 
 // Controller
 import EmployeeController from "../controllers/employee.controller";
@@ -14,6 +17,11 @@ employeeRouter.post(
     "/upload-face",
     uploadFaceMiddleware,
     employeeController.uploadFace
+);
+employeeRouter.post(
+    "/recognition-face",
+    uploadRecognitionFaceMiddleware,
+    employeeController.uploadRecognitionFace
 );
 
 export default employeeRouter;

@@ -6,15 +6,15 @@ import {
     RequestError,
     RequestPayloadInvalidError,
 } from "../config/handleError.config";
-import { addFace } from "../utils/faceApiJs.util";
 import { ArrayNotEmpty } from "../types/array";
+import addFace from "../utils/faceApiJs.util";
 
 export default class EmployeeController {
     public async uploadFace(req: Request, res: Response, next: NextFunction) {
         try {
             const { label } = await addFaceBodyPayload
                 .validateAsync(req.body)
-                .catch((error) => {
+                .catch(() => {
                     throw new RequestPayloadInvalidError(
                         "Body payload invalid"
                     );

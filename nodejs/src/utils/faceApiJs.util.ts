@@ -35,6 +35,8 @@ export default async function addFace(
     imgPathList: ArrayNotEmpty<string>,
     label: string
 ) {
+    await loadModels()
+
     const imgElmList = await Promise.all(
         imgPathList.map((imgPath) => canvas.loadImage(imgPath))
     );
@@ -46,7 +48,7 @@ export default async function addFace(
                     .detectAllFaces(
                         imgElm,
                         new faceApi.SsdMobilenetv1Options({
-                            minConfidence: 0.5,
+                            minConfidence: 0.9,
                             maxResults: 1,
                         })
                     )

@@ -24,7 +24,7 @@ export const faceStorage = multer.diskStorage({
     },
 });
 
-export const uploadFace= multer({
+export const uploadFace = multer({
     storage: faceStorage,
     limits: {
         fileSize: 1 * 1024 ** 2, // 1Mb
@@ -42,4 +42,3 @@ export const uploadFace= multer({
         callback(null, true);
     },
 });
-

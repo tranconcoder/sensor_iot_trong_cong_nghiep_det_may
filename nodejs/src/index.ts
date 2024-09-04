@@ -1,4 +1,3 @@
-import type { Request, Response, NextFunction } from "express";
 
 // Express app
 import express from "express";
@@ -26,6 +25,7 @@ import connectDb from "./config/database/mongoose.config";
 import handleError from "./utils/handleError.util";
 
 import "dotenv/config";
+import { loadModels } from "./utils/faceApiJs.util";
 
 // Constants
 const HOST = process.env.HOST as string;
@@ -70,7 +70,8 @@ handleRoute(app);
 // SETUP WEBSOCKET, FACE API JS
 //
 // Start streaming came
-import("./services/ffmpeg.service.js")
+loadModels()
+    .then(() => import("./services/ffmpeg.service.js"))
     .then(({ ffmpegCommand }) => {
         ffmpegCommand.run();
     })

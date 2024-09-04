@@ -1,1 +1,1 @@
-export  * from "./faceRecognition.config"
+export * from "./faceRecognition.config";

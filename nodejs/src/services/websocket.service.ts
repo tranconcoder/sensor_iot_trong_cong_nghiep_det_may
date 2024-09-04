@@ -3,13 +3,12 @@ import type { WebSocketServer } from "ws";
 import type { WebSocketCustom } from "../types/ws";
 import { WebSocketSourceEnum } from "../enums/ws.enum";
 
-import path from "path";
 import url from "url";
-import Worker from "web-worker";
 import { v4 as uuidv4 } from "uuid";
 import { Readable } from "node:stream";
 
 import "dotenv/config";
+import { faceRecognition } from "../utils/faceApiJs.util";
 
 export const readStreamEsp32CamSecurityGateImg = new Readable({
     read() {},
@@ -50,25 +49,10 @@ export default function setupWebsocket(
             console.log(`Client ${ws.id} connected`);
             ws.on("error", console.error);
 
-            /*
-            const worker = new Worker(
-                path.join(__dirname, "./workers/face-detection.worker.js")
-            );
             let workerInProcess = false;
-
-            worker.addEventListener("message", (e: MessageEvent<Buffer>) => {
-                console.log(e.data);
-                workerInProcess = false;
-            });
-            worker.addEventListener("error", (e) => {
-                console.log(e.message);
-            });
-            */
 
             switch (ws.source) {
                 case WebSocketSourceEnum.ESP32CAM_SECURITY_GATE_SEND_IMG:
-                    ws.once("message", async (buffer: Buffer) => {});
-
                     // Handle append video frames to stream
                     ws.on("message", async function message(buffer: Buffer) {
                         transformInfo.frameCount++;
@@ -76,12 +60,14 @@ export default function setupWebsocket(
 
                         readStreamEsp32CamSecurityGateImg.push(buffer);
 
-                        /*
                         if (!workerInProcess) {
-                            worker.postMessage(buffer);
                             workerInProcess = true;
+
+                            const detections = await faceRecognition(buffer);
+                            console.log(detections);
+
+                            workerInProcess = false
                         }
-                        */
                     });
 
                     break;

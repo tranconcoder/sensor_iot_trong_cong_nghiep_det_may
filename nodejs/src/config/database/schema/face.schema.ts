@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const { Schema } = mongoose;
 
 const faceSchema = new Schema({
-    userId: {
+    employeeId: {
         type: mongoose.Types.ObjectId,
         required: true,
         unique: true,

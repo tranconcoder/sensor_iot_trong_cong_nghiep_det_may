@@ -106,34 +106,37 @@ export async function faceRecognition(imgPath: string) {
             };
         });
     });
-    const faceLabel = await Promise.all(
+    const allFaceLabel = await Promise.all(
         allFace.map(({ label, descriptors }) => {
             return new faceApi.LabeledFaceDescriptors(
-                label as string,
+                label.toString(),
                 descriptors
             );
         })
     );
-    console.log(faceLabel);
 
     // Create canvas
-    const faceMatcher = new faceApi.FaceMatcher(allFace, 0.6);
+    const faceMatcher = new faceApi.FaceMatcher(allFaceLabel, 0.8);
     const img = (await canvas.loadImage(imgPath)) as any as HTMLImageElement;
-    const canvasElm = canvas.createCanvas(
-        img.height,
-        img.width
-    ) as any as HTMLCanvasElementCustom;
+    const displaySize = { width: img.width, height: img.height };
 
-
-    const detections = await faceApi.detectAllFaces(
-        canvasElm,
-        new faceApi.SsdMobilenetv1Options({ minConfidence: 0.5, maxResults: 1 })
+    // Detect face
+    const detection = await faceApi
+        .detectSingleFace(
+            img,
+            new faceApi.SsdMobilenetv1Options({
+                minConfidence: MIN_CONFIDENCE,
+                maxResults: 1,
+            })
+        )
+        .withFaceLandmarks()
+        .withFaceDescriptor();
+    const resizeDetection = faceApi.resizeResults(detection, displaySize);
+    const results = faceMatcher.findBestMatch(
+        resizeDetection?.descriptor as Float32Array
     );
 
-    // Cleanup temporary file
-    fs.rmSync(imgPath);
-
-    return detections;
+    return results;
 }
 
 export { canvas };

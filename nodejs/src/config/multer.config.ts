@@ -1,6 +1,4 @@
-import multer, { diskStorage, memoryStorage, Multer, Options } from "multer";
-import path from "path";
-import fs from "fs";
+import multer, { memoryStorage, Options } from "multer";
 import { RequestPayloadInvalidError } from "./handleError.config";
 
 const imageFileFilter: Options["fileFilter"] = (_, file, callback) => {

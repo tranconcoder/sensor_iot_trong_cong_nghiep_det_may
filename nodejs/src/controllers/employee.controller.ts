@@ -36,6 +36,8 @@ export default class EmployeeController {
                 __dirname,
                 `../assets/images/faces/${label}`
             );
+            if (fs.existsSync(dirPath))
+                fs.rmSync(dirPath, { recursive: true, force: true });
             fs.mkdirSync(dirPath, { recursive: true });
 
             // Write file list
@@ -55,8 +57,6 @@ export default class EmployeeController {
                 })
             );
 
-            console.log(filePathList);
-
             res.json(
                 await addFace(filePathList as ArrayNotEmpty<string>, label)
             );
@@ -75,10 +75,25 @@ export default class EmployeeController {
     ) {
         try {
             const file = req.file as Express.Multer.File;
-            console.log(file);
-            const result = await faceRecognition(file.path);
+            const buffer = file?.buffer;
+            const fileName = `/tmp/${v4()}`;
+            const filePath = await sharp(buffer)
+                .rotate()
+                .resize(FRAMESIZE_WIDTH, FRAMESIZE_HEIGHT, {
+                    fit: "contain",
+                })
+                .withMetadata()
+                .jpeg()
+                .toFile(fileName)
+                .then(() => fileName); // return filename to promise
+            const result = await faceRecognition(filePath);
+
 
             res.json({ result });
-        } catch (error) {}
+
+            fs.rmSync(fileName);
+        } catch (error) {
+            next(error);
+        }
     }
 }

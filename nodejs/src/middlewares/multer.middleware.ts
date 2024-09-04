@@ -1,3 +1,3 @@
-import upload from "../config/multer.config";
+import {uploadFace} from "../config/multer.config";
 
-export const uploadFaceMiddleware = upload.array('face-img', 10)
+export const uploadFaceMiddleware = uploadFace.array("face-img", 10);

@@ -1,13 +1,15 @@
 import type { AddFacePayload } from "../../types/worker";
+import type { CanvasCustom } from "../../types/canvas";
 
-import { loadModels, canvas } from "../../utils/faceApiJs.util";
 import * as faceApi from "face-api.js";
+import * as _canvas from "canvas";
 import { FaceModel } from "../../config/database/schema/face.shema";
+
+const canvas = _canvas as any as CanvasCustom;
 
 addEventListener("message", async (e: MessageEvent<AddFacePayload>) => {
     try {
         // Load models
-        await loadModels();
 
         const { label, imgPathList } = e.data;
 

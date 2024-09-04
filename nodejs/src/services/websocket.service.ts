@@ -50,6 +50,7 @@ export default function setupWebsocket(
             console.log(`Client ${ws.id} connected`);
             ws.on("error", console.error);
 
+            /*
             const worker = new Worker(
                 path.join(__dirname, "./workers/face-detection.worker.js")
             );
@@ -62,6 +63,7 @@ export default function setupWebsocket(
             worker.addEventListener("error", (e) => {
                 console.log(e.message);
             });
+            */
 
             switch (ws.source) {
                 case WebSocketSourceEnum.ESP32CAM_SECURITY_GATE_SEND_IMG:
@@ -74,10 +76,12 @@ export default function setupWebsocket(
 
                         readStreamEsp32CamSecurityGateImg.push(buffer);
 
+                        /*
                         if (!workerInProcess) {
                             worker.postMessage(buffer);
                             workerInProcess = true;
                         }
+                        */
                     });
 
                     break;

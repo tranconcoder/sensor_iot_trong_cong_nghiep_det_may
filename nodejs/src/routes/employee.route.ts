@@ -1,23 +1,19 @@
+// Express
 import { Router } from "express";
-import { RequestPayloadInvalidError } from "../config/handleError.config";
-import upload from "../config/multer.config";
+
+// Middleware
+import { uploadFaceMiddleware } from "../middlewares/multer.middleware";
+
+// Controller
+import EmployeeController from "../controllers/employee.controller";
 
 const employeeRouter = Router();
+const employeeController = new EmployeeController();
 
 employeeRouter.post(
     "/upload-face",
-    upload.array("face-img", 10),
-    async (req, res, next) => {
-        if (!req.files?.length || !req.body.label) {
-            next(new RequestPayloadInvalidError("Not found file upload!"));
-            return;
-        }
-
-        const files = req.files as Array<Express.Multer.File>;
-        const imgPathList = files.map((file) => file.path);
-
-        res.json({ files, body: req.body });
-    }
+    uploadFaceMiddleware,
+    employeeController.uploadFace
 );
 
 export default employeeRouter;

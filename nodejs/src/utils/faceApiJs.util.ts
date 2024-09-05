@@ -22,6 +22,7 @@ let fsTemp: FsTemp;
 let initialize = false;
 const canvas = _canvas as any as CanvasCustom;
 
+
 export async function loadModels() {
     // Cancel while model is loaded
     if (initialize) {
@@ -72,7 +73,10 @@ export default async function addFace(
         )
     )
         .map((x) => x?.descriptor)
-        .filter((x) => x);
+        .filter((x, index) => {
+            if (!x) fs.rmSync(imgPathList.at(index));
+            return x;
+        });
 
     // Validate face count
     const faceCount = descriptorList.reduce((accumulator, descriptor) => {

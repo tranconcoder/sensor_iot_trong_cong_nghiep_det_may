@@ -1,4 +1,3 @@
-
 // Express app
 import express from "express";
 import handleRoute from "./routes";
@@ -31,6 +30,7 @@ import { loadModels } from "./utils/faceApiJs.util";
 const HOST = process.env.HOST as string;
 const PORT = Number(process.env.PORT) || 3001;
 
+// Server
 const app = express();
 const httpServer = createServer(app);
 const wss = new WebSocketServer({

@@ -1,7 +1,4 @@
 #include "setup_rc522.h"
-#include "config_http_client.h"
-#include "esp_http_client.h"
-#include <stdio.h>
 
 static rc522_handle_t scanner;
 static const char *SETUP_RC522_TAG = "setup_rc522";
@@ -28,24 +25,35 @@ static void rc522_handler(void (*on_tag_scanned)(uint64_t serial_number), esp_ev
 
 void on_tag_scanned(uint64_t serial_number)
 {
-    char serial_number_char[43];
-    sprintf(serial_number_char, "{\"serial_number\":\"%022llu\"}", serial_number);
-    ESP_LOGI(SETUP_RC522_TAG, "TAG SCANNED: %s", serial_number_char);
+    camera_fb_t *fb = esp_camera_fb_get();
+
+    if (!fb) return;
+
+    char http_path[55];
+    sprintf(http_path, "/api/security-gate/auth-door/?s=%022llu", serial_number);
+    ESP_LOGI(SETUP_RC522_TAG, "TAG SCANNED: %llu", serial_number);
     esp_http_client_config_t http_webserver_config = {
         .host = "192.168.1.88",
         .port = 3000,
-        .path = "/api/security-gate/auth-serial-number",
+        .path = http_path,
         .event_handler = _http_event_handle,
     };
     esp_http_client_handle_t client = esp_http_client_init(&http_webserver_config);
+    // Convert buffer to base64
+    size_t outlen;
+    unsigned char base64[16000];
+
+    mbedtls_base64_encode(base64, 16000, &outlen, (unsigned char *)fb->buf, fb->len);
+    ESP_LOGI(SETUP_RC522_TAG, "%d %s", outlen, base64);
 
     esp_http_client_set_method(client, HTTP_METHOD_POST);
-    esp_http_client_set_header(client, "Content-Type", "application/json");
-    esp_http_client_set_post_field(client, serial_number_char, strlen(serial_number_char));
+    esp_http_client_set_header(client, "Content-Type", "text/plain");
+    esp_http_client_set_post_field(client, &base64, outlen);
 
     esp_http_client_perform(client);
-
     esp_http_client_cleanup(client);
+
+    esp_camera_fb_return(fb);
 }
 
 void setup_rc522()

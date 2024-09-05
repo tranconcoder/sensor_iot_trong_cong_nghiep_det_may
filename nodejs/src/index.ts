@@ -48,6 +48,8 @@ app.use(morgan("tiny"));
 // BODY PARSER
 //
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.raw());
+app.use(bodyParser.text());
 app.use(bodyParser.json());
 
 //

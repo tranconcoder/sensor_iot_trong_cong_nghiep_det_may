@@ -60,11 +60,8 @@ export default class EmployeeController {
             res.json(
                 await addFace(filePathList as ArrayNotEmpty<string>, label)
             );
-        } catch (error: any) {
-            if (error instanceof RequestError) next(error);
-            else {
-                next(new RequestError(400, error?.message || "Unknown error!"));
-            }
+        } catch (error) {
+            next(error);
         }
     }
 
@@ -87,7 +84,6 @@ export default class EmployeeController {
                 .toFile(fileName)
                 .then(() => fileName); // return filename to promise
             const result = await faceRecognition(filePath);
-
 
             res.json({ result });
 

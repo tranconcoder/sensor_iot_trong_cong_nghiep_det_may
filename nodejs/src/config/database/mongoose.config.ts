@@ -1,8 +1,7 @@
-import mongoose from "mongoose"
-import "dotenv/config"
+import mongoose from "mongoose";
+import "dotenv/config";
 
 const PASSWORD = process.env.MONGODB_ATLAS_PASSWORD;
-console.log({ PASSWORD });
 
 export default function connectDb() {
     return mongoose.connect(

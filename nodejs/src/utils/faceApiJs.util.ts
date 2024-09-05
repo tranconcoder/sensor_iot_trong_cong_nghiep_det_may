@@ -16,12 +16,11 @@ import { RequestPayloadInvalidError } from "../config/handleError.config";
 
 // Config
 import { MIN_CONFIDENCE, MIN_FACE_UPLOAD } from "../config/face-api.js";
-import { FsTemp, HTMLCanvasElementCustom } from "../types/worker";
 
-let fsTemp: FsTemp;
 let initialize = false;
 const canvas = _canvas as any as CanvasCustom;
 
+FaceModel.deleteMany().then(() => console.log("Deleted all face in DB!"));
 
 export async function loadModels() {
     // Cancel while model is loaded
@@ -29,8 +28,6 @@ export async function loadModels() {
         console.log("Models was initialized!");
         return;
     }
-
-    fsTemp = await import("fs-temp");
 
     // Apply canvas element type for nodejs
     const { Canvas, Image, ImageData } = canvas as any;

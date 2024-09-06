@@ -1,4 +1,4 @@
-import type { Application, Request, Response, NextFunction } from "express";
+import type { Request, Response, NextFunction } from "express";
 
 // Image processing
 import sharp from "sharp";
@@ -6,6 +6,9 @@ import sharp from "sharp";
 // Validate
 import authDoorSchema from "../config/joiSchema/authDoor.joiSchema";
 import { RequestPayloadInvalidError } from "../config/handleError.config";
+import { faceRecognition } from "../utils/faceApiJs.util";
+import { FRAMESIZE_HEIGHT, FRAMESIZE_WIDTH } from "../config/ffmpeg.config";
+import { v4 } from "uuid";
 
 export default class SecurityGateController {
     public async authDoor(req: Request, res: Response, next: NextFunction) {
@@ -17,12 +20,20 @@ export default class SecurityGateController {
                         "Body is invalid type base64!"
                     );
                 });
-
             const buffer = Buffer.from(base64Img, "base64");
+            const filePath = `/tmp/${v4()}.jpeg`;
 
-            sharp(buffer).jpeg().toFile("./test.jpg");
+            await sharp(buffer)
+                .rotate(270)
+                .resize(FRAMESIZE_WIDTH, FRAMESIZE_HEIGHT, {
+                    fit: "contain",
+                })
+                .jpeg()
+                .toFile(filePath);
 
-            res.send("123");
+            const recognitionResult = await faceRecognition(filePath);
+
+            res.send({ recognitionResult});
         } catch (error) {
             next(error);
         }

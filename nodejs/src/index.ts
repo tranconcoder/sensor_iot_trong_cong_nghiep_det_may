@@ -71,8 +71,9 @@ handleRoute(app);
 //
 // SETUP WEBSOCKET, FACE API JS
 //
-// Start streaming came
+// Load face api models
 loadModels()
+    // Run ffmpeg
     .then(() => import("./services/ffmpeg.service.js"))
     .then(({ ffmpegCommand }) => {
         ffmpegCommand.run();

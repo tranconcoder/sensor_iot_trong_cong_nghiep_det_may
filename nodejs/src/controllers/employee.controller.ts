@@ -30,6 +30,7 @@ export default class EmployeeController {
                 });
 
             const files = req.files as Array<Express.Multer.File>;
+            console.log(files)
 
             // Create directory
             const dirPath = path.join(

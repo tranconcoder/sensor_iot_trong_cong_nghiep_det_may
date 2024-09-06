@@ -3,7 +3,7 @@
 #include "esp_err.h"
 
 // CAMERA SETTINGS
-#define CAM_FRAMESIZE FRAMESIZE_HVGA
+#define CAM_FRAMESIZE FRAMESIZE_SVGA
 #define CAM_PIN_PWDN 32
 #define CAM_PIN_RESET -1 // software reset will be performed
 #define CAM_PIN_XCLK 0

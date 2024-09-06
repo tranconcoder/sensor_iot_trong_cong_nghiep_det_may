@@ -12,7 +12,10 @@ import fs from "fs";
 import { FaceModel } from "../config/database/schema/face.schema";
 
 // Handle error
-import { RequestPayloadInvalidError } from "../config/handleError.config";
+import {
+    RequestNotFoundError,
+    RequestPayloadInvalidError,
+} from "../config/handleError.config";
 
 // Config
 import { MIN_CONFIDENCE, MIN_FACE_UPLOAD } from "../config/face-api.js";
@@ -20,7 +23,7 @@ import { MIN_CONFIDENCE, MIN_FACE_UPLOAD } from "../config/face-api.js";
 let initialize = false;
 const canvas = _canvas as any as CanvasCustom;
 
-FaceModel.deleteMany().then(() => console.log("Deleted all face in DB!"));
+// FaceModel.deleteMany().then(() => console.log("Deleted all face in DB!"));
 
 export async function loadModels() {
     // Cancel while model is loaded
@@ -97,6 +100,24 @@ export default async function addFace(
 }
 
 export async function faceRecognition(imgPath: string) {
+    // Detect face
+    const img = (await canvas.loadImage(imgPath)) as any as HTMLImageElement;
+    const detection = await faceApi
+        .detectSingleFace(
+            img,
+            new faceApi.SsdMobilenetv1Options({
+                minConfidence: MIN_CONFIDENCE,
+                maxResults: 1,
+            })
+        )
+        .withFaceLandmarks()
+        .withFaceDescriptor();
+
+    // Stop while not detect face
+    if (!detection) {
+        throw new RequestNotFoundError("Not detect face to recognition!");
+    }
+
     const allFace = await FaceModel.find().then((faceList) => {
         return faceList.map(({ employee_id: label, descriptors }) => {
             return {
@@ -117,22 +138,12 @@ export async function faceRecognition(imgPath: string) {
     );
 
     // Create canvas
-    const faceMatcher = new faceApi.FaceMatcher(allFaceLabel, 0.8);
-    const img = (await canvas.loadImage(imgPath)) as any as HTMLImageElement;
+    const faceMatcher = new faceApi.FaceMatcher(allFaceLabel, 0.7);
     const displaySize = { width: img.width, height: img.height };
 
-    // Detect face
-    const detection = await faceApi
-        .detectSingleFace(
-            img,
-            new faceApi.SsdMobilenetv1Options({
-                minConfidence: MIN_CONFIDENCE,
-                maxResults: 1,
-            })
-        )
-        .withFaceLandmarks()
-        .withFaceDescriptor();
+    console.log({ detection });
     const resizeDetection = faceApi.resizeResults(detection, displaySize);
+    console.log({ resizeDetection });
     const results = faceMatcher.findBestMatch(
         resizeDetection?.descriptor as Float32Array
     );

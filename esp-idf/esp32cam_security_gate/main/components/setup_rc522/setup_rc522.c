@@ -41,19 +41,20 @@ void on_tag_scanned(uint64_t serial_number)
     esp_http_client_handle_t client = esp_http_client_init(&http_webserver_config);
     // Convert buffer to base64
     size_t outlen;
-    unsigned char base64[16000];
+    unsigned char * base64 = heap_caps_malloc(50000, MALLOC_CAP_SPIRAM);
 
-    mbedtls_base64_encode(base64, 16000, &outlen, (unsigned char *)fb->buf, fb->len);
-    ESP_LOGI(SETUP_RC522_TAG, "%d %s", outlen, base64);
+    mbedtls_base64_encode(base64, 50000, &outlen, (unsigned char *)fb->buf, fb->len);
+    esp_camera_fb_return(fb);
+    // ESP_LOGI(SETUP_RC522_TAG, "%d %s", outlen, base64);
+    // ESP_LOGI(SETUP_RC522_TAG, "%d", outlen);
 
     esp_http_client_set_method(client, HTTP_METHOD_POST);
     esp_http_client_set_header(client, "Content-Type", "text/plain");
-    esp_http_client_set_post_field(client, &base64, outlen);
+    esp_http_client_set_post_field(client, (const char *)base64, outlen);
 
     esp_http_client_perform(client);
     esp_http_client_cleanup(client);
-
-    esp_camera_fb_return(fb);
+    heap_caps_free(base64);
 }
 
 void setup_rc522()

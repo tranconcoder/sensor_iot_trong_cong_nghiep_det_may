@@ -2,19 +2,19 @@ dependencies:
   common_struct:
     dependencies: []
     source:
-      path: /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/components/common_struct
+      path: /home/tran-con/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/components/common_struct
       type: local
     version: '*'
   config_http_client:
     dependencies: []
     source:
-      path: /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/config_http_client
+      path: /home/tran-con/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/config_http_client
       type: local
     version: '*'
   esp-idf-rc522:
     dependencies: []
     source:
-      path: /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/components/esp-idf-rc522
+      path: /home/tran-con/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/components/esp-idf-rc522
       type: local
     version: 2.6.0
   esp-websocket_client:
@@ -22,7 +22,7 @@ dependencies:
     - name: idf
       version: '>=5.0'
     source:
-      path: /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/components/esp-websocket_client
+      path: /home/tran-con/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/components/esp-websocket_client
       type: local
     version: 1.2.3
   espressif/cmake_utilities:
@@ -104,23 +104,23 @@ dependencies:
   idf:
     source:
       type: idf
-    version: 5.3.0
+    version: 5.2.3
   setup_esp32_cam:
     dependencies: []
     source:
-      path: /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp32_cam
+      path: /home/tran-con/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp32_cam
       type: local
     version: '*'
   setup_esp_websocket_client:
     dependencies: []
     source:
-      path: /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client
+      path: /home/tran-con/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_esp_websocket_client
       type: local
     version: '*'
   setup_rc522:
     dependencies: []
     source:
-      path: /home/tvconss/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_rc522
+      path: /home/tran-con/Workspace/sensor_iot_trong_cong_nghiep_det_may/esp-idf/esp32cam_security_gate/main/components/setup_rc522
       type: local
     version: '*'
 direct_dependencies:

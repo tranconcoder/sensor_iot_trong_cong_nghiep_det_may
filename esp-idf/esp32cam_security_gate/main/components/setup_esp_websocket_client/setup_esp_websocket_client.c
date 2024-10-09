@@ -6,7 +6,7 @@ const char *TAG = "websocket_client";
 
 TaskHandle_t pv_task_send_image_to_websocket = NULL;
 const esp_websocket_client_config_t ws_cfg = {
-    .host = "192.168.1.88",
+    .host = "192.168.1.21",
     .port = 3000,
     .path = "/?source=esp32cam_security_gate_send_img",
     .buffer_size = 16 * 1024,

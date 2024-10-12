@@ -5,7 +5,7 @@ if (Hls.isSupported()) {
     const hls = new Hls();
     hls.attachMedia(video);
     hls.on(Hls.Events.MEDIA_ATTACHED, () => {
-        hls.loadSource("http://192.168.1.88:8000/live/livestream0/index.m3u8");
+        hls.loadSource("http://192.168.100.201:8000/live/livestream0/index.m3u8");
     });
     video.webkitRequestFullScreen();
 }

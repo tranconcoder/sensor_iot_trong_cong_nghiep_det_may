@@ -13,7 +13,7 @@ import EmployeeController from "../controllers/employee.controller";
 const employeeRouter = Router();
 const employeeController = new EmployeeController();
 
-employeeRouter.post(
+/* employeeRouter.post(
     "/upload-face",
     uploadFaceMiddleware,
     employeeController.uploadFace
@@ -22,6 +22,6 @@ employeeRouter.post(
     "/recognition-face",
     uploadRecognitionFaceMiddleware,
     employeeController.uploadRecognitionFace
-);
+); */
 
 export default employeeRouter;

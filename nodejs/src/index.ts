@@ -24,7 +24,6 @@ import connectDb from "./config/database/mongoose.config";
 import handleError from "./utils/handleError.util";
 
 import "dotenv/config";
-import { loadModels } from "./utils/faceApiJs.util";
 
 // Constants
 const HOST = process.env.HOST as string;
@@ -71,10 +70,8 @@ handleRoute(app);
 //
 // SETUP WEBSOCKET, FACE API JS
 //
-// Load face api models
-loadModels()
-    // Run ffmpeg
-    .then(() => import("./services/ffmpeg.service.js"))
+// Run ffmpeg
+import("./services/ffmpeg.service.js")
     .then(({ ffmpegCommand }) => {
         ffmpegCommand.run();
     })
